@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{2236122C-CFBA-4951-AEE1-9E9545DD07A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entidades", "Entidades\Entidades.csproj", "{2236122C-CFBA-4951-AEE1-9E9545DD07A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main", "Main\Main.csproj", "{37A9EB80-1FD7-4E8B-A874-E2D75B297E88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Main", "Main\Main.csproj", "{37A9EB80-1FD7-4E8B-A874-E2D75B297E88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Formularios", "FormularioLogin\Formularios.csproj", "{540CF6E8-967B-45AB-A77B-FB296C16F5DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{37A9EB80-1FD7-4E8B-A874-E2D75B297E88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37A9EB80-1FD7-4E8B-A874-E2D75B297E88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37A9EB80-1FD7-4E8B-A874-E2D75B297E88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{540CF6E8-967B-45AB-A77B-FB296C16F5DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{540CF6E8-967B-45AB-A77B-FB296C16F5DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{540CF6E8-967B-45AB-A77B-FB296C16F5DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{540CF6E8-967B-45AB-A77B-FB296C16F5DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
