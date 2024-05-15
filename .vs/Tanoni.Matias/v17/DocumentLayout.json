@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83E032D9-65D1-4F32-92B0-AB069CC9B88A}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\mat\u00EDas tanoni\\onedrive\\escritorio\\parcial\\tanoni.matias\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83E032D9-65D1-4F32-92B0-AB069CC9B88A}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\entidades\\gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|solutionrelative:entidades\\gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\entidades\\empresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|solutionrelative:entidades\\empresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\entidades\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|solutionrelative:entidades\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\entidades\\desarrollador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|solutionrelative:entidades\\desarrollador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\entidades\\tester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|solutionrelative:entidades\\tester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37A9EB80-1FD7-4E8B-A874-E2D75B297E88}|Main\\Main.csproj|c:\\users\\mat\u00EDas tanoni\\onedrive\\escritorio\\parcial\\tanoni.matias\\main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37A9EB80-1FD7-4E8B-A874-E2D75B297E88}|Main\\Main.csproj|solutionrelative:main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -22,15 +42,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\ConsoleApp1\\Program.cs",
-              "RelativeDocumentMoniker": "ConsoleApp1\\Program.cs",
-              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\ConsoleApp1\\Program.cs",
-              "RelativeToolTip": "ConsoleApp1\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Main\\Program.cs",
+              "RelativeDocumentMoniker": "Main\\Program.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Main\\Program.cs",
+              "RelativeToolTip": "Main\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-08T16:48:38.413Z",
+              "WhenOpened": "2024-05-08T23:26:41.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Empresa.cs",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Empresa.cs",
+              "RelativeDocumentMoniker": "Entidades\\Empresa.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Empresa.cs",
+              "RelativeToolTip": "Entidades\\Empresa.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwB8AAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T23:15:55.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Tester.cs",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Tester.cs",
+              "RelativeDocumentMoniker": "Entidades\\Tester.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Tester.cs",
+              "RelativeToolTip": "Entidades\\Tester.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAhwCkAAAADAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T21:57:31.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Desarrollador.cs",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Desarrollador.cs",
+              "RelativeDocumentMoniker": "Entidades\\Desarrollador.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Desarrollador.cs",
+              "RelativeToolTip": "Entidades\\Desarrollador.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAACEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T21:56:05.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Empleado.cs",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Empleado.cs",
+              "RelativeDocumentMoniker": "Entidades\\Empleado.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Empleado.cs",
+              "RelativeToolTip": "Entidades\\Empleado.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T21:55:03.819Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Gerente.cs",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Gerente.cs",
+              "RelativeDocumentMoniker": "Entidades\\Gerente.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Gerente.cs",
+              "RelativeToolTip": "Entidades\\Gerente.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T21:56:58.601Z",
               "EditorCaption": ""
             }
           ]

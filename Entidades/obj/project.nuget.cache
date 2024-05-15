@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "FqBo0ivU9f6KSiZ25jPQFVPo+T0XRnDRv112RmOMa4cwYoKnJglNH9wAVf4duxjzNDf+HoarzSRy6qWj3J0muQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Matías Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Entidades.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Matías Tanoni\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\Matías Tanoni\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.27\\microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\Matías Tanoni\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512"
+  ],
+  "logs": []
+}
