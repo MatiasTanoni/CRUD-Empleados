@@ -1,4 +1,4 @@
-namespace FormularioLogin
+namespace Formularios
 {
     internal static class Program
     {
@@ -11,7 +11,7 @@ namespace FormularioLogin
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FormularioPrincipal());
+            Application.Run(new FormularioLogin());
         }
     }
 }
