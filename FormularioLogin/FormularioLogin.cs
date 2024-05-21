@@ -32,20 +32,32 @@ namespace Formularios
             CambiarColor(textContrasena, labelContrasena, pictureBoxBorderContrasena);
 
         }
+        //private void pictureBoxIniciarSesion_Click(object sender, EventArgs e)
+        //{
+        //    CambiarColorIniciarSesion(textContrasena,textBoxCorreo,pictureBoxIniciarSesion);
+        //}
         private void CambiarColor(TextBox textBox, Label label, PictureBox pictureBox)
         {
 
             if (textBox.Text.Length != 0)
             {
-                pictureBox.BackColor = Color.Black;
-                label.ForeColor = Color.Black;
+                pictureBox.BackColor = Color.Green;
+                label.ForeColor = Color.Green;
             }
             else
             {
-                pictureBox.BackColor = Color.Red;
-                label.ForeColor = Color.Red;
+                pictureBox.BackColor = Color.Black;
+                label.ForeColor = Color.Black;
             }
         }
+        //private void CambiarColorIniciarSesion(TextBox textBoxContrasena,TextBox textBoxCorreo,PictureBox pictureBox)
+        //{
+        //    if (textBoxContrasena.Text.Length != 0 && textBoxCorreo.Text.Length != 0)
+        //    {
+        //        pictureBox.BackColor = Color.Green;
+        //    }
+        //    else { pictureBox.BackColor = Color.Black;}
+        //}
         private void buttonIniciarSesion_Click(object sender, EventArgs e)
         {
             string jsonPath = "C:\\Users\\Matías Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\datosLogin.json";
@@ -60,16 +72,20 @@ namespace Formularios
 
                         List<Usuario> usuarios = JsonSerializer.Deserialize<List<Usuario>>(jsonString);
 
+                        bool usuarioEncontrado = false;
                         foreach (Usuario usuario in usuarios)
                         {
                             if (usuario.Correo == textBoxCorreo.Text && usuario.Clave == textContrasena.Text)
                             {
+                                usuarioEncontrado = true;
                                 FormularioPrincipal formularioPrincipal = new FormularioPrincipal();
+                                formularioPrincipal.ShowDialog();
+                                break;
                             }
-                            else
-                            {
-                                MessageBox.Show("Error ha ingresado mal el usuario!");
-                            }
+                        }
+                        if (!usuarioEncontrado)
+                        {
+                            MessageBox.Show("Error, ha ingresado mal el usuario o la contraseña.");
                         }
                     }
                 }
@@ -82,26 +98,6 @@ namespace Formularios
             {
                 MessageBox.Show("El archivo JSON no existe.");
             }
-
-        }
-
-        private void labelContrasena_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pContainer_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
 
         }
 

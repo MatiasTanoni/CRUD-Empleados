@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioLogin));
             pContainer = new Panel();
+            label1 = new Label();
             buttonIniciarSesion = new Button();
             labelContrasena = new Label();
             textContrasena = new TextBox();
@@ -40,15 +41,14 @@
             pictureBoxCorreo = new PictureBox();
             pictureBoxBorderCorreo = new PictureBox();
             pictureBoxBorderContrasena = new PictureBox();
-            pictureBox2 = new PictureBox();
-            label1 = new Label();
+            pictureBoxIniciarSesion = new PictureBox();
             pContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxContrasena).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxCorreo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxBorderCorreo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxBorderContrasena).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxIniciarSesion).BeginInit();
             SuspendLayout();
             // 
             // pContainer
@@ -65,16 +65,28 @@
             pContainer.Controls.Add(pictureBoxCorreo);
             pContainer.Controls.Add(pictureBoxBorderCorreo);
             pContainer.Controls.Add(pictureBoxBorderContrasena);
-            pContainer.Controls.Add(pictureBox2);
+            pContainer.Controls.Add(pictureBoxIniciarSesion);
             pContainer.Dock = DockStyle.Fill;
             pContainer.Location = new Point(0, 0);
             pContainer.Name = "pContainer";
             pContainer.Size = new Size(455, 458);
             pContainer.TabIndex = 0;
-            pContainer.Paint += pContainer_Paint;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Black;
+            label1.Font = new Font("Lucida Sans", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(168, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(111, 33);
+            label1.TabIndex = 11;
+            label1.Text = "LOGIN";
             // 
             // buttonIniciarSesion
             // 
+            buttonIniciarSesion.FlatStyle = FlatStyle.Popup;
             buttonIniciarSesion.Font = new Font("Lucida Sans", 12F, FontStyle.Bold, GraphicsUnit.Point);
             buttonIniciarSesion.Location = new Point(154, 341);
             buttonIniciarSesion.Name = "buttonIniciarSesion";
@@ -95,7 +107,6 @@
             labelContrasena.Size = new Size(106, 18);
             labelContrasena.TabIndex = 8;
             labelContrasena.Text = "Contraseña:";
-            labelContrasena.Click += labelContrasena_Click;
             // 
             // textContrasena
             // 
@@ -176,27 +187,14 @@
             pictureBoxBorderContrasena.TabIndex = 7;
             pictureBoxBorderContrasena.TabStop = false;
             // 
-            // pictureBox2
+            // pictureBoxIniciarSesion
             // 
-            pictureBox2.BackColor = Color.Black;
-            pictureBox2.Location = new Point(149, 337);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(154, 78);
-            pictureBox2.TabIndex = 10;
-            pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Black;
-            label1.Font = new Font("Lucida Sans", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(168, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(111, 33);
-            label1.TabIndex = 11;
-            label1.Text = "LOGIN";
+            pictureBoxIniciarSesion.BackColor = Color.Black;
+            pictureBoxIniciarSesion.Location = new Point(149, 337);
+            pictureBoxIniciarSesion.Name = "pictureBoxIniciarSesion";
+            pictureBoxIniciarSesion.Size = new Size(154, 78);
+            pictureBoxIniciarSesion.TabIndex = 10;
+            pictureBoxIniciarSesion.TabStop = false;
             // 
             // FormularioLogin
             // 
@@ -206,6 +204,7 @@
             Controls.Add(pContainer);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormularioLogin";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             pContainer.ResumeLayout(false);
             pContainer.PerformLayout();
@@ -214,7 +213,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxCorreo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxBorderCorreo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxBorderContrasena).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxIniciarSesion).EndInit();
             ResumeLayout(false);
         }
 
@@ -231,7 +230,7 @@
         private PictureBox pictureBoxBorderContrasena;
         private PictureBox pictureBox1;
         private Button buttonIniciarSesion;
-        private PictureBox pictureBox2;
+        private PictureBox pictureBoxIniciarSesion;
         private Label label1;
     }
 }

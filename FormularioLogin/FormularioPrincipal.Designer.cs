@@ -28,12 +28,81 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            listBoxPrincipal = new ListBox();
+            buttonAgregar = new Button();
+            buttonEliminar = new Button();
+            buttonModificar = new Button();
+            SuspendLayout();
+            // 
+            // listBoxPrincipal
+            // 
+            listBoxPrincipal.BackColor = Color.Silver;
+            listBoxPrincipal.FormattingEnabled = true;
+            listBoxPrincipal.ItemHeight = 15;
+            listBoxPrincipal.Location = new Point(12, 30);
+            listBoxPrincipal.Name = "listBoxPrincipal";
+            listBoxPrincipal.Size = new Size(776, 304);
+            listBoxPrincipal.TabIndex = 0;
+            // 
+            // buttonAgregar
+            // 
+            buttonAgregar.BackColor = Color.OliveDrab;
+            buttonAgregar.FlatStyle = FlatStyle.Popup;
+            buttonAgregar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonAgregar.Location = new Point(71, 360);
+            buttonAgregar.Name = "buttonAgregar";
+            buttonAgregar.Size = new Size(127, 62);
+            buttonAgregar.TabIndex = 1;
+            buttonAgregar.Text = "Agregar";
+            buttonAgregar.UseVisualStyleBackColor = false;
+            buttonAgregar.Click += button1_Click;
+            // 
+            // buttonEliminar
+            // 
+            buttonEliminar.BackColor = Color.DarkRed;
+            buttonEliminar.FlatStyle = FlatStyle.Popup;
+            buttonEliminar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonEliminar.Location = new Point(337, 360);
+            buttonEliminar.Name = "buttonEliminar";
+            buttonEliminar.Size = new Size(127, 62);
+            buttonEliminar.TabIndex = 2;
+            buttonEliminar.Text = "Eliminar";
+            buttonEliminar.UseVisualStyleBackColor = false;
+            // 
+            // buttonModificar
+            // 
+            buttonModificar.BackColor = SystemColors.ActiveCaption;
+            buttonModificar.FlatStyle = FlatStyle.Popup;
+            buttonModificar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonModificar.Location = new Point(603, 360);
+            buttonModificar.Name = "buttonModificar";
+            buttonModificar.Size = new Size(127, 62);
+            buttonModificar.TabIndex = 3;
+            buttonModificar.Text = "Modificar";
+            buttonModificar.UseVisualStyleBackColor = false;
+            buttonModificar.Click += buttonModificar_Click;
+            // 
+            // FormularioPrincipal
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(800, 450);
+            Controls.Add(buttonModificar);
+            Controls.Add(buttonEliminar);
+            Controls.Add(buttonAgregar);
+            Controls.Add(listBoxPrincipal);
+            Name = "FormularioPrincipal";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "FormularioPrincipal";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private ListBox listBoxPrincipal;
+        private Button buttonAgregar;
+        private Button buttonEliminar;
+        private Button buttonModificar;
     }
 }
