@@ -31,7 +31,11 @@ namespace Entidades
 
         public override string MostrarInformacion()
         {
-            return $"el nombre es {this.nombre}, la edad es: {this.edad}, el salario es:  {this.salario}, y esta a cargo de: {this.personasACargo} personas, Proyectos Gestionados: {proyectosGestionados}";
+            return $"el nombre es {this.nombre}, la edad es: {this.edad},Experiencia: {this.experiencia}, el salario es:  {this.salario}, y esta a cargo de: {this.personasACargo} personas, Proyectos Gestionados: {this.proyectosGestionados}";
         }
+        //public override string ToString()
+        //{
+        //    return this.MostrarInformacion();
+        //}
     }
 }

@@ -1,3 +1,4 @@
+using Formularios;
 namespace FormularioLogin
 {
     public partial class FormularioPrincipal : Form
@@ -7,14 +8,24 @@ namespace FormularioLogin
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void buttonModificar_Click(object sender, EventArgs e)
         {
+            FormularioDatos formularioAgregar = new FormularioDatos();
+            formularioAgregar.ShowDialog();
+        }
 
+        private void buttonAgregar_Click(object sender, EventArgs e)
+        {
+            FormularioDatos formularioAgregar = new FormularioDatos();
+            formularioAgregar.ShowDialog();
+        }
+
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            FormularioDatos formularioAgregar = new FormularioDatos();
+            formularioAgregar.ShowDialog();
         }
     }
 }

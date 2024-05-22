@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioPrincipal));
             listBoxPrincipal = new ListBox();
             buttonAgregar = new Button();
             buttonEliminar = new Button();
@@ -55,26 +56,27 @@
             buttonAgregar.TabIndex = 1;
             buttonAgregar.Text = "Agregar";
             buttonAgregar.UseVisualStyleBackColor = false;
-            buttonAgregar.Click += button1_Click;
+            buttonAgregar.Click += buttonAgregar_Click;
             // 
             // buttonEliminar
             // 
             buttonEliminar.BackColor = Color.DarkRed;
             buttonEliminar.FlatStyle = FlatStyle.Popup;
             buttonEliminar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonEliminar.Location = new Point(337, 360);
+            buttonEliminar.Location = new Point(618, 360);
             buttonEliminar.Name = "buttonEliminar";
             buttonEliminar.Size = new Size(127, 62);
             buttonEliminar.TabIndex = 2;
             buttonEliminar.Text = "Eliminar";
             buttonEliminar.UseVisualStyleBackColor = false;
+            buttonEliminar.Click += buttonEliminar_Click;
             // 
             // buttonModificar
             // 
             buttonModificar.BackColor = SystemColors.ActiveCaption;
             buttonModificar.FlatStyle = FlatStyle.Popup;
             buttonModificar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonModificar.Location = new Point(603, 360);
+            buttonModificar.Location = new Point(336, 360);
             buttonModificar.Name = "buttonModificar";
             buttonModificar.Size = new Size(127, 62);
             buttonModificar.TabIndex = 3;
@@ -92,6 +94,7 @@
             Controls.Add(buttonEliminar);
             Controls.Add(buttonAgregar);
             Controls.Add(listBoxPrincipal);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormularioPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormularioPrincipal";
