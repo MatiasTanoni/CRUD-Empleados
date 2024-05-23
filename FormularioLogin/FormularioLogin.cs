@@ -30,12 +30,8 @@ namespace Formularios
         private void textContrasena_TextChanged(object sender, EventArgs e)
         {
             CambiarColor(textContrasena, labelContrasena, pictureBoxBorderContrasena);
-
         }
-        //private void pictureBoxIniciarSesion_Click(object sender, EventArgs e)
-        //{
-        //    CambiarColorIniciarSesion(textContrasena,textBoxCorreo,pictureBoxIniciarSesion);
-        //}
+
         private void CambiarColor(TextBox textBox, Label label, PictureBox pictureBox)
         {
 
@@ -50,14 +46,7 @@ namespace Formularios
                 label.ForeColor = Color.Black;
             }
         }
-        //private void CambiarColorIniciarSesion(TextBox textBoxContrasena,TextBox textBoxCorreo,PictureBox pictureBox)
-        //{
-        //    if (textBoxContrasena.Text.Length != 0 && textBoxCorreo.Text.Length != 0)
-        //    {
-        //        pictureBox.BackColor = Color.Green;
-        //    }
-        //    else { pictureBox.BackColor = Color.Black;}
-        //}
+
         private void buttonIniciarSesion_Click(object sender, EventArgs e)
         {
             string jsonPath = "C:\\Users\\Matías Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\datosLogin.json";

@@ -22,3 +22,6 @@ C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogi
 C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogin\obj\Debug\net6.0-windows\Formular.9034CDC0.Up2Date
 C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogin\obj\Debug\net6.0-windows\Formularios.Properties.Resources.resources
 C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogin\obj\Debug\net6.0-windows\Formularios.FormularioDatos.resources
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogin\obj\Debug\net6.0-windows\Formularios.FormDesarrollador.resources
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogin\obj\Debug\net6.0-windows\Formularios.FormGerente.resources
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogin\obj\Debug\net6.0-windows\Formularios.FormTester.resources

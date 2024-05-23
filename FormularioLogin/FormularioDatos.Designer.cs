@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioDatos));
-            buttonAceptar = new Button();
             buttonCancelar = new Button();
-            menuStrip1 = new MenuStrip();
             radioButtonDesarrollador = new RadioButton();
             groupBox = new GroupBox();
             radioButtonGerente = new RadioButton();
@@ -39,39 +37,18 @@
             groupBox.SuspendLayout();
             SuspendLayout();
             // 
-            // buttonAceptar
-            // 
-            buttonAceptar.BackColor = Color.FromArgb(224, 224, 224);
-            buttonAceptar.FlatStyle = FlatStyle.Popup;
-            buttonAceptar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonAceptar.Location = new Point(46, 200);
-            buttonAceptar.Name = "buttonAceptar";
-            buttonAceptar.Size = new Size(127, 62);
-            buttonAceptar.TabIndex = 3;
-            buttonAceptar.Text = "Aceptar";
-            buttonAceptar.UseVisualStyleBackColor = false;
-            buttonAceptar.Click += buttonAceptar_Click;
-            // 
             // buttonCancelar
             // 
             buttonCancelar.BackColor = Color.FromArgb(224, 224, 224);
             buttonCancelar.FlatStyle = FlatStyle.Popup;
             buttonCancelar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonCancelar.Location = new Point(186, 200);
+            buttonCancelar.Location = new Point(125, 188);
             buttonCancelar.Name = "buttonCancelar";
             buttonCancelar.Size = new Size(123, 62);
             buttonCancelar.TabIndex = 4;
             buttonCancelar.Text = "Cancelar";
             buttonCancelar.UseVisualStyleBackColor = false;
             buttonCancelar.Click += buttonCancelar_Click;
-            // 
-            // menuStrip1
-            // 
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(372, 24);
-            menuStrip1.TabIndex = 8;
-            menuStrip1.Text = "menuStrip1";
             // 
             // radioButtonDesarrollador
             // 
@@ -93,7 +70,7 @@
             groupBox.Controls.Add(radioButtonDesarrollador);
             groupBox.Font = new Font("Lucida Sans", 12F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox.ForeColor = SystemColors.ControlText;
-            groupBox.Location = new Point(46, 63);
+            groupBox.Location = new Point(53, 64);
             groupBox.Name = "groupBox";
             groupBox.Size = new Size(263, 107);
             groupBox.TabIndex = 12;
@@ -110,6 +87,7 @@
             radioButtonGerente.TabStop = true;
             radioButtonGerente.Text = "Gerente";
             radioButtonGerente.UseVisualStyleBackColor = true;
+            radioButtonGerente.CheckedChanged += radioButtonGerente_CheckedChanged;
             // 
             // radioButtonTester
             // 
@@ -121,6 +99,7 @@
             radioButtonTester.TabStop = true;
             radioButtonTester.Text = "Tester";
             radioButtonTester.UseVisualStyleBackColor = true;
+            radioButtonTester.CheckedChanged += radioButtonTester_CheckedChanged;
             // 
             // FormularioDatos
             // 
@@ -130,23 +109,17 @@
             ClientSize = new Size(372, 323);
             Controls.Add(groupBox);
             Controls.Add(buttonCancelar);
-            Controls.Add(buttonAceptar);
-            Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            MainMenuStrip = menuStrip1;
             Name = "FormularioDatos";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Agregar";
             groupBox.ResumeLayout(false);
             groupBox.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-        private Button buttonAceptar;
         private Button buttonCancelar;
-        private MenuStrip menuStrip1;
         private ToolStripMenuItem empleadoToolStripMenuItem;
         private ToolStripMenuItem gerenteToolStripMenuItem;
         private ToolStripMenuItem testerToolStripMenuItem;

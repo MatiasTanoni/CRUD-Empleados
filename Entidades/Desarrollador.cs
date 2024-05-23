@@ -18,7 +18,7 @@ namespace Entidades
         {
             get { return salario; }
         }
-        public string LeangueDeProgramacion
+        public string LenguajeDeProgramacion
         {
             get { return lenguajeDeProgramacion;}
         }

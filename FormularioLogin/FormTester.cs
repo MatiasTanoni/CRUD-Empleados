@@ -16,5 +16,11 @@ namespace Formularios
         {
             InitializeComponent();
         }
+
+        private void buttonCancelar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+
+        }
     }
 }

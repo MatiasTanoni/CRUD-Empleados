@@ -354,6 +354,7 @@
             buttonCancelar.TabIndex = 37;
             buttonCancelar.Text = "Cancelar";
             buttonCancelar.UseVisualStyleBackColor = false;
+            buttonCancelar.Click += buttonCancelar_Click;
             // 
             // buttonAceptar
             // 
@@ -417,6 +418,7 @@
             Controls.Add(pictureBoxBorderContrasena);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormGerente";
+            StartPosition = FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)pictureBoxContrasena).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxCorreo).EndInit();

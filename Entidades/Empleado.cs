@@ -6,7 +6,24 @@
         protected string nombre;
         protected int edad;
         protected int experiencia;
+        
+        //Propiedades
+        public string Nombre
+        {
+            get { return nombre; }
+            set { nombre = value; }
+        }
+        public int Edad
+        {
+            get { return edad; }
+            set { edad = value; }
+        }
 
+        public int Experiencia
+        {
+            get { return experiencia; }
+            set { experiencia = value; }
+        }
         // Constructor
         public Empleado()
         {

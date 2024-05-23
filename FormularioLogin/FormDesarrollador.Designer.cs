@@ -33,32 +33,32 @@
             buttonCancelar = new Button();
             buttonAceptar = new Button();
             labelProyectosFinalizados = new Label();
-            textBox3 = new TextBox();
             pictureBox7 = new PictureBox();
             labelLenguajeDeProgramacion = new Label();
-            textBox4 = new TextBox();
             pictureBox8 = new PictureBox();
             pictureBox9 = new PictureBox();
             pictureBox10 = new PictureBox();
             pictureBox11 = new PictureBox();
             labelSalario = new Label();
-            textBox1 = new TextBox();
             pictureBox2 = new PictureBox();
             labelExperiencia = new Label();
-            textBox2 = new TextBox();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox6 = new PictureBox();
             labelEdad = new Label();
-            textContrasena = new TextBox();
             pictureBoxContrasena = new PictureBox();
             labelNombre = new Label();
-            textBoxCorreo = new TextBox();
             pictureBox1 = new PictureBox();
             pictureBoxCorreo = new PictureBox();
             pictureBoxBorderCorreo = new PictureBox();
             pictureBoxBorderContrasena = new PictureBox();
+            textBoxEdad = new TextBox();
+            textBox2 = new TextBox();
+            textBox3 = new TextBox();
+            textBox4 = new TextBox();
+            textBox5 = new TextBox();
+            textBoxNombre = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
@@ -99,6 +99,7 @@
             buttonCancelar.TabIndex = 97;
             buttonCancelar.Text = "Cancelar";
             buttonCancelar.UseVisualStyleBackColor = false;
+            buttonCancelar.Click += buttonCancelar_Click;
             // 
             // buttonAceptar
             // 
@@ -111,6 +112,7 @@
             buttonAceptar.TabIndex = 96;
             buttonAceptar.Text = "Aceptar";
             buttonAceptar.UseVisualStyleBackColor = false;
+            buttonAceptar.Click += buttonAceptar_Click;
             // 
             // labelProyectosFinalizados
             // 
@@ -123,16 +125,6 @@
             labelProyectosFinalizados.Size = new Size(190, 18);
             labelProyectosFinalizados.TabIndex = 95;
             labelProyectosFinalizados.Text = "Proyectos Finalizados:";
-            // 
-            // textBox3
-            // 
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox3.Location = new Point(28, 461);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(242, 25);
-            textBox3.TabIndex = 92;
-            textBox3.Tag = "Correo";
             // 
             // pictureBox7
             // 
@@ -154,16 +146,6 @@
             labelLenguajeDeProgramacion.Size = new Size(230, 18);
             labelLenguajeDeProgramacion.TabIndex = 91;
             labelLenguajeDeProgramacion.Text = "Lenguaje De Programacion:";
-            // 
-            // textBox4
-            // 
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox4.Location = new Point(23, 378);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(254, 25);
-            textBox4.TabIndex = 87;
-            textBox4.Tag = "Correo";
             // 
             // pictureBox8
             // 
@@ -213,16 +195,6 @@
             labelSalario.TabIndex = 86;
             labelSalario.Text = "Salario:";
             // 
-            // textBox1
-            // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.Location = new Point(28, 306);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(242, 25);
-            textBox1.TabIndex = 83;
-            textBox1.Tag = "Correo";
-            // 
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.White;
@@ -243,16 +215,6 @@
             labelExperiencia.Size = new Size(105, 18);
             labelExperiencia.TabIndex = 82;
             labelExperiencia.Text = "Experiencia:";
-            // 
-            // textBox2
-            // 
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.Location = new Point(23, 228);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(254, 25);
-            textBox2.TabIndex = 78;
-            textBox2.Tag = "Correo";
             // 
             // pictureBox3
             // 
@@ -302,16 +264,6 @@
             labelEdad.TabIndex = 77;
             labelEdad.Text = "Edad:";
             // 
-            // textContrasena
-            // 
-            textContrasena.BorderStyle = BorderStyle.None;
-            textContrasena.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textContrasena.Location = new Point(28, 158);
-            textContrasena.Name = "textContrasena";
-            textContrasena.Size = new Size(242, 25);
-            textContrasena.TabIndex = 74;
-            textContrasena.Tag = "Correo";
-            // 
             // pictureBoxContrasena
             // 
             pictureBoxContrasena.BackColor = Color.White;
@@ -332,16 +284,6 @@
             labelNombre.Size = new Size(76, 18);
             labelNombre.TabIndex = 73;
             labelNombre.Text = "Nombre:";
-            // 
-            // textBoxCorreo
-            // 
-            textBoxCorreo.BorderStyle = BorderStyle.None;
-            textBoxCorreo.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxCorreo.Location = new Point(23, 82);
-            textBoxCorreo.Name = "textBoxCorreo";
-            textBoxCorreo.Size = new Size(254, 25);
-            textBoxCorreo.TabIndex = 69;
-            textBoxCorreo.Tag = "Correo";
             // 
             // pictureBox1
             // 
@@ -379,44 +321,88 @@
             pictureBoxBorderContrasena.TabIndex = 76;
             pictureBoxBorderContrasena.TabStop = false;
             // 
+            // textBoxEdad
+            // 
+            textBoxEdad.Location = new Point(17, 158);
+            textBoxEdad.Name = "textBoxEdad";
+            textBoxEdad.Size = new Size(248, 23);
+            textBoxEdad.TabIndex = 100;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(23, 460);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(248, 23);
+            textBox2.TabIndex = 101;
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(23, 378);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(248, 23);
+            textBox3.TabIndex = 102;
+            // 
+            // textBox4
+            // 
+            textBox4.Location = new Point(23, 306);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(248, 23);
+            textBox4.TabIndex = 103;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(23, 227);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(248, 23);
+            textBox5.TabIndex = 104;
+            // 
+            // textBoxNombre
+            // 
+            textBoxNombre.Location = new Point(23, 82);
+            textBoxNombre.Name = "textBoxNombre";
+            textBoxNombre.Size = new Size(248, 23);
+            textBoxNombre.TabIndex = 105;
+            textBoxNombre.TextChanged += textBoxNombre_TextChanged_1;
+            // 
             // FormDesarrollador
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(593, 519);
+            Controls.Add(textBoxNombre);
+            Controls.Add(textBox5);
+            Controls.Add(textBox4);
+            Controls.Add(textBox3);
+            Controls.Add(textBox2);
+            Controls.Add(textBoxEdad);
             Controls.Add(labelTester);
             Controls.Add(buttonCancelar);
             Controls.Add(buttonAceptar);
             Controls.Add(labelProyectosFinalizados);
-            Controls.Add(textBox3);
             Controls.Add(pictureBox7);
             Controls.Add(labelLenguajeDeProgramacion);
-            Controls.Add(textBox4);
             Controls.Add(pictureBox8);
             Controls.Add(pictureBox9);
             Controls.Add(pictureBox10);
             Controls.Add(pictureBox11);
             Controls.Add(labelSalario);
-            Controls.Add(textBox1);
             Controls.Add(pictureBox2);
             Controls.Add(labelExperiencia);
-            Controls.Add(textBox2);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox6);
             Controls.Add(labelEdad);
-            Controls.Add(textContrasena);
             Controls.Add(pictureBoxContrasena);
             Controls.Add(labelNombre);
-            Controls.Add(textBoxCorreo);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBoxCorreo);
             Controls.Add(pictureBoxBorderCorreo);
             Controls.Add(pictureBoxBorderContrasena);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormDesarrollador";
+            StartPosition = FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
@@ -442,31 +428,31 @@
         private Button buttonCancelar;
         private Button buttonAceptar;
         private Label labelProyectosFinalizados;
-        private TextBox textBox3;
         private PictureBox pictureBox7;
         private Label labelLenguajeDeProgramacion;
-        private TextBox textBox4;
         private PictureBox pictureBox8;
         private PictureBox pictureBox9;
         private PictureBox pictureBox10;
         private PictureBox pictureBox11;
         private Label labelSalario;
-        private TextBox textBox1;
         private PictureBox pictureBox2;
         private Label labelExperiencia;
-        private TextBox textBox2;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
         private Label labelEdad;
-        private TextBox textContrasena;
         private PictureBox pictureBoxContrasena;
         private Label labelNombre;
-        private TextBox textBoxCorreo;
         private PictureBox pictureBox1;
         private PictureBox pictureBoxCorreo;
         private PictureBox pictureBoxBorderCorreo;
         private PictureBox pictureBoxBorderContrasena;
+        private TextBox textBoxEdad;
+        private TextBox textBox2;
+        private TextBox textBox3;
+        private TextBox textBox4;
+        private TextBox textBox5;
+        private TextBox textBoxNombre;
     }
 }

@@ -9,13 +9,8 @@ namespace Entidades
     public class Empresa
     {
         //Atributos
-        private List<Empleado> listaDeEmpleados;
+        public List<Empleado> listaDeEmpleados;
 
-        //Constructor
-        public Empresa()
-        {
-            this.listaDeEmpleados = new List<Empleado>();
-        }
         //Propiedad
         public List<Empleado> ListaDeEmpleados 
         { 
@@ -33,6 +28,11 @@ namespace Entidades
         {
             empresa.listaDeEmpleados.Remove(empleado);
             return true;
+        }
+        //Constructor
+        public Empresa()
+        {
+            this.listaDeEmpleados = new List<Empleado>();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,10 @@ namespace Formularios
 {
     public partial class FormularioDatos : Form
     {
+        public FormDesarrollador formDesarrollador;
+        public FormTester formTester;
+        public FormGerente formGerente;
+        public string tipoDeEmpleado;
         public FormularioDatos()
         {
             InitializeComponent();
@@ -22,18 +27,36 @@ namespace Formularios
             this.DialogResult = DialogResult.Cancel;
         }
 
-        private void buttonAceptar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gerenteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void radioButtonDesarrollador_CheckedChanged(object sender, EventArgs e)
         {
+            if (!radioButtonTester.Checked && !radioButtonGerente.Checked)
+            {
+                this.formDesarrollador = new FormDesarrollador();
+                formDesarrollador.ShowDialog();
+            }
+            if (this.formDesarrollador.DialogResult == DialogResult.OK)
+            {
+                this.formDesarrollador.Close();
+            }
+        }
+
+        private void radioButtonTester_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!radioButtonDesarrollador.Checked && !radioButtonGerente.Checked)
+            {
+                this.formTester = new FormTester();
+                formTester.ShowDialog();                  
+            }
+
+        }
+
+        private void radioButtonGerente_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!radioButtonDesarrollador.Checked && !radioButtonTester.Checked)
+            {
+                this.formGerente = new FormGerente();
+                formGerente.ShowDialog();                      
+            }
 
         }
     }
