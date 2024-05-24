@@ -30,28 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGerente));
             labelEdad = new Label();
-            textContrasena = new TextBox();
+            textBoxEdad = new TextBox();
             pictureBoxContrasena = new PictureBox();
             labelNombre = new Label();
-            textBoxCorreo = new TextBox();
+            textBoxNombre = new TextBox();
             pictureBox1 = new PictureBox();
             pictureBoxCorreo = new PictureBox();
             pictureBoxBorderCorreo = new PictureBox();
             pictureBoxBorderContrasena = new PictureBox();
             labelSalario = new Label();
-            textBox1 = new TextBox();
+            textBoxSalario = new TextBox();
             pictureBox2 = new PictureBox();
             labelExperiencia = new Label();
-            textBox2 = new TextBox();
+            textBoxExperiencia = new TextBox();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox6 = new PictureBox();
             labelProyectosGestionados = new Label();
-            textBox3 = new TextBox();
+            textBoxProyectosGestionados = new TextBox();
             pictureBox7 = new PictureBox();
             labelPersonasACargo = new Label();
-            textBox4 = new TextBox();
+            textBoxPersonasACargo = new TextBox();
             pictureBox8 = new PictureBox();
             pictureBox9 = new PictureBox();
             pictureBox10 = new PictureBox();
@@ -88,15 +88,15 @@
             labelEdad.TabIndex = 17;
             labelEdad.Text = "Edad:";
             // 
-            // textContrasena
+            // textBoxEdad
             // 
-            textContrasena.BorderStyle = BorderStyle.None;
-            textContrasena.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textContrasena.Location = new Point(31, 151);
-            textContrasena.Name = "textContrasena";
-            textContrasena.Size = new Size(242, 25);
-            textContrasena.TabIndex = 14;
-            textContrasena.Tag = "Correo";
+            textBoxEdad.BorderStyle = BorderStyle.None;
+            textBoxEdad.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            textBoxEdad.Location = new Point(31, 151);
+            textBoxEdad.Name = "textBoxEdad";
+            textBoxEdad.Size = new Size(242, 25);
+            textBoxEdad.TabIndex = 2;
+            textBoxEdad.Tag = "Correo";
             // 
             // pictureBoxContrasena
             // 
@@ -119,15 +119,15 @@
             labelNombre.TabIndex = 13;
             labelNombre.Text = "Nombre:";
             // 
-            // textBoxCorreo
+            // textBoxNombre
             // 
-            textBoxCorreo.BorderStyle = BorderStyle.None;
-            textBoxCorreo.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxCorreo.Location = new Point(26, 75);
-            textBoxCorreo.Name = "textBoxCorreo";
-            textBoxCorreo.Size = new Size(254, 25);
-            textBoxCorreo.TabIndex = 9;
-            textBoxCorreo.Tag = "Correo";
+            textBoxNombre.BorderStyle = BorderStyle.None;
+            textBoxNombre.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            textBoxNombre.Location = new Point(26, 75);
+            textBoxNombre.Name = "textBoxNombre";
+            textBoxNombre.Size = new Size(254, 25);
+            textBoxNombre.TabIndex = 1;
+            textBoxNombre.Tag = "Correo";
             // 
             // pictureBox1
             // 
@@ -177,15 +177,15 @@
             labelSalario.TabIndex = 26;
             labelSalario.Text = "Salario:";
             // 
-            // textBox1
+            // textBoxSalario
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox1.Location = new Point(31, 299);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(242, 25);
-            textBox1.TabIndex = 23;
-            textBox1.Tag = "Correo";
+            textBoxSalario.BorderStyle = BorderStyle.None;
+            textBoxSalario.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            textBoxSalario.Location = new Point(31, 299);
+            textBoxSalario.Name = "textBoxSalario";
+            textBoxSalario.Size = new Size(242, 25);
+            textBoxSalario.TabIndex = 4;
+            textBoxSalario.Tag = "Correo";
             // 
             // pictureBox2
             // 
@@ -208,15 +208,15 @@
             labelExperiencia.TabIndex = 22;
             labelExperiencia.Text = "Experiencia:";
             // 
-            // textBox2
+            // textBoxExperiencia
             // 
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox2.Location = new Point(26, 221);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(254, 25);
-            textBox2.TabIndex = 18;
-            textBox2.Tag = "Correo";
+            textBoxExperiencia.BorderStyle = BorderStyle.None;
+            textBoxExperiencia.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            textBoxExperiencia.Location = new Point(26, 221);
+            textBoxExperiencia.Name = "textBoxExperiencia";
+            textBoxExperiencia.Size = new Size(254, 25);
+            textBoxExperiencia.TabIndex = 3;
+            textBoxExperiencia.Tag = "Correo";
             // 
             // pictureBox3
             // 
@@ -266,15 +266,16 @@
             labelProyectosGestionados.TabIndex = 35;
             labelProyectosGestionados.Text = "Proyectos Gestionados:";
             // 
-            // textBox3
+            // textBoxProyectosGestionados
             // 
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox3.Location = new Point(31, 454);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(242, 25);
-            textBox3.TabIndex = 32;
-            textBox3.Tag = "Correo";
+            textBoxProyectosGestionados.BorderStyle = BorderStyle.None;
+            textBoxProyectosGestionados.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            textBoxProyectosGestionados.Location = new Point(31, 454);
+            textBoxProyectosGestionados.Name = "textBoxProyectosGestionados";
+            textBoxProyectosGestionados.Size = new Size(242, 25);
+            textBoxProyectosGestionados.TabIndex = 6;
+            textBoxProyectosGestionados.Tag = "Correo";
+            textBoxProyectosGestionados.TextChanged += textBoxProyectosGestionados_TextChanged;
             // 
             // pictureBox7
             // 
@@ -297,15 +298,15 @@
             labelPersonasACargo.TabIndex = 31;
             labelPersonasACargo.Text = "Personas a cargo:";
             // 
-            // textBox4
+            // textBoxPersonasACargo
             // 
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBox4.Location = new Point(26, 371);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(254, 25);
-            textBox4.TabIndex = 27;
-            textBox4.Tag = "Correo";
+            textBoxPersonasACargo.BorderStyle = BorderStyle.None;
+            textBoxPersonasACargo.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            textBoxPersonasACargo.Location = new Point(26, 371);
+            textBoxPersonasACargo.Name = "textBoxPersonasACargo";
+            textBoxPersonasACargo.Size = new Size(254, 25);
+            textBoxPersonasACargo.TabIndex = 5;
+            textBoxPersonasACargo.Tag = "Correo";
             // 
             // pictureBox8
             // 
@@ -351,7 +352,7 @@
             buttonCancelar.Location = new Point(450, 429);
             buttonCancelar.Name = "buttonCancelar";
             buttonCancelar.Size = new Size(131, 64);
-            buttonCancelar.TabIndex = 37;
+            buttonCancelar.TabIndex = 8;
             buttonCancelar.Text = "Cancelar";
             buttonCancelar.UseVisualStyleBackColor = false;
             buttonCancelar.Click += buttonCancelar_Click;
@@ -364,9 +365,10 @@
             buttonAceptar.Location = new Point(313, 429);
             buttonAceptar.Name = "buttonAceptar";
             buttonAceptar.Size = new Size(131, 64);
-            buttonAceptar.TabIndex = 36;
+            buttonAceptar.TabIndex = 7;
             buttonAceptar.Text = "Aceptar";
             buttonAceptar.UseVisualStyleBackColor = false;
+            buttonAceptar.Click += buttonAceptar_Click;
             // 
             // labelGerente
             // 
@@ -390,28 +392,28 @@
             Controls.Add(buttonCancelar);
             Controls.Add(buttonAceptar);
             Controls.Add(labelProyectosGestionados);
-            Controls.Add(textBox3);
+            Controls.Add(textBoxProyectosGestionados);
             Controls.Add(pictureBox7);
             Controls.Add(labelPersonasACargo);
-            Controls.Add(textBox4);
+            Controls.Add(textBoxPersonasACargo);
             Controls.Add(pictureBox8);
             Controls.Add(pictureBox9);
             Controls.Add(pictureBox10);
             Controls.Add(pictureBox11);
             Controls.Add(labelSalario);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxSalario);
             Controls.Add(pictureBox2);
             Controls.Add(labelExperiencia);
-            Controls.Add(textBox2);
+            Controls.Add(textBoxExperiencia);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox5);
             Controls.Add(pictureBox6);
             Controls.Add(labelEdad);
-            Controls.Add(textContrasena);
+            Controls.Add(textBoxEdad);
             Controls.Add(pictureBoxContrasena);
             Controls.Add(labelNombre);
-            Controls.Add(textBoxCorreo);
+            Controls.Add(textBoxNombre);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBoxCorreo);
             Controls.Add(pictureBoxBorderCorreo);
@@ -441,28 +443,28 @@
         #endregion
 
         private Label labelEdad;
-        private TextBox textContrasena;
+        private TextBox textBoxEdad;
         private PictureBox pictureBoxContrasena;
         private Label labelNombre;
-        private TextBox textBoxCorreo;
+        private TextBox textBoxNombre;
         private PictureBox pictureBox1;
         private PictureBox pictureBoxCorreo;
         private PictureBox pictureBoxBorderCorreo;
         private PictureBox pictureBoxBorderContrasena;
         private Label labelSalario;
-        private TextBox textBox1;
+        private TextBox textBoxSalario;
         private PictureBox pictureBox2;
         private Label labelExperiencia;
-        private TextBox textBox2;
+        private TextBox textBoxExperiencia;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
         private PictureBox pictureBox6;
         private Label labelProyectosGestionados;
-        private TextBox textBox3;
+        private TextBox textBoxProyectosGestionados;
         private PictureBox pictureBox7;
         private Label labelPersonasACargo;
-        private TextBox textBox4;
+        private TextBox textBoxPersonasACargo;
         private PictureBox pictureBox8;
         private PictureBox pictureBox9;
         private PictureBox pictureBox10;

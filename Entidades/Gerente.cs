@@ -12,6 +12,24 @@ namespace Entidades
         private int salario;
         private int personasACargo;
         private int proyectosGestionados;
+
+        // Propiedades
+        public int Salario
+        {
+            get { return salario; }
+            set { salario = value; }
+        }
+        public int PersonasACargo
+        {
+            get { return personasACargo; }
+            set { personasACargo = value;}
+        }
+        public int ProyectosGestionados
+        {
+            get { return proyectosGestionados;}
+            set { proyectosGestionados = value;}
+        }
+
         // Constructor
         public Gerente(string nombre,int edad, int experiencia):base(nombre,edad,experiencia)
         {
@@ -31,7 +49,7 @@ namespace Entidades
 
         public override string MostrarInformacion()
         {
-            return $"el nombre es {this.nombre}, la edad es: {this.edad},Experiencia: {this.experiencia}, el salario es:  {this.salario}, y esta a cargo de: {this.personasACargo} personas, Proyectos Gestionados: {this.proyectosGestionados}";
+            return $"Nombre: {this.nombre} - Edad: {this.edad} - Experiencia: {this.experiencia} - Salario: {this.salario} - A cargo de: {this.personasACargo} personas - Proyectos Gestionados: {this.proyectosGestionados}";
         }
         //public override string ToString()
         //{

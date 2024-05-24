@@ -17,14 +17,17 @@ namespace Entidades
         public int Salario
         {
             get { return salario; }
+            set { salario = value; }
         }
         public string LenguajeDeProgramacion
         {
             get { return lenguajeDeProgramacion;}
+            set { lenguajeDeProgramacion = value; }
         }
         public int ProyectosFinalizados
         {
             get { return proyectosFinalizados;}
+            set { proyectosFinalizados = value; }
         }
         
         // Constructor
@@ -46,7 +49,7 @@ namespace Entidades
         }
         public override string MostrarInformacion()
         {     
-            return $"Nombre: {this.nombre},Edad: {this.edad},Experiencia: {this.experiencia}, Salario: {this.salario}, lenguaje de programacion: {this.lenguajeDeProgramacion},Proyectos finalizados: {this.proyectosFinalizados}";     
+            return $"Nombre: {this.nombre} - Edad: {this.edad} - Experiencia: {this.experiencia} - Salario: {this.salario} - lenguaje de programacion: {this.lenguajeDeProgramacion} - Proyectos finalizados: {this.proyectosFinalizados}";     
         }
         //public override string ToString()
         //{

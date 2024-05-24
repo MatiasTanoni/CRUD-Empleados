@@ -20,14 +20,41 @@ namespace FormularioLogin
         {
             this.formularioAgregar = new FormularioDatos();
             formularioAgregar.ShowDialog();
-            this.actualizarVisor(this.formularioAgregar.formDesarrollador.empresa);
+
+            if (formularioAgregar.formDesarrollador != null)
+            {
+                this.actualizarVisor(this.formularioAgregar.formDesarrollador.empresa);
+            }
+            if (formularioAgregar.formTester != null)
+            {
+                this.actualizarVisor(this.formularioAgregar.formTester.empresa);
+            }
+            if(formularioAgregar.formGerente != null)
+            {
+                this.actualizarVisor(this.formularioAgregar.formGerente.empresa);
+            }
         }
         private void actualizarVisor(Empresa empresa)
         {
-            foreach (Empleado empleado in empresa.listaDeEmpleados)
+            if (empresa != null && empresa.listaDeEmpleados != null)
             {
-                this.listBoxPrincipal.Items.Add(empleado.MostrarInformacion());
+                try
+                {
+                    foreach (Empleado empleado in empresa.listaDeEmpleados)
+                    {
+                        this.listBoxPrincipal.Items.Add(empleado.MostrarInformacion());
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al agregar datos: {ex.Message}");
+                }
             }
+            else
+            {
+                MessageBox.Show("No agregaste nada a la lista de empleados.");
+            }
+
         }
 
         private void buttonEliminar_Click(object sender, EventArgs e)

@@ -38,12 +38,13 @@
             // listBoxPrincipal
             // 
             listBoxPrincipal.BackColor = Color.Silver;
+            listBoxPrincipal.Font = new Font("Lucida Sans", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
             listBoxPrincipal.FormattingEnabled = true;
             listBoxPrincipal.ItemHeight = 15;
             listBoxPrincipal.Location = new Point(12, 30);
             listBoxPrincipal.Name = "listBoxPrincipal";
             listBoxPrincipal.Size = new Size(776, 304);
-            listBoxPrincipal.TabIndex = 0;
+            listBoxPrincipal.TabIndex = 3;
             listBoxPrincipal.SelectedIndexChanged += listBoxPrincipal_SelectedIndexChanged;
             // 
             // buttonAgregar
@@ -54,7 +55,7 @@
             buttonAgregar.Location = new Point(84, 360);
             buttonAgregar.Name = "buttonAgregar";
             buttonAgregar.Size = new Size(127, 62);
-            buttonAgregar.TabIndex = 1;
+            buttonAgregar.TabIndex = 0;
             buttonAgregar.Text = "Agregar";
             buttonAgregar.UseVisualStyleBackColor = false;
             buttonAgregar.Click += buttonAgregar_Click;
@@ -80,7 +81,7 @@
             buttonModificar.Location = new Point(350, 360);
             buttonModificar.Name = "buttonModificar";
             buttonModificar.Size = new Size(127, 62);
-            buttonModificar.TabIndex = 3;
+            buttonModificar.TabIndex = 1;
             buttonModificar.Text = "Modificar";
             buttonModificar.UseVisualStyleBackColor = false;
             buttonModificar.Click += buttonModificar_Click;

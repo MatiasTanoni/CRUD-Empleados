@@ -13,6 +13,7 @@ namespace Formularios
 {
     public partial class FormularioDatos : Form
     {
+        //public FormularioDatos formularioDatos;
         public FormDesarrollador formDesarrollador;
         public FormTester formTester;
         public FormGerente formGerente;

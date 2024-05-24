@@ -13,6 +13,24 @@ namespace Entidades
         private string herramientaDePrueba;
         private int proyectosTesteados;
 
+        //Propiedades
+        public int Salario
+        {
+            set { salario = value; }
+            get { return salario; }
+        }
+        public string HerramientaDePrueba
+        {
+            set { herramientaDePrueba = value; }
+            get { return herramientaDePrueba;}
+        }
+        public int ProyectosTesteados
+        {
+            set { proyectosTesteados = value; }
+            get { return proyectosTesteados; }
+        }
+
+
         // Constructor
         public Tester(string nombre,int edad, int experiencia) : base(nombre,edad,experiencia)
         {       
@@ -36,7 +54,7 @@ namespace Entidades
 
         public override string MostrarInformacion()
         {
-            return $"Nombre: {this.nombre}, Edad: {this.edad},Experiencia: {this.experiencia},Salario: {this.salario}, Herramienta De Prueba: {this.herramientaDePrueba}, Testeo: {this.proyectosTesteados} proyectos";
+            return $"Nombre: {this.nombre} - Edad: {this.edad} - Experiencia: {this.experiencia} - Salario: {this.salario} - Herramienta De Prueba: {this.herramientaDePrueba} - Testeo: {this.proyectosTesteados} proyectos";
         }
         //public override string ToString()
         //{

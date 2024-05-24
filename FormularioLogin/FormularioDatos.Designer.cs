@@ -56,7 +56,7 @@
             radioButtonDesarrollador.Location = new Point(6, 23);
             radioButtonDesarrollador.Name = "radioButtonDesarrollador";
             radioButtonDesarrollador.Size = new Size(136, 22);
-            radioButtonDesarrollador.TabIndex = 9;
+            radioButtonDesarrollador.TabIndex = 1;
             radioButtonDesarrollador.TabStop = true;
             radioButtonDesarrollador.Text = "Desarrollador";
             radioButtonDesarrollador.UseVisualStyleBackColor = true;
@@ -83,7 +83,7 @@
             radioButtonGerente.Location = new Point(6, 73);
             radioButtonGerente.Name = "radioButtonGerente";
             radioButtonGerente.Size = new Size(91, 22);
-            radioButtonGerente.TabIndex = 11;
+            radioButtonGerente.TabIndex = 3;
             radioButtonGerente.TabStop = true;
             radioButtonGerente.Text = "Gerente";
             radioButtonGerente.UseVisualStyleBackColor = true;
@@ -95,7 +95,7 @@
             radioButtonTester.Location = new Point(6, 48);
             radioButtonTester.Name = "radioButtonTester";
             radioButtonTester.Size = new Size(78, 22);
-            radioButtonTester.TabIndex = 10;
+            radioButtonTester.TabIndex = 2;
             radioButtonTester.TabStop = true;
             radioButtonTester.Text = "Tester";
             radioButtonTester.UseVisualStyleBackColor = true;

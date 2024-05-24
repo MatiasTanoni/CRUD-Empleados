@@ -91,7 +91,7 @@
             buttonIniciarSesion.Location = new Point(154, 341);
             buttonIniciarSesion.Name = "buttonIniciarSesion";
             buttonIniciarSesion.Size = new Size(145, 71);
-            buttonIniciarSesion.TabIndex = 9;
+            buttonIniciarSesion.TabIndex = 2;
             buttonIniciarSesion.Text = "Iniciar Sesión";
             buttonIniciarSesion.UseVisualStyleBackColor = true;
             buttonIniciarSesion.Click += buttonIniciarSesion_Click;
@@ -114,8 +114,9 @@
             textContrasena.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
             textContrasena.Location = new Point(24, 191);
             textContrasena.Name = "textContrasena";
+            textContrasena.PasswordChar = '*';
             textContrasena.Size = new Size(242, 25);
-            textContrasena.TabIndex = 4;
+            textContrasena.TabIndex = 1;
             textContrasena.Tag = "Correo";
             textContrasena.TextChanged += textContrasena_TextChanged;
             // 
