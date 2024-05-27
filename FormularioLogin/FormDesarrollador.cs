@@ -9,16 +9,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Formularios;
+using System.Text.RegularExpressions;
 
 namespace Formularios
 {
     public partial class FormDesarrollador : Form
     {
-        public Empresa empresa;
-        public Desarrollador desarrollador;
+        //Atributos
+        private Desarrollador desarrollador = new Desarrollador("",0,0);
+        public Empresa empresa = new Empresa();
+
+        public Desarrollador Desarrollador
+        {
+            get { return desarrollador; }
+            set { desarrollador = value; }
+        }
+
+        // Contructor
         public FormDesarrollador()
         {
             InitializeComponent();
+        }
+        public FormDesarrollador(Empresa empresa) : this()
+        {
+            this.empresa = empresa;
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
@@ -28,63 +42,112 @@ namespace Formularios
 
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
-            this.empresa = new Empresa();
-            this.desarrollador = new Desarrollador("", 0, 0);
-            this.desarrollador.Nombre = this.textBoxNombre.Text;
-            this.desarrollador.Experiencia = int.Parse(this.textBoxExperiencia.Text);
-            this.desarrollador.Salario = int.Parse(this.textBoxSalario.Text);
-            this.desarrollador.LenguajeDeProgramacion = this.textBoxLenguajeDeProgramacion.Text;
-            this.desarrollador.ProyectosFinalizados = int.Parse(this.textBoxProyectosFinalizados.Text);
+            bool esValido = true;
+            esValido &= Validar(desarrollador, "nombre", textBoxNombre);
+            esValido &= Validar(desarrollador, "edad", textBoxEdad);
+            esValido &= Validar(desarrollador, "experiencia", textBoxExperiencia);
+            esValido &= Validar(desarrollador, "salario", textBoxSalario);
+            esValido &= Validar(desarrollador, "lenguaje de programacion", textBoxLenguajeDeProgramacion);
+            esValido &= Validar(desarrollador, "proyectos finalizados", textBoxProyectosFinalizados);
 
-
-            if (int.TryParse(this.textBoxEdad.Text, out _))
+            if (esValido)
             {
-                if (int.Parse(this.textBoxEdad.Text) > 0 && int.Parse(this.textBoxEdad.Text) < 90)
+                this.empresa.listaDeEmpleados.Add(desarrollador);
+                this.DialogResult = DialogResult.OK;
+            }
+        }
+        private bool Validar(Desarrollador desarrollador, string dato,TextBox textBox)
+        {
+            switch (dato)
+            {
+                case "nombre":
+                    if (!string.IsNullOrWhiteSpace(textBox.Text) && !int.TryParse(textBox.Text, out _))
+                    {
+                        desarrollador.Nombre = textBox.Text;
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Por favor, el nombre no puede estar vacío o ser un número.");
+                        return false;
+                    }
+                case "lenguaje de programacion":
+                    {
+                        if (!string.IsNullOrWhiteSpace(textBox.Text) && !int.TryParse(textBox.Text, out _))
+                        {
+                            desarrollador.LenguajeDeProgramacion = textBox.Text;
+                            return true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Por favor, El lenguaje de programación no puede estar vacío o ser un número.");
+                            return false;
+                        }
+                    }
+                case "edad":
                 {
-                    this.desarrollador.Edad = int.Parse(this.textBoxEdad.Text); 
-                    this.empresa.listaDeEmpleados.Add(this.desarrollador);
-                    this.DialogResult = DialogResult.OK;
-                    //this.FormularioDatos.Hide();
+                if (int.TryParse(textBox.Text, out int edad))
+                {
+                    if (edad > 0 && edad < 90)
+                    {
+                        desarrollador.Edad = edad;
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Por favor, ingrese una edad válida (entre 1 y 89).");
+                        return false;
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("edad inexistente");
+                    MessageBox.Show("Por favor, ingrese un valor numérico válido para la edad.");
+                    return false;
                 }
+                }
+                case "salario":
+                    {
+                        if (int.TryParse(textBox.Text, out int salario))
+                        {
+                            desarrollador.Salario = salario;
+                            return true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Por favor, ingrese un valor numérico válido para el salario.");
+                            return false ;
+                        }
+                    }
+                case "experiencia":
+                    {
+                        if (int.TryParse(textBox.Text, out int experiencia))
+                        {
+                            desarrollador.Experiencia = experiencia;
+                            return true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Por favor, ingrese un valor numérico válido para la experiencia.");
+                            return false;
+                        }
+                    }
+                case "proyectos finalizados":
+                    {
+                        if (int.TryParse(textBox.Text, out int proyectosFinalizados))
+                        {
+                            desarrollador.ProyectosFinalizados = proyectosFinalizados;
+                            return true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Por favor, ingrese un valor numérico válido para los proyectos finalizados.");
+                            return false;
+                        }
+                    }
+                default:
+                    return false;
             }
-            else
-            {
-                MessageBox.Show("mal ingresado, no has ingresado un numero");
-            }
-
+        }
     }
-        //private void ValidarIngresosDesarrollador(TextBox textBoxNombre_, TextBox textBoxEdad_, TextBox textBoxExperiencia_,TextBox textBoxSalario_, TextBox textBoxLenguajeDeProgramacion_, TextBox textBoxProyectosFinalizados_, Empresa empresaa, Desarrollador desarrolladorr)
-        //{
-        //    empresaa = new Empresa();
-        //    desarrolladorr = new Desarrollador("", 0, 0);
-
-        //    desarrolladorr.Nombre = textBoxNombre_.Text;
-        //    desarrolladorr.Experiencia = int.Parse(textBoxExperiencia_.Text);
-        //    desarrolladorr.Salario = int.Parse(textBoxSalario_.Text);
-        //    desarrolladorr.LenguajeDeProgramacion = textBoxLenguajeDeProgramacion_.Text;
-        //    desarrolladorr.ProyectosFinalizados = int.Parse(textBoxProyectosFinalizados_.Text);
-
-        //    if (int.TryParse(textBoxEdad_.Text, out _))
-        //    {
-        //        if (int.Parse(textBoxEdad_.Text) > 0 && int.Parse(textBoxEdad_.Text) < 90)
-        //        {
-        //            desarrolladorr.Edad = int.Parse(textBoxEdad_.Text);
-        //            empresaa.listaDeEmpleados.Add(desarrolladorr);
-        //            //DialogResult = DialogResult.Cancel;
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("Edad Inexistente");
-        //        }
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Mal Ingresado, no has ingresado un numero");
-        //    }
-        //}
-    }
+   
 }

@@ -1,6 +1,6 @@
 ﻿namespace Formularios
 {
-    partial class FormTester
+    partial class FormTester : Form
     {
         /// <summary>
         /// Required designer variable.
@@ -32,8 +32,8 @@
             labelTester = new Label();
             buttonCancelar = new Button();
             buttonAceptar = new Button();
-            labelProyectosGestionados = new Label();
-            textBoxProyectosGestionados = new TextBox();
+            labelProyectosTesteados = new Label();
+            textBoxProyectosTesteados = new TextBox();
             pictureBox7 = new PictureBox();
             labelHerramientaDePrueba = new Label();
             textBoxHerramientaDePrueba = new TextBox();
@@ -114,27 +114,27 @@
             buttonAceptar.UseVisualStyleBackColor = false;
             buttonAceptar.Click += buttonAceptar_Click;
             // 
-            // labelProyectosGestionados
+            // labelProyectosTesteados
             // 
-            labelProyectosGestionados.AutoSize = true;
-            labelProyectosGestionados.BackColor = Color.White;
-            labelProyectosGestionados.Font = new Font("Lucida Sans", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelProyectosGestionados.ForeColor = Color.Black;
-            labelProyectosGestionados.Location = new Point(23, 440);
-            labelProyectosGestionados.Name = "labelProyectosGestionados";
-            labelProyectosGestionados.Size = new Size(202, 18);
-            labelProyectosGestionados.TabIndex = 65;
-            labelProyectosGestionados.Text = "Proyectos Gestionados:";
+            labelProyectosTesteados.AutoSize = true;
+            labelProyectosTesteados.BackColor = Color.White;
+            labelProyectosTesteados.Font = new Font("Lucida Sans", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            labelProyectosTesteados.ForeColor = Color.Black;
+            labelProyectosTesteados.Location = new Point(23, 440);
+            labelProyectosTesteados.Name = "labelProyectosTesteados";
+            labelProyectosTesteados.Size = new Size(181, 18);
+            labelProyectosTesteados.TabIndex = 65;
+            labelProyectosTesteados.Text = "Proyectos Testeados";
             // 
-            // textBoxProyectosGestionados
+            // textBoxProyectosTesteados
             // 
-            textBoxProyectosGestionados.BorderStyle = BorderStyle.None;
-            textBoxProyectosGestionados.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxProyectosGestionados.Location = new Point(28, 461);
-            textBoxProyectosGestionados.Name = "textBoxProyectosGestionados";
-            textBoxProyectosGestionados.Size = new Size(242, 25);
-            textBoxProyectosGestionados.TabIndex = 6;
-            textBoxProyectosGestionados.Tag = "Correo";
+            textBoxProyectosTesteados.BorderStyle = BorderStyle.None;
+            textBoxProyectosTesteados.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            textBoxProyectosTesteados.Location = new Point(28, 461);
+            textBoxProyectosTesteados.Name = "textBoxProyectosTesteados";
+            textBoxProyectosTesteados.Size = new Size(242, 25);
+            textBoxProyectosTesteados.TabIndex = 6;
+            textBoxProyectosTesteados.Tag = "Correo";
             // 
             // pictureBox7
             // 
@@ -390,8 +390,8 @@
             Controls.Add(labelTester);
             Controls.Add(buttonCancelar);
             Controls.Add(buttonAceptar);
-            Controls.Add(labelProyectosGestionados);
-            Controls.Add(textBoxProyectosGestionados);
+            Controls.Add(labelProyectosTesteados);
+            Controls.Add(textBoxProyectosTesteados);
             Controls.Add(pictureBox7);
             Controls.Add(labelHerramientaDePrueba);
             Controls.Add(textBoxHerramientaDePrueba);
@@ -444,8 +444,8 @@
         private Label labelTester;
         private Button buttonCancelar;
         private Button buttonAceptar;
-        private Label labelProyectosGestionados;
-        private TextBox textBoxProyectosGestionados;
+        private Label labelProyectosTesteados;
+        private TextBox textBoxProyectosTesteados;
         private PictureBox pictureBox7;
         private Label labelHerramientaDePrueba;
         private TextBox textBoxHerramientaDePrueba;

@@ -275,7 +275,6 @@
             textBoxProyectosGestionados.Size = new Size(242, 25);
             textBoxProyectosGestionados.TabIndex = 6;
             textBoxProyectosGestionados.Tag = "Correo";
-            textBoxProyectosGestionados.TextChanged += textBoxProyectosGestionados_TextChanged;
             // 
             // pictureBox7
             // 

@@ -49,7 +49,7 @@ namespace Entidades
         }
         public override string MostrarInformacion()
         {     
-            return $"Nombre: {this.nombre} - Edad: {this.edad} - Experiencia: {this.experiencia} - Salario: {this.salario} - lenguaje de programacion: {this.lenguajeDeProgramacion} - Proyectos finalizados: {this.proyectosFinalizados}";     
+            return $"Nombre: {this.nombre} - Edad: {this.edad} - Experiencia: {this.experiencia} - Salario: {this.salario} - Lenguaje De Programacion: {this.lenguajeDeProgramacion} - Proyectos finalizados: {this.proyectosFinalizados}";     
         }
         //public override string ToString()
         //{

@@ -4,7 +4,6 @@ C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogi
 C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogin\bin\Debug\net6.0-windows\Formularios.dll
 C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogin\bin\Debug\net6.0-windows\Formularios.pdb
 C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogin\obj\Debug\net6.0-windows\Formularios.FormularioLogin.resources
-C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogin\obj\Debug\net6.0-windows\FormularioLogin.FormularioPrincipal.resources
 C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogin\obj\Debug\net6.0-windows\Formularios.csproj.GenerateResource.cache
 C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogin\obj\Debug\net6.0-windows\Formularios.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogin\obj\Debug\net6.0-windows\Formularios.AssemblyInfoInputs.cache
@@ -25,3 +24,4 @@ C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogi
 C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogin\obj\Debug\net6.0-windows\Formularios.FormDesarrollador.resources
 C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogin\obj\Debug\net6.0-windows\Formularios.FormGerente.resources
 C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogin\obj\Debug\net6.0-windows\Formularios.FormTester.resources
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogin\obj\Debug\net6.0-windows\Formularios.FormularioPrincipal.resources

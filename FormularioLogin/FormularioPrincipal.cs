@@ -1,48 +1,24 @@
 using Entidades;
 using Formularios;
-namespace FormularioLogin
+namespace Formularios
 {
     public partial class FormularioPrincipal : Form
     {
         public FormularioDatos formularioAgregar;
+        public Empresa empresa = new Empresa();
         public FormularioPrincipal()
         {
             InitializeComponent();
         }
-
-        private void buttonModificar_Click(object sender, EventArgs e)
-        {
-            FormularioDatos formularioAgregar = new FormularioDatos();
-            formularioAgregar.ShowDialog();
-        }
-
-        private void buttonAgregar_Click(object sender, EventArgs e)
-        {
-            this.formularioAgregar = new FormularioDatos();
-            formularioAgregar.ShowDialog();
-
-            if (formularioAgregar.formDesarrollador != null)
-            {
-                this.actualizarVisor(this.formularioAgregar.formDesarrollador.empresa);
-            }
-            if (formularioAgregar.formTester != null)
-            {
-                this.actualizarVisor(this.formularioAgregar.formTester.empresa);
-            }
-            if(formularioAgregar.formGerente != null)
-            {
-                this.actualizarVisor(this.formularioAgregar.formGerente.empresa);
-            }
-        }
-        private void actualizarVisor(Empresa empresa)
+        private void ActualizarVisor()
         {
             if (empresa != null && empresa.listaDeEmpleados != null)
             {
                 try
                 {
-                    foreach (Empleado empleado in empresa.listaDeEmpleados)
+                    foreach (Empleado empleado in this.empresa.listaDeEmpleados)
                     {
-                        this.listBoxPrincipal.Items.Add(empleado.MostrarInformacion());
+                        listBoxPrincipal.Items.Add(empleado.MostrarInformacion());
                     }
                 }
                 catch (Exception ex)
@@ -57,15 +33,46 @@ namespace FormularioLogin
 
         }
 
-        private void buttonEliminar_Click(object sender, EventArgs e)
+        private void buttonAgregar_Click_1(object sender, EventArgs e)
+        {
+            this.formularioAgregar = new FormularioDatos(empresa);
+            formularioAgregar.ShowDialog();
+
+            if (formularioAgregar.formDesarrollador != null)
+            {
+                this.listBoxPrincipal.Items.Clear();
+                this.ActualizarVisor();
+            }
+            if (formularioAgregar.formTester != null)
+            {
+                this.listBoxPrincipal.Items.Clear();
+
+                this.ActualizarVisor();
+            }
+            if (formularioAgregar.formGerente != null)
+            {
+                this.listBoxPrincipal.Items.Clear();
+
+                this.ActualizarVisor();
+            }
+        }
+
+        private void buttonModificar_Click(object sender, EventArgs e)
         {
             FormularioDatos formularioAgregar = new FormularioDatos();
             formularioAgregar.ShowDialog();
         }
 
-        private void listBoxPrincipal_SelectedIndexChanged(object sender, EventArgs e)
+        private void buttonEliminar_Click_1(object sender, EventArgs e)
         {
+            int indice = this.listBoxPrincipal.SelectedIndex;
+            if (indice != -1)
+            {
+                this.empresa.listaDeEmpleados.RemoveAt(indice);
 
+                this.listBoxPrincipal.Items.Clear();
+                this.ActualizarVisor();
+            }
         }
     }
 }

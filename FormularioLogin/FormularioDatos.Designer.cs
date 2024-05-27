@@ -1,7 +1,9 @@
-﻿namespace Formularios
+﻿
+namespace Formularios
 {
     partial class FormularioDatos
-    {
+    {  
+   
         /// <summary>
         /// Required designer variable.
         /// </summary>

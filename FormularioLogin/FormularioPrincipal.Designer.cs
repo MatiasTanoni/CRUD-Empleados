@@ -1,4 +1,4 @@
-﻿namespace FormularioLogin
+﻿namespace Formularios
 {
     partial class FormularioPrincipal
     {
@@ -45,7 +45,6 @@
             listBoxPrincipal.Name = "listBoxPrincipal";
             listBoxPrincipal.Size = new Size(776, 304);
             listBoxPrincipal.TabIndex = 3;
-            listBoxPrincipal.SelectedIndexChanged += listBoxPrincipal_SelectedIndexChanged;
             // 
             // buttonAgregar
             // 
@@ -58,7 +57,7 @@
             buttonAgregar.TabIndex = 0;
             buttonAgregar.Text = "Agregar";
             buttonAgregar.UseVisualStyleBackColor = false;
-            buttonAgregar.Click += buttonAgregar_Click;
+            buttonAgregar.Click += buttonAgregar_Click_1;
             // 
             // buttonEliminar
             // 
@@ -71,7 +70,7 @@
             buttonEliminar.TabIndex = 2;
             buttonEliminar.Text = "Eliminar";
             buttonEliminar.UseVisualStyleBackColor = false;
-            buttonEliminar.Click += buttonEliminar_Click;
+            buttonEliminar.Click += buttonEliminar_Click_1;
             // 
             // buttonModificar
             // 
