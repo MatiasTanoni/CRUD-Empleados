@@ -13,17 +13,35 @@ namespace Formularios
 {
     public partial class FormTester : Form
     {
-        public Tester tester = new Tester("",0,0);
+        private Tester tester = new Tester("",0,0);
         public Empresa empresa = new Empresa();
+
+        public Tester Tester 
+        { 
+            get { return tester; } 
+            set { tester = value; }
+        }
+
         public FormTester()
         {
             InitializeComponent();
-
         }
         public FormTester(Empresa empresa) :this()
         {
             this.empresa = empresa;
         }
+
+        public FormTester(Tester tester) : this()
+        {
+            this.tester = tester;
+            this.textBoxNombre.Text = tester.Nombre.ToString();
+            this.textBoxEdad.Text = tester.Edad.ToString();
+            this.textBoxExperiencia.Text = tester.Experiencia.ToString();
+            this.textBoxSalario.Text = tester.Salario.ToString();
+            this.textBoxHerramientaDePrueba.Text = tester.HerramientaDePrueba.ToString();
+            this.textBoxProyectosTesteados.Text = tester.ProyectosTesteados.ToString();
+        }
+
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
@@ -41,7 +59,7 @@ namespace Formularios
 
             if (esValido)
             {
-                this.empresa.listaDeEmpleados.Add(tester);
+                this.empresa.ListaDeEmpleados.Add(tester);
                 this.DialogResult = DialogResult.OK;
             }
         }

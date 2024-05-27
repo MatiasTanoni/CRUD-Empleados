@@ -19,6 +19,7 @@ namespace Formularios
         private Desarrollador desarrollador = new Desarrollador("",0,0);
         public Empresa empresa = new Empresa();
 
+        // Propiedades
         public Desarrollador Desarrollador
         {
             get { return desarrollador; }
@@ -33,6 +34,16 @@ namespace Formularios
         public FormDesarrollador(Empresa empresa) : this()
         {
             this.empresa = empresa;
+        }
+        public FormDesarrollador(Desarrollador desarrollador) : this()
+        {
+            this.desarrollador = desarrollador;
+            this.textBoxNombre.Text = desarrollador.Nombre.ToString();
+            this.textBoxEdad.Text = desarrollador.Edad.ToString();
+            this.textBoxExperiencia.Text = desarrollador.Experiencia.ToString();
+            this.textBoxSalario.Text = desarrollador.Salario.ToString();
+            this.textBoxLenguajeDeProgramacion.Text = desarrollador.LenguajeDeProgramacion.ToString();
+            this.textBoxProyectosFinalizados.Text = desarrollador.ProyectosFinalizados.ToString();
         }
 
         private void buttonCancelar_Click(object sender, EventArgs e)
@@ -52,7 +63,7 @@ namespace Formularios
 
             if (esValido)
             {
-                this.empresa.listaDeEmpleados.Add(desarrollador);
+                this.empresa.ListaDeEmpleados.Add(desarrollador);
                 this.DialogResult = DialogResult.OK;
             }
         }

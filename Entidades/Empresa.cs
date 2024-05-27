@@ -9,7 +9,7 @@ namespace Entidades
     public class Empresa
     {
         //Atributos
-        public List<Empleado> listaDeEmpleados;
+        private List<Empleado> listaDeEmpleados;
 
         //Propiedad
         public List<Empleado> ListaDeEmpleados 
