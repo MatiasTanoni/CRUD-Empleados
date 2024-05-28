@@ -13,9 +13,16 @@ namespace Formularios
 {
     public partial class FormTester : Form
     {
+        /// <summary>
+        /// Representa un objeto de tipo Tester con valores predeterminados para el nombre, la edad y el salario.
+        /// Representa una instancia de la clase Empresa que almacena información sobre la empresa, incluida la lista de empleados.
+        /// </summary>
         private Tester tester = new Tester("",0,0);
         public Empresa empresa = new Empresa();
 
+        /// <summary>
+        /// Obtiene o establece el objeto de tipo Tester asociado a esta instancia.
+        /// </summary>
         public Tester Tester 
         { 
             get { return tester; } 
@@ -26,11 +33,20 @@ namespace Formularios
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Inicializa una nueva instancia de la clase FormTester con la empresa proporcionada.
+        /// </summary>
+        /// <param name="empresa">La empresa asociada a este formulario.</param>
         public FormTester(Empresa empresa) :this()
         {
             this.empresa = empresa;
         }
 
+        /// <summary>
+        /// Inicializa una nueva instancia de la clase FormTester con el objeto Tester proporcionado.
+        /// Asigna los valores del objeto Tester a los controles del formulario.
+        /// </summary>
+        /// <param name="tester">El objeto Tester utilizado para inicializar el formulario.</param>
         public FormTester(Tester tester) : this()
         {
             this.tester = tester;
@@ -42,11 +58,23 @@ namespace Formularios
             this.textBoxProyectosTesteados.Text = tester.ProyectosTesteados.ToString();
         }
 
+        /// <summary>
+        /// Maneja el evento Click del botón "Cancelar".
+        /// Establece el resultado del diálogo como Cancelar.
+        /// </summary>
+        /// <param name="sender">El origen del evento.</param>
+        /// <param name="e">Los datos del evento.</param>
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
         }
 
+        /// <summary>
+        /// Maneja el evento Click del botón "Aceptar".
+        /// Valida los datos del formulario y agrega un nuevo objeto Tester a la lista de empleados si los datos son válidos.
+        /// </summary>
+        /// <param name="sender">El origen del evento.</param>
+        /// <param name="e">Los datos del evento.</param>
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
             bool esValido = true;
@@ -63,6 +91,14 @@ namespace Formularios
                 this.DialogResult = DialogResult.OK;
             }
         }
+
+        /// <summary>
+        /// Valida los datos de un objeto Tester según el tipo de dato especificado.
+        /// </summary>
+        /// <param name="tester">El objeto Tester a validar.</param>
+        /// <param name="dato">El tipo de dato a validar (nombre, herramienta de prueba, edad, salario, experiencia, proyectos testeados).</param>
+        /// <param name="textBox">El control TextBox que contiene el valor a validar.</param>
+        /// <returns>True si los datos son válidos; False si no lo son.</returns>
         private bool Validar(Tester tester, string dato, TextBox textBox)
         {
             switch (dato)
@@ -129,8 +165,16 @@ namespace Formularios
                     {
                         if (int.TryParse(textBox.Text, out int experiencia))
                         {
-                            tester.Experiencia = experiencia;
-                            return true;
+                            if (experiencia >= 0 && experiencia < 90)
+                            {
+                                tester.Experiencia = experiencia;
+                                return true;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Por favor, ingrese una experiencia válida (entre 0 y 89).");
+                                return false;
+                            }
                         }
                         else
                         {

@@ -4,6 +4,13 @@ namespace Formularios
 {
     public partial class FormularioPrincipal : Form
     {
+        /// <summary>
+        /// Formulario para manejar datos de desarrolladores.
+        /// Formulario para manejar datos de testers.
+        /// Formulario para manejar datos de gerentes.
+        /// Formulario para agregar nuevos empleados.
+        /// Empresa que contiene la lista de empleados.
+        /// </summary>
         public FormDesarrollador formularioDesarrollador = new FormDesarrollador();
         public FormTester formTester = new FormTester();
         public FormGerente formGerente = new FormGerente();
@@ -13,9 +20,12 @@ namespace Formularios
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Actualiza la lista de empleados en el ListBox de la interfaz de usuario.
+        /// </summary>
         private void ActualizarVisor()
         {
-
             if (empresa != null && empresa.ListaDeEmpleados != null)
             {
                 this.listBoxPrincipal.Items.Clear();
@@ -35,9 +45,14 @@ namespace Formularios
             {
                 MessageBox.Show("No agregaste nada a la lista de empleados.");
             }
-
         }
 
+
+        /// <summary>
+        /// Maneja el evento de clic del botón "Agregar" para abrir el formulario de datos y agregar un nuevo empleado.
+        /// </summary>
+        /// <param name="sender">El origen del evento.</param>
+        /// <param name="e">Los datos del evento.</param>
         private void buttonAgregar_Click_1(object sender, EventArgs e)
         {
             this.formularioAgregar = new FormularioDatos(empresa);
@@ -56,15 +71,16 @@ namespace Formularios
                 this.ActualizarVisor();
             }
         }
-
+        /// <summary>
+        /// Maneja el evento de clic del botón "Modificar" para abrir el formulario correspondiente y modificar el empleado seleccionado.
+        /// </summary>
+        /// <param name="sender">El origen del evento.</param>
+        /// <param name="e">Los datos del evento.</param>
         private void buttonModificar_Click(object sender, EventArgs e)
         {
-
             int indice = this.listBoxPrincipal.SelectedIndex;
             if (indice != -1)
             {
-                //this.listBoxPrincipal.Items.RemoveAt(indice);
-
                 if (this.empresa.ListaDeEmpleados[indice].GetType() == typeof(Gerente))
                 {
                     this.formGerente = new FormGerente((Gerente)this.empresa.ListaDeEmpleados[indice]);
@@ -76,7 +92,7 @@ namespace Formularios
                         this.ActualizarVisor();
                     }
                 }
-                if (this.empresa.ListaDeEmpleados[indice].GetType() == typeof(Tester))
+                else if (this.empresa.ListaDeEmpleados[indice].GetType() == typeof(Tester))
                 {
                     this.formTester = new FormTester((Tester)this.empresa.ListaDeEmpleados[indice]);
                     this.formTester.ShowDialog();
@@ -87,7 +103,7 @@ namespace Formularios
                         this.ActualizarVisor();
                     }
                 }
-                if (this.empresa.ListaDeEmpleados[indice].GetType() == typeof(Desarrollador))
+                else if (this.empresa.ListaDeEmpleados[indice].GetType() == typeof(Desarrollador))
                 {
                     this.formularioDesarrollador = new FormDesarrollador((Desarrollador)this.empresa.ListaDeEmpleados[indice]);
                     this.formularioDesarrollador.ShowDialog();
@@ -100,18 +116,21 @@ namespace Formularios
                 }
             }
         }
-
-
+        /// <summary>
+        /// Maneja el evento de clic del botón "Eliminar" para eliminar el empleado seleccionado de la lista.
+        /// </summary>
+        /// <param name="sender">El origen del evento.</param>
+        /// <param name="e">Los datos del evento.</param>
         private void buttonEliminar_Click_1(object sender, EventArgs e)
         {
             int indice = this.listBoxPrincipal.SelectedIndex;
             if (indice != -1)
             {
                 this.empresa.ListaDeEmpleados.RemoveAt(indice);
-
                 this.listBoxPrincipal.Items.Clear();
                 this.ActualizarVisor();
             }
         }
+
     }
 }

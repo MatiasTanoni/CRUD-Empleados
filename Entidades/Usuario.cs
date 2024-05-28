@@ -9,6 +9,14 @@ namespace Entidades
 {
     public class Usuario
     {
+        /// <summary>
+        /// Obtiene o establece el apellido del usuario.
+        /// Obtiene o establece el nombre del usuario.
+        /// Obtiene o establece el legajo del usuario.
+        /// Obtiene o establece el correo electrónico del usuario.
+        /// Obtiene o establece la clave del usuario.
+        /// Obtiene o establece el perfil del usuario.
+        /// </summary>
         [JsonPropertyName("apellido")]
         public string Apellido { get; set; }
 

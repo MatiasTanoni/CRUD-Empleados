@@ -16,10 +16,17 @@ namespace Formularios
     public partial class FormDesarrollador : Form
     {
         //Atributos
+        /// <summary>
+        /// Representa un objeto Desarrollador.
+        /// Representa una empresa que contiene una lista de empleados.
+        /// </summary>
         private Desarrollador desarrollador = new Desarrollador("",0,0);
         public Empresa empresa = new Empresa();
 
         // Propiedades
+        /// <summary>
+        /// Obtiene o establece el objeto Desarrollador asociado.
+        /// </summary>
         public Desarrollador Desarrollador
         {
             get { return desarrollador; }
@@ -31,10 +38,19 @@ namespace Formularios
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// Inicializa una nueva instancia de la clase <see cref="FormDesarrollador"/> con la empresa especificada.
+        /// </summary>
+        /// <param name="empresa">La empresa asociada al formulario.</param>
         public FormDesarrollador(Empresa empresa) : this()
         {
             this.empresa = empresa;
         }
+
+        /// <summary>
+        /// Inicializa una nueva instancia de la clase <see cref="FormDesarrollador"/> con el desarrollador especificado.
+        /// </summary>
+        /// <param name="desarrollador">El desarrollador asociado al formulario.</param>
         public FormDesarrollador(Desarrollador desarrollador) : this()
         {
             this.desarrollador = desarrollador;
@@ -46,11 +62,21 @@ namespace Formularios
             this.textBoxProyectosFinalizados.Text = desarrollador.ProyectosFinalizados.ToString();
         }
 
+        /// <summary>
+        /// Maneja el evento Click del botón de cancelar, estableciendo el resultado del diálogo como Cancelar.
+        /// </summary>
+        /// <param name="sender">El objeto que generó el evento.</param>
+        /// <param name="e">Los datos del evento.</param>
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
         }
 
+        /// <summary>
+        /// Maneja el evento Click del botón de aceptar, valida los datos del desarrollador y los agrega a la lista de empleados de la empresa si son válidos.
+        /// </summary>
+        /// <param name="sender">El objeto que generó el evento.</param>
+        /// <param name="e">Los datos del evento.</param>
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
             bool esValido = true;
@@ -67,6 +93,14 @@ namespace Formularios
                 this.DialogResult = DialogResult.OK;
             }
         }
+
+        /// <summary>
+        /// Valida los datos de un desarrollador según el tipo de dato especificado y el contenido del cuadro de texto proporcionado.
+        /// </summary>
+        /// <param name="desarrollador">El objeto desarrollador cuyos datos se están validando.</param>
+        /// <param name="dato">El tipo de dato que se está validando (nombre, edad, experiencia, salario, lenguaje de programación, proyectos finalizados).</param>
+        /// <param name="textBox">El cuadro de texto que contiene el valor a validar.</param>
+        /// <returns>True si el valor es válido y se asigna correctamente al desarrollador; de lo contrario, false.</returns>
         private bool Validar(Desarrollador desarrollador, string dato,TextBox textBox)
         {
             switch (dato)
@@ -131,10 +165,18 @@ namespace Formularios
                     }
                 case "experiencia":
                     {
-                        if (int.TryParse(textBox.Text, out int experiencia))
+                        if (int.TryParse(textBox.Text, out int experiencia) )
                         {
-                            desarrollador.Experiencia = experiencia;
-                            return true;
+                            if(experiencia >= 0 && experiencia < 90)
+                            {
+                                desarrollador.Experiencia = experiencia;
+                                return true;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Por favor, ingrese una experiencia válida (entre 0 y 89).");
+                                return false;
+                            }
                         }
                         else
                         {
