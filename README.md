@@ -11,3 +11,5 @@ El botón "Guardar" guarda la lista de empleados en un archivo JSON.
 El botón "Abrir" abre un archivo JSON y carga su contenido en la lista de empleados.
 
 Diagrama de Clases:
+
+![](https://raw.githubusercontent.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/master/Diagrama%20de%20Clases.png?token=GHSAT0AAAAAACSBCJS3SR6TYB3DVPNTF5Y4ZSWXAYQ)
