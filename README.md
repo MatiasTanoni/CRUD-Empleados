@@ -1,6 +1,6 @@
 Titulo: CRUD - Empleados
 
-Sobre mí: Mi nombre es Matias Tanoni, tengo 19 años, soy estudiante de la Tecnicatura Universitaria En Programacion, en esta ocasión realice un "CRUD - Empeados"
+Sobre mí: Mi nombre es Matias Tanoni, tengo 19 años, soy estudiante de la Tecnicatura Universitaria En Programacion, en esta ocasión realice un "CRUD - Empleados"
 
 Resumen: La aplicación proporciona una interfaz para manejar datos de empleados en una empresa. Permite agregar, modificar y eliminar empleados, así como guardar y cargar la lista de empleados desde archivos JSON
 El botón "Agregar" abre un formulario para agregar un nuevo empleado a la empresa.
@@ -12,4 +12,4 @@ El botón "Abrir" abre un archivo JSON y carga su contenido en la lista de emple
 
 Diagrama de Clases:
 
-![](https://raw.githubusercontent.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/master/Diagrama%20de%20Clases.png?token=GHSAT0AAAAAACSBCJS3SR6TYB3DVPNTF5Y4ZSWXAYQ)
+![](https://raw.githubusercontent.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/master/Diagrama%20de%20Clases.png?token=GHSAT0AAAAAACSBCJS3XCG45ZARIESYBTX4ZSXB7RA)
