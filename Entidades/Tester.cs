@@ -6,11 +6,26 @@
 public class Tester : Empleado
 {
     // Atributos
+    /// <summary>
+    /// Tipo de empleado.
+    /// Salario del Tester.
+    /// Herramienta de prueba utilizada por el Tester.
+    /// Número de proyectos testeados por el Tester.
+    /// </summary>
+    private TipoDeEmpleados tipo = TipoDeEmpleados.Tester;
     private int salario;
     private string herramientaDePrueba;
     private int proyectosTesteados;
 
     // Propiedades
+    /// <summary>
+    /// Tipo de empleado.
+    /// </summary>
+    public TipoDeEmpleados Tipo
+    {
+        get { return tipo; }
+        set { tipo = value; }
+    }
     /// <summary>
     /// Obtiene o establece el salario del tester.
     /// </summary>
@@ -52,17 +67,70 @@ public class Tester : Empleado
     }
 
     /// <summary>
+    /// Constructor de la clase Tester que inicializa el salario, nombre, edad y experiencia del Tester.
+    /// </summary>
+    /// <param name="salario">El salario del Tester.</param>
+    /// <param name="nombre">El nombre del Tester.</param>
+    /// <param name="edad">La edad del Tester.</param>
+    /// <param name="experiencia">La experiencia del Tester.</param>
+    public Tester(int salario, string nombre, int edad, int experiencia) : this(nombre, edad, experiencia)
+    {
+        this.salario = salario;
+    }
+
+    /// <summary>
+    /// Constructor de la clase Tester que inicializa el salario, herramienta de prueba, nombre, edad y experiencia del Tester.
+    /// </summary>
+    /// <param name="salario">El salario del Tester.</param>
+    /// <param name="herramientaDePrueba">La herramienta de prueba utilizada por el Tester.</param>
+    /// <param name="nombre">El nombre del Tester.</param>
+    /// <param name="edad">La edad del Tester.</param>
+    /// <param name="experiencia">La experiencia del Tester.</param>
+    public Tester(int salario, string herramientaDePrueba, string nombre, int edad, int experiencia) : this(salario, nombre, edad, experiencia)
+    {
+        this.herramientaDePrueba = herramientaDePrueba;
+    }
+
+    /// <summary>
+    /// Constructor de la clase Tester que inicializa el salario, herramienta de prueba, proyectos testeados, nombre, edad y experiencia del Tester.
+    /// </summary>
+    /// <param name="salario">El salario del Tester.</param>
+    /// <param name="herramientaDePrueba">La herramienta de prueba utilizada por el Tester.</param>
+    /// <param name="proyectosTesteados">El número de proyectos testeados por el Tester.</param>
+    /// <param name="nombre">El nombre del Tester.</param>
+    /// <param name="edad">La edad del Tester.</param>
+    /// <param name="experiencia">La experiencia del Tester.</param>
+    public Tester(int salario, string herramientaDePrueba, int proyectosTesteados, string nombre, int edad, int experiencia) : this(salario, herramientaDePrueba, nombre, edad, experiencia)
+    {
+        this.proyectosTesteados = proyectosTesteados;
+    }
+
+    /// <summary>
     /// Devuelve una cadena que representa la información del tester.
     /// </summary>
     /// <returns>Una cadena que contiene el nombre, la edad, la experiencia, el salario, la herramienta de prueba y la cantidad de proyectos testeados del tester.</returns>
     public override string MostrarInformacion()
     {
-        return $"Nombre: {this.nombre} - Edad: {this.edad} - Experiencia: {this.experiencia} - Salario: {this.salario} - Herramienta De Prueba: {this.herramientaDePrueba} - Testeo: {this.proyectosTesteados} proyectos";
+        return $"{ToString()} - Nombre: {this.nombre} - Edad: {this.edad} - Experiencia: {this.experiencia} - Salario: {this.salario} - Herramienta De Prueba: {this.herramientaDePrueba} - Testeo: {this.proyectosTesteados} proyectos";
     }
-    //public override string ToString()
-    //{
-    //    return this.MostrarInformacion();
-    //}
+    /// <summary>
+    /// Devuelve una representación de cadena del objeto Tester.
+    /// </summary>
+    /// <returns>Una cadena que representa el objeto Tester.</returns>
+    public override string ToString()
+    {
+        return "Soy Tester";
+    }
+
+    /// <summary>
+    /// Comprueba si el objeto actual es igual a otro objeto Tester.
+    /// </summary>
+    /// <param name="otroTester">El objeto que se va a comparar con el objeto actual.</param>
+    /// <returns>True si el objeto actual es igual al objeto especificado; de lo contrario, False.</returns>
+    public override bool Equals(Object otroTester)
+    {
+        return otroTester is Tester && this == (Tester)otroTester;
+    }
 }
 
 

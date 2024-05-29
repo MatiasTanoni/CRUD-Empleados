@@ -12,11 +12,26 @@ namespace Entidades
     public class Desarrollador : Empleado
     {
         // Atributos
+        /// <summary>
+        ///Tipo de empleado
+        ///Salario del empleado
+        ///Lenguaje de programación que el empleado utiliza.
+        ///Número de proyectos finalizados por el empleado.
+        /// </summary>
+        private TipoDeEmpleados tipo = TipoDeEmpleados.Desarrollador;
         private int salario;
         private string lenguajeDeProgramacion;
         private int proyectosFinalizados;
 
         // Propiedades
+        /// <summary>
+        /// Tipo de empleado
+        /// </summary>
+        public TipoDeEmpleados Tipo
+        {
+            get { return tipo; }
+            set { tipo = value; }
+        }
         /// <summary>
         /// Obtiene o establece el salario del desarrollador.
         /// </summary>
@@ -100,12 +115,26 @@ namespace Entidades
         /// <returns>La información del desarrollador.</returns>
         public override string MostrarInformacion()
         {
-            return $"Nombre: {this.nombre} - Edad: {this.edad} - Experiencia: {this.experiencia} - Salario: {this.salario} - Lenguaje De Programacion: {this.lenguajeDeProgramacion} - Proyectos finalizados: {this.proyectosFinalizados}";
+            return $"{ToString()} - Nombre: {this.nombre} - Edad: {this.edad} - Experiencia: {this.experiencia} - Salario: {this.salario} - Lenguaje De Programacion: {this.lenguajeDeProgramacion} - Proyectos finalizados: {this.proyectosFinalizados}";
         }
-        //public override string ToString()
-        //{
-        //    return this.MostrarInformacion();
-        //}
+        /// <summary>
+        /// Devuelve una representación de cadena del objeto Desarrollador.
+        /// </summary>
+        /// <returns>Una cadena que representa el objeto Desarrollador.</returns>
+        public override string ToString()
+        {
+            return "Soy Desarrollador";
+        }
+
+        /// <summary>
+        /// Comprueba si el objeto actual es igual a otro objeto Desarrollador.
+        /// </summary>
+        /// <param name="otroDesarrollador">El objeto que se va a comparar con el objeto actual.</param>
+        /// <returns>True si el objeto actual es igual al objeto especificado; de lo contrario, False.</returns>
+        public override bool Equals(Object otroDesarrollador)
+        {
+            return otroDesarrollador is Desarrollador && this == (Desarrollador)otroDesarrollador;
+        }
     }
 
 }

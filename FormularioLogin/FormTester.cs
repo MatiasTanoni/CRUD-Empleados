@@ -32,6 +32,8 @@ namespace Formularios
         public FormTester()
         {
             InitializeComponent();
+            empresa = new Empresa(); // Inicializa la empresa aca
+            empresa.ListaDeEmpleados = new List<Empleado>(); // Inicializa la lista de empleados aca
         }
         /// <summary>
         /// Inicializa una nueva instancia de la clase FormTester con la empresa proporcionada.
@@ -64,6 +66,7 @@ namespace Formularios
         /// </summary>
         /// <param name="sender">El origen del evento.</param>
         /// <param name="e">Los datos del evento.</param>
+        
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
@@ -87,7 +90,7 @@ namespace Formularios
 
             if (esValido)
             {
-                this.empresa.ListaDeEmpleados.Add(tester);
+                this.empresa += tester;
                 this.DialogResult = DialogResult.OK;
             }
         }

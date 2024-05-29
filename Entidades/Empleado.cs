@@ -6,6 +6,11 @@
     public abstract class Empleado
     {
         // Atributos
+        /// <summary>
+        /// Nombre del empleado.
+        /// Edad del empleado.
+        /// Experiencia del empleado en años.
+        /// </summary>
         protected string nombre;
         protected int edad;
         protected int experiencia;
@@ -85,7 +90,23 @@
         /// <returns>Información del empleado.</returns>
         public abstract string MostrarInformacion();
 
-
+        /// <summary>
+        /// Comprueba si el objeto actual es igual a otro objeto Empleado.
+        /// </summary>
+        /// <param name="otroEmpleado">El objeto que se va a comparar con el objeto actual.</param>
+        /// <returns>True si el objeto actual es igual al objeto especificado; de lo contrario, False.</returns>
+        public override bool Equals(Object otroEmpleado)
+        {
+            return otroEmpleado is Empleado && this == (Empleado)otroEmpleado;
+        }
+        /// <summary>
+        /// Devuelve una representación de cadena del objeto Empleado.
+        /// </summary>
+        /// <returns>Una cadena que representa el objeto Empleado.</returns>
+        public virtual string ToString()
+        {
+            return "Soy Empleado";
+        }
     }
 
 

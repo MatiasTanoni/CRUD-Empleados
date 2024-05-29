@@ -36,6 +36,8 @@ namespace Formularios
         public FormGerente()
         {
             InitializeComponent();
+            empresa = new Empresa(); // Inicializa la empresa aca
+            empresa.ListaDeEmpleados = new List<Empleado>(); // Inicializa la lista de empleados aca
         }
 
         /// <summary>
@@ -91,7 +93,7 @@ namespace Formularios
 
             if (esValido)
             {
-                this.empresa.ListaDeEmpleados.Add(gerente);
+                this.empresa += gerente;
                 this.DialogResult = DialogResult.OK;
             }
         }

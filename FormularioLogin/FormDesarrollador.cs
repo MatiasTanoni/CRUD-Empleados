@@ -37,6 +37,8 @@ namespace Formularios
         public FormDesarrollador()
         {
             InitializeComponent();
+            empresa = new Empresa(); // Inicializa la empresa aquí
+            empresa.ListaDeEmpleados = new List<Empleado>(); // Inicializa la lista de empleados aquí
         }
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="FormDesarrollador"/> con la empresa especificada.
@@ -89,7 +91,7 @@ namespace Formularios
 
             if (esValido)
             {
-                this.empresa.ListaDeEmpleados.Add(desarrollador);
+                this.empresa += desarrollador;
                 this.DialogResult = DialogResult.OK;
             }
         }

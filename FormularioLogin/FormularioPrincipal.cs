@@ -1,5 +1,8 @@
 using Entidades;
 using Formularios;
+using System.Text;
+using System.Text.Json;
+using System.Windows.Forms;
 namespace Formularios
 {
     public partial class FormularioPrincipal : Form
@@ -10,15 +13,35 @@ namespace Formularios
         /// Formulario para manejar datos de gerentes.
         /// Formulario para agregar nuevos empleados.
         /// Empresa que contiene la lista de empleados.
+        /// El usuario registrado.
         /// </summary>
         public FormDesarrollador formularioDesarrollador = new FormDesarrollador();
         public FormTester formTester = new FormTester();
         public FormGerente formGerente = new FormGerente();
         public FormularioDatos formularioAgregar;
         public Empresa empresa = new Empresa();
+        public Usuario usuarioRegistrado;
+
+        /// <summary>
+        /// Obtiene o establece la ruta actual.
+        /// </summary>
+        public string PathCurrent { get; set; }
+
+        /// <summary>
+        /// Constructor por defecto de la clase FormularioPrincipal.
+        /// </summary>
         public FormularioPrincipal()
         {
             InitializeComponent();
+            this.FormClosing += FormularioPrincipal_FormClosing;
+        }
+        /// <summary>
+        /// Constructor de la clase FormularioPrincipal que recibe un usuario registrado.
+        /// </summary>
+        /// <param name="usuarioRegistrado">El usuario registrado que utilizará el formulario principal.</param>
+        public FormularioPrincipal(Usuario usuarioRegistrado) : this()
+        {
+            this.usuarioRegistrado = usuarioRegistrado;
         }
 
         /// <summary>
@@ -126,11 +149,147 @@ namespace Formularios
             int indice = this.listBoxPrincipal.SelectedIndex;
             if (indice != -1)
             {
-                this.empresa.ListaDeEmpleados.RemoveAt(indice);
+                this.empresa -= this.empresa.ListaDeEmpleados[indice];
                 this.listBoxPrincipal.Items.Clear();
                 this.ActualizarVisor();
             }
         }
 
+        /// <summary>
+        /// Maneja el evento Load del formulario principal.
+        /// </summary>
+        /// <param name="sender">El objeto que desencadenó el evento.</param>
+        /// <param name="e">Los datos del evento.</param>
+        private void FormularioPrincipal_Load_1(object sender, EventArgs e)
+        {
+            toolStripStatusLabelOperador.Text = $"Operador: {this.usuarioRegistrado.Nombre}";
+            toolStripStatusLabelFecha.Text = "Fecha: " + DateTime.Now.ToString("dd/MM/yyyy");
+        }
+
+        /// <summary>
+        /// Maneja el evento Click del botón de visualización.
+        /// </summary>
+        /// <param name="sender">El objeto que desencadenó el evento.</param>
+        /// <param name="e">Los datos del evento.</param>
+        private void buttonVisualizador_Click(object sender, EventArgs e)
+        {
+            FormVisualizador formVisualizador = new FormVisualizador();
+            formVisualizador.ShowDialog();
+        }
+
+        /// <summary>
+        /// Maneja el evento Click del botón de guardar.
+        /// </summary>
+        /// <param name="sender">El objeto que desencadenó el evento.</param>
+        /// <param name="e">Los datos del evento.</param>
+        private void buttonGuardar_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(PathCurrent))
+            {
+                GuardarComo();
+            }
+            else
+            {
+                GuardarArchivo(PathCurrent);
+            }
+        }
+
+        /// <summary>
+        /// Guarda el contenido del listBox en un archivo en la ruta especificada.
+        /// </summary>
+        /// <param name="pathCurrent">La ruta del archivo en la que se guardará el contenido.</param>
+        private void GuardarArchivo(string pathCurrent)
+        {
+            try
+            {
+                // Obtenemos el contenido del listBox
+                string content = listBoxPrincipal.Text;
+
+                // Guardamos el contenido en el archivo
+                File.WriteAllText(pathCurrent, content);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar el archivo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Abre un cuadro de diálogo de guardar como y guarda el contenido del listBox en un archivo JSON.
+        /// </summary>
+        private void GuardarComo()
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Archivo JSON |*.json";
+            saveFileDialog.FilterIndex = 1;
+            saveFileDialog.RestoreDirectory = true;
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string path = saveFileDialog.FileName;
+
+                var items = new List<string>();
+                foreach (var item in listBoxPrincipal.Items)
+                {
+                    items.Add(item.ToString());
+                }
+
+                var jsonOptions = new JsonSerializerOptions { WriteIndented = true };
+                string jsonContent = JsonSerializer.Serialize(items, jsonOptions);
+
+                File.WriteAllText(path, jsonContent);
+            }
+        }
+
+        /// <summary>
+        /// Maneja el evento Click del botón de abrir archivo.
+        /// </summary>
+        /// <param name="sender">El objeto que desencadenó el evento.</param>
+        /// <param name="e">Los datos del evento.</param>
+        private void Abrir_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); 
+            openFileDialog.Filter = "Archivos JSON (*.json)|*.json|Todos los archivos (*.*)|*.*";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                string path = openFileDialog.FileName;
+
+                try
+                {
+                    string jsonContent = File.ReadAllText(path);
+
+                    var items = JsonSerializer.Deserialize<List<string>>(jsonContent);
+
+                    listBoxPrincipal.Items.Clear();
+
+                    foreach (var item in items)
+                    {
+                        listBoxPrincipal.Items.Add(item);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al abrir el archivo: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Maneja el evento de cierre del formulario principal.
+        /// </summary>
+        /// <param name="sender">El objeto que desencadenó el evento.</param>
+        /// <param name="e">Los datos del evento.</param>
+        private void FormularioPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas salir?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
     }
 }

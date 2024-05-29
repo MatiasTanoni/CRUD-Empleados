@@ -12,11 +12,26 @@ namespace Entidades
     public class Gerente : Empleado
     {
         // Atributos
+        /// <summary>
+        /// Tipo de empleado.
+        /// Salario del empleado.
+        /// Número de personas a cargo del empleado (si es un gerente).
+        /// Número de proyectos gestionados por el empleado (si es un gerente).
+        /// </summary>
+        private TipoDeEmpleados tipo = TipoDeEmpleados.Gerente;
         private int salario;
         private int personasACargo;
         private int proyectosGestionados;
 
         // Propiedades
+        /// <summary>
+        /// Tipo de empleado.
+        /// </summary>
+        public TipoDeEmpleados Tipo
+        {
+            get { return tipo; }
+            set { tipo = value; }
+        }
         /// <summary>
         /// Obtiene o establece el salario del gerente.
         /// </summary>
@@ -100,7 +115,25 @@ namespace Entidades
         /// <returns>La información del gerente.</returns>
         public override string MostrarInformacion()
         {
-            return $"Nombre: {this.nombre} - Edad: {this.edad} - Experiencia: {this.experiencia} - Salario: {this.salario} - A cargo de: {this.personasACargo} personas - Proyectos Gestionados: {this.proyectosGestionados}";
+            return $"{ToString()} - Nombre: {this.nombre} - Edad: {this.edad} - Experiencia: {this.experiencia} - Salario: {this.salario} - A cargo de: {this.personasACargo} personas - Proyectos Gestionados: {this.proyectosGestionados}";
+        }
+        /// <summary>
+        /// Devuelve una representación de cadena del objeto Gerente.
+        /// </summary>
+        /// <returns>Una cadena que representa el objeto Gerente.</returns>
+        public override string ToString()
+        {
+            return "Soy Gerente";
+        }
+
+        /// <summary>
+        /// Comprueba si el objeto actual es igual a otro objeto Gerente.
+        /// </summary>
+        /// <param name="otroGerente">El objeto que se va a comparar con el objeto actual.</param>
+        /// <returns>True si el objeto actual es igual al objeto especificado; de lo contrario, False.</returns>
+        public override bool Equals(Object otroGerente)
+        {
+            return otroGerente is Gerente && this == (Gerente)otroGerente;
         }
     }
 

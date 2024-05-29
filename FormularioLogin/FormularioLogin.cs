@@ -17,11 +17,23 @@ namespace Formularios
 {
     public partial class FormularioLogin : Form
     {
+        /// <summary>
+        /// Usuario registrado en el formulario de inicio de sesión.
+        /// </summary>
+        private Usuario usuarioRegistrado = new Usuario();
         public FormularioLogin()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Usuario registrado en el formulario de inicio de sesión.
+        /// </summary>
+        public Usuario UsuarioRegistrado
+        {
+            get { return usuarioRegistrado; }
+            set { usuarioRegistrado = value; }
+        }
         /// <summary>
         /// Maneja el evento TextChanged del TextBox para el correo electrónico.
         /// Cambia el color del borde y la etiqueta asociados.
@@ -66,15 +78,15 @@ namespace Formularios
         }
 
         /// <summary>
-        /// Maneja el evento Click del botón Iniciar Sesión.
-        /// Verifica las credenciales del usuario contra un archivo JSON y abre el formulario principal si son correctas.
+        /// Maneja el evento Click del botón de inicio de sesión.
         /// </summary>
-        /// <param name="sender">El origen del evento.</param>
+        /// <param name="sender">El objeto que desencadenó el evento.</param>
         /// <param name="e">Los datos del evento.</param>
         private void buttonIniciarSesion_Click(object sender, EventArgs e)
         {
-            string jsonPath = "C:\\Users\\Matías Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\datosLogin.json";
-
+            string jsonPathAbsoluto= "C:\\Users\\Matías Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\datosLogin.json";
+            string jsonPath = ObtenerRutaRelativa(jsonPathAbsoluto);
+            
             if (File.Exists(jsonPath))
             {
                 try
@@ -90,8 +102,10 @@ namespace Formularios
                         {
                             if (usuario.Correo == textBoxCorreo.Text && usuario.Clave == textContrasena.Text)
                             {
+                                UsuarioRegistrado = usuario;
                                 usuarioEncontrado = true;
-                                FormularioPrincipal formularioPrincipal = new FormularioPrincipal();
+                                RegistrarAccesoUsuario();
+                                FormularioPrincipal formularioPrincipal = new FormularioPrincipal(this.UsuarioRegistrado);
                                 formularioPrincipal.ShowDialog();
                                 break;
                             }
@@ -112,6 +126,55 @@ namespace Formularios
                 MessageBox.Show("El archivo JSON no existe.");
             }
 
+        }
+        /// <summary>
+        /// Registra el acceso del usuario en un archivo de registro.
+        /// </summary>
+        private void RegistrarAccesoUsuario()
+        {
+
+            string rutaAbsoluta = @"C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\usuarios.log";
+            string rutaRelativa = ObtenerRutaRelativa(rutaAbsoluta);
+
+            string fechaHoraActual = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            string informacionUsuario = $"Apellido: {usuarioRegistrado.Apellido} " +
+                                        $"Usuario: {usuarioRegistrado.Nombre}," +
+                                        $"Legajo:{usuarioRegistrado.Legajo}," +
+                                        $"Correo:{usuarioRegistrado.Correo}, " +
+                                        $"Clave:{usuarioRegistrado.Clave}, " +
+                                        $"Perfil: {usuarioRegistrado.Perfil} " +
+                                        $"Fecha y Hora de Acceso: {fechaHoraActual}";
+
+            try
+            {
+                using (StreamWriter sw = new StreamWriter(rutaRelativa, true))
+                {
+                    sw.WriteLine(informacionUsuario);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al registrar el acceso del usuario: {ex.Message}");
+            }
+        }
+        /// <summary>
+        /// Obtiene la ruta relativa a partir de una ruta absoluta.
+        /// </summary>
+        /// <param name="rutaAbsoluta">La ruta absoluta a convertir en relativa.</param>
+        /// <returns>La ruta relativa correspondiente.</returns>
+        private string ObtenerRutaRelativa(string rutaAbsoluta)
+        {
+            string directorioBase = AppDomain.CurrentDomain.BaseDirectory;
+
+            Uri uriArchivo = new Uri(rutaAbsoluta);
+            Uri uriDirectorioBase = new Uri(directorioBase);
+
+            Uri uriRelativa = uriDirectorioBase.MakeRelativeUri(uriArchivo);
+            string rutaRelativa = Uri.UnescapeDataString(uriRelativa.ToString());
+
+            rutaRelativa = rutaRelativa.Replace('/', '\\');
+
+            return rutaRelativa;
         }
 
     }

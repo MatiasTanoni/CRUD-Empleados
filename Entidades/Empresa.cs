@@ -22,37 +22,59 @@ namespace Entidades
             get { return listaDeEmpleados; }
             set { listaDeEmpleados = value; }
         }
-
-        /// <summary>
-        /// Agrega un empleado a la empresa.
-        /// </summary>
-        /// <param name="empresa">La empresa.</param>
-        /// <param name="empleado">El empleado a agregar.</param>
-        /// <returns>True si el empleado se agrega correctamente, de lo contrario false.</returns>
-        public static bool operator +(Empresa empresa, Empleado empleado)
-        {
-            empresa.listaDeEmpleados.Add(empleado);
-            return true;
-        }
-
-        /// <summary>
-        /// Quita un empleado de la empresa.
-        /// </summary>
-        /// <param name="empresa">La empresa.</param>
-        /// <param name="empleado">El empleado a quitar.</param>
-        /// <returns>True si el empleado se quita correctamente, de lo contrario false.</returns>
-        public static bool operator -(Empresa empresa, Empleado empleado)
-        {
-            empresa.listaDeEmpleados.Remove(empleado);
-            return true;
-        }
-
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="Empresa"/>.
         /// </summary>
         public Empresa()
         {
             this.listaDeEmpleados = new List<Empleado>();
+        }
+
+
+        /// <summary>
+        /// Sobrecarga del operador de adición para agregar un empleado a la lista de empleados de la empresa.
+        /// </summary>
+        /// <param name="empresa">La empresa a la que se agregará el empleado.</param>
+        /// <param name="empleado">El empleado que se agregará a la empresa.</param>
+        /// <returns>La empresa con el empleado agregado.</returns>
+        public static Empresa operator +(Empresa empresa, Empleado empleado)
+        {
+            empresa.listaDeEmpleados.Add(empleado);
+            return empresa;
+        }
+
+        /// <summary>
+        /// Sobrecarga del operador de substracción para eliminar un empleado de la lista de empleados de la empresa.
+        /// </summary>
+        /// <param name="empresa">La empresa de la que se eliminará el empleado.</param>
+        /// <param name="empleado">El empleado que se eliminará de la empresa.</param>
+        /// <returns>La empresa con el empleado eliminado.</returns>
+        public static Empresa operator -(Empresa empresa, Empleado empleado)
+        {
+            empresa.listaDeEmpleados.Remove(empleado);
+            return empresa;
+        }
+
+        /// <summary>
+        /// Sobrecarga del operador de igualdad para comprobar si un empleado está en la lista de empleados de la empresa.
+        /// </summary>
+        /// <param name="empresa">La empresa en la que se buscará el empleado.</param>
+        /// <param name="empleado">El empleado que se buscará en la lista de empleados de la empresa.</param>
+        /// <returns>True si el empleado está en la lista de empleados de la empresa; de lo contrario, False.</returns>
+        public static bool operator ==(Empresa empresa, Empleado empleado)
+        {
+            return empresa.ListaDeEmpleados.Contains(empleado);
+        }
+
+        /// <summary>
+        /// Sobrecarga del operador de desigualdad para comprobar si un empleado no está en la lista de empleados de la empresa.
+        /// </summary>
+        /// <param name="empresa">La empresa en la que se buscará el empleado.</param>
+        /// <param name="empleado">El empleado que se buscará en la lista de empleados de la empresa.</param>
+        /// <returns>True si el empleado no está en la lista de empleados de la empresa; de lo contrario, False.</returns>
+        public static bool operator !=(Empresa empresa, Empleado empleado)
+        {
+            return !(empresa == empleado);
         }
     }
 
