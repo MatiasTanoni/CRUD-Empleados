@@ -28,10 +28,7 @@ namespace Formularios
         private void MostrarHistorialVisualizador()
         {
             // Ruta absoluta del archivo de historial
-            string historialAbsoluto = "C:\\Users\\Matías Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\usuarios.log";
-
-            // Obtener la ruta relativa del archivo de historial
-            string historial = ObtenerRutaRelativa(historialAbsoluto);
+            string historial = "usuarios.log";
 
             try
             {
@@ -55,26 +52,6 @@ namespace Formularios
             {
                 MessageBox.Show($"Error al leer el archivo log: {ex.Message}");
             }
-        }
-
-        /// <summary>
-        /// Obtiene la ruta relativa a partir de una ruta absoluta.
-        /// </summary>
-        /// <param name="rutaAbsoluta">La ruta absoluta a convertir en relativa.</param>
-        /// <returns>La ruta relativa correspondiente.</returns>
-        private string ObtenerRutaRelativa(string rutaAbsoluta)
-        {
-            string directorioBase = AppDomain.CurrentDomain.BaseDirectory;
-
-            Uri uriArchivo = new Uri(rutaAbsoluta);
-            Uri uriDirectorioBase = new Uri(directorioBase);
-
-            Uri uriRelativa = uriDirectorioBase.MakeRelativeUri(uriArchivo);
-            string rutaRelativa = Uri.UnescapeDataString(uriRelativa.ToString());
-
-            rutaRelativa = rutaRelativa.Replace('/', '\\');
-
-            return rutaRelativa;
         }
 
         /// <summary>

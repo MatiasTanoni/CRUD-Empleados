@@ -109,6 +109,15 @@ namespace Entidades
             this.proyectosGestionados = proyectosGestionados;
         }
 
+        public static bool operator ==(Gerente gerente, Gerente gerente1)
+        {
+            return gerente.Salario == gerente1.Salario && gerente.PersonasACargo == gerente1.PersonasACargo && gerente.ProyectosGestionados == gerente1.ProyectosGestionados;
+        }
+
+        public static bool operator !=(Gerente gerente, Gerente gerente1)
+        {
+            return gerente.Salario != gerente1.Salario && gerente.PersonasACargo != gerente1.PersonasACargo && gerente.ProyectosGestionados != gerente1.ProyectosGestionados;
+        }
         /// <summary>
         /// Devuelve la información del gerente.
         /// </summary>

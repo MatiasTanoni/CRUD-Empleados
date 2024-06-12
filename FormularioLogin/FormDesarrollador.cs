@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Formularios;
 using System.Text.RegularExpressions;
+using System.Runtime.CompilerServices;
+using System.Diagnostics.Eventing.Reader;
 
 namespace Formularios
 {
@@ -91,8 +93,11 @@ namespace Formularios
 
             if (esValido)
             {
-                this.empresa += desarrollador;
-                this.DialogResult = DialogResult.OK;
+                if (this.empresa != Desarrollador)
+                {
+                    this.empresa += desarrollador;
+                    this.DialogResult = DialogResult.OK;
+                }
             }
         }
 
@@ -133,38 +138,48 @@ namespace Formularios
                     }
                 case "edad":
                 {
-                if (int.TryParse(textBox.Text, out int edad))
-                {
-                    if (edad > 0 && edad < 90)
+                    if (int.TryParse(textBox.Text, out int edad))
                     {
-                        desarrollador.Edad = edad;
-                        return true;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Por favor, ingrese una edad válida (entre 1 y 89).");
-                        return false;
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Por favor, ingrese un valor numérico válido para la edad.");
-                    return false;
-                }
-                }
-                case "salario":
-                    {
-                        if (int.TryParse(textBox.Text, out int salario))
+                        if (edad > 0 && edad < 90)
                         {
-                            desarrollador.Salario = salario;
+                            desarrollador.Edad = edad;
                             return true;
                         }
                         else
                         {
-                            MessageBox.Show("Por favor, ingrese un valor numérico válido para el salario.");
-                            return false ;
+                            MessageBox.Show("Por favor, ingrese una edad válida (entre 1 y 89).");
+                            return false;
                         }
                     }
+                    else
+                    {
+                        MessageBox.Show("Por favor, ingrese un valor numérico válido para la edad.");
+                        return false;
+                    }
+                }
+                case "salario":
+                {
+                    if (int.TryParse(textBox.Text, out int salario))
+                    {
+                        if (salario > 0)
+                        {
+                            desarrollador.Salario = salario;
+                            return true;
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Por favor, ingrese un valor numérico mayor a 0 para el salario.");
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Por favor, ingrese un valor numérico válido para el salario.");
+                        return false;
+                    } 
+                }
+
                 case "experiencia":
                     {
                         if (int.TryParse(textBox.Text, out int experiencia) )

@@ -50,6 +50,7 @@
             // richTextBoxVisualizador
             // 
             richTextBoxVisualizador.BackColor = Color.Silver;
+            richTextBoxVisualizador.Font = new Font("Lucida Sans", 9F, FontStyle.Bold, GraphicsUnit.Point);
             richTextBoxVisualizador.Location = new Point(12, 12);
             richTextBoxVisualizador.Name = "richTextBoxVisualizador";
             richTextBoxVisualizador.Size = new Size(687, 389);

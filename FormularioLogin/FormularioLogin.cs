@@ -84,8 +84,7 @@ namespace Formularios
         /// <param name="e">Los datos del evento.</param>
         private void buttonIniciarSesion_Click(object sender, EventArgs e)
         {
-            string jsonPathAbsoluto= "C:\\Users\\Matías Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\datosLogin.json";
-            string jsonPath = ObtenerRutaRelativa(jsonPathAbsoluto);
+            string jsonPath = "datosLogin.json";
             
             if (File.Exists(jsonPath))
             {
@@ -133,8 +132,8 @@ namespace Formularios
         private void RegistrarAccesoUsuario()
         {
 
-            string rutaAbsoluta = @"C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\usuarios.log";
-            string rutaRelativa = ObtenerRutaRelativa(rutaAbsoluta);
+            string ruta = @"usuarios.log";
+            
 
             string fechaHoraActual = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             string informacionUsuario = $"Apellido: {usuarioRegistrado.Apellido} " +
@@ -147,7 +146,7 @@ namespace Formularios
 
             try
             {
-                using (StreamWriter sw = new StreamWriter(rutaRelativa, true))
+                using (StreamWriter sw = new StreamWriter(ruta, true))
                 {
                     sw.WriteLine(informacionUsuario);
                 }
@@ -162,20 +161,20 @@ namespace Formularios
         /// </summary>
         /// <param name="rutaAbsoluta">La ruta absoluta a convertir en relativa.</param>
         /// <returns>La ruta relativa correspondiente.</returns>
-        private string ObtenerRutaRelativa(string rutaAbsoluta)
-        {
-            string directorioBase = AppDomain.CurrentDomain.BaseDirectory;
+        //private string ObtenerRutaRelativa(string rutaAbsoluta)
+        //{
+        //    string directorioBase = AppDomain.CurrentDomain.BaseDirectory;
 
-            Uri uriArchivo = new Uri(rutaAbsoluta);
-            Uri uriDirectorioBase = new Uri(directorioBase);
+        //    Uri uriArchivo = new Uri(rutaAbsoluta);
+        //    Uri uriDirectorioBase = new Uri(directorioBase);
 
-            Uri uriRelativa = uriDirectorioBase.MakeRelativeUri(uriArchivo);
-            string rutaRelativa = Uri.UnescapeDataString(uriRelativa.ToString());
+        //    Uri uriRelativa = uriDirectorioBase.MakeRelativeUri(uriArchivo);
+        //    string rutaRelativa = Uri.UnescapeDataString(uriRelativa.ToString());
 
-            rutaRelativa = rutaRelativa.Replace('/', '\\');
+        //    rutaRelativa = rutaRelativa.Replace('/', '\\');
 
-            return rutaRelativa;
-        }
+        //    return rutaRelativa;
+        //}
 
     }
 }

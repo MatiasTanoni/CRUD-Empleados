@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -108,7 +109,15 @@ namespace Entidades
         {
             this.proyectosFinalizados = proyectosFinalizados;
         }
+        public static bool operator ==(Desarrollador desarrollador, Desarrollador desarrollador1)
+        {
+            return desarrollador.Salario == desarrollador1.Salario && desarrollador.LenguajeDeProgramacion == desarrollador1.LenguajeDeProgramacion && desarrollador.ProyectosFinalizados == desarrollador1.ProyectosFinalizados;
+        }
 
+        public static bool operator !=(Desarrollador desarrollador, Desarrollador desarrollador1)
+        {
+            return desarrollador.Salario != desarrollador1.Salario && desarrollador.LenguajeDeProgramacion != desarrollador1.LenguajeDeProgramacion && desarrollador.ProyectosFinalizados != desarrollador1.ProyectosFinalizados;
+        }
         /// <summary>
         /// Devuelve la información del desarrollador.
         /// </summary>

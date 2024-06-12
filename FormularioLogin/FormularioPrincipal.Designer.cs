@@ -45,20 +45,22 @@
             // listBoxPrincipal
             // 
             listBoxPrincipal.BackColor = Color.Silver;
-            listBoxPrincipal.Font = new Font("Lucida Sans", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            listBoxPrincipal.Font = new Font("Lucida Sans", 9F, FontStyle.Italic, GraphicsUnit.Point);
             listBoxPrincipal.FormattingEnabled = true;
             listBoxPrincipal.ItemHeight = 15;
             listBoxPrincipal.Location = new Point(12, 32);
             listBoxPrincipal.Name = "listBoxPrincipal";
-            listBoxPrincipal.Size = new Size(776, 304);
+            listBoxPrincipal.ScrollAlwaysVisible = true;
+            listBoxPrincipal.Size = new Size(765, 319);
             listBoxPrincipal.TabIndex = 3;
+            listBoxPrincipal.SelectedIndexChanged += listBoxPrincipal_SelectedIndexChanged;
             // 
             // buttonAgregar
             // 
             buttonAgregar.BackColor = Color.OliveDrab;
             buttonAgregar.FlatStyle = FlatStyle.Popup;
             buttonAgregar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonAgregar.Location = new Point(74, 342);
+            buttonAgregar.Location = new Point(53, 370);
             buttonAgregar.Name = "buttonAgregar";
             buttonAgregar.Size = new Size(127, 62);
             buttonAgregar.TabIndex = 0;
@@ -71,7 +73,7 @@
             buttonEliminar.BackColor = Color.DarkRed;
             buttonEliminar.FlatStyle = FlatStyle.Popup;
             buttonEliminar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonEliminar.Location = new Point(601, 342);
+            buttonEliminar.Location = new Point(585, 370);
             buttonEliminar.Name = "buttonEliminar";
             buttonEliminar.Size = new Size(127, 62);
             buttonEliminar.TabIndex = 2;
@@ -84,7 +86,7 @@
             buttonModificar.BackColor = SystemColors.ActiveCaption;
             buttonModificar.FlatStyle = FlatStyle.Popup;
             buttonModificar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonModificar.Location = new Point(348, 342);
+            buttonModificar.Location = new Point(334, 370);
             buttonModificar.Name = "buttonModificar";
             buttonModificar.Size = new Size(127, 62);
             buttonModificar.TabIndex = 1;
@@ -95,9 +97,9 @@
             // statusStrip1
             // 
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabelOperador, toolStripStatusLabelFecha });
-            statusStrip1.Location = new Point(0, 428);
+            statusStrip1.Location = new Point(0, 451);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(800, 22);
+            statusStrip1.Size = new Size(789, 22);
             statusStrip1.TabIndex = 4;
             statusStrip1.Text = "statusStrip1";
             // 
@@ -121,7 +123,7 @@
             buttonVisualizador.FlatStyle = FlatStyle.Popup;
             buttonVisualizador.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonVisualizador.ForeColor = Color.White;
-            buttonVisualizador.Location = new Point(12, 3);
+            buttonVisualizador.Location = new Point(434, 3);
             buttonVisualizador.Name = "buttonVisualizador";
             buttonVisualizador.Size = new Size(114, 23);
             buttonVisualizador.TabIndex = 5;
@@ -135,7 +137,7 @@
             buttonGuardar.FlatStyle = FlatStyle.Popup;
             buttonGuardar.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonGuardar.ForeColor = Color.White;
-            buttonGuardar.Location = new Point(699, 3);
+            buttonGuardar.Location = new Point(674, 3);
             buttonGuardar.Name = "buttonGuardar";
             buttonGuardar.Size = new Size(89, 23);
             buttonGuardar.TabIndex = 6;
@@ -149,7 +151,7 @@
             Abrir.FlatStyle = FlatStyle.Popup;
             Abrir.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             Abrir.ForeColor = Color.White;
-            Abrir.Location = new Point(604, 3);
+            Abrir.Location = new Point(568, 3);
             Abrir.Name = "Abrir";
             Abrir.Size = new Size(89, 23);
             Abrir.TabIndex = 7;
@@ -162,7 +164,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(789, 473);
             Controls.Add(Abrir);
             Controls.Add(buttonGuardar);
             Controls.Add(buttonVisualizador);

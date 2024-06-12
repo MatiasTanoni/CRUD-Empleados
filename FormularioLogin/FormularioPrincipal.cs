@@ -33,6 +33,7 @@ namespace Formularios
         public FormularioPrincipal()
         {
             InitializeComponent();
+            this.listBoxPrincipal.HorizontalScrollbar = true;
             this.FormClosing += FormularioPrincipal_FormClosing;
         }
         /// <summary>
@@ -146,13 +147,19 @@ namespace Formularios
         /// <param name="e">Los datos del evento.</param>
         private void buttonEliminar_Click_1(object sender, EventArgs e)
         {
-            int indice = this.listBoxPrincipal.SelectedIndex;
-            if (indice != -1)
+            DialogResult result = MessageBox.Show("¿Estás seguro que quieres Eliminar este empleado?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
             {
-                this.empresa -= this.empresa.ListaDeEmpleados[indice];
-                this.listBoxPrincipal.Items.Clear();
-                this.ActualizarVisor();
+                int indice = this.listBoxPrincipal.SelectedIndex;
+                if (indice != -1)
+                {
+                    this.empresa -= this.empresa.ListaDeEmpleados[indice];
+                    this.listBoxPrincipal.Items.Clear();
+                    this.ActualizarVisor();
+                }
             }
+
         }
 
         /// <summary>
@@ -250,7 +257,7 @@ namespace Formularios
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
 
-            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop); 
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             openFileDialog.Filter = "Archivos JSON (*.json)|*.json|Todos los archivos (*.*)|*.*";
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -290,6 +297,11 @@ namespace Formularios
             {
                 e.Cancel = true;
             }
+        }
+
+        private void listBoxPrincipal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

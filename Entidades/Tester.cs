@@ -105,6 +105,16 @@ public class Tester : Empleado
         this.proyectosTesteados = proyectosTesteados;
     }
 
+    public static bool operator ==(Tester tester, Tester tester1)
+    {
+        return tester.Salario == tester1.Salario && tester.HerramientaDePrueba == tester1.HerramientaDePrueba && tester.ProyectosTesteados == tester1.ProyectosTesteados;
+    }
+
+    public static bool operator !=(Tester tester, Tester tester1)
+    {
+        return tester.Salario != tester1.Salario && tester.HerramientaDePrueba != tester1.HerramientaDePrueba && tester.ProyectosTesteados != tester1.ProyectosTesteados;
+    }
+
     /// <summary>
     /// Devuelve una cadena que representa la información del tester.
     /// </summary>

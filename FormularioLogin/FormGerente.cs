@@ -93,8 +93,11 @@ namespace Formularios
 
             if (esValido)
             {
-                this.empresa += gerente;
-                this.DialogResult = DialogResult.OK;
+                if (this.empresa != Gerente)
+                {
+                    this.empresa += gerente;
+                    this.DialogResult = DialogResult.OK;
+                }
             }
         }
 
@@ -160,8 +163,17 @@ namespace Formularios
                     {
                         if (int.TryParse(textBox.Text, out int salario))
                         {
-                            gerente.Salario = salario;
-                            return true;
+                            if (salario > 0)
+                            {
+                                gerente.Salario = salario;
+                                return true;
+
+                            }
+                            else
+                            {
+                                MessageBox.Show("Por favor, ingrese un valor numérico mayor a 0 para el salario.");
+                                return false;
+                            }
                         }
                         else
                         {
