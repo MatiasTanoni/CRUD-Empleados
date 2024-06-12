@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Entidades
@@ -35,6 +36,7 @@ namespace Entidades
         /// <summary>
         /// Obtiene o establece el salario del gerente.
         /// </summary>
+        [JsonPropertyName("Salario")]
         public int Salario
         {
             get { return salario; }
@@ -44,6 +46,7 @@ namespace Entidades
         /// <summary>
         /// Obtiene o establece la cantidad de personas a cargo del gerente.
         /// </summary>
+        [JsonPropertyName("PersonasACargo")]
         public int PersonasACargo
         {
             get { return personasACargo; }
@@ -53,6 +56,7 @@ namespace Entidades
         /// <summary>
         /// Obtiene o establece la cantidad de proyectos gestionados por el gerente.
         /// </summary>
+        [JsonPropertyName("ProyectosGestionados")]
         public int ProyectosGestionados
         {
             get { return proyectosGestionados; }

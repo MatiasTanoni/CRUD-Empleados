@@ -1,4 +1,5 @@
 ﻿using Entidades;
+using System.Text.Json.Serialization;
 
 /// <summary>
 /// Representa un empleado de tipo Tester en la empresa.
@@ -29,6 +30,7 @@ public class Tester : Empleado
     /// <summary>
     /// Obtiene o establece el salario del tester.
     /// </summary>
+    [JsonPropertyName("Salario")]
     public int Salario
     {
         set { salario = value; }
@@ -38,6 +40,7 @@ public class Tester : Empleado
     /// <summary>
     /// Obtiene o establece la herramienta de prueba utilizada por el tester.
     /// </summary>
+    [JsonPropertyName("HerramientaDePrueba")]
     public string HerramientaDePrueba
     {
         set { herramientaDePrueba = value; }
@@ -47,6 +50,7 @@ public class Tester : Empleado
     /// <summary>
     /// Obtiene o establece la cantidad de proyectos testeados por el tester.
     /// </summary>
+    [JsonPropertyName("ProyectosTesteados")]
     public int ProyectosTesteados
     {
         set { proyectosTesteados = value; }

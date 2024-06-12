@@ -99,5 +99,15 @@ namespace Formularios.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap it_atencion_a_obras_ver {
+            get {
+                object obj = ResourceManager.GetObject("it_atencion_a_obras_ver", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

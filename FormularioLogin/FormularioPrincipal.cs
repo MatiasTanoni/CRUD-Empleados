@@ -269,6 +269,8 @@ namespace Formularios
                     string jsonContent = File.ReadAllText(path);
 
                     var items = JsonSerializer.Deserialize<List<string>>(jsonContent);
+                    //var empleados = JsonSerializer.Deserialize<List<Empleado>>(jsonContent);
+                    List<Empleado> empleados = JsonSerializer.Deserialize<List<Empleado>>(jsonContent);
 
                     listBoxPrincipal.Items.Clear();
 
@@ -276,6 +278,12 @@ namespace Formularios
                     {
                         listBoxPrincipal.Items.Add(item);
                     }
+                    foreach (var item in empleados)
+                    {
+                        this.empresa.ListaDeEmpleados.Add(item);
+                    }
+
+
                 }
                 catch (Exception ex)
                 {

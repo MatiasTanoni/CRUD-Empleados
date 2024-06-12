@@ -1,4 +1,5 @@
-﻿namespace Entidades
+﻿using System.Text.Json.Serialization;
+namespace Entidades
 {
     /// <summary>
     /// Clase abstracta que representa a un empleado.
@@ -19,6 +20,8 @@
         /// <summary>
         /// Obtiene o establece el nombre del empleado.
         /// </summary>
+        /// 
+        [JsonPropertyName("Nombre")]
         public string Nombre
         {
             get { return nombre; }
@@ -28,6 +31,7 @@
         /// <summary>
         /// Obtiene o establece la edad del empleado.
         /// </summary>
+        [JsonPropertyName("Edad")]
         public int Edad
         {
             get { return edad; }
@@ -37,6 +41,7 @@
         /// <summary>
         /// Obtiene o establece la experiencia del empleado.
         /// </summary>
+        [JsonPropertyName("Experiencia")]
         public int Experiencia
         {
             get { return experiencia; }

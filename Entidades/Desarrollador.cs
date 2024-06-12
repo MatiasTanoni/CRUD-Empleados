@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace Entidades
@@ -36,6 +37,7 @@ namespace Entidades
         /// <summary>
         /// Obtiene o establece el salario del desarrollador.
         /// </summary>
+        [JsonPropertyName("Salario")]
         public int Salario
         {
             get { return salario; }
@@ -45,6 +47,7 @@ namespace Entidades
         /// <summary>
         /// Obtiene o establece el lenguaje de programación que domina el desarrollador.
         /// </summary>
+        [JsonPropertyName("LenguajeDeProgramacion")]
         public string LenguajeDeProgramacion
         {
             get { return lenguajeDeProgramacion; }
@@ -54,6 +57,7 @@ namespace Entidades
         /// <summary>
         /// Obtiene o establece la cantidad de proyectos finalizados por el desarrollador.
         /// </summary>
+        [JsonPropertyName("ProyectosFinalizados")]
         public int ProyectosFinalizados
         {
             get { return proyectosFinalizados; }

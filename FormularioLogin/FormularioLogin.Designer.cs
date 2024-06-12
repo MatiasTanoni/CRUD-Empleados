@@ -80,6 +80,7 @@
             // 
             // pictureBox2
             // 
+            pictureBox2.BackColor = Color.WhiteSmoke;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(12, 87);
             pictureBox2.Name = "pictureBox2";
@@ -215,6 +216,7 @@
             // 
             // pictureBox3
             // 
+            pictureBox3.BackColor = Color.WhiteSmoke;
             pictureBox3.Image = Properties.Resources.candado1;
             pictureBox3.Location = new Point(12, 168);
             pictureBox3.Name = "pictureBox3";
