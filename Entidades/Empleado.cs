@@ -1,17 +1,14 @@
-﻿using System.Text.Json.Serialization;
+﻿using System;
+using System.Text.Json.Serialization;
+
 namespace Entidades
 {
     /// <summary>
     /// Clase abstracta que representa a un empleado.
     /// </summary>
-    public abstract class Empleado
+    public abstract class Empleado : IComparable<Empleado>
     {
         // Atributos
-        /// <summary>
-        /// Nombre del empleado.
-        /// Edad del empleado.
-        /// Experiencia del empleado en años.
-        /// </summary>
         protected string nombre;
         protected int edad;
         protected int experiencia;
@@ -20,7 +17,6 @@ namespace Entidades
         /// <summary>
         /// Obtiene o establece el nombre del empleado.
         /// </summary>
-        /// 
         [JsonPropertyName("Nombre")]
         public string Nombre
         {
@@ -48,7 +44,7 @@ namespace Entidades
             set { experiencia = value; }
         }
 
-        // Constructor
+        // Constructores
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="Empleado"/>.
         /// </summary>
@@ -96,23 +92,33 @@ namespace Entidades
         public abstract string MostrarInformacion();
 
         /// <summary>
-        /// Comprueba si el objeto actual es igual a otro objeto Empleado.
+        /// Implementación de la interfaz IComparable para comparar empleados por nombre.
         /// </summary>
-        /// <param name="otroEmpleado">El objeto que se va a comparar con el objeto actual.</param>
-        /// <returns>True si el objeto actual es igual al objeto especificado; de lo contrario, False.</returns>
-        public override bool Equals(Object otroEmpleado)
+        /// <param name="other">Otro empleado a comparar.</param>
+        /// <returns>Resultado de la comparación.</returns>
+        public int CompareTo(Empleado other)
         {
-            return otroEmpleado is Empleado && this == (Empleado)otroEmpleado;
+            if (other == null) return 1;
+            return this.Nombre.CompareTo(other.Nombre);
         }
+
         /// <summary>
         /// Devuelve una representación de cadena del objeto Empleado.
         /// </summary>
         /// <returns>Una cadena que representa el objeto Empleado.</returns>
-        public virtual string ToString()
+        public override string ToString()
         {
-            return "Soy Empleado";
+            return $"{Nombre}, {Edad} años, {Experiencia} años de experiencia";
+        }
+
+        /// <summary>
+        /// Comprueba si el objeto actual es igual a otro objeto Empleado.
+        /// </summary>
+        /// <param name="otroEmpleado">El objeto que se va a comparar con el objeto actual.</param>
+        /// <returns>True si el objeto actual es igual al objeto especificado; de lo contrario, False.</returns>
+        public override bool Equals(object otroEmpleado)
+        {
+            return otroEmpleado is Empleado && this == (Empleado)otroEmpleado;
         }
     }
-
-
 }

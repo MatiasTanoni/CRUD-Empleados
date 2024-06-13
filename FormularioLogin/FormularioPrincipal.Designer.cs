@@ -158,7 +158,6 @@
             listBoxPrincipal.ScrollAlwaysVisible = true;
             listBoxPrincipal.Size = new Size(751, 304);
             listBoxPrincipal.TabIndex = 8;
-            listBoxPrincipal.SelectedIndexChanged += listBoxPrincipal_SelectedIndexChanged_1;
             // 
             // buttonAscendente
             // 
@@ -172,6 +171,7 @@
             buttonAscendente.TabIndex = 9;
             buttonAscendente.Text = "Ascendente";
             buttonAscendente.UseVisualStyleBackColor = false;
+            buttonAscendente.Click += buttonAscendente_Click;
             // 
             // buttonDescendente
             // 
@@ -185,6 +185,7 @@
             buttonDescendente.TabIndex = 10;
             buttonDescendente.Text = "Descendente";
             buttonDescendente.UseVisualStyleBackColor = false;
+            buttonDescendente.Click += buttonDescendente_Click;
             // 
             // FormularioPrincipal
             // 

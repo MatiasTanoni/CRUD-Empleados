@@ -1,5 +1,6 @@
 using Entidades;
 using Formularios;
+using System.Collections.Immutable;
 using System.Text;
 using System.Text.Json;
 using System.Windows.Forms;
@@ -307,19 +308,58 @@ namespace Formularios
             }
         }
 
-        private void listBoxPrincipal_SelectedIndexChanged(object sender, EventArgs e)
+        private void buttonAscendente_Click(object sender, EventArgs e)
         {
+            // Convertir ListBox items a una lista de Empleado
+            List<Empleado> empleados = new List<Empleado>();
 
+            foreach (var item in listBoxPrincipal.Items)
+            {
+                if (item is Empleado empleado)
+                {
+                    empleados.Add(empleado);
+                    MessageBox.Show("hola");
+                }
+            }
+            //foreach (var item1 in listBoxPrincipal.Items)
+            //{
+            //    item1.Sort(); 
+            //}
+
+            // Ordenar la lista de empleados ascendentemente por nombre
+            empleados.Sort();
+            MessageBox.Show("chaa");
+            // Actualizar ListBox con los empleados ordenados
+            listBoxPrincipal.Items.Clear();
+            foreach (var empleado in empleados)
+            {
+                listBoxPrincipal.Items.Add(empleado.MostrarInformacion());
+                MessageBox.Show("hola");
+            }
         }
 
-        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void buttonDescendente_Click(object sender, EventArgs e)
         {
+            // Convertir ListBox items a una lista de Empleado
+            List<Empleado> empleados = new List<Empleado>();
+            foreach (var item in listBoxPrincipal.Items)
+            {
+                if (item is Empleado empleado)
+                {
+                    empleados.Add(empleado);
+                }
+            }
 
-        }
+            // Ordenar la lista de empleados descendentemente por nombre
+            empleados.Sort();
+            empleados.Reverse();
 
-        private void listBoxPrincipal_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-
+            // Limpiar ListBox y agregar los empleados ordenados
+            //listBoxPrincipal.Items.Clear();
+            foreach (var empleado in empleados)
+            {
+                listBoxPrincipal.Items.Add(empleado.MostrarInformacion()); // Mostrar la información del empleado
+            }
         }
     }
 }
