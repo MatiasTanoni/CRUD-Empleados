@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioPrincipal));
-            listBoxPrincipal = new ListBox();
             buttonAgregar = new Button();
             buttonEliminar = new Button();
             buttonModificar = new Button();
@@ -39,21 +38,11 @@
             buttonVisualizador = new Button();
             buttonGuardar = new Button();
             Abrir = new Button();
+            listBoxPrincipal = new ListBox();
+            buttonAscendente = new Button();
+            buttonDescendente = new Button();
             statusStrip1.SuspendLayout();
             SuspendLayout();
-            // 
-            // listBoxPrincipal
-            // 
-            listBoxPrincipal.BackColor = Color.Silver;
-            listBoxPrincipal.Font = new Font("Lucida Sans", 9F, FontStyle.Italic, GraphicsUnit.Point);
-            listBoxPrincipal.FormattingEnabled = true;
-            listBoxPrincipal.ItemHeight = 15;
-            listBoxPrincipal.Location = new Point(12, 32);
-            listBoxPrincipal.Name = "listBoxPrincipal";
-            listBoxPrincipal.ScrollAlwaysVisible = true;
-            listBoxPrincipal.Size = new Size(765, 319);
-            listBoxPrincipal.TabIndex = 3;
-            listBoxPrincipal.SelectedIndexChanged += listBoxPrincipal_SelectedIndexChanged;
             // 
             // buttonAgregar
             // 
@@ -123,7 +112,7 @@
             buttonVisualizador.FlatStyle = FlatStyle.Popup;
             buttonVisualizador.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonVisualizador.ForeColor = Color.White;
-            buttonVisualizador.Location = new Point(434, 3);
+            buttonVisualizador.Location = new Point(438, 12);
             buttonVisualizador.Name = "buttonVisualizador";
             buttonVisualizador.Size = new Size(114, 23);
             buttonVisualizador.TabIndex = 5;
@@ -137,7 +126,7 @@
             buttonGuardar.FlatStyle = FlatStyle.Popup;
             buttonGuardar.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonGuardar.ForeColor = Color.White;
-            buttonGuardar.Location = new Point(674, 3);
+            buttonGuardar.Location = new Point(674, 12);
             buttonGuardar.Name = "buttonGuardar";
             buttonGuardar.Size = new Size(89, 23);
             buttonGuardar.TabIndex = 6;
@@ -151,7 +140,7 @@
             Abrir.FlatStyle = FlatStyle.Popup;
             Abrir.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             Abrir.ForeColor = Color.White;
-            Abrir.Location = new Point(568, 3);
+            Abrir.Location = new Point(567, 12);
             Abrir.Name = "Abrir";
             Abrir.Size = new Size(89, 23);
             Abrir.TabIndex = 7;
@@ -159,12 +148,53 @@
             Abrir.UseVisualStyleBackColor = false;
             Abrir.Click += Abrir_Click;
             // 
+            // listBoxPrincipal
+            // 
+            listBoxPrincipal.BackColor = Color.Silver;
+            listBoxPrincipal.FormattingEnabled = true;
+            listBoxPrincipal.ItemHeight = 15;
+            listBoxPrincipal.Location = new Point(12, 46);
+            listBoxPrincipal.Name = "listBoxPrincipal";
+            listBoxPrincipal.ScrollAlwaysVisible = true;
+            listBoxPrincipal.Size = new Size(751, 304);
+            listBoxPrincipal.TabIndex = 8;
+            listBoxPrincipal.SelectedIndexChanged += listBoxPrincipal_SelectedIndexChanged_1;
+            // 
+            // buttonAscendente
+            // 
+            buttonAscendente.BackColor = Color.Gainsboro;
+            buttonAscendente.FlatStyle = FlatStyle.Popup;
+            buttonAscendente.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonAscendente.ForeColor = Color.Black;
+            buttonAscendente.Location = new Point(12, 12);
+            buttonAscendente.Name = "buttonAscendente";
+            buttonAscendente.Size = new Size(123, 28);
+            buttonAscendente.TabIndex = 9;
+            buttonAscendente.Text = "Ascendente";
+            buttonAscendente.UseVisualStyleBackColor = false;
+            // 
+            // buttonDescendente
+            // 
+            buttonDescendente.BackColor = Color.Gainsboro;
+            buttonDescendente.FlatStyle = FlatStyle.Popup;
+            buttonDescendente.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonDescendente.ForeColor = Color.Black;
+            buttonDescendente.Location = new Point(141, 12);
+            buttonDescendente.Name = "buttonDescendente";
+            buttonDescendente.Size = new Size(123, 28);
+            buttonDescendente.TabIndex = 10;
+            buttonDescendente.Text = "Descendente";
+            buttonDescendente.UseVisualStyleBackColor = false;
+            // 
             // FormularioPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(789, 473);
+            Controls.Add(buttonDescendente);
+            Controls.Add(buttonAscendente);
+            Controls.Add(listBoxPrincipal);
             Controls.Add(Abrir);
             Controls.Add(buttonGuardar);
             Controls.Add(buttonVisualizador);
@@ -172,7 +202,6 @@
             Controls.Add(buttonModificar);
             Controls.Add(buttonEliminar);
             Controls.Add(buttonAgregar);
-            Controls.Add(listBoxPrincipal);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormularioPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
@@ -185,8 +214,6 @@
         }
 
         #endregion
-
-        private ListBox listBoxPrincipal;
         private Button buttonAgregar;
         private Button buttonEliminar;
         private Button buttonModificar;
@@ -196,5 +223,8 @@
         private Button buttonVisualizador;
         private Button buttonGuardar;
         private Button Abrir;
+        private ListBox listBoxPrincipal;
+        private Button buttonAscendente;
+        private Button buttonDescendente;
     }
 }

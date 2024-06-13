@@ -311,5 +311,15 @@ namespace Formularios
         {
 
         }
+
+        private void dataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void listBoxPrincipal_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
