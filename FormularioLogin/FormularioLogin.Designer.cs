@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioLogin));
             pContainer = new Panel();
             pictureBox2 = new PictureBox();
-            label1 = new Label();
             buttonIniciarSesion = new Button();
             labelContrasena = new Label();
             textContrasena = new TextBox();
@@ -44,6 +43,8 @@
             pictureBoxBorderContrasena = new PictureBox();
             pictureBoxIniciarSesion = new PictureBox();
             pictureBox3 = new PictureBox();
+            panel1 = new Panel();
+            label1 = new Label();
             pContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxContrasena).BeginInit();
@@ -53,13 +54,13 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxBorderContrasena).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxIniciarSesion).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // pContainer
             // 
             pContainer.BackColor = Color.White;
             pContainer.Controls.Add(pictureBox2);
-            pContainer.Controls.Add(label1);
             pContainer.Controls.Add(buttonIniciarSesion);
             pContainer.Controls.Add(labelContrasena);
             pContainer.Controls.Add(textContrasena);
@@ -72,6 +73,7 @@
             pContainer.Controls.Add(pictureBoxBorderContrasena);
             pContainer.Controls.Add(pictureBoxIniciarSesion);
             pContainer.Controls.Add(pictureBox3);
+            pContainer.Controls.Add(panel1);
             pContainer.Dock = DockStyle.Fill;
             pContainer.Location = new Point(0, 0);
             pContainer.Name = "pContainer";
@@ -80,26 +82,15 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.BackColor = Color.WhiteSmoke;
+            pictureBox2.BackColor = Color.Gainsboro;
+            pictureBox2.BorderStyle = BorderStyle.Fixed3D;
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(12, 87);
+            pictureBox2.Location = new Point(46, 122);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(67, 55);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 12;
             pictureBox2.TabStop = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.BackColor = Color.Black;
-            label1.Font = new Font("Lucida Sans", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(168, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(111, 33);
-            label1.TabIndex = 11;
-            label1.Text = "LOGIN";
             // 
             // buttonIniciarSesion
             // 
@@ -119,7 +110,7 @@
             labelContrasena.BackColor = Color.White;
             labelContrasena.Font = new Font("Lucida Sans", 12F, FontStyle.Bold, GraphicsUnit.Point);
             labelContrasena.ForeColor = Color.Black;
-            labelContrasena.Location = new Point(96, 163);
+            labelContrasena.Location = new Point(130, 198);
             labelContrasena.Name = "labelContrasena";
             labelContrasena.Size = new Size(106, 18);
             labelContrasena.TabIndex = 8;
@@ -129,10 +120,10 @@
             // 
             textContrasena.BorderStyle = BorderStyle.None;
             textContrasena.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textContrasena.Location = new Point(101, 184);
+            textContrasena.Location = new Point(130, 219);
             textContrasena.Name = "textContrasena";
             textContrasena.PasswordChar = '*';
-            textContrasena.Size = new Size(242, 25);
+            textContrasena.Size = new Size(254, 25);
             textContrasena.TabIndex = 1;
             textContrasena.Tag = "Correo";
             textContrasena.TextChanged += textContrasena_TextChanged;
@@ -140,7 +131,7 @@
             // pictureBoxContrasena
             // 
             pictureBoxContrasena.BackColor = Color.White;
-            pictureBoxContrasena.Location = new Point(89, 170);
+            pictureBoxContrasena.Location = new Point(123, 205);
             pictureBoxContrasena.Name = "pictureBoxContrasena";
             pictureBoxContrasena.Size = new Size(267, 53);
             pictureBoxContrasena.TabIndex = 6;
@@ -152,7 +143,7 @@
             labelCorreo.BackColor = Color.White;
             labelCorreo.Font = new Font("Lucida Sans", 12F, FontStyle.Bold, GraphicsUnit.Point);
             labelCorreo.ForeColor = Color.Black;
-            labelCorreo.Location = new Point(104, 80);
+            labelCorreo.Location = new Point(138, 115);
             labelCorreo.Name = "labelCorreo";
             labelCorreo.Size = new Size(67, 18);
             labelCorreo.TabIndex = 3;
@@ -162,7 +153,7 @@
             // 
             textBoxCorreo.BorderStyle = BorderStyle.None;
             textBoxCorreo.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxCorreo.Location = new Point(96, 101);
+            textBoxCorreo.Location = new Point(130, 136);
             textBoxCorreo.Name = "textBoxCorreo";
             textBoxCorreo.Size = new Size(254, 25);
             textBoxCorreo.TabIndex = 0;
@@ -172,7 +163,7 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.White;
-            pictureBox1.Location = new Point(90, 89);
+            pictureBox1.Location = new Point(124, 124);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(267, 53);
             pictureBox1.TabIndex = 1;
@@ -181,7 +172,7 @@
             // pictureBoxCorreo
             // 
             pictureBoxCorreo.BackColor = Color.White;
-            pictureBoxCorreo.Location = new Point(90, 89);
+            pictureBoxCorreo.Location = new Point(124, 124);
             pictureBoxCorreo.Name = "pictureBoxCorreo";
             pictureBoxCorreo.Size = new Size(267, 53);
             pictureBoxCorreo.TabIndex = 1;
@@ -190,7 +181,7 @@
             // pictureBoxBorderCorreo
             // 
             pictureBoxBorderCorreo.BackColor = Color.Black;
-            pictureBoxBorderCorreo.Location = new Point(88, 87);
+            pictureBoxBorderCorreo.Location = new Point(122, 122);
             pictureBoxBorderCorreo.Name = "pictureBoxBorderCorreo";
             pictureBoxBorderCorreo.Size = new Size(271, 57);
             pictureBoxBorderCorreo.TabIndex = 2;
@@ -199,7 +190,7 @@
             // pictureBoxBorderContrasena
             // 
             pictureBoxBorderContrasena.BackColor = Color.Black;
-            pictureBoxBorderContrasena.Location = new Point(87, 168);
+            pictureBoxBorderContrasena.Location = new Point(121, 203);
             pictureBoxBorderContrasena.Name = "pictureBoxBorderContrasena";
             pictureBoxBorderContrasena.Size = new Size(271, 57);
             pictureBoxBorderContrasena.TabIndex = 7;
@@ -216,14 +207,38 @@
             // 
             // pictureBox3
             // 
-            pictureBox3.BackColor = Color.WhiteSmoke;
+            pictureBox3.BackColor = Color.Gainsboro;
+            pictureBox3.BorderStyle = BorderStyle.Fixed3D;
             pictureBox3.Image = Properties.Resources.candado1;
-            pictureBox3.Location = new Point(12, 168);
+            pictureBox3.Location = new Point(46, 203);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(67, 55);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 13;
             pictureBox3.TabStop = false;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Gainsboro;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(12, 12);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(431, 72);
+            panel1.TabIndex = 14;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Black;
+            label1.BorderStyle = BorderStyle.Fixed3D;
+            label1.Font = new Font("Lucida Sans", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(156, 17);
+            label1.Name = "label1";
+            label1.Size = new Size(113, 35);
+            label1.TabIndex = 11;
+            label1.Text = "LOGIN";
             // 
             // FormularioLogin
             // 
@@ -245,6 +260,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxBorderContrasena).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxIniciarSesion).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -265,5 +282,6 @@
         private Label label1;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
+        private Panel panel1;
     }
 }
