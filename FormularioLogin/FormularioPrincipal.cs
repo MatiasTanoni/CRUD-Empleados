@@ -171,7 +171,7 @@ namespace Formularios
         /// </summary>
         /// <param name="sender">El objeto que desencadenó el evento.</param>
         /// <param name="e">Los datos del evento.</param>
-        private void FormularioPrincipal_Load_1(object sender, EventArgs e)
+        private void FormularioPrincipal_Load(object sender, EventArgs e)
         {
             toolStripStatusLabelOperador.Text = $"Operador: {this.usuarioRegistrado.Nombre}";
             toolStripStatusLabelFecha.Text = "Fecha: " + DateTime.Now.ToString("dd/MM/yyyy");
@@ -192,10 +192,10 @@ namespace Formularios
             {
                 GuardarArchivo(PathCurrent);
             }
-            
+
         }
 
-        
+
         ///  /// <summary>
         /// Abre un cuadro de diálogo de guardar como y guarda el contenido del listBox en un archivo JSON.
         /// </summary>
@@ -264,7 +264,7 @@ namespace Formularios
                 {
                     string jsonContent = File.ReadAllText(path);
 
-                    var items = JsonSerializer.Deserialize<List<string>>(jsonContent);                
+                    var items = JsonSerializer.Deserialize<List<string>>(jsonContent);
 
                     listBoxPrincipal.Items.Clear();
 

@@ -207,6 +207,7 @@
             Name = "FormularioPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormularioPrincipal";
+            Load += FormularioPrincipal_Load;
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
             ResumeLayout(false);
