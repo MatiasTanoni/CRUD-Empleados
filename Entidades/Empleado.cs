@@ -17,7 +17,7 @@ namespace Entidades
         /// <summary>
         /// Obtiene o establece el nombre del empleado.
         /// </summary>
-        [JsonPropertyName("Nombre")]
+        //[JsonPropertyName("Nombre")]
         public string Nombre
         {
             get { return nombre; }
@@ -27,7 +27,7 @@ namespace Entidades
         /// <summary>
         /// Obtiene o establece la edad del empleado.
         /// </summary>
-        [JsonPropertyName("Edad")]
+        //[JsonPropertyName("Edad")]
         public int Edad
         {
             get { return edad; }
@@ -37,7 +37,7 @@ namespace Entidades
         /// <summary>
         /// Obtiene o establece la experiencia del empleado.
         /// </summary>
-        [JsonPropertyName("Experiencia")]
+        //[JsonPropertyName("Experiencia")]
         public int Experiencia
         {
             get { return experiencia; }

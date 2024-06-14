@@ -80,6 +80,8 @@ namespace Formularios
         /// <param name="e">Los datos del evento.</param>
         private void buttonAgregar_Click_1(object sender, EventArgs e)
         {
+            buttonModificar.Enabled = true;
+            buttonEliminar.Enabled = true;
             this.formularioAgregar = new FormularioDatos(empresa);
             formularioAgregar.ShowDialog();
 
@@ -101,46 +103,54 @@ namespace Formularios
         /// </summary>
         /// <param name="sender">El origen del evento.</param>
         /// <param name="e">Los datos del evento.</param>
-        private void buttonModificar_Click(object sender, EventArgs e)
+        private void buttonModificar_Click_1(object sender, EventArgs e)
         {
             int indice = this.listBoxPrincipal.SelectedIndex;
             if (indice != -1)
             {
-                if (this.empresa.ListaDeEmpleados[indice].GetType() == typeof(Gerente))
+                if (this.empresa.ListaDeEmpleados.Count == 0)
                 {
-                    this.formGerente = new FormGerente((Gerente)this.empresa.ListaDeEmpleados[indice]);
-                    this.formGerente.ShowDialog();
-                    DialogResult resultado = formGerente.DialogResult;
-                    if (resultado == DialogResult.OK)
-                    {
-                        this.empresa.ListaDeEmpleados[indice] = formGerente.Gerente;
-                        this.ActualizarVisor();
-                    }
+                    //No se puede modificar, porque ya es una lista de empleados ya anteriormente guardada
                 }
-                else if (this.empresa.ListaDeEmpleados[indice].GetType() == typeof(Tester))
+                else
                 {
-                    this.formTester = new FormTester((Tester)this.empresa.ListaDeEmpleados[indice]);
-                    this.formTester.ShowDialog();
-                    DialogResult resultado = formTester.DialogResult;
-                    if (resultado == DialogResult.OK)
+                    if (this.empresa.ListaDeEmpleados[indice].GetType() == typeof(Gerente))
                     {
-                        this.empresa.ListaDeEmpleados[indice] = formTester.Tester;
-                        this.ActualizarVisor();
+                        this.formGerente = new FormGerente((Gerente)this.empresa.ListaDeEmpleados[indice]);
+                        this.formGerente.ShowDialog();
+                        DialogResult resultado = formGerente.DialogResult;
+                        if (resultado == DialogResult.OK)
+                        {
+                            this.empresa.ListaDeEmpleados[indice] = formGerente.Gerente;
+                            this.ActualizarVisor();
+                        }
                     }
-                }
-                else if (this.empresa.ListaDeEmpleados[indice].GetType() == typeof(Desarrollador))
-                {
-                    this.formularioDesarrollador = new FormDesarrollador((Desarrollador)this.empresa.ListaDeEmpleados[indice]);
-                    this.formularioDesarrollador.ShowDialog();
-                    DialogResult resultado = formularioDesarrollador.DialogResult;
-                    if (resultado == DialogResult.OK)
+                    else if (this.empresa.ListaDeEmpleados[indice].GetType() == typeof(Tester))
                     {
-                        this.empresa.ListaDeEmpleados[indice] = formularioDesarrollador.Desarrollador;
-                        this.ActualizarVisor();
+                        this.formTester = new FormTester((Tester)this.empresa.ListaDeEmpleados[indice]);
+                        this.formTester.ShowDialog();
+                        DialogResult resultado = formTester.DialogResult;
+                        if (resultado == DialogResult.OK)
+                        {
+                            this.empresa.ListaDeEmpleados[indice] = formTester.Tester;
+                            this.ActualizarVisor();
+                        }
+                    }
+                    else if (this.empresa.ListaDeEmpleados[indice].GetType() == typeof(Desarrollador))
+                    {
+                        this.formularioDesarrollador = new FormDesarrollador((Desarrollador)this.empresa.ListaDeEmpleados[indice]);
+                        this.formularioDesarrollador.ShowDialog();
+                        DialogResult resultado = formularioDesarrollador.DialogResult;
+                        if (resultado == DialogResult.OK)
+                        {
+                            this.empresa.ListaDeEmpleados[indice] = formularioDesarrollador.Desarrollador;
+                            this.ActualizarVisor();
+                        }
                     }
                 }
             }
         }
+
         /// <summary>
         /// Maneja el evento de clic del botón "Eliminar" para eliminar el empleado seleccionado de la lista.
         /// </summary>
@@ -155,9 +165,16 @@ namespace Formularios
                 int indice = this.listBoxPrincipal.SelectedIndex;
                 if (indice != -1)
                 {
-                    this.empresa -= this.empresa.ListaDeEmpleados[indice];
-                    this.listBoxPrincipal.Items.Clear();
-                    this.ActualizarVisor();
+                    if (this.empresa.ListaDeEmpleados.Count == 0)
+                    {
+                        //No se puede eliminar, porque ya es una lista de empleados ya anteriormente guardada
+                    }
+                    else
+                    {
+                        this.empresa -= this.empresa.ListaDeEmpleados[indice];
+                        this.listBoxPrincipal.Items.Clear();
+                        this.ActualizarVisor();
+                    }
                 }
             }
 
@@ -175,22 +192,11 @@ namespace Formularios
         }
 
         /// <summary>
-        /// Maneja el evento Click del botón de visualización.
-        /// </summary>
-        /// <param name="sender">El objeto que desencadenó el evento.</param>
-        /// <param name="e">Los datos del evento.</param>
-        private void buttonVisualizador_Click(object sender, EventArgs e)
-        {
-            FormVisualizador formVisualizador = new FormVisualizador();
-            formVisualizador.ShowDialog();
-        }
-
-        /// <summary>
         /// Maneja el evento Click del botón de guardar.
         /// </summary>
         /// <param name="sender">El objeto que desencadenó el evento.</param>
         /// <param name="e">Los datos del evento.</param>
-        private void buttonGuardar_Click(object sender, EventArgs e)
+        private void buttonGuardar_Click_1(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(PathCurrent))
             {
@@ -200,29 +206,11 @@ namespace Formularios
             {
                 GuardarArchivo(PathCurrent);
             }
+            
         }
 
-        /// <summary>
-        /// Guarda el contenido del listBox en un archivo en la ruta especificada.
-        /// </summary>
-        /// <param name="pathCurrent">La ruta del archivo en la que se guardará el contenido.</param>
-        private void GuardarArchivo(string pathCurrent)
-        {
-            try
-            {
-                // Obtenemos el contenido del listBox
-                string content = listBoxPrincipal.Text;
-
-                // Guardamos el contenido en el archivo
-                File.WriteAllText(pathCurrent, content);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al guardar el archivo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        /// <summary>
+        
+        ///  /// <summary>
         /// Abre un cuadro de diálogo de guardar como y guarda el contenido del listBox en un archivo JSON.
         /// </summary>
         private void GuardarComo()
@@ -250,6 +238,28 @@ namespace Formularios
         }
 
         /// <summary>
+        /// Guarda el contenido del listBox en un archivo en la ruta especificada.
+        /// </summary>
+        /// <param name="pathCurrent">La ruta del archivo en la que se guardará el contenido.</param>
+        private void GuardarArchivo(string pathCurrent)
+        {
+            try
+            {
+                // Obtenemos el contenido del listBox
+                string content = listBoxPrincipal.Text;
+
+                // Guardamos el contenido en el archivo
+                File.WriteAllText(pathCurrent, content);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar el archivo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+        /// <summary>
         /// Maneja el evento Click del botón de abrir archivo.
         /// </summary>
         /// <param name="sender">El objeto que desencadenó el evento.</param>
@@ -264,14 +274,11 @@ namespace Formularios
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string path = openFileDialog.FileName;
-
                 try
                 {
                     string jsonContent = File.ReadAllText(path);
 
-                    var items = JsonSerializer.Deserialize<List<string>>(jsonContent);
-                    //var empleados = JsonSerializer.Deserialize<List<Empleado>>(jsonContent);
-                    List<Empleado> empleados = JsonSerializer.Deserialize<List<Empleado>>(jsonContent);
+                    var items = JsonSerializer.Deserialize<List<string>>(jsonContent);                
 
                     listBoxPrincipal.Items.Clear();
 
@@ -279,12 +286,8 @@ namespace Formularios
                     {
                         listBoxPrincipal.Items.Add(item);
                     }
-                    foreach (var item in empleados)
-                    {
-                        this.empresa.ListaDeEmpleados.Add(item);
-                    }
-
-
+                    buttonModificar.Enabled = false;
+                    buttonEliminar.Enabled = false;
                 }
                 catch (Exception ex)
                 {
@@ -310,56 +313,31 @@ namespace Formularios
 
         private void buttonAscendente_Click(object sender, EventArgs e)
         {
-            // Convertir ListBox items a una lista de Empleado
-            List<Empleado> empleados = new List<Empleado>();
-
-            foreach (var item in listBoxPrincipal.Items)
-            {
-                if (item is Empleado empleado)
-                {
-                    empleados.Add(empleado);
-                    MessageBox.Show("hola");
-                }
-            }
-            //foreach (var item1 in listBoxPrincipal.Items)
-            //{
-            //    item1.Sort(); 
-            //}
-
-            // Ordenar la lista de empleados ascendentemente por nombre
-            empleados.Sort();
-            MessageBox.Show("chaa");
-            // Actualizar ListBox con los empleados ordenados
+            var empleadosOrdenados = empresa.ListaDeEmpleados.OrderBy(e => e.Nombre).ToList();
             listBoxPrincipal.Items.Clear();
-            foreach (var empleado in empleados)
+            foreach (var item in empleadosOrdenados)
             {
-                listBoxPrincipal.Items.Add(empleado.MostrarInformacion());
-                MessageBox.Show("hola");
+                listBoxPrincipal.Items.Add(item.MostrarInformacion());
             }
         }
 
         private void buttonDescendente_Click(object sender, EventArgs e)
         {
-            // Convertir ListBox items a una lista de Empleado
-            List<Empleado> empleados = new List<Empleado>();
-            foreach (var item in listBoxPrincipal.Items)
+            var empleadosOrdenados = empresa.ListaDeEmpleados.OrderByDescending(e => e.Nombre).ToList();
+            listBoxPrincipal.Items.Clear();
+            foreach (var item in empleadosOrdenados)
             {
-                if (item is Empleado empleado)
-                {
-                    empleados.Add(empleado);
-                }
-            }
-
-            // Ordenar la lista de empleados descendentemente por nombre
-            empleados.Sort();
-            empleados.Reverse();
-
-            // Limpiar ListBox y agregar los empleados ordenados
-            //listBoxPrincipal.Items.Clear();
-            foreach (var empleado in empleados)
-            {
-                listBoxPrincipal.Items.Add(empleado.MostrarInformacion()); // Mostrar la información del empleado
+                listBoxPrincipal.Items.Add(item.MostrarInformacion());
             }
         }
+
+        private void buttonVisualizador_Click_1(object sender, EventArgs e)
+        {
+            FormVisualizador formVisualizador = new FormVisualizador();
+            formVisualizador.ShowDialog();
+        }
+
     }
 }
+
+

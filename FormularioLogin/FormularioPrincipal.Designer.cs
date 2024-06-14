@@ -38,9 +38,9 @@
             buttonVisualizador = new Button();
             buttonGuardar = new Button();
             Abrir = new Button();
-            listBoxPrincipal = new ListBox();
             buttonAscendente = new Button();
             buttonDescendente = new Button();
+            listBoxPrincipal = new ListBox();
             statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -81,7 +81,7 @@
             buttonModificar.TabIndex = 1;
             buttonModificar.Text = "Modificar";
             buttonModificar.UseVisualStyleBackColor = false;
-            buttonModificar.Click += buttonModificar_Click;
+            buttonModificar.Click += buttonModificar_Click_1;
             // 
             // statusStrip1
             // 
@@ -118,7 +118,7 @@
             buttonVisualizador.TabIndex = 5;
             buttonVisualizador.Text = "Visualizador";
             buttonVisualizador.UseVisualStyleBackColor = false;
-            buttonVisualizador.Click += buttonVisualizador_Click;
+            buttonVisualizador.Click += buttonVisualizador_Click_1;
             // 
             // buttonGuardar
             // 
@@ -132,7 +132,7 @@
             buttonGuardar.TabIndex = 6;
             buttonGuardar.Text = "Guardar";
             buttonGuardar.UseVisualStyleBackColor = false;
-            buttonGuardar.Click += buttonGuardar_Click;
+            buttonGuardar.Click += buttonGuardar_Click_1;
             // 
             // Abrir
             // 
@@ -147,17 +147,6 @@
             Abrir.Text = "Abrir";
             Abrir.UseVisualStyleBackColor = false;
             Abrir.Click += Abrir_Click;
-            // 
-            // listBoxPrincipal
-            // 
-            listBoxPrincipal.BackColor = Color.Silver;
-            listBoxPrincipal.FormattingEnabled = true;
-            listBoxPrincipal.ItemHeight = 15;
-            listBoxPrincipal.Location = new Point(12, 46);
-            listBoxPrincipal.Name = "listBoxPrincipal";
-            listBoxPrincipal.ScrollAlwaysVisible = true;
-            listBoxPrincipal.Size = new Size(751, 304);
-            listBoxPrincipal.TabIndex = 8;
             // 
             // buttonAscendente
             // 
@@ -187,15 +176,26 @@
             buttonDescendente.UseVisualStyleBackColor = false;
             buttonDescendente.Click += buttonDescendente_Click;
             // 
+            // listBoxPrincipal
+            // 
+            listBoxPrincipal.BackColor = Color.Silver;
+            listBoxPrincipal.FormattingEnabled = true;
+            listBoxPrincipal.ItemHeight = 15;
+            listBoxPrincipal.Location = new Point(15, 59);
+            listBoxPrincipal.Name = "listBoxPrincipal";
+            listBoxPrincipal.ScrollAlwaysVisible = true;
+            listBoxPrincipal.Size = new Size(748, 304);
+            listBoxPrincipal.TabIndex = 11;
+            // 
             // FormularioPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(789, 473);
+            Controls.Add(listBoxPrincipal);
             Controls.Add(buttonDescendente);
             Controls.Add(buttonAscendente);
-            Controls.Add(listBoxPrincipal);
             Controls.Add(Abrir);
             Controls.Add(buttonGuardar);
             Controls.Add(buttonVisualizador);
@@ -207,7 +207,6 @@
             Name = "FormularioPrincipal";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormularioPrincipal";
-            Load += FormularioPrincipal_Load_1;
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
             ResumeLayout(false);
@@ -224,8 +223,8 @@
         private Button buttonVisualizador;
         private Button buttonGuardar;
         private Button Abrir;
-        private ListBox listBoxPrincipal;
         private Button buttonAscendente;
         private Button buttonDescendente;
+        private ListBox listBoxPrincipal;
     }
 }
