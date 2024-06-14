@@ -108,44 +108,37 @@ namespace Formularios
             int indice = this.listBoxPrincipal.SelectedIndex;
             if (indice != -1)
             {
-                if (this.empresa.ListaDeEmpleados.Count == 0)
+                if (this.empresa.ListaDeEmpleados[indice].GetType() == typeof(Gerente))
                 {
-                    //No se puede modificar, porque ya es una lista de empleados ya anteriormente guardada
+                    this.formGerente = new FormGerente((Gerente)this.empresa.ListaDeEmpleados[indice]);
+                    this.formGerente.ShowDialog();
+                    DialogResult resultado = formGerente.DialogResult;
+                    if (resultado == DialogResult.OK)
+                    {
+                        this.empresa.ListaDeEmpleados[indice] = formGerente.Gerente;
+                        this.ActualizarVisor();
+                    }
                 }
-                else
+                else if (this.empresa.ListaDeEmpleados[indice].GetType() == typeof(Tester))
                 {
-                    if (this.empresa.ListaDeEmpleados[indice].GetType() == typeof(Gerente))
+                    this.formTester = new FormTester((Tester)this.empresa.ListaDeEmpleados[indice]);
+                    this.formTester.ShowDialog();
+                    DialogResult resultado = formTester.DialogResult;
+                    if (resultado == DialogResult.OK)
                     {
-                        this.formGerente = new FormGerente((Gerente)this.empresa.ListaDeEmpleados[indice]);
-                        this.formGerente.ShowDialog();
-                        DialogResult resultado = formGerente.DialogResult;
-                        if (resultado == DialogResult.OK)
-                        {
-                            this.empresa.ListaDeEmpleados[indice] = formGerente.Gerente;
-                            this.ActualizarVisor();
-                        }
+                        this.empresa.ListaDeEmpleados[indice] = formTester.Tester;
+                        this.ActualizarVisor();
                     }
-                    else if (this.empresa.ListaDeEmpleados[indice].GetType() == typeof(Tester))
+                }
+                else if (this.empresa.ListaDeEmpleados[indice].GetType() == typeof(Desarrollador))
+                {
+                    this.formularioDesarrollador = new FormDesarrollador((Desarrollador)this.empresa.ListaDeEmpleados[indice]);
+                    this.formularioDesarrollador.ShowDialog();
+                    DialogResult resultado = formularioDesarrollador.DialogResult;
+                    if (resultado == DialogResult.OK)
                     {
-                        this.formTester = new FormTester((Tester)this.empresa.ListaDeEmpleados[indice]);
-                        this.formTester.ShowDialog();
-                        DialogResult resultado = formTester.DialogResult;
-                        if (resultado == DialogResult.OK)
-                        {
-                            this.empresa.ListaDeEmpleados[indice] = formTester.Tester;
-                            this.ActualizarVisor();
-                        }
-                    }
-                    else if (this.empresa.ListaDeEmpleados[indice].GetType() == typeof(Desarrollador))
-                    {
-                        this.formularioDesarrollador = new FormDesarrollador((Desarrollador)this.empresa.ListaDeEmpleados[indice]);
-                        this.formularioDesarrollador.ShowDialog();
-                        DialogResult resultado = formularioDesarrollador.DialogResult;
-                        if (resultado == DialogResult.OK)
-                        {
-                            this.empresa.ListaDeEmpleados[indice] = formularioDesarrollador.Desarrollador;
-                            this.ActualizarVisor();
-                        }
+                        this.empresa.ListaDeEmpleados[indice] = formularioDesarrollador.Desarrollador;
+                        this.ActualizarVisor();
                     }
                 }
             }
@@ -165,16 +158,9 @@ namespace Formularios
                 int indice = this.listBoxPrincipal.SelectedIndex;
                 if (indice != -1)
                 {
-                    if (this.empresa.ListaDeEmpleados.Count == 0)
-                    {
-                        //No se puede eliminar, porque ya es una lista de empleados ya anteriormente guardada
-                    }
-                    else
-                    {
-                        this.empresa -= this.empresa.ListaDeEmpleados[indice];
-                        this.listBoxPrincipal.Items.Clear();
-                        this.ActualizarVisor();
-                    }
+                    this.empresa -= this.empresa.ListaDeEmpleados[indice];
+                    this.listBoxPrincipal.Items.Clear();
+                    this.ActualizarVisor();
                 }
             }
 
