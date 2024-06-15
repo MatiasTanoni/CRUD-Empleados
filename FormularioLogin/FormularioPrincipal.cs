@@ -1,9 +1,11 @@
 using Entidades;
 using Formularios;
 using System.Collections.Immutable;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.Json;
 using System.Windows.Forms;
+using System.Xml.Serialization;
 namespace Formularios
 {
     public partial class FormularioPrincipal : Form
@@ -177,6 +179,7 @@ namespace Formularios
             toolStripStatusLabelFecha.Text = "Fecha: " + DateTime.Now.ToString("dd/MM/yyyy");
         }
 
+
         /// <summary>
         /// Maneja el evento Click del botón de guardar.
         /// </summary>
@@ -192,17 +195,15 @@ namespace Formularios
             {
                 GuardarArchivo(PathCurrent);
             }
-
         }
 
-
-        ///  /// <summary>
-        /// Abre un cuadro de diálogo de guardar como y guarda el contenido del listBox en un archivo JSON.
+        /// <summary>
+        /// Abre un cuadro de diálogo de guardar como y guarda el contenido del listBox en un archivo XML.
         /// </summary>
         private void GuardarComo()
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "Archivo JSON |*.json";
+            saveFileDialog.Filter = "Archivo XML |*.xml";
             saveFileDialog.FilterIndex = 1;
             saveFileDialog.RestoreDirectory = true;
 
@@ -216,10 +217,12 @@ namespace Formularios
                     items.Add(item.ToString());
                 }
 
-                var jsonOptions = new JsonSerializerOptions { WriteIndented = true };
-                string jsonContent = JsonSerializer.Serialize(items, jsonOptions);
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Empleado>));
+                using (StreamWriter streamWriter = new StreamWriter(path))
+                {
+                    xmlSerializer.Serialize(streamWriter, this.empresa.ListaDeEmpleados);
 
-                File.WriteAllText(path, jsonContent);
+                }
             }
         }
 
@@ -231,11 +234,19 @@ namespace Formularios
         {
             try
             {
-                // Obtenemos el contenido del listBox
-                string content = listBoxPrincipal.Text;
+                var items = new List<string>();
+                foreach (var item in listBoxPrincipal.Items)
+                {
+                    items.Add(item.ToString());
+                }
 
-                // Guardamos el contenido en el archivo
-                File.WriteAllText(pathCurrent, content);
+                XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Empleado>));
+
+                using (StreamWriter streamWriter = new StreamWriter(pathCurrent))
+                {
+                    xmlSerializer.Serialize(streamWriter, this.empresa.ListaDeEmpleados);
+
+                }
             }
             catch (Exception ex)
             {
@@ -243,37 +254,39 @@ namespace Formularios
             }
         }
 
-
-
-        /// <summary>
-        /// Maneja el evento Click del botón de abrir archivo.
-        /// </summary>
-        /// <param name="sender">El objeto que desencadenó el evento.</param>
-        /// <param name="e">Los datos del evento.</param>
         private void Abrir_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
 
             openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            openFileDialog.Filter = "Archivos JSON (*.json)|*.json|Todos los archivos (*.*)|*.*";
+            openFileDialog.Filter = "Archivos XML (*.xml)|*.xml|Todos los archivos (*.*)|*.*";
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string path = openFileDialog.FileName;
                 try
                 {
-                    string jsonContent = File.ReadAllText(path);
+                    string xmlContent = File.ReadAllText(path);
 
-                    var items = JsonSerializer.Deserialize<List<string>>(jsonContent);
 
-                    listBoxPrincipal.Items.Clear();
-
-                    foreach (var item in items)
+                    // Deserializar lista de empleados
+                    XmlSerializer xmlSerializerEmpleado = new XmlSerializer(typeof(List<Empleado>));
+                    List<Empleado> empleados;
+                    using (StringReader reader = new StringReader(xmlContent))
                     {
-                        listBoxPrincipal.Items.Add(item);
+                        empleados = (List<Empleado>)xmlSerializerEmpleado.Deserialize(reader);
                     }
-                    buttonModificar.Enabled = false;
-                    buttonEliminar.Enabled = false;
+
+                    // Asignar la lista de empleados a la propiedad correspondiente
+                    this.empresa.ListaDeEmpleados = empleados;
+
+                    // Limpiar y llenar el listBox con los elementos deserializados
+                    listBoxPrincipal.Items.Clear();
+                    foreach (var empleado in empleados)
+                    {
+
+                        listBoxPrincipal.Items.Add(empleado.MostrarInformacion());
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -299,9 +312,21 @@ namespace Formularios
 
         private void buttonAscendente_Click(object sender, EventArgs e)
         {
-            var empleadosOrdenados = empresa.ListaDeEmpleados.OrderBy(e => e.Nombre).ToList();
+            var empleadosOrdenados = new List<Empleado>();
+
+            if (comboBoxPrincipal.Text == "Nombre")
+            {
+                empleadosOrdenados = empresa.ListaDeEmpleados.OrderBy(e => e.Nombre).ToList();
+                this.empresa.ListaDeEmpleados = empleadosOrdenados;
+            }
+            else if (comboBoxPrincipal.Text == "Edad")
+            {
+                empleadosOrdenados = empresa.ListaDeEmpleados.OrderBy(e => e.Edad).ToList();
+                this.empresa.ListaDeEmpleados = empleadosOrdenados;
+            }
+
             listBoxPrincipal.Items.Clear();
-            foreach (var item in empleadosOrdenados)
+            foreach (var item in this.empresa.ListaDeEmpleados)
             {
                 listBoxPrincipal.Items.Add(item.MostrarInformacion());
             }
@@ -309,9 +334,21 @@ namespace Formularios
 
         private void buttonDescendente_Click(object sender, EventArgs e)
         {
-            var empleadosOrdenados = empresa.ListaDeEmpleados.OrderByDescending(e => e.Nombre).ToList();
+            var empleadosOrdenados = new List<Empleado>();
+
+            if (comboBoxPrincipal.Text == "Nombre")
+            {
+                empleadosOrdenados = empresa.ListaDeEmpleados.OrderByDescending(e => e.Nombre).ToList();
+                this.empresa.ListaDeEmpleados = empleadosOrdenados;
+            }
+            else if (comboBoxPrincipal.Text == "Edad")
+            {
+                empleadosOrdenados = empresa.ListaDeEmpleados.OrderByDescending(e => e.Edad).ToList();
+                this.empresa.ListaDeEmpleados = empleadosOrdenados;
+            }
+
             listBoxPrincipal.Items.Clear();
-            foreach (var item in empleadosOrdenados)
+            foreach (var item in this.empresa.ListaDeEmpleados)
             {
                 listBoxPrincipal.Items.Add(item.MostrarInformacion());
             }

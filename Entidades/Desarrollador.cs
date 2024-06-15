@@ -65,6 +65,10 @@ namespace Entidades
         }
 
         // Constructor
+        public Desarrollador()
+        {
+        }
+
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="Desarrollador"/>.
         /// </summary>
@@ -128,7 +132,12 @@ namespace Entidades
         /// <returns>La información del desarrollador.</returns>
         public override string MostrarInformacion()
         {
-            return $"{ToString()} - Nombre: {this.nombre} - Edad: {this.edad} - Experiencia: {this.experiencia} - Salario: {this.salario} - Lenguaje De Programacion: {this.lenguajeDeProgramacion} - Proyectos finalizados: {this.proyectosFinalizados}";
+            return $"{this.tipo} - {base.ToString()} - {base.MostrarExperiencia()} - Salario: {this.salario} - Lenguaje De Programacion: {this.lenguajeDeProgramacion} - Proyectos finalizados: {this.proyectosFinalizados} - {ToString()}";
+        }
+
+        public override string MostrarExperiencia()
+        {
+            return base.MostrarExperiencia();
         }
         /// <summary>
         /// Devuelve una representación de cadena del objeto Desarrollador.
@@ -136,9 +145,8 @@ namespace Entidades
         /// <returns>Una cadena que representa el objeto Desarrollador.</returns>
         public override string ToString()
         {
-            return "Soy Desarrollador";
+            return "Información de un Desarrollador";
         }
-
         /// <summary>
         /// Comprueba si el objeto actual es igual a otro objeto Desarrollador.
         /// </summary>

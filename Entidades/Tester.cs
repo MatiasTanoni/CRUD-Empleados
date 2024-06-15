@@ -30,7 +30,7 @@ public class Tester : Empleado
     /// <summary>
     /// Obtiene o establece el salario del tester.
     /// </summary>
-    [JsonPropertyName("Salario")]
+    
     public int Salario
     {
         set { salario = value; }
@@ -40,7 +40,7 @@ public class Tester : Empleado
     /// <summary>
     /// Obtiene o establece la herramienta de prueba utilizada por el tester.
     /// </summary>
-    [JsonPropertyName("HerramientaDePrueba")]
+    
     public string HerramientaDePrueba
     {
         set { herramientaDePrueba = value; }
@@ -50,7 +50,7 @@ public class Tester : Empleado
     /// <summary>
     /// Obtiene o establece la cantidad de proyectos testeados por el tester.
     /// </summary>
-    [JsonPropertyName("ProyectosTesteados")]
+    
     public int ProyectosTesteados
     {
         set { proyectosTesteados = value; }
@@ -58,7 +58,9 @@ public class Tester : Empleado
     }
 
     // Constructor
-
+    public Tester()
+    {
+    }
     /// <summary>
     /// Inicializa una nueva instancia de la clase Tester con el nombre, la edad y la experiencia especificados.
     /// </summary>
@@ -125,7 +127,7 @@ public class Tester : Empleado
     /// <returns>Una cadena que contiene el nombre, la edad, la experiencia, el salario, la herramienta de prueba y la cantidad de proyectos testeados del tester.</returns>
     public override string MostrarInformacion()
     {
-        return $"{ToString()} - Nombre: {this.nombre} - Edad: {this.edad} - Experiencia: {this.experiencia} - Salario: {this.salario} - Herramienta De Prueba: {this.herramientaDePrueba} - Testeo: {this.proyectosTesteados} proyectos";
+        return $"{this.tipo} - {base.ToString()} - {base.MostrarExperiencia()} - Salario: {this.salario} - Herramienta De Prueba: {this.herramientaDePrueba} - Testeo: {this.proyectosTesteados} proyectos - {ToString()}";
     }
     /// <summary>
     /// Devuelve una representación de cadena del objeto Tester.
@@ -133,7 +135,7 @@ public class Tester : Empleado
     /// <returns>Una cadena que representa el objeto Tester.</returns>
     public override string ToString()
     {
-        return "Soy Tester";
+        return "Informacion de un Tester";
     }
 
     /// <summary>

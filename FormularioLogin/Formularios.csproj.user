@@ -4,9 +4,6 @@
     <Compile Update="FormularioPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormVisualizador.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="FormDesarrollador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -20,6 +17,9 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="FormularioLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FormVisualizador.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

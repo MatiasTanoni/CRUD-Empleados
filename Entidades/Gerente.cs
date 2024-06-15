@@ -36,7 +36,7 @@ namespace Entidades
         /// <summary>
         /// Obtiene o establece el salario del gerente.
         /// </summary>
-        [JsonPropertyName("Salario")]
+        
         public int Salario
         {
             get { return salario; }
@@ -46,7 +46,7 @@ namespace Entidades
         /// <summary>
         /// Obtiene o establece la cantidad de personas a cargo del gerente.
         /// </summary>
-        [JsonPropertyName("PersonasACargo")]
+        
         public int PersonasACargo
         {
             get { return personasACargo; }
@@ -56,7 +56,7 @@ namespace Entidades
         /// <summary>
         /// Obtiene o establece la cantidad de proyectos gestionados por el gerente.
         /// </summary>
-        [JsonPropertyName("ProyectosGestionados")]
+        
         public int ProyectosGestionados
         {
             get { return proyectosGestionados; }
@@ -64,6 +64,9 @@ namespace Entidades
         }
 
         // Constructor
+        public Gerente()
+        {
+        }
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="Gerente"/>.
         /// </summary>
@@ -128,7 +131,7 @@ namespace Entidades
         /// <returns>La información del gerente.</returns>
         public override string MostrarInformacion()
         {
-            return $"{ToString()} - Nombre: {this.nombre} - Edad: {this.edad} - Experiencia: {this.experiencia} - Salario: {this.salario} - A cargo de: {this.personasACargo} personas - Proyectos Gestionados: {this.proyectosGestionados}";
+            return $"{this.tipo} - {base.ToString()} - {base.MostrarExperiencia()} - Salario: {this.salario} - A cargo de: {this.personasACargo} personas - Proyectos Gestionados: {this.proyectosGestionados} - {ToString()}";
         }
         /// <summary>
         /// Devuelve una representación de cadena del objeto Gerente.
@@ -136,7 +139,7 @@ namespace Entidades
         /// <returns>Una cadena que representa el objeto Gerente.</returns>
         public override string ToString()
         {
-            return "Soy Gerente";
+            return "Informacion de un Gerente";
         }
 
         /// <summary>

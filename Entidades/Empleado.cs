@@ -1,23 +1,30 @@
 ﻿using System;
 using System.Text.Json.Serialization;
+using System.Xml.Serialization;
 
 namespace Entidades
 {
     /// <summary>
     /// Clase abstracta que representa a un empleado.
     /// </summary>
-    public abstract class Empleado : IComparable<Empleado>
+
+    [XmlInclude(typeof(Empleado))]
+    [XmlInclude(typeof(Desarrollador))]
+    [XmlInclude(typeof(Tester))]
+    [XmlInclude(typeof(Gerente))]
+
+    public abstract class Empleado
     {
         // Atributos
         protected string nombre;
         protected int edad;
         protected int experiencia;
-
+        protected int edadJubilacionDefault = 65;
         // Propiedades
         /// <summary>
         /// Obtiene o establece el nombre del empleado.
         /// </summary>
-        //[JsonPropertyName("Nombre")]
+
         public string Nombre
         {
             get { return nombre; }
@@ -27,7 +34,7 @@ namespace Entidades
         /// <summary>
         /// Obtiene o establece la edad del empleado.
         /// </summary>
-        //[JsonPropertyName("Edad")]
+        
         public int Edad
         {
             get { return edad; }
@@ -37,22 +44,21 @@ namespace Entidades
         /// <summary>
         /// Obtiene o establece la experiencia del empleado.
         /// </summary>
-        //[JsonPropertyName("Experiencia")]
+        
         public int Experiencia
         {
             get { return experiencia; }
             set { experiencia = value; }
         }
 
+        public int EdadJubilacionDefault
+        {
+            get { return edadJubilacionDefault; }
+        }
+
         // Constructores
-        /// <summary>
-        /// Inicializa una nueva instancia de la clase <see cref="Empleado"/>.
-        /// </summary>
         public Empleado()
         {
-            this.nombre = "";
-            this.edad = 0;
-            this.experiencia = 0;
         }
 
         /// <summary>
@@ -85,30 +91,39 @@ namespace Entidades
             this.experiencia = experiencia;
         }
 
+        public int AniosHastaJubilacion()
+        {
+            return AniosHastaJubilacion(EdadJubilacionDefault);
+        }
+
+        /// <summary>
+        /// Método que calcula los años restantes hasta la jubilación del empleado.
+        /// </summary>
+        /// <param name="edadJubilacion">Edad de jubilación esperada.</param>
+        /// <returns>Años restantes hasta la jubilación.</returns>
+        public int AniosHastaJubilacion(int edadJubilacion)
+        {
+            return edadJubilacion - Edad;
+        }
+
         /// <summary>
         /// Método abstracto que devuelve la información del empleado.
         /// </summary>
         /// <returns>Información del empleado.</returns>
         public abstract string MostrarInformacion();
 
-        /// <summary>
-        /// Implementación de la interfaz IComparable para comparar empleados por nombre.
-        /// </summary>
-        /// <param name="other">Otro empleado a comparar.</param>
-        /// <returns>Resultado de la comparación.</returns>
-        public int CompareTo(Empleado other)
-        {
-            if (other == null) return 1;
-            return this.Nombre.CompareTo(other.Nombre);
-        }
 
+        public virtual string MostrarExperiencia()
+        {
+            return $"Experiencia: {Experiencia}";
+        }
         /// <summary>
         /// Devuelve una representación de cadena del objeto Empleado.
         /// </summary>
         /// <returns>Una cadena que representa el objeto Empleado.</returns>
         public override string ToString()
         {
-            return $"{Nombre}, {Edad} años, {Experiencia} años de experiencia";
+            return $"Nombre: {Nombre} - Edad: {Edad} - Años para jubilacion: {AniosHastaJubilacion()}";
         }
 
         /// <summary>
@@ -120,5 +135,7 @@ namespace Entidades
         {
             return otroEmpleado is Empleado && this == (Empleado)otroEmpleado;
         }
+
+
     }
 }

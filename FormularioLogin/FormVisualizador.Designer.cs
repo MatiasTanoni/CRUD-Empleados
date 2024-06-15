@@ -1,6 +1,6 @@
 ﻿namespace Formularios
 {
-    partial class FormVisualizador
+    partial class FormVisualizador 
     {
         /// <summary>
         /// Required designer variable.

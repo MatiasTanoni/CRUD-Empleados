@@ -17,15 +17,15 @@ namespace Formularios
         /// Representa un objeto de tipo Tester con valores predeterminados para el nombre, la edad y el salario.
         /// Representa una instancia de la clase Empresa que almacena información sobre la empresa, incluida la lista de empleados.
         /// </summary>
-        private Tester tester = new Tester("",0,0);
+        private Tester tester = new Tester("", 0, 0);
         public Empresa empresa = new Empresa();
 
         /// <summary>
         /// Obtiene o establece el objeto de tipo Tester asociado a esta instancia.
         /// </summary>
-        public Tester Tester 
-        { 
-            get { return tester; } 
+        public Tester Tester
+        {
+            get { return tester; }
             set { tester = value; }
         }
 
@@ -39,7 +39,7 @@ namespace Formularios
         /// Inicializa una nueva instancia de la clase FormTester con la empresa proporcionada.
         /// </summary>
         /// <param name="empresa">La empresa asociada a este formulario.</param>
-        public FormTester(Empresa empresa) :this()
+        public FormTester(Empresa empresa) : this()
         {
             this.empresa = empresa;
         }
@@ -66,7 +66,7 @@ namespace Formularios
         /// </summary>
         /// <param name="sender">El origen del evento.</param>
         /// <param name="e">Los datos del evento.</param>
-        
+
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
@@ -93,7 +93,7 @@ namespace Formularios
                 if (this.empresa != Tester)
                 {
                     this.empresa += tester;
-                    this.DialogResult = DialogResult.OK; 
+                    this.DialogResult = DialogResult.OK;
                 }
             }
         }
@@ -137,7 +137,7 @@ namespace Formularios
                     {
                         if (int.TryParse(textBox.Text, out int edad))
                         {
-                            if (edad > 0 && edad < 90)
+                            if (edad > 0 && edad < 65)
                             {
                                 tester.Edad = edad;
                                 return true;
@@ -180,7 +180,7 @@ namespace Formularios
                     {
                         if (int.TryParse(textBox.Text, out int experiencia))
                         {
-                            if (experiencia >= 0 && experiencia < 90)
+                            if (experiencia >= 0 && experiencia < 40)
                             {
                                 tester.Experiencia = experiencia;
                                 return true;
@@ -214,6 +214,7 @@ namespace Formularios
                     return false;
             }
         }
+
     }
 }
 

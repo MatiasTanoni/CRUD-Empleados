@@ -142,7 +142,7 @@ namespace Formularios
                     {
                         if (int.TryParse(textBox.Text, out int edad))
                         {
-                            if (edad > 0 && edad < 90)
+                            if (edad > 0 && edad < 65)
                             {
                                 gerente.Edad = edad;
                                 return true;
@@ -185,7 +185,7 @@ namespace Formularios
                     {
                         if (int.TryParse(textBox.Text, out int experiencia))
                         {
-                            if (experiencia >= 0 && experiencia < 90)
+                            if (experiencia >= 0 && experiencia < 40)
                             {
                                 gerente.Experiencia = experiencia;
                                 return true;

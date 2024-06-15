@@ -41,6 +41,7 @@
             buttonAscendente = new Button();
             buttonDescendente = new Button();
             listBoxPrincipal = new ListBox();
+            comboBoxPrincipal = new ComboBox();
             statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -112,7 +113,7 @@
             buttonVisualizador.FlatStyle = FlatStyle.Popup;
             buttonVisualizador.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonVisualizador.ForeColor = Color.White;
-            buttonVisualizador.Location = new Point(438, 12);
+            buttonVisualizador.Location = new Point(541, 7);
             buttonVisualizador.Name = "buttonVisualizador";
             buttonVisualizador.Size = new Size(114, 23);
             buttonVisualizador.TabIndex = 5;
@@ -126,7 +127,7 @@
             buttonGuardar.FlatStyle = FlatStyle.Popup;
             buttonGuardar.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonGuardar.ForeColor = Color.White;
-            buttonGuardar.Location = new Point(674, 12);
+            buttonGuardar.Location = new Point(688, 7);
             buttonGuardar.Name = "buttonGuardar";
             buttonGuardar.Size = new Size(89, 23);
             buttonGuardar.TabIndex = 6;
@@ -140,7 +141,7 @@
             Abrir.FlatStyle = FlatStyle.Popup;
             Abrir.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             Abrir.ForeColor = Color.White;
-            Abrir.Location = new Point(567, 12);
+            Abrir.Location = new Point(688, 36);
             Abrir.Name = "Abrir";
             Abrir.Size = new Size(89, 23);
             Abrir.TabIndex = 7;
@@ -154,7 +155,7 @@
             buttonAscendente.FlatStyle = FlatStyle.Popup;
             buttonAscendente.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonAscendente.ForeColor = Color.Black;
-            buttonAscendente.Location = new Point(12, 12);
+            buttonAscendente.Location = new Point(15, 7);
             buttonAscendente.Name = "buttonAscendente";
             buttonAscendente.Size = new Size(123, 28);
             buttonAscendente.TabIndex = 9;
@@ -168,7 +169,7 @@
             buttonDescendente.FlatStyle = FlatStyle.Popup;
             buttonDescendente.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonDescendente.ForeColor = Color.Black;
-            buttonDescendente.Location = new Point(141, 12);
+            buttonDescendente.Location = new Point(144, 7);
             buttonDescendente.Name = "buttonDescendente";
             buttonDescendente.Size = new Size(123, 28);
             buttonDescendente.TabIndex = 10;
@@ -179,13 +180,24 @@
             // listBoxPrincipal
             // 
             listBoxPrincipal.BackColor = Color.Silver;
+            listBoxPrincipal.Font = new Font("Lucida Sans", 9F, FontStyle.Regular, GraphicsUnit.Point);
             listBoxPrincipal.FormattingEnabled = true;
             listBoxPrincipal.ItemHeight = 15;
-            listBoxPrincipal.Location = new Point(15, 59);
+            listBoxPrincipal.Location = new Point(15, 74);
             listBoxPrincipal.Name = "listBoxPrincipal";
             listBoxPrincipal.ScrollAlwaysVisible = true;
-            listBoxPrincipal.Size = new Size(748, 304);
+            listBoxPrincipal.Size = new Size(748, 289);
             listBoxPrincipal.TabIndex = 11;
+            // 
+            // comboBoxPrincipal
+            // 
+            comboBoxPrincipal.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxPrincipal.FormattingEnabled = true;
+            comboBoxPrincipal.Items.AddRange(new object[] { "Nombre", "Edad" });
+            comboBoxPrincipal.Location = new Point(81, 41);
+            comboBoxPrincipal.Name = "comboBoxPrincipal";
+            comboBoxPrincipal.Size = new Size(121, 23);
+            comboBoxPrincipal.TabIndex = 12;
             // 
             // FormularioPrincipal
             // 
@@ -193,6 +205,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(789, 473);
+            Controls.Add(comboBoxPrincipal);
             Controls.Add(listBoxPrincipal);
             Controls.Add(buttonDescendente);
             Controls.Add(buttonAscendente);
@@ -227,5 +240,6 @@
         private Button buttonAscendente;
         private Button buttonDescendente;
         private ListBox listBoxPrincipal;
+        private ComboBox comboBoxPrincipal;
     }
 }
