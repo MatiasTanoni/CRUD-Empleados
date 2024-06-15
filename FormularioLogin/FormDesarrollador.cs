@@ -147,7 +147,7 @@ namespace Formularios
                         }
                         else
                         {
-                            MessageBox.Show("Por favor, ingrese una edad válida (entre 1 y 89).");
+                            MessageBox.Show("Por favor, ingrese una edad válida (entre 1 y 64).");
                             return false;
                         }
                     }
@@ -184,14 +184,14 @@ namespace Formularios
                     {
                         if (int.TryParse(textBox.Text, out int experiencia) )
                         {
-                            if(experiencia >= 0 && experiencia < 40)
+                            if(experiencia >= 0 && experiencia <= 40)
                             {
                                 desarrollador.Experiencia = experiencia;
                                 return true;
                             }
                             else
                             {
-                                MessageBox.Show("Por favor, ingrese una experiencia válida (entre 0 y 89).");
+                                MessageBox.Show("Por favor, ingrese una experiencia válida (entre 0 y 40).");
                                 return false;
                             }
                         }

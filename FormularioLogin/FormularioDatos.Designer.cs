@@ -122,10 +122,10 @@ namespace Formularios
 
         #endregion
         private Button buttonCancelar;
-        private ToolStripMenuItem empleadoToolStripMenuItem;
-        private ToolStripMenuItem gerenteToolStripMenuItem;
-        private ToolStripMenuItem testerToolStripMenuItem;
-        private ToolStripMenuItem desarrolladorToolStripMenuItem;
+        //private ToolStripMenuItem empleadoToolStripMenuItem;
+        //private ToolStripMenuItem gerenteToolStripMenuItem;
+        //private ToolStripMenuItem testerToolStripMenuItem;
+        //private ToolStripMenuItem desarrolladorToolStripMenuItem;
         private RadioButton radioButtonDesarrollador;
         private GroupBox groupBox;
         private RadioButton radioButtonGerente;

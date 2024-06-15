@@ -20,9 +20,9 @@ namespace Formularios
         /// Formulario para manejar las acciones relacionadas con un gerente.
         /// Instancia de la empresa que contiene la lista de empleados.
         /// </summary>
-        public FormDesarrollador formDesarrollador;
-        public FormTester formTester;
-        public FormGerente formGerente;
+        public FormDesarrollador? formDesarrollador = null;
+        public FormTester? formTester = null;
+        public FormGerente? formGerente = null;
         public Empresa empresa = new Empresa();
 
         public FormularioDatos()
@@ -63,9 +63,13 @@ namespace Formularios
                 this.formDesarrollador = new FormDesarrollador(this.empresa);
                 formDesarrollador.ShowDialog();
             }
+            if (this.formDesarrollador != null)
+            {
             if (this.formDesarrollador.DialogResult == DialogResult.OK)
             {
                 this.formDesarrollador.Close();
+            }
+                
             }
             this.Hide();
         }

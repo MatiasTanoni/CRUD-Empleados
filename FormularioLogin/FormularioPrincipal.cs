@@ -18,17 +18,19 @@ namespace Formularios
         /// Empresa que contiene la lista de empleados.
         /// El usuario registrado.
         /// </summary>
-        public FormDesarrollador formularioDesarrollador = new FormDesarrollador();
-        public FormTester formTester = new FormTester();
-        public FormGerente formGerente = new FormGerente();
-        public FormularioDatos formularioAgregar;
+        public FormDesarrollador? formularioDesarrollador = new FormDesarrollador();
+        public FormTester? formTester = new FormTester();
+        public FormGerente? formGerente = new FormGerente();
+        public FormularioDatos? formularioAgregar;
         public Empresa empresa = new Empresa();
-        public Usuario usuarioRegistrado;
+        public Usuario? usuarioRegistrado;
+
 
         /// <summary>
         /// Obtiene o establece la ruta actual.
         /// </summary>
-        public string PathCurrent { get; set; }
+        public string PathCurrent { get; set; } = string.Empty;
+
 
         /// <summary>
         /// Constructor por defecto de la clase FormularioPrincipal.
@@ -39,11 +41,12 @@ namespace Formularios
             this.listBoxPrincipal.HorizontalScrollbar = true;
             this.FormClosing += FormularioPrincipal_FormClosing;
         }
-        /// <summary>
-        /// Constructor de la clase FormularioPrincipal que recibe un usuario registrado.
-        /// </summary>
-        /// <param name="usuarioRegistrado">El usuario registrado que utilizará el formulario principal.</param>
-        public FormularioPrincipal(Usuario usuarioRegistrado) : this()
+
+            /// <summary>
+            /// Constructor de la clase FormularioPrincipal que recibe un usuario registrado.
+            /// </summary>
+            /// <param name="usuarioRegistrado">El usuario registrado que utilizará el formulario principal.</param>
+            public FormularioPrincipal(Usuario usuarioRegistrado) : this()
         {
             this.usuarioRegistrado = usuarioRegistrado;
         }
@@ -53,7 +56,7 @@ namespace Formularios
         /// </summary>
         private void ActualizarVisor()
         {
-            if (empresa != null && empresa.ListaDeEmpleados != null)
+            if (empresa.ListaDeEmpleados != null)
             {
                 this.listBoxPrincipal.Items.Clear();
                 try
@@ -175,8 +178,12 @@ namespace Formularios
         /// <param name="e">Los datos del evento.</param>
         private void FormularioPrincipal_Load(object sender, EventArgs e)
         {
-            toolStripStatusLabelOperador.Text = $"Operador: {this.usuarioRegistrado.Nombre}";
-            toolStripStatusLabelFecha.Text = "Fecha: " + DateTime.Now.ToString("dd/MM/yyyy");
+            if (this.usuarioRegistrado != null)
+            {     
+                toolStripStatusLabelOperador.Text = $"Operador: {this.usuarioRegistrado.Nombre}";
+                toolStripStatusLabelFecha.Text = "Fecha: " + DateTime.Now.ToString("dd/MM/yyyy");
+            }
+            
         }
 
 
@@ -214,7 +221,9 @@ namespace Formularios
                 var items = new List<string>();
                 foreach (var item in listBoxPrincipal.Items)
                 {
-                    items.Add(item.ToString());
+                    string itemString = item?.ToString() ?? "Valor nulo";
+                    items.Add(itemString);
+                    //items.Add(item.ToString());
                 }
 
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Empleado>));
@@ -237,7 +246,10 @@ namespace Formularios
                 var items = new List<string>();
                 foreach (var item in listBoxPrincipal.Items)
                 {
-                    items.Add(item.ToString());
+                    string itemString = item?.ToString() ?? "Valor nulo";
+                    items.Add(itemString);
+                    //items.Add(item.ToString());
+
                 }
 
                 XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Empleado>));
@@ -274,18 +286,32 @@ namespace Formularios
                     List<Empleado> empleados;
                     using (StringReader reader = new StringReader(xmlContent))
                     {
-                        empleados = (List<Empleado>)xmlSerializerEmpleado.Deserialize(reader);
+                        //empleados = (List<Empleado>)xmlSerializerEmpleado.Deserialize(reader);
+                        var resultado = xmlSerializerEmpleado.Deserialize(reader);
+
+                        if (resultado != null)
+                        {
+                            empleados = (List<Empleado>)resultado;
+                        }
+                        else
+                        {
+                            empleados = new List<Empleado>(); // Asignar una lista vacía o manejar el caso de null adecuadamente
+                        }
                     }
 
-                    // Asignar la lista de empleados a la propiedad correspondiente
-                    this.empresa.ListaDeEmpleados = empleados;
-
-                    // Limpiar y llenar el listBox con los elementos deserializados
-                    listBoxPrincipal.Items.Clear();
-                    foreach (var empleado in empleados)
+                    if (empleados != null)
                     {
+                        // Asignar la lista de empleados a la propiedad correspondiente
+                        this.empresa.ListaDeEmpleados = empleados;
 
-                        listBoxPrincipal.Items.Add(empleado.MostrarInformacion());
+                        // Limpiar y llenar el listBox con los elementos deserializados
+                        listBoxPrincipal.Items.Clear();
+                        foreach (var empleado in empleados)
+                        {
+
+                            listBoxPrincipal.Items.Add(empleado.MostrarInformacion());
+                        }
+                        
                     }
                 }
                 catch (Exception ex)

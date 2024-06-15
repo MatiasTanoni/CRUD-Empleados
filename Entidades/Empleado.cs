@@ -16,7 +16,7 @@ namespace Entidades
     public abstract class Empleado
     {
         // Atributos
-        protected string nombre;
+        protected string nombre = string.Empty;
         protected int edad;
         protected int experiencia;
         protected int edadJubilacionDefault = 65;
@@ -133,9 +133,20 @@ namespace Entidades
         /// <returns>True si el objeto actual es igual al objeto especificado; de lo contrario, False.</returns>
         public override bool Equals(object otroEmpleado)
         {
+
             return otroEmpleado is Empleado && this == (Empleado)otroEmpleado;
         }
-
+        //public override int GetHashCode()
+        //{
+        //    unchecked
+        //    {
+        //        int hash = 17;
+        //        hash = hash * 23 + (nombre != null ? nombre.GetHashCode() : 0);
+        //        hash = hash * 23 + edad.GetHashCode();
+        //        hash = hash * 23 + experiencia.GetHashCode();
+        //        return hash;
+        //    }
+        //}
 
     }
 }

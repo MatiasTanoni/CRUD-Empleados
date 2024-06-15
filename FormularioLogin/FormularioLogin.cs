@@ -94,24 +94,47 @@ namespace Formularios
                     {
                         string jsonString = streamReader.ReadToEnd();
 
-                        List<Usuario> usuarios = JsonSerializer.Deserialize<List<Usuario>>(jsonString);
-
-                        bool usuarioEncontrado = false;
-                        foreach (Usuario usuario in usuarios)
+                        List<Usuario> usuarios;
+                        if (jsonString != null)
                         {
-                            if (usuario.Correo == textBoxCorreo.Text && usuario.Clave == textContrasena.Text)
+                            var resultado = JsonSerializer.Deserialize<List<Usuario>>(jsonString);
+
+                            // Manejar el caso en que la deserialización devuelva null
+                            if (resultado != null)
                             {
-                                UsuarioRegistrado = usuario;
-                                usuarioEncontrado = true;
-                                RegistrarAccesoUsuario();
-                                FormularioPrincipal formularioPrincipal = new FormularioPrincipal(this.UsuarioRegistrado);
-                                formularioPrincipal.ShowDialog();
-                                break;
+                                usuarios = resultado;
+                            }
+                            else
+                            {
+                                usuarios = new List<Usuario>();
                             }
                         }
-                        if (!usuarioEncontrado)
+                        else
                         {
-                            MessageBox.Show("Error, ha ingresado mal el usuario o la contraseña.");
+                            usuarios = new List<Usuario>(); // Manejar el caso de jsonString nulo
+                        }
+
+                        // List<Usuario> usuarios = JsonSerializer.Deserialize<List<Usuario>>(jsonString);
+
+                        bool usuarioEncontrado = false;
+                        if (usuarios != null)
+                        { 
+                            foreach (Usuario usuario in usuarios)
+                            {
+                                if (usuario.Correo == textBoxCorreo.Text && usuario.Clave == textContrasena.Text)
+                                {
+                                    UsuarioRegistrado = usuario;
+                                    usuarioEncontrado = true;
+                                    RegistrarAccesoUsuario();
+                                    FormularioPrincipal formularioPrincipal = new FormularioPrincipal(this.UsuarioRegistrado);
+                                    formularioPrincipal.ShowDialog();
+                                    break;
+                                }
+                            }
+                            if (!usuarioEncontrado)
+                            {
+                                MessageBox.Show("Error, ha ingresado mal el usuario o la contraseña.");
+                            }
                         }
                     }
                 }

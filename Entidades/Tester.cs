@@ -15,7 +15,7 @@ public class Tester : Empleado
     /// </summary>
     private TipoDeEmpleados tipo = TipoDeEmpleados.Tester;
     private int salario;
-    private string herramientaDePrueba;
+    private string herramientaDePrueba = string.Empty;
     private int proyectosTesteados;
 
     // Propiedades
