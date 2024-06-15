@@ -113,7 +113,7 @@
             buttonVisualizador.FlatStyle = FlatStyle.Popup;
             buttonVisualizador.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonVisualizador.ForeColor = Color.White;
-            buttonVisualizador.Location = new Point(541, 7);
+            buttonVisualizador.Location = new Point(473, 25);
             buttonVisualizador.Name = "buttonVisualizador";
             buttonVisualizador.Size = new Size(114, 23);
             buttonVisualizador.TabIndex = 5;
@@ -127,7 +127,7 @@
             buttonGuardar.FlatStyle = FlatStyle.Popup;
             buttonGuardar.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonGuardar.ForeColor = Color.White;
-            buttonGuardar.Location = new Point(688, 7);
+            buttonGuardar.Location = new Point(688, 25);
             buttonGuardar.Name = "buttonGuardar";
             buttonGuardar.Size = new Size(89, 23);
             buttonGuardar.TabIndex = 6;
@@ -141,7 +141,7 @@
             Abrir.FlatStyle = FlatStyle.Popup;
             Abrir.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             Abrir.ForeColor = Color.White;
-            Abrir.Location = new Point(688, 36);
+            Abrir.Location = new Point(593, 25);
             Abrir.Name = "Abrir";
             Abrir.Size = new Size(89, 23);
             Abrir.TabIndex = 7;
