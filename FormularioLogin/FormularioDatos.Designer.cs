@@ -36,7 +36,10 @@ namespace Formularios
             groupBox = new GroupBox();
             radioButtonGerente = new RadioButton();
             radioButtonTester = new RadioButton();
+            panel1 = new Panel();
+            labelElegirEmpleado = new Label();
             groupBox.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // buttonCancelar
@@ -44,7 +47,7 @@ namespace Formularios
             buttonCancelar.BackColor = Color.FromArgb(224, 224, 224);
             buttonCancelar.FlatStyle = FlatStyle.Popup;
             buttonCancelar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonCancelar.Location = new Point(125, 188);
+            buttonCancelar.Location = new Point(117, 232);
             buttonCancelar.Name = "buttonCancelar";
             buttonCancelar.Size = new Size(123, 62);
             buttonCancelar.TabIndex = 4;
@@ -70,14 +73,14 @@ namespace Formularios
             groupBox.Controls.Add(radioButtonGerente);
             groupBox.Controls.Add(radioButtonTester);
             groupBox.Controls.Add(radioButtonDesarrollador);
+            groupBox.FlatStyle = FlatStyle.Flat;
             groupBox.Font = new Font("Lucida Sans", 12F, FontStyle.Bold, GraphicsUnit.Point);
             groupBox.ForeColor = SystemColors.ControlText;
-            groupBox.Location = new Point(53, 64);
+            groupBox.Location = new Point(49, 93);
             groupBox.Name = "groupBox";
-            groupBox.Size = new Size(263, 107);
+            groupBox.Size = new Size(263, 116);
             groupBox.TabIndex = 12;
             groupBox.TabStop = false;
-            groupBox.Text = "Elegir Empleado";
             // 
             // radioButtonGerente
             // 
@@ -103,12 +106,36 @@ namespace Formularios
             radioButtonTester.UseVisualStyleBackColor = true;
             radioButtonTester.CheckedChanged += radioButtonTester_CheckedChanged;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Gainsboro;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(labelElegirEmpleado);
+            panel1.Location = new Point(12, 12);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(348, 63);
+            panel1.TabIndex = 134;
+            // 
+            // labelElegirEmpleado
+            // 
+            labelElegirEmpleado.AutoSize = true;
+            labelElegirEmpleado.BackColor = Color.Black;
+            labelElegirEmpleado.BorderStyle = BorderStyle.Fixed3D;
+            labelElegirEmpleado.Font = new Font("Lucida Sans", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelElegirEmpleado.ForeColor = Color.White;
+            labelElegirEmpleado.Location = new Point(42, 13);
+            labelElegirEmpleado.Name = "labelElegirEmpleado";
+            labelElegirEmpleado.Size = new Size(260, 35);
+            labelElegirEmpleado.TabIndex = 11;
+            labelElegirEmpleado.Text = "Elegir Empleado";
+            // 
             // FormularioDatos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(372, 323);
+            Controls.Add(panel1);
             Controls.Add(groupBox);
             Controls.Add(buttonCancelar);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -116,6 +143,8 @@ namespace Formularios
             Text = "Agregar";
             groupBox.ResumeLayout(false);
             groupBox.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -129,5 +158,7 @@ namespace Formularios
         private GroupBox groupBox;
         private RadioButton radioButtonGerente;
         private RadioButton radioButtonTester;
+        private Panel panel1;
+        private Label labelElegirEmpleado;
     }
 }

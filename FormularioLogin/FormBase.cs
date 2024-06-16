@@ -23,7 +23,7 @@ namespace Formularios
             this.StartPosition = FormStartPosition.CenterScreen;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimizeBox = true;
+            this.MinimizeBox = false;
         }
     }
 }

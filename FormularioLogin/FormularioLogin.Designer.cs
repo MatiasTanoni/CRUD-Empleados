@@ -236,9 +236,9 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(156, 17);
             label1.Name = "label1";
-            label1.Size = new Size(113, 35);
+            label1.Size = new Size(101, 35);
             label1.TabIndex = 11;
-            label1.Text = "LOGIN";
+            label1.Text = "Login";
             // 
             // FormularioLogin
             // 

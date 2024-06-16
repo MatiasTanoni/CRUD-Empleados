@@ -22,7 +22,7 @@ namespace Formularios
         /// Representa un objeto Desarrollador.
         /// Representa una empresa que contiene una lista de empleados.
         /// </summary>
-        private Desarrollador desarrollador = new Desarrollador("",0,0);
+        private Desarrollador desarrollador = new Desarrollador("", 0, 0);
         public Empresa empresa = new Empresa();
 
         // Propiedades
@@ -108,7 +108,7 @@ namespace Formularios
         /// <param name="dato">El tipo de dato que se está validando (nombre, edad, experiencia, salario, lenguaje de programación, proyectos finalizados).</param>
         /// <param name="textBox">El cuadro de texto que contiene el valor a validar.</param>
         /// <returns>True si el valor es válido y se asigna correctamente al desarrollador; de lo contrario, false.</returns>
-        private bool Validar(Desarrollador desarrollador, string dato,TextBox textBox)
+        private bool Validar(Desarrollador desarrollador, string dato, TextBox textBox)
         {
             switch (dato)
             {
@@ -137,54 +137,54 @@ namespace Formularios
                         }
                     }
                 case "edad":
-                {
-                    if (int.TryParse(textBox.Text, out int edad))
                     {
-                        if (edad > 0 && edad < 65)
+                        if (int.TryParse(textBox.Text, out int edad))
                         {
-                            desarrollador.Edad = edad;
-                            return true;
+                            if (edad > 0 && edad < 65)
+                            {
+                                desarrollador.Edad = edad;
+                                return true;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Por favor, ingrese una edad válida (entre 1 y 64).");
+                                return false;
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Por favor, ingrese una edad válida (entre 1 y 64).");
+                            MessageBox.Show("Por favor, ingrese un valor numérico válido para la edad.");
                             return false;
                         }
                     }
-                    else
-                    {
-                        MessageBox.Show("Por favor, ingrese un valor numérico válido para la edad.");
-                        return false;
-                    }
-                }
                 case "salario":
-                {
-                    if (int.TryParse(textBox.Text, out int salario))
                     {
-                        if (salario > 0)
+                        if (int.TryParse(textBox.Text, out int salario))
                         {
-                            desarrollador.Salario = salario;
-                            return true;
+                            if (salario > 0)
+                            {
+                                desarrollador.Salario = salario;
+                                return true;
 
+                            }
+                            else
+                            {
+                                MessageBox.Show("Por favor, ingrese un valor numérico mayor a 0 para el salario.");
+                                return false;
+                            }
                         }
                         else
                         {
-                            MessageBox.Show("Por favor, ingrese un valor numérico mayor a 0 para el salario.");
+                            MessageBox.Show("Por favor, ingrese un valor numérico válido para el salario.");
                             return false;
                         }
                     }
-                    else
-                    {
-                        MessageBox.Show("Por favor, ingrese un valor numérico válido para el salario.");
-                        return false;
-                    } 
-                }
 
                 case "experiencia":
                     {
-                        if (int.TryParse(textBox.Text, out int experiencia) )
+                        if (int.TryParse(textBox.Text, out int experiencia))
                         {
-                            if(experiencia >= 0 && experiencia <= 40)
+                            if (experiencia >= 0 && experiencia <= 40)
                             {
                                 desarrollador.Experiencia = experiencia;
                                 return true;
@@ -218,6 +218,11 @@ namespace Formularios
                     return false;
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
-   
+
 }

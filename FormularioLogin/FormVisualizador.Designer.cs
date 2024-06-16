@@ -36,7 +36,7 @@
             // 
             // buttonVolver
             // 
-            buttonVolver.BackColor = Color.Gray;
+            buttonVolver.BackColor = Color.FromArgb(224, 224, 224);
             buttonVolver.FlatStyle = FlatStyle.Popup;
             buttonVolver.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonVolver.Location = new Point(290, 419);

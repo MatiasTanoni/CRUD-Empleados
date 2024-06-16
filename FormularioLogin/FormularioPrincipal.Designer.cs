@@ -35,13 +35,13 @@
             statusStrip1 = new StatusStrip();
             toolStripStatusLabelOperador = new ToolStripStatusLabel();
             toolStripStatusLabelFecha = new ToolStripStatusLabel();
-            buttonVisualizador = new Button();
             buttonGuardar = new Button();
             Abrir = new Button();
             buttonAscendente = new Button();
             buttonDescendente = new Button();
             listBoxPrincipal = new ListBox();
             comboBoxPrincipal = new ComboBox();
+            buttonVisualizador = new Button();
             statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -107,27 +107,13 @@
             toolStripStatusLabelFecha.Size = new Size(159, 17);
             toolStripStatusLabelFecha.Text = "toolStripStatusLabel2";
             // 
-            // buttonVisualizador
-            // 
-            buttonVisualizador.BackColor = Color.Black;
-            buttonVisualizador.FlatStyle = FlatStyle.Popup;
-            buttonVisualizador.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonVisualizador.ForeColor = Color.White;
-            buttonVisualizador.Location = new Point(473, 25);
-            buttonVisualizador.Name = "buttonVisualizador";
-            buttonVisualizador.Size = new Size(114, 23);
-            buttonVisualizador.TabIndex = 5;
-            buttonVisualizador.Text = "Visualizador";
-            buttonVisualizador.UseVisualStyleBackColor = false;
-            buttonVisualizador.Click += buttonVisualizador_Click_1;
-            // 
             // buttonGuardar
             // 
             buttonGuardar.BackColor = Color.OliveDrab;
             buttonGuardar.FlatStyle = FlatStyle.Popup;
             buttonGuardar.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonGuardar.ForeColor = Color.White;
-            buttonGuardar.Location = new Point(688, 25);
+            buttonGuardar.Location = new Point(688, 7);
             buttonGuardar.Name = "buttonGuardar";
             buttonGuardar.Size = new Size(89, 23);
             buttonGuardar.TabIndex = 6;
@@ -141,7 +127,7 @@
             Abrir.FlatStyle = FlatStyle.Popup;
             Abrir.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             Abrir.ForeColor = Color.White;
-            Abrir.Location = new Point(593, 25);
+            Abrir.Location = new Point(688, 36);
             Abrir.Name = "Abrir";
             Abrir.Size = new Size(89, 23);
             Abrir.TabIndex = 7;
@@ -199,19 +185,33 @@
             comboBoxPrincipal.Size = new Size(121, 23);
             comboBoxPrincipal.TabIndex = 12;
             // 
+            // buttonVisualizador
+            // 
+            buttonVisualizador.BackColor = Color.FromArgb(64, 64, 64);
+            buttonVisualizador.FlatStyle = FlatStyle.Popup;
+            buttonVisualizador.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonVisualizador.ForeColor = Color.White;
+            buttonVisualizador.Location = new Point(532, 7);
+            buttonVisualizador.Name = "buttonVisualizador";
+            buttonVisualizador.Size = new Size(133, 52);
+            buttonVisualizador.TabIndex = 5;
+            buttonVisualizador.Text = "Visualizador";
+            buttonVisualizador.UseVisualStyleBackColor = false;
+            buttonVisualizador.Click += buttonVisualizador_Click_1;
+            // 
             // FormularioPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(789, 473);
+            Controls.Add(buttonVisualizador);
             Controls.Add(comboBoxPrincipal);
             Controls.Add(listBoxPrincipal);
             Controls.Add(buttonDescendente);
             Controls.Add(buttonAscendente);
             Controls.Add(Abrir);
             Controls.Add(buttonGuardar);
-            Controls.Add(buttonVisualizador);
             Controls.Add(statusStrip1);
             Controls.Add(buttonModificar);
             Controls.Add(buttonEliminar);
@@ -233,12 +233,12 @@
         private StatusStrip statusStrip1;
         private ToolStripStatusLabel toolStripStatusLabelOperador;
         private ToolStripStatusLabel toolStripStatusLabelFecha;
-        private Button buttonVisualizador;
         private Button buttonGuardar;
         private Button Abrir;
         private Button buttonAscendente;
         private Button buttonDescendente;
         private ListBox listBoxPrincipal;
         private ComboBox comboBoxPrincipal;
+        private Button buttonVisualizador;
     }
 }

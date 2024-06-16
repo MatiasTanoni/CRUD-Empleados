@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTester));
-            labelTester = new Label();
             buttonCancelar = new Button();
             buttonAceptar = new Button();
             labelProyectosTesteados = new Label();
@@ -59,6 +58,8 @@
             pictureBoxCorreo = new PictureBox();
             pictureBoxBorderCorreo = new PictureBox();
             pictureBoxBorderContrasena = new PictureBox();
+            panel1 = new Panel();
+            labelTester = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
@@ -74,26 +75,15 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxCorreo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxBorderCorreo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxBorderContrasena).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // labelTester
-            // 
-            labelTester.AutoSize = true;
-            labelTester.BackColor = Color.Silver;
-            labelTester.Font = new Font("Lucida Sans", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
-            labelTester.ForeColor = Color.Black;
-            labelTester.Location = new Point(222, 16);
-            labelTester.Name = "labelTester";
-            labelTester.Size = new Size(104, 31);
-            labelTester.TabIndex = 68;
-            labelTester.Text = "Tester";
             // 
             // buttonCancelar
             // 
             buttonCancelar.BackColor = Color.FromArgb(224, 224, 224);
             buttonCancelar.FlatStyle = FlatStyle.Popup;
             buttonCancelar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonCancelar.Location = new Point(447, 436);
+            buttonCancelar.Location = new Point(280, 550);
             buttonCancelar.Name = "buttonCancelar";
             buttonCancelar.Size = new Size(131, 64);
             buttonCancelar.TabIndex = 8;
@@ -106,7 +96,7 @@
             buttonAceptar.BackColor = Color.FromArgb(224, 224, 224);
             buttonAceptar.FlatStyle = FlatStyle.Popup;
             buttonAceptar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonAceptar.Location = new Point(310, 436);
+            buttonAceptar.Location = new Point(139, 550);
             buttonAceptar.Name = "buttonAceptar";
             buttonAceptar.Size = new Size(131, 64);
             buttonAceptar.TabIndex = 7;
@@ -120,7 +110,7 @@
             labelProyectosTesteados.BackColor = Color.White;
             labelProyectosTesteados.Font = new Font("Lucida Sans", 12F, FontStyle.Bold, GraphicsUnit.Point);
             labelProyectosTesteados.ForeColor = Color.Black;
-            labelProyectosTesteados.Location = new Point(23, 440);
+            labelProyectosTesteados.Location = new Point(148, 475);
             labelProyectosTesteados.Name = "labelProyectosTesteados";
             labelProyectosTesteados.Size = new Size(181, 18);
             labelProyectosTesteados.TabIndex = 65;
@@ -130,7 +120,7 @@
             // 
             textBoxProyectosTesteados.BorderStyle = BorderStyle.None;
             textBoxProyectosTesteados.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxProyectosTesteados.Location = new Point(28, 461);
+            textBoxProyectosTesteados.Location = new Point(153, 496);
             textBoxProyectosTesteados.Name = "textBoxProyectosTesteados";
             textBoxProyectosTesteados.Size = new Size(242, 25);
             textBoxProyectosTesteados.TabIndex = 6;
@@ -139,7 +129,7 @@
             // pictureBox7
             // 
             pictureBox7.BackColor = Color.White;
-            pictureBox7.Location = new Point(16, 447);
+            pictureBox7.Location = new Point(141, 482);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(267, 53);
             pictureBox7.TabIndex = 63;
@@ -151,7 +141,7 @@
             labelHerramientaDePrueba.BackColor = Color.White;
             labelHerramientaDePrueba.Font = new Font("Lucida Sans", 12F, FontStyle.Bold, GraphicsUnit.Point);
             labelHerramientaDePrueba.ForeColor = Color.Black;
-            labelHerramientaDePrueba.Location = new Point(23, 357);
+            labelHerramientaDePrueba.Location = new Point(148, 392);
             labelHerramientaDePrueba.Name = "labelHerramientaDePrueba";
             labelHerramientaDePrueba.Size = new Size(199, 18);
             labelHerramientaDePrueba.TabIndex = 61;
@@ -161,7 +151,7 @@
             // 
             textBoxHerramientaDePrueba.BorderStyle = BorderStyle.None;
             textBoxHerramientaDePrueba.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxHerramientaDePrueba.Location = new Point(23, 378);
+            textBoxHerramientaDePrueba.Location = new Point(148, 413);
             textBoxHerramientaDePrueba.Name = "textBoxHerramientaDePrueba";
             textBoxHerramientaDePrueba.Size = new Size(254, 25);
             textBoxHerramientaDePrueba.TabIndex = 5;
@@ -170,7 +160,7 @@
             // pictureBox8
             // 
             pictureBox8.BackColor = Color.White;
-            pictureBox8.Location = new Point(17, 366);
+            pictureBox8.Location = new Point(142, 401);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(267, 53);
             pictureBox8.TabIndex = 58;
@@ -179,7 +169,7 @@
             // pictureBox9
             // 
             pictureBox9.BackColor = Color.White;
-            pictureBox9.Location = new Point(17, 366);
+            pictureBox9.Location = new Point(142, 401);
             pictureBox9.Name = "pictureBox9";
             pictureBox9.Size = new Size(267, 53);
             pictureBox9.TabIndex = 59;
@@ -188,7 +178,7 @@
             // pictureBox10
             // 
             pictureBox10.BackColor = Color.Black;
-            pictureBox10.Location = new Point(15, 364);
+            pictureBox10.Location = new Point(140, 399);
             pictureBox10.Name = "pictureBox10";
             pictureBox10.Size = new Size(271, 57);
             pictureBox10.TabIndex = 60;
@@ -197,7 +187,7 @@
             // pictureBox11
             // 
             pictureBox11.BackColor = Color.Black;
-            pictureBox11.Location = new Point(14, 445);
+            pictureBox11.Location = new Point(139, 480);
             pictureBox11.Name = "pictureBox11";
             pictureBox11.Size = new Size(271, 57);
             pictureBox11.TabIndex = 64;
@@ -209,7 +199,7 @@
             labelSalario.BackColor = Color.White;
             labelSalario.Font = new Font("Lucida Sans", 12F, FontStyle.Bold, GraphicsUnit.Point);
             labelSalario.ForeColor = Color.Black;
-            labelSalario.Location = new Point(23, 285);
+            labelSalario.Location = new Point(148, 320);
             labelSalario.Name = "labelSalario";
             labelSalario.Size = new Size(67, 18);
             labelSalario.TabIndex = 56;
@@ -219,7 +209,7 @@
             // 
             textBoxSalario.BorderStyle = BorderStyle.None;
             textBoxSalario.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxSalario.Location = new Point(28, 306);
+            textBoxSalario.Location = new Point(153, 341);
             textBoxSalario.Name = "textBoxSalario";
             textBoxSalario.Size = new Size(242, 25);
             textBoxSalario.TabIndex = 4;
@@ -228,7 +218,7 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.White;
-            pictureBox2.Location = new Point(16, 292);
+            pictureBox2.Location = new Point(141, 327);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(267, 53);
             pictureBox2.TabIndex = 54;
@@ -240,7 +230,7 @@
             labelExperiencia.BackColor = Color.White;
             labelExperiencia.Font = new Font("Lucida Sans", 12F, FontStyle.Bold, GraphicsUnit.Point);
             labelExperiencia.ForeColor = Color.Black;
-            labelExperiencia.Location = new Point(23, 207);
+            labelExperiencia.Location = new Point(148, 242);
             labelExperiencia.Name = "labelExperiencia";
             labelExperiencia.Size = new Size(105, 18);
             labelExperiencia.TabIndex = 52;
@@ -250,7 +240,7 @@
             // 
             textBoxExperiencia.BorderStyle = BorderStyle.None;
             textBoxExperiencia.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxExperiencia.Location = new Point(23, 228);
+            textBoxExperiencia.Location = new Point(148, 263);
             textBoxExperiencia.Name = "textBoxExperiencia";
             textBoxExperiencia.Size = new Size(254, 25);
             textBoxExperiencia.TabIndex = 3;
@@ -259,7 +249,7 @@
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.White;
-            pictureBox3.Location = new Point(17, 216);
+            pictureBox3.Location = new Point(142, 251);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(267, 53);
             pictureBox3.TabIndex = 49;
@@ -268,7 +258,7 @@
             // pictureBox4
             // 
             pictureBox4.BackColor = Color.White;
-            pictureBox4.Location = new Point(17, 216);
+            pictureBox4.Location = new Point(142, 251);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(267, 53);
             pictureBox4.TabIndex = 50;
@@ -277,7 +267,7 @@
             // pictureBox5
             // 
             pictureBox5.BackColor = Color.Black;
-            pictureBox5.Location = new Point(15, 214);
+            pictureBox5.Location = new Point(140, 249);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(271, 57);
             pictureBox5.TabIndex = 51;
@@ -286,7 +276,7 @@
             // pictureBox6
             // 
             pictureBox6.BackColor = Color.Black;
-            pictureBox6.Location = new Point(14, 290);
+            pictureBox6.Location = new Point(139, 325);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new Size(271, 57);
             pictureBox6.TabIndex = 55;
@@ -298,7 +288,7 @@
             labelEdad.BackColor = Color.White;
             labelEdad.Font = new Font("Lucida Sans", 12F, FontStyle.Bold, GraphicsUnit.Point);
             labelEdad.ForeColor = Color.Black;
-            labelEdad.Location = new Point(23, 137);
+            labelEdad.Location = new Point(148, 172);
             labelEdad.Name = "labelEdad";
             labelEdad.Size = new Size(53, 18);
             labelEdad.TabIndex = 47;
@@ -308,7 +298,7 @@
             // 
             textBoxEdad.BorderStyle = BorderStyle.None;
             textBoxEdad.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxEdad.Location = new Point(28, 158);
+            textBoxEdad.Location = new Point(153, 193);
             textBoxEdad.Name = "textBoxEdad";
             textBoxEdad.Size = new Size(242, 25);
             textBoxEdad.TabIndex = 2;
@@ -317,7 +307,7 @@
             // pictureBoxContrasena
             // 
             pictureBoxContrasena.BackColor = Color.White;
-            pictureBoxContrasena.Location = new Point(16, 144);
+            pictureBoxContrasena.Location = new Point(141, 179);
             pictureBoxContrasena.Name = "pictureBoxContrasena";
             pictureBoxContrasena.Size = new Size(267, 53);
             pictureBoxContrasena.TabIndex = 45;
@@ -329,7 +319,7 @@
             labelNombre.BackColor = Color.White;
             labelNombre.Font = new Font("Lucida Sans", 12F, FontStyle.Bold, GraphicsUnit.Point);
             labelNombre.ForeColor = Color.Black;
-            labelNombre.Location = new Point(23, 61);
+            labelNombre.Location = new Point(148, 96);
             labelNombre.Name = "labelNombre";
             labelNombre.Size = new Size(76, 18);
             labelNombre.TabIndex = 43;
@@ -339,7 +329,7 @@
             // 
             textBoxNombre.BorderStyle = BorderStyle.None;
             textBoxNombre.Font = new Font("Lucida Sans Unicode", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            textBoxNombre.Location = new Point(23, 82);
+            textBoxNombre.Location = new Point(148, 117);
             textBoxNombre.Name = "textBoxNombre";
             textBoxNombre.Size = new Size(254, 25);
             textBoxNombre.TabIndex = 1;
@@ -348,7 +338,7 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.White;
-            pictureBox1.Location = new Point(17, 70);
+            pictureBox1.Location = new Point(142, 105);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(267, 53);
             pictureBox1.TabIndex = 40;
@@ -357,7 +347,7 @@
             // pictureBoxCorreo
             // 
             pictureBoxCorreo.BackColor = Color.White;
-            pictureBoxCorreo.Location = new Point(17, 70);
+            pictureBoxCorreo.Location = new Point(142, 105);
             pictureBoxCorreo.Name = "pictureBoxCorreo";
             pictureBoxCorreo.Size = new Size(267, 53);
             pictureBoxCorreo.TabIndex = 41;
@@ -366,7 +356,7 @@
             // pictureBoxBorderCorreo
             // 
             pictureBoxBorderCorreo.BackColor = Color.Black;
-            pictureBoxBorderCorreo.Location = new Point(15, 68);
+            pictureBoxBorderCorreo.Location = new Point(140, 103);
             pictureBoxBorderCorreo.Name = "pictureBoxBorderCorreo";
             pictureBoxBorderCorreo.Size = new Size(271, 57);
             pictureBoxBorderCorreo.TabIndex = 42;
@@ -375,19 +365,42 @@
             // pictureBoxBorderContrasena
             // 
             pictureBoxBorderContrasena.BackColor = Color.Black;
-            pictureBoxBorderContrasena.Location = new Point(14, 142);
+            pictureBoxBorderContrasena.Location = new Point(139, 177);
             pictureBoxBorderContrasena.Name = "pictureBoxBorderContrasena";
             pictureBoxBorderContrasena.Size = new Size(271, 57);
             pictureBoxBorderContrasena.TabIndex = 46;
             pictureBoxBorderContrasena.TabStop = false;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Gainsboro;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(labelTester);
+            panel1.Location = new Point(45, 12);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(431, 72);
+            panel1.TabIndex = 134;
+            // 
+            // labelTester
+            // 
+            labelTester.AutoSize = true;
+            labelTester.BackColor = Color.Black;
+            labelTester.BorderStyle = BorderStyle.Fixed3D;
+            labelTester.Font = new Font("Lucida Sans", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
+            labelTester.ForeColor = Color.White;
+            labelTester.Location = new Point(169, 18);
+            labelTester.Name = "labelTester";
+            labelTester.Size = new Size(114, 35);
+            labelTester.TabIndex = 11;
+            labelTester.Text = "Tester";
             // 
             // FormTester
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(593, 519);
-            Controls.Add(labelTester);
+            ClientSize = new Size(525, 626);
+            Controls.Add(panel1);
             Controls.Add(buttonCancelar);
             Controls.Add(buttonAceptar);
             Controls.Add(labelProyectosTesteados);
@@ -419,7 +432,6 @@
             Controls.Add(pictureBoxBorderContrasena);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormTester";
-            StartPosition = FormStartPosition.CenterParent;
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
@@ -435,13 +447,13 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxCorreo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxBorderCorreo).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxBorderContrasena).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label labelTester;
         private Button buttonCancelar;
         private Button buttonAceptar;
         private Label labelProyectosTesteados;
@@ -471,5 +483,7 @@
         private PictureBox pictureBoxCorreo;
         private PictureBox pictureBoxBorderCorreo;
         private PictureBox pictureBoxBorderContrasena;
+        private Panel panel1;
+        private Label labelTester;
     }
 }
