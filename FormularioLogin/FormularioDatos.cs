@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Formularios
 {
-    public partial class FormularioDatos: Form
+    public partial class FormularioDatos: FormBase
     {
         /// <summary>
         /// Formulario para manejar las acciones relacionadas con un desarrollador.

@@ -248,7 +248,6 @@
             Controls.Add(pContainer);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormularioLogin";
-            StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
             pContainer.ResumeLayout(false);
             pContainer.PerformLayout();

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Formularios
 {
-    public partial class FormVisualizador:Form
+    public partial class FormVisualizador:FormBase
     {
         /// <summary>
         /// Constructor por defecto de la clase FormVisualizador.

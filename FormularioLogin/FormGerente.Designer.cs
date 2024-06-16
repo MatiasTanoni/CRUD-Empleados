@@ -419,7 +419,7 @@
             Controls.Add(pictureBoxBorderContrasena);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormGerente";
-            StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.CenterParent;
             ((System.ComponentModel.ISupportInitialize)pictureBoxContrasena).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxCorreo).EndInit();

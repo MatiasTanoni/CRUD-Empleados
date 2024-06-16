@@ -113,7 +113,6 @@ namespace Formularios
             Controls.Add(buttonCancelar);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormularioDatos";
-            StartPosition = FormStartPosition.CenterScreen;
             Text = "Agregar";
             groupBox.ResumeLayout(false);
             groupBox.PerformLayout();

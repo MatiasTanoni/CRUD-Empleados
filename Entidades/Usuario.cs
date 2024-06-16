@@ -25,7 +25,7 @@ namespace Entidades
 
         [JsonPropertyName("legajo")]
         public int Legajo { get; set; }
-
+ 
         [JsonPropertyName("correo")]
         public string Correo { get; set; }
 

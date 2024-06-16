@@ -67,7 +67,6 @@
             Controls.Add(buttonVolver);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormVisualizador";
-            StartPosition = FormStartPosition.CenterScreen;
             Text = "Visualizador";
             ResumeLayout(false);
         }

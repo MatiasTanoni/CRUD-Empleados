@@ -1,6 +1,6 @@
 ﻿namespace Formularios
 {
-    partial class FormTester : Form
+    partial class FormTester 
     {
         /// <summary>
         /// Required designer variable.
@@ -419,7 +419,7 @@
             Controls.Add(pictureBoxBorderContrasena);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormTester";
-            StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.CenterParent;
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();

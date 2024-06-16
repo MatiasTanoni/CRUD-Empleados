@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Formularios
 {
-    public partial class FormTester : Form
+    public partial class FormTester : FormBase
     {
         /// <summary>
         /// Representa un objeto de tipo Tester con valores predeterminados para el nombre, la edad y el salario.

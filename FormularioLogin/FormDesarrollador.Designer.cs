@@ -419,7 +419,7 @@
             Controls.Add(buttonAceptar);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormDesarrollador";
-            StartPosition = FormStartPosition.CenterScreen;
+            StartPosition = FormStartPosition.CenterParent;
             ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();

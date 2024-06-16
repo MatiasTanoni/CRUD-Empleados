@@ -218,7 +218,6 @@
             Controls.Add(buttonAgregar);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormularioPrincipal";
-            StartPosition = FormStartPosition.CenterScreen;
             Text = "FormularioPrincipal";
             Load += FormularioPrincipal_Load;
             statusStrip1.ResumeLayout(false);
