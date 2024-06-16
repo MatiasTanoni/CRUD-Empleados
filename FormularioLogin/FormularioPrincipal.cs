@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using System.Xml.Serialization;
 namespace Formularios
 {
-    public partial class FormularioPrincipal : FormBase
+    public partial class FormularioPrincipal : FormConfiguraciones
     {
         /// <summary>
         /// Formulario para manejar datos de desarrolladores.

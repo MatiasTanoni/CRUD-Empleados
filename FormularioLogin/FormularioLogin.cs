@@ -15,7 +15,7 @@ using Entidades;
 
 namespace Formularios
 {
-    public partial class FormularioLogin : FormBase
+    public partial class FormularioLogin : FormConfiguraciones
     {
         /// <summary>
         /// Usuario registrado en el formulario de inicio de sesión.

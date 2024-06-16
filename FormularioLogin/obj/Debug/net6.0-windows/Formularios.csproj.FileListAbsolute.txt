@@ -26,4 +26,4 @@ C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogi
 C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogin\obj\Debug\net6.0-windows\Formularios.FormTester.resources
 C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogin\obj\Debug\net6.0-windows\Formularios.FormularioPrincipal.resources
 C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogin\obj\Debug\net6.0-windows\Formularios.FormVisualizador.resources
-C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogin\obj\Debug\net6.0-windows\Formularios.FormBase.resources
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\FormularioLogin\obj\Debug\net6.0-windows\Formularios.FormConfiguraciones.resources

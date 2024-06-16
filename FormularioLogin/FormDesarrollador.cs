@@ -15,7 +15,7 @@ using System.Diagnostics.Eventing.Reader;
 
 namespace Formularios
 {
-    public partial class FormDesarrollador : FormBase
+    public partial class FormDesarrollador : FormConfiguraciones
     {
         //Atributos
         /// <summary>

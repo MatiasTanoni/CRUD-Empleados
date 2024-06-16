@@ -13,7 +13,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace Formularios
 {
-    public partial class FormGerente : FormBase
+    public partial class FormGerente : FormConfiguraciones
     {
         /// <summary>
         /// Representa un objeto Gerente con atributos predeterminados.
