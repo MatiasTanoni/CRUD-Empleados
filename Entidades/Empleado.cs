@@ -131,7 +131,7 @@ namespace Entidades
         /// </summary>
         /// <param name="otroEmpleado">El objeto que se va a comparar con el objeto actual.</param>
         /// <returns>True si el objeto actual es igual al objeto especificado; de lo contrario, False.</returns>
-        public override bool Equals(object otroEmpleado)
+        public override bool Equals(object? otroEmpleado)
         {
 
             return otroEmpleado is Empleado && this == (Empleado)otroEmpleado;

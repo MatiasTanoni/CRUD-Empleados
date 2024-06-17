@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Entidades
 {
@@ -22,6 +20,7 @@ namespace Entidades
             get { return listaDeEmpleados; }
             set { listaDeEmpleados = value; }
         }
+
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="Empresa"/>.
         /// </summary>
@@ -29,7 +28,6 @@ namespace Entidades
         {
             this.listaDeEmpleados = new List<Empleado>();
         }
-
 
         /// <summary>
         /// Sobrecarga del operador de adición para agregar un empleado a la lista de empleados de la empresa.
@@ -76,7 +74,30 @@ namespace Entidades
         {
             return !(empresa == empleado);
         }
+
+        /// <summary>
+        /// Sobrescribe el método Equals para comparar si dos objetos Empresa son iguales.
+        /// </summary>
+        /// <param name="obj">El objeto a comparar.</param>
+        /// <returns>True si los objetos son iguales; de lo contrario, False.</returns>
+        public override bool Equals(object? obj)
+        {
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            Empresa other = (Empresa)obj;
+            return listaDeEmpleados.SequenceEqual(other.listaDeEmpleados);
+        }
+
+        /// <summary>
+        /// Sobrescribe el método GetHashCode para obtener el código hash del objeto Empresa.
+        /// </summary>
+        /// <returns>Código hash del objeto.</returns>
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(listaDeEmpleados);
+        }
     }
-
-
 }

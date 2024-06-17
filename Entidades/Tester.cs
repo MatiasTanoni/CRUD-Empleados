@@ -143,7 +143,7 @@ public class Tester : Empleado
     /// </summary>
     /// <param name="otroTester">El objeto que se va a comparar con el objeto actual.</param>
     /// <returns>True si el objeto actual es igual al objeto especificado; de lo contrario, False.</returns>
-    public override bool Equals(Object otroTester)
+    public override bool Equals(Object? otroTester)
     {
         return otroTester is Tester && this == (Tester)otroTester;
     }
