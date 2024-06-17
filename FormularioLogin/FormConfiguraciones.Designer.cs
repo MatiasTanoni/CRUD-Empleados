@@ -15,6 +15,7 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConfiguraciones));
             buttonCancelar = new Button();
             SuspendLayout();
             // 
@@ -34,11 +35,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(933, 519);
             Controls.Add(buttonCancelar);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
             Name = "FormConfiguraciones";
-            Text = "FormBase";
             ResumeLayout(false);
         }
 

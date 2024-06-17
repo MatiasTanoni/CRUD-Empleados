@@ -147,6 +147,11 @@ public class Tester : Empleado
     {
         return otroTester is Tester && this == (Tester)otroTester;
     }
+
+    public override int GetHashCode()
+    {
+        throw new NotImplementedException();
+    }
 }
 
 

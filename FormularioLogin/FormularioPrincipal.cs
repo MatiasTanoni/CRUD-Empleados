@@ -1,6 +1,7 @@
 using Entidades;
 using Formularios;
 using System.Collections.Immutable;
+using System.Diagnostics.Contracts;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.Json;
@@ -37,16 +38,16 @@ namespace Formularios
         /// </summary>
         public FormularioPrincipal()
         {
-            InitializeComponent();
+            InitializeComponent(); 
             this.listBoxPrincipal.HorizontalScrollbar = true;
-            this.FormClosing += FormularioPrincipal_FormClosing;
+            FormClosing += FormularioPrincipal_FormClosing;
         }
 
-            /// <summary>
-            /// Constructor de la clase FormularioPrincipal que recibe un usuario registrado.
-            /// </summary>
-            /// <param name="usuarioRegistrado">El usuario registrado que utilizará el formulario principal.</param>
-            public FormularioPrincipal(Usuario usuarioRegistrado) : this()
+        /// <summary>
+        /// Constructor de la clase FormularioPrincipal que recibe un usuario registrado.
+        /// </summary>
+        /// <param name="usuarioRegistrado">El usuario registrado que utilizará el formulario principal.</param>
+        public FormularioPrincipal(Usuario usuarioRegistrado) : this()
         {
             this.usuarioRegistrado = usuarioRegistrado;
         }
@@ -183,7 +184,7 @@ namespace Formularios
                 toolStripStatusLabelOperador.Text = $"Operador: {this.usuarioRegistrado.Nombre}";
                 toolStripStatusLabelFecha.Text = "Fecha: " + DateTime.Now.ToString("dd/MM/yyyy");
             }
-            
+
         }
 
 
@@ -326,7 +327,7 @@ namespace Formularios
         /// </summary>
         /// <param name="sender">El objeto que desencadenó el evento.</param>
         /// <param name="e">Los datos del evento.</param>
-        private void FormularioPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        private void FormularioPrincipal_FormClosing(object? sender, FormClosingEventArgs e)
         {
             DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas salir?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -335,6 +336,7 @@ namespace Formularios
                 e.Cancel = true;
             }
         }
+
 
         private void buttonAscendente_Click(object sender, EventArgs e)
         {

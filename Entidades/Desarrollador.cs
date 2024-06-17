@@ -154,6 +154,11 @@ namespace Entidades
         {
             return otroDesarrollador is Desarrollador && this == (Desarrollador)otroDesarrollador;
         }
+
+        public override int GetHashCode()
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }

@@ -136,6 +136,11 @@ namespace Entidades
 
             return otroEmpleado is Empleado && this == (Empleado)otroEmpleado;
         }
+
+        public override int GetHashCode()
+        {
+            throw new NotImplementedException();
+        }
         //public override int GetHashCode()
         //{
         //    unchecked

@@ -151,6 +151,11 @@ namespace Entidades
         {
             return otroGerente is Gerente && this == (Gerente)otroGerente;
         }
+
+        public override int GetHashCode()
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }
