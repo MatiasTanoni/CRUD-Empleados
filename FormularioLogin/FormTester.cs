@@ -125,53 +125,7 @@ namespace Formularios
                     return false;
             }
         }
-        private bool ValidarNombre(Tester tester, TextBox textBox)
-        {
-            if (!string.IsNullOrWhiteSpace(textBox.Text) && !int.TryParse(textBox.Text, out _))
-            {
-                tester.Nombre = textBox.Text;
-                return true;
-            }
-            else
-            {
-                MessageBox.Show("Por favor, el nombre no puede estar vacío o ser un número.");
-                return false;
-            }
-        }
-        private bool ValidarHerramientaDePrueba(Tester tester, TextBox textBox)
-        {
-            if (!string.IsNullOrWhiteSpace(textBox.Text) && !int.TryParse(textBox.Text, out _))
-            {
-                tester.HerramientaDePrueba = textBox.Text;
-                return true;
-            }
-            else
-            {
-                MessageBox.Show("Por favor, La HerramientaDePrueba no puede estar vacío o ser un número.");
-                return false;
-            }
-        }
-        private bool ValidarEdad(Tester tester, TextBox textBox)
-        {
-            if (int.TryParse(textBox.Text, out int edad))
-            {
-                if (edad > 0 && edad < 65)
-                {
-                    tester.Edad = edad;
-                    return true;
-                }
-                else
-                {
-                    MessageBox.Show("Por favor, ingrese una edad válida (entre 1 y 64).");
-                    return false;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Por favor, ingrese un valor numérico válido para la edad.");
-                return false;
-            }
-        }
+
         private bool ValidadSalario(Tester tester, TextBox textBox)
         {
             if (int.TryParse(textBox.Text, out int salario))
@@ -194,6 +148,20 @@ namespace Formularios
                 return false;
             }
         }
+        private bool ValidarHerramientaDePrueba(Tester tester, TextBox textBox)
+        {
+            if (!string.IsNullOrWhiteSpace(textBox.Text) && !int.TryParse(textBox.Text, out _))
+            {
+                tester.HerramientaDePrueba = textBox.Text;
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Por favor, La HerramientaDePrueba no puede estar vacío o ser un número.");
+                return false;
+            }
+        }
+
         private bool ValidarExperiencia(Tester tester, TextBox textBox)
         {
             if (int.TryParse(textBox.Text, out int experiencia))

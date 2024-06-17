@@ -12,17 +12,25 @@ using Formularios;
 using System.Text.RegularExpressions;
 using System.Runtime.CompilerServices;
 using System.Diagnostics.Eventing.Reader;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using TextBox = System.Windows.Forms.TextBox;
 
 namespace Formularios
 {
+    /// <summary>
+    /// Clase parcial que representa el formulario para manejar información de desarrolladores.
+    /// </summary>
     public partial class FormDesarrollador : FormConfiguraciones
     {
-        //Atributos
+        // Atributos
         /// <summary>
         /// Representa un objeto Desarrollador.
-        /// Representa una empresa que contiene una lista de empleados.
         /// </summary>
         private Desarrollador desarrollador = new Desarrollador("", 0, 0);
+
+        /// <summary>
+        /// Representa una empresa que contiene una lista de empleados.
+        /// </summary>
         public Empresa empresa = new Empresa();
 
         // Propiedades
@@ -35,15 +43,16 @@ namespace Formularios
             set { desarrollador = value; }
         }
 
-        // Contructor
+        // Constructor
         public FormDesarrollador()
         {
             InitializeComponent();
             empresa = new Empresa(); // Inicializa la empresa aquí
             empresa.ListaDeEmpleados = new List<Empleado>(); // Inicializa la lista de empleados aquí
         }
+
         /// <summary>
-        /// Inicializa una nueva instancia de la clase <see cref="FormDesarrollador"/> con la empresa especificada.
+        /// Inicializa una nueva instancia de la clase FormDesarrollador con la empresa especificada.
         /// </summary>
         /// <param name="empresa">La empresa asociada al formulario.</param>
         public FormDesarrollador(Empresa empresa) : this()
@@ -52,7 +61,7 @@ namespace Formularios
         }
 
         /// <summary>
-        /// Inicializa una nueva instancia de la clase <see cref="FormDesarrollador"/> con el desarrollador especificado.
+        /// Inicializa una nueva instancia de la clase FormDesarrollador con el desarrollador especificado.
         /// </summary>
         /// <param name="desarrollador">El desarrollador asociado al formulario.</param>
         public FormDesarrollador(Desarrollador desarrollador) : this()
@@ -66,6 +75,7 @@ namespace Formularios
             this.textBoxProyectosFinalizados.Text = desarrollador.ProyectosFinalizados.ToString();
         }
 
+        // Eventos
         /// <summary>
         /// Maneja el evento Click del botón de cancelar, estableciendo el resultado del diálogo como Cancelar.
         /// </summary>
@@ -93,7 +103,7 @@ namespace Formularios
 
             if (esValido)
             {
-                if (this.empresa != Desarrollador)
+                if (this.empresa != desarrollador)
                 {
                     this.empresa += desarrollador;
                     this.DialogResult = DialogResult.OK;
@@ -101,6 +111,7 @@ namespace Formularios
             }
         }
 
+        // Métodos de validación
         /// <summary>
         /// Valida los datos de un desarrollador según el tipo de dato especificado y el contenido del cuadro de texto proporcionado.
         /// </summary>
@@ -113,116 +124,74 @@ namespace Formularios
             switch (dato)
             {
                 case "nombre":
-                    if (!string.IsNullOrWhiteSpace(textBox.Text) && !int.TryParse(textBox.Text, out _))
-                    {
-                        desarrollador.Nombre = textBox.Text;
-                        return true;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Por favor, el nombre no puede estar vacío o ser un número.");
-                        return false;
-                    }
+                    return ValidarNombre(desarrollador, textBox);
                 case "lenguaje de programacion":
-                    {
-                        if (!string.IsNullOrWhiteSpace(textBox.Text) && !int.TryParse(textBox.Text, out _))
-                        {
-                            desarrollador.LenguajeDeProgramacion = textBox.Text;
-                            return true;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Por favor, El lenguaje de programación no puede estar vacío o ser un número.");
-                            return false;
-                        }
-                    }
+                    return ValidarLenguajeDeProgramacion(desarrollador, textBox);
                 case "edad":
-                    {
-                        if (int.TryParse(textBox.Text, out int edad))
-                        {
-                            if (edad > 0 && edad < 65)
-                            {
-                                desarrollador.Edad = edad;
-                                return true;
-                            }
-                            else
-                            {
-                                MessageBox.Show("Por favor, ingrese una edad válida (entre 1 y 64).");
-                                return false;
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Por favor, ingrese un valor numérico válido para la edad.");
-                            return false;
-                        }
-                    }
+                    return ValidarEdad(desarrollador, textBox);
                 case "salario":
-                    {
-                        if (int.TryParse(textBox.Text, out int salario))
-                        {
-                            if (salario > 0)
-                            {
-                                desarrollador.Salario = salario;
-                                return true;
-
-                            }
-                            else
-                            {
-                                MessageBox.Show("Por favor, ingrese un valor numérico mayor a 0 para el salario.");
-                                return false;
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Por favor, ingrese un valor numérico válido para el salario.");
-                            return false;
-                        }
-                    }
-
+                    return ValidadSalario(desarrollador, textBox);
                 case "experiencia":
-                    {
-                        if (int.TryParse(textBox.Text, out int experiencia))
-                        {
-                            if (experiencia >= 0 && experiencia <= 40)
-                            {
-                                desarrollador.Experiencia = experiencia;
-                                return true;
-                            }
-                            else
-                            {
-                                MessageBox.Show("Por favor, ingrese una experiencia válida (entre 0 y 40).");
-                                return false;
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Por favor, ingrese un valor numérico válido para la experiencia.");
-                            return false;
-                        }
-                    }
+                    return ValidarExperiencia(desarrollador, textBox);
                 case "proyectos finalizados":
-                    {
-                        if (int.TryParse(textBox.Text, out int proyectosFinalizados))
-                        {
-                            desarrollador.ProyectosFinalizados = proyectosFinalizados;
-                            return true;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Por favor, ingrese un valor numérico válido para los proyectos finalizados.");
-                            return false;
-                        }
-                    }
+                    return ValidarProyectosFinalizados(desarrollador, textBox);
                 default:
                     return false;
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
+
+        private bool ValidadSalario(Desarrollador desarrollador, TextBox textBox)
+        {
+            if (int.TryParse(textBox.Text, out int salario))
+            {
+                if (salario > 0)
+                {
+                    desarrollador.Salario = salario;
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, ingrese un valor numérico mayor a 0 para el salario.");
+                    return false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un valor numérico válido para el salario.");
+                return false;
+            }
+        }
+
+        private bool ValidarLenguajeDeProgramacion(Desarrollador desarrollador, TextBox textBox)
+        {
+            if (!string.IsNullOrWhiteSpace(textBox.Text) && !int.TryParse(textBox.Text, out _))
+            {
+                desarrollador.LenguajeDeProgramacion = textBox.Text;
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Por favor, el lenguaje de programación no puede estar vacío o ser un número.");
+                return false;
+            }
+        }
+
+        private bool ValidarProyectosFinalizados(Desarrollador desarrollador, TextBox textBox)
+        {
+            if (int.TryParse(textBox.Text, out int proyectosFinalizados))
+            {
+                desarrollador.ProyectosFinalizados = proyectosFinalizados;
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un valor numérico válido para los proyectos finalizados.");
+                return false;
+            }
         }
     }
-
 }
+
+

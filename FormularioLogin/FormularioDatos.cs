@@ -65,10 +65,10 @@ namespace Formularios
             }
             if (this.formDesarrollador != null)
             {
-            if (this.formDesarrollador.DialogResult == DialogResult.OK)
-            {
-                this.formDesarrollador.Close();
-            }
+                if (this.formDesarrollador.DialogResult == DialogResult.OK)
+                {
+                    this.formDesarrollador.Close();
+                }
                 
             }
             this.Hide();
@@ -107,7 +107,5 @@ namespace Formularios
             }
             this.Hide();
         }
-
-
     }
 }

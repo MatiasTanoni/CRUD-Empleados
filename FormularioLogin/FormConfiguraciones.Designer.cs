@@ -15,16 +15,33 @@
 
         private void InitializeComponent()
         {
-            this.SuspendLayout();
+            buttonCancelar = new Button();
+            SuspendLayout();
             // 
-            // FormBase
+            // buttonCancelar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "FormBase";
-            this.Text = "FormBase";
-            this.ResumeLayout(false);
+            buttonCancelar.BackColor = Color.FromArgb(224, 224, 224);
+            buttonCancelar.FlatStyle = FlatStyle.Popup;
+            buttonCancelar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonCancelar.Location = new Point(409, 416);
+            buttonCancelar.Name = "buttonCancelar";
+            buttonCancelar.Size = new Size(131, 64);
+            buttonCancelar.TabIndex = 9;
+            buttonCancelar.Text = "Cancelar";
+            buttonCancelar.UseVisualStyleBackColor = false;
+            // 
+            // FormConfiguraciones
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(933, 519);
+            Controls.Add(buttonCancelar);
+            Margin = new Padding(4, 3, 4, 3);
+            Name = "FormConfiguraciones";
+            Text = "FormBase";
+            ResumeLayout(false);
         }
+
+        private Button buttonCancelar;
     }
 }

@@ -18,22 +18,22 @@ namespace Entidades
         /// Obtiene o establece el perfil del usuario.
         /// </summary>
         [JsonPropertyName("apellido")]
-        public string Apellido { get; set; }
+        public string Apellido { get; set; } = string.Empty;
 
         [JsonPropertyName("nombre")]
-        public string Nombre { get; set; }
+        public string Nombre { get; set; } = string.Empty;
 
         [JsonPropertyName("legajo")]
         public int Legajo { get; set; }
  
-        [JsonPropertyName("correo")]
-        public string Correo { get; set; }
+        [JsonPropertyName("correo")] 
+        public string Correo { get; set; } = string.Empty;
 
         [JsonPropertyName("clave")]
-        public string Clave { get; set; }
+        public string Clave { get; set; } = string.Empty;
 
         [JsonPropertyName("perfil")]
-        public string Perfil { get; set; }
+        public string Perfil { get; set; } = string.Empty;
 
     }
 }
