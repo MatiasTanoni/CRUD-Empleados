@@ -21,7 +21,6 @@ namespace Entidades
         ///Número de proyectos finalizados por el empleado.
         /// </summary>
         private TipoDeEmpleados tipo = TipoDeEmpleados.Desarrollador;
-        private int salario;
         private string lenguajeDeProgramacion = string.Empty;
         private int proyectosFinalizados;
 
@@ -33,14 +32,6 @@ namespace Entidades
         {
             get { return tipo; }
             set { tipo = value; }
-        }
-        /// <summary>
-        /// Obtiene o establece el salario del desarrollador.
-        /// </summary>
-        public int Salario
-        {
-            get { return salario; }
-            set { salario = value; }
         }
 
         /// <summary>
@@ -73,7 +64,7 @@ namespace Entidades
         /// <param name="nombre">El nombre del desarrollador.</param>
         /// <param name="edad">La edad del desarrollador.</param>
         /// <param name="experiencia">La experiencia del desarrollador.</param>
-        public Desarrollador(string nombre, int edad, int experiencia) : base(nombre, edad, experiencia)
+        public Desarrollador(string nombre, int edad, int experiencia,int salario) : base(nombre, edad, experiencia,salario)
         {
         }
 
@@ -84,9 +75,8 @@ namespace Entidades
         /// <param name="nombre">El nombre del desarrollador.</param>
         /// <param name="edad">La edad del desarrollador.</param>
         /// <param name="experiencia">La experiencia del desarrollador.</param>
-        public Desarrollador(int salario, string nombre, int edad, int experiencia) : this(nombre, edad, experiencia)
+        public Desarrollador(int salario, string nombre, int edad, int experiencia) : this(nombre, edad, experiencia, salario)
         {
-            this.salario = salario;
         }
 
         /// <summary>

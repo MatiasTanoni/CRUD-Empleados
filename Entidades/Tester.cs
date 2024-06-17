@@ -14,7 +14,6 @@ public class Tester : Empleado
     /// Número de proyectos testeados por el Tester.
     /// </summary>
     private TipoDeEmpleados tipo = TipoDeEmpleados.Tester;
-    private int salario;
     private string herramientaDePrueba = string.Empty;
     private int proyectosTesteados;
 
@@ -27,15 +26,7 @@ public class Tester : Empleado
         get { return tipo; }
         set { tipo = value; }
     }
-    /// <summary>
-    /// Obtiene o establece el salario del tester.
-    /// </summary>
-    
-    public int Salario
-    {
-        set { salario = value; }
-        get { return salario; }
-    }
+
 
     /// <summary>
     /// Obtiene o establece la herramienta de prueba utilizada por el tester.
@@ -67,7 +58,7 @@ public class Tester : Empleado
     /// <param name="nombre">El nombre del tester.</param>
     /// <param name="edad">La edad del tester.</param>
     /// <param name="experiencia">La experiencia del tester.</param>
-    public Tester(string nombre, int edad, int experiencia) : base(nombre, edad, experiencia)
+    public Tester(string nombre, int edad, int experiencia,int salario) : base(nombre, edad, experiencia,salario)
     {
 
     }
@@ -79,9 +70,8 @@ public class Tester : Empleado
     /// <param name="nombre">El nombre del Tester.</param>
     /// <param name="edad">La edad del Tester.</param>
     /// <param name="experiencia">La experiencia del Tester.</param>
-    public Tester(int salario, string nombre, int edad, int experiencia) : this(nombre, edad, experiencia)
+    public Tester(int salario, string nombre, int edad, int experiencia) : this(nombre, edad, experiencia, salario)
     {
-        this.salario = salario;
     }
 
     /// <summary>

@@ -20,7 +20,6 @@ namespace Entidades
         /// Número de proyectos gestionados por el empleado (si es un gerente).
         /// </summary>
         private TipoDeEmpleados tipo = TipoDeEmpleados.Gerente;
-        private int salario;
         private int personasACargo;
         private int proyectosGestionados;
 
@@ -32,15 +31,6 @@ namespace Entidades
         {
             get { return tipo; }
             set { tipo = value; }
-        }
-        /// <summary>
-        /// Obtiene o establece el salario del gerente.
-        /// </summary>
-        
-        public int Salario
-        {
-            get { return salario; }
-            set { salario = value; }
         }
 
         /// <summary>
@@ -73,7 +63,7 @@ namespace Entidades
         /// <param name="nombre">El nombre del gerente.</param>
         /// <param name="edad">La edad del gerente.</param>
         /// <param name="experiencia">La experiencia del gerente.</param>
-        public Gerente(string nombre, int edad, int experiencia) : base(nombre, edad, experiencia)
+        public Gerente(string nombre, int edad, int experiencia,int salario) : base(nombre, edad, experiencia, salario)
         {
         }
 
@@ -84,9 +74,8 @@ namespace Entidades
         /// <param name="nombre">El nombre del gerente.</param>
         /// <param name="edad">La edad del gerente.</param>
         /// <param name="experiencia">La experiencia del gerente.</param>
-        public Gerente(int salario, string nombre, int edad, int experiencia) : this(nombre, edad, experiencia)
+        public Gerente(int salario, string nombre, int edad, int experiencia) : this(nombre, edad, experiencia, salario)
         {
-            this.salario = salario;
         }
 
         /// <summary>

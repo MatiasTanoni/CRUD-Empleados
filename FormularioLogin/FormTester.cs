@@ -17,7 +17,7 @@ namespace Formularios
         /// Representa un objeto de tipo Tester con valores predeterminados para el nombre, la edad y el salario.
         /// Representa una instancia de la clase Empresa que almacena información sobre la empresa, incluida la lista de empleados.
         /// </summary>
-        private Tester tester = new Tester("", 0, 0);
+        private Tester tester = new Tester("", 0, 0, 0);
         public Empresa empresa = new Empresa();
 
         /// <summary>
@@ -126,28 +126,28 @@ namespace Formularios
             }
         }
 
-        private bool ValidadSalario(Tester tester, TextBox textBox)
-        {
-            if (int.TryParse(textBox.Text, out int salario))
-            {
-                if (salario > 0)
-                {
-                    tester.Salario = salario;
-                    return true;
+        //private bool ValidadSalario(Tester tester, TextBox textBox)
+        //{
+        //    if (int.TryParse(textBox.Text, out int salario))
+        //    {
+        //        if (salario > 0)
+        //        {
+        //            tester.Salario = salario;
+        //            return true;
 
-                }
-                else
-                {
-                    MessageBox.Show("Por favor, ingrese un valor numérico mayor a 0 para el salario.");
-                    return false;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Por favor, ingrese un valor numérico válido para el salario.");
-                return false;
-            }
-        }
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show("Por favor, ingrese un valor numérico mayor a 0 para el salario.");
+        //            return false;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("Por favor, ingrese un valor numérico válido para el salario.");
+        //        return false;
+        //    }
+        //}
         private bool ValidarHerramientaDePrueba(Tester tester, TextBox textBox)
         {
             if (!string.IsNullOrWhiteSpace(textBox.Text) && !int.TryParse(textBox.Text, out _))

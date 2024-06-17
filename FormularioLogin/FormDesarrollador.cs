@@ -26,7 +26,7 @@ namespace Formularios
         /// <summary>
         /// Representa un objeto Desarrollador.
         /// </summary>
-        private Desarrollador desarrollador = new Desarrollador("", 0, 0);
+        private Desarrollador desarrollador = new Desarrollador("", 0, 0,0);
 
         /// <summary>
         /// Representa una empresa que contiene una lista de empleados.
@@ -137,30 +137,6 @@ namespace Formularios
                     return ValidarProyectosFinalizados(desarrollador, textBox);
                 default:
                     return false;
-            }
-        }
-
-
-
-        private bool ValidadSalario(Desarrollador desarrollador, TextBox textBox)
-        {
-            if (int.TryParse(textBox.Text, out int salario))
-            {
-                if (salario > 0)
-                {
-                    desarrollador.Salario = salario;
-                    return true;
-                }
-                else
-                {
-                    MessageBox.Show("Por favor, ingrese un valor numérico mayor a 0 para el salario.");
-                    return false;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Por favor, ingrese un valor numérico válido para el salario.");
-                return false;
             }
         }
 

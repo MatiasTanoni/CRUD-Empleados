@@ -19,7 +19,7 @@ namespace Formularios
         /// Representa un objeto Gerente con atributos predeterminados.
         /// Representa una empresa asociada a la clase.
         /// </summary>
-        private Gerente gerente = new Gerente("", 0, 0);
+        private Gerente gerente = new Gerente("", 0, 0, 0);
         public Empresa empresa;
 
         /// <summary>
@@ -131,29 +131,6 @@ namespace Formularios
             }
         }
 
-        private bool ValidadSalario(Gerente gerente, TextBox textBox)
-        {
-            if (int.TryParse(textBox.Text, out int salario))
-            {
-                if (salario > 0)
-                {
-                    gerente.Salario = salario;
-                    return true;
-
-                }
-                else
-                {
-                    MessageBox.Show("Por favor, ingrese un valor numérico mayor a 0 para el salario.");
-                    return false;
-                }
-            }
-            else
-            {
-                MessageBox.Show("Por favor, ingrese un valor numérico válido para el salario.");
-                return false;
-            }
-        }
-
         private bool ValidarProyectosGestionados(Gerente gerente, TextBox textBox) 
         {
             if (int.TryParse(textBox.Text, out int ProyectosGestionados))
@@ -169,14 +146,14 @@ namespace Formularios
         }
         private bool ValidarPersonasACargo(Gerente gerente, TextBox textBox)
         {
-            if (int.TryParse(textBox.Text, out int ProyectosGestionados))
+            if (int.TryParse(textBox.Text, out int PersonasACargo))
             {
-                gerente.ProyectosGestionados = ProyectosGestionados;
+                gerente.PersonasACargo = PersonasACargo;
                 return true;
             }
             else
             {
-                MessageBox.Show("Por favor, ingrese un valor numérico válido para el valor de Proyectos Gestionados.");
+                MessageBox.Show("Por favor, ingrese un valor numérico válido para el valor de Personas a cargo.");
                 return false;
             }
         }

@@ -71,5 +71,26 @@ namespace Formularios
                 return false;
             }
         }
+        public bool ValidadSalario(Empleado empleado, TextBox textBox)
+        {
+            if (int.TryParse(textBox.Text, out int salario))
+            {
+                if (salario > 0)
+                {
+                    empleado.Salario = salario;
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, ingrese un valor numérico mayor a 0 para el salario.");
+                    return false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un valor numérico válido para el salario.");
+                return false;
+            }
+        }
     }
 }

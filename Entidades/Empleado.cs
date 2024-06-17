@@ -19,6 +19,7 @@ namespace Entidades
         protected string nombre = string.Empty;
         protected int edad;
         protected int experiencia;
+        protected int salario;
         protected int edadJubilacionDefault = 65;
         // Propiedades
         /// <summary>
@@ -51,6 +52,11 @@ namespace Entidades
             set { experiencia = value; }
         }
 
+        public int Salario
+        {
+            get { return salario; }
+            set { salario = value; }
+        }
         public int EdadJubilacionDefault
         {
             get { return edadJubilacionDefault; }
@@ -89,6 +95,11 @@ namespace Entidades
         public Empleado(string nombre, int edad, int experiencia) : this(nombre, edad)
         {
             this.experiencia = experiencia;
+        }
+
+        public Empleado(string nombre, int edad, int experiencia,int salario) : this(nombre, edad,experiencia)
+        {
+            this.salario = salario;
         }
 
         public int AniosHastaJubilacion()
@@ -141,17 +152,6 @@ namespace Entidades
         {
             throw new NotImplementedException();
         }
-        //public override int GetHashCode()
-        //{
-        //    unchecked
-        //    {
-        //        int hash = 17;
-        //        hash = hash * 23 + (nombre != null ? nombre.GetHashCode() : 0);
-        //        hash = hash * 23 + edad.GetHashCode();
-        //        hash = hash * 23 + experiencia.GetHashCode();
-        //        return hash;
-        //    }
-        //}
 
     }
 }
