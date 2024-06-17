@@ -115,110 +115,125 @@ namespace Formularios
             switch (dato)
             {
                 case "nombre":
-                    if (!string.IsNullOrWhiteSpace(textBox.Text) && !int.TryParse(textBox.Text, out _))
-                    {
-                        gerente.Nombre = textBox.Text;
-                        return true;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Por favor, el nombre no puede estar vacío o ser un número.");
-                        return false;
-                    }
+                    return ValidarNombre(gerente,textBox);
                 case "proyectos gestionados":
-                    {
-                        if (int.TryParse(textBox.Text, out int ProyectosGestionados))
-                        {
-                            gerente.ProyectosGestionados = ProyectosGestionados;
-                            return true;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Por favor, ingrese un valor numérico válido para el valor de Proyectos Gestionados.");
-                            return false;
-                        }
-                    }
+                    return ValidarProyectosGestionados(gerente,textBox);
                 case "edad":
-                    {
-                        if (int.TryParse(textBox.Text, out int edad))
-                        {
-                            if (edad > 0 && edad < 65)
-                            {
-                                gerente.Edad = edad;
-                                return true;
-                            }
-                            else
-                            {
-                                MessageBox.Show("Por favor, ingrese una edad válida (entre 1 y 64).");
-                                return false;
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Por favor, ingrese un valor numérico válido para la edad.");
-                            return false;
-                        }
-                    }
+                    return ValidarEdad(gerente,textBox);
                 case "salario":
-                    {
-                        if (int.TryParse(textBox.Text, out int salario))
-                        {
-                            if (salario > 0)
-                            {
-                                gerente.Salario = salario;
-                                return true;
-
-                            }
-                            else
-                            {
-                                MessageBox.Show("Por favor, ingrese un valor numérico mayor a 0 para el salario.");
-                                return false;
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Por favor, ingrese un valor numérico válido para el salario.");
-                            return false;
-                        }
-                    }
+                    return ValidadSalario(gerente,textBox);
                 case "experiencia":
-                    {
-                        if (int.TryParse(textBox.Text, out int experiencia))
-                        {
-                            if (experiencia >= 0 && experiencia <= 40)
-                            {
-                                gerente.Experiencia = experiencia;
-                                return true;
-                            }
-                            else
-                            {
-                                MessageBox.Show("Por favor, ingrese una experiencia válida (entre 0 y 40).");
-                                return false;
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Por favor, ingrese un valor numérico válido para la experiencia.");
-                            return false;
-                        }
-                    }
+                    return ValidarExperiencia(gerente,textBox);
                 case "personas a cargo":
-                    {
-                        if (int.TryParse(textBox.Text, out int PersonasACargo))
-                        {
-                            gerente.PersonasACargo = PersonasACargo;
-                            return true;
-                        }
-                        else
-                        {
-                            MessageBox.Show("Por favor, ingrese un valor numérico válido para las personas a cargo.");
-                            return false;
-                        }
-                    }
+                    return ValidarPersonasACargo(gerente,textBox);
                 default:
                     return false;
             }
         }
+        private bool ValidarNombre(Gerente gerente, TextBox textBox)
+        {
+            if (!string.IsNullOrWhiteSpace(textBox.Text) && !int.TryParse(textBox.Text, out _))
+            {
+                gerente.Nombre = textBox.Text;
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Por favor, el nombre no puede estar vacío o ser un número.");
+                return false;
+            }
+        }
 
+        private bool ValidarEdad(Gerente gerente, TextBox textBox)
+        {
+            if (int.TryParse(textBox.Text, out int edad))
+            {
+                if (edad > 0 && edad < 65)
+                {
+                    gerente.Edad = edad;
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, ingrese una edad válida (entre 1 y 64).");
+                    return false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un valor numérico válido para la edad.");
+                return false;
+            }
+        }
+        private bool ValidadSalario(Gerente gerente, TextBox textBox)
+        {
+            if (int.TryParse(textBox.Text, out int salario))
+            {
+                if (salario > 0)
+                {
+                    gerente.Salario = salario;
+                    return true;
+
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, ingrese un valor numérico mayor a 0 para el salario.");
+                    return false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un valor numérico válido para el salario.");
+                return false;
+            }
+        }
+        private bool ValidarExperiencia(Gerente gerente, TextBox textBox)
+        {
+            if (int.TryParse(textBox.Text, out int experiencia))
+            {
+                if (experiencia >= 0 && experiencia <= 40)
+                {
+                    gerente.Experiencia = experiencia;
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, ingrese una experiencia válida (entre 0 y 40).");
+                    return false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un valor numérico válido para la experiencia.");
+                return false;
+            }
+        }
+        private bool ValidarProyectosGestionados(Gerente gerente, TextBox textBox) 
+        {
+            if (int.TryParse(textBox.Text, out int ProyectosGestionados))
+            {
+                gerente.ProyectosGestionados = ProyectosGestionados;
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un valor numérico válido para el valor de Proyectos Gestionados.");
+                return false;
+            }
+        }
+        private bool ValidarPersonasACargo(Gerente gerente, TextBox textBox)
+        {
+            if (int.TryParse(textBox.Text, out int ProyectosGestionados))
+            {
+                gerente.ProyectosGestionados = ProyectosGestionados;
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese un valor numérico válido para el valor de Proyectos Gestionados.");
+                return false;
+            }
+        }
     }
+
 }
