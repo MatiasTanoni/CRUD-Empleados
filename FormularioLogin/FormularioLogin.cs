@@ -114,26 +114,42 @@ namespace Formularios
                             usuarios = new List<Usuario>(); // Manejar el caso de jsonString nulo
                         }
 
-                        // List<Usuario> usuarios = JsonSerializer.Deserialize<List<Usuario>>(jsonString);
-
-                        bool usuarioEncontrado = false;
                         if (usuarios != null)
                         { 
+
                             foreach (Usuario usuario in usuarios)
                             {
-                                if (usuario.Correo == textBoxCorreo.Text && usuario.Clave == textContrasena.Text)
+                                if (usuario.Correo != textBoxCorreo.Text && usuario.Clave != textContrasena.Text)
                                 {
-                                    UsuarioRegistrado = usuario;
-                                    usuarioEncontrado = true;
-                                    RegistrarAccesoUsuario();
-                                    FormularioPrincipal formularioPrincipal = new FormularioPrincipal(this.UsuarioRegistrado);
-                                    formularioPrincipal.ShowDialog();
+                                    MessageBox.Show("Error, ha ingresado mal el correo y la contraseña.");
                                     break;
                                 }
-                            }
-                            if (!usuarioEncontrado)
-                            {
-                                MessageBox.Show("Error, ha ingresado mal el usuario o la contraseña.");
+                                else
+                                {
+                                    if (usuario.Correo == textBoxCorreo.Text)
+                                    {
+                                        if (usuario.Clave == textContrasena.Text)
+                                        {
+                                            
+                                            UsuarioRegistrado = usuario;
+                                            RegistrarAccesoUsuario();
+                                            FormularioPrincipal formularioPrincipal = new FormularioPrincipal(this.UsuarioRegistrado);
+                                            formularioPrincipal.ShowDialog();
+                                            break;
+                                          
+                                        }
+                                        else
+                                        {
+                                            MessageBox.Show("Error, ha ingresado mal la contraseña.");
+                                            break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Error, ha ingresado mal el correo.");
+                                        break;
+                                    }
+                                }
                             }
                         }
                     }

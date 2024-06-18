@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Formularios
 {
-    public partial class FormularioDatos: FormConfiguraciones
+    public partial class FormularioDatos : FormConfiguraciones
     {
         /// <summary>
         /// Formulario para manejar las acciones relacionadas con un desarrollador.
@@ -69,7 +69,7 @@ namespace Formularios
                 {
                     this.formDesarrollador.Close();
                 }
-                
+
             }
             this.Hide();
         }
@@ -107,5 +107,6 @@ namespace Formularios
             }
             this.Hide();
         }
+
     }
 }

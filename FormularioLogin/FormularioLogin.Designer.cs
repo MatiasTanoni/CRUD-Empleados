@@ -234,7 +234,7 @@
             label1.BorderStyle = BorderStyle.Fixed3D;
             label1.Font = new Font("Lucida Sans", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(156, 17);
+            label1.Location = new Point(177, 17);
             label1.Name = "label1";
             label1.Size = new Size(101, 35);
             label1.TabIndex = 11;

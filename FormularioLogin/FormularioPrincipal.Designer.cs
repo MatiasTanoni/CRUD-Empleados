@@ -50,7 +50,7 @@
             buttonAgregar.BackColor = Color.OliveDrab;
             buttonAgregar.FlatStyle = FlatStyle.Popup;
             buttonAgregar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonAgregar.Location = new Point(53, 370);
+            buttonAgregar.Location = new Point(15, 369);
             buttonAgregar.Name = "buttonAgregar";
             buttonAgregar.Size = new Size(127, 62);
             buttonAgregar.TabIndex = 0;
@@ -63,7 +63,7 @@
             buttonEliminar.BackColor = Color.DarkRed;
             buttonEliminar.FlatStyle = FlatStyle.Popup;
             buttonEliminar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonEliminar.Location = new Point(585, 370);
+            buttonEliminar.Location = new Point(636, 369);
             buttonEliminar.Name = "buttonEliminar";
             buttonEliminar.Size = new Size(127, 62);
             buttonEliminar.TabIndex = 2;
@@ -76,7 +76,7 @@
             buttonModificar.BackColor = SystemColors.ActiveCaption;
             buttonModificar.FlatStyle = FlatStyle.Popup;
             buttonModificar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonModificar.Location = new Point(334, 370);
+            buttonModificar.Location = new Point(343, 369);
             buttonModificar.Name = "buttonModificar";
             buttonModificar.Size = new Size(127, 62);
             buttonModificar.TabIndex = 1;

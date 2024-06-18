@@ -121,7 +121,7 @@ namespace Formularios
                 case "edad":
                     return ValidarEdad(gerente,textBox);
                 case "salario":
-                    return ValidadSalario(gerente,textBox);
+                    return ValidarSalario(gerente,textBox);
                 case "experiencia":
                     return ValidarExperiencia(gerente,textBox);
                 case "personas a cargo":
@@ -133,27 +133,47 @@ namespace Formularios
 
         private bool ValidarProyectosGestionados(Gerente gerente, TextBox textBox) 
         {
-            if (int.TryParse(textBox.Text, out int ProyectosGestionados))
+
+            if (!string.IsNullOrWhiteSpace(textBox.Text))
             {
-                gerente.ProyectosGestionados = ProyectosGestionados;
-                return true;
+                if (int.TryParse(textBox.Text, out int ProyectosGestionados))
+                {
+                    gerente.ProyectosGestionados = ProyectosGestionados;
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, ingrese un valor numérico válido para el valor de Proyectos Gestionados.");
+                    return false;
+                }
             }
             else
             {
-                MessageBox.Show("Por favor, ingrese un valor numérico válido para el valor de Proyectos Gestionados.");
+                MessageBox.Show("Por favor, No puede estar vacio, ingrese un valor para los Proyectos Gestionados.");
                 return false;
             }
+
+
         }
         private bool ValidarPersonasACargo(Gerente gerente, TextBox textBox)
         {
-            if (int.TryParse(textBox.Text, out int PersonasACargo))
+            if (!string.IsNullOrWhiteSpace(textBox.Text))
             {
-                gerente.PersonasACargo = PersonasACargo;
-                return true;
+
+                if (int.TryParse(textBox.Text, out int PersonasACargo))
+                {
+                    gerente.PersonasACargo = PersonasACargo;
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, ingrese un valor numérico válido para el valor de Personas a cargo.");
+                    return false;
+                }
             }
             else
             {
-                MessageBox.Show("Por favor, ingrese un valor numérico válido para el valor de Personas a cargo.");
+                MessageBox.Show("Por favor, No puede estar vacio, ingrese un valor para las Personas A Cargo.");
                 return false;
             }
         }

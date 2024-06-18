@@ -18,79 +18,127 @@ namespace Formularios
         }
         public bool ValidarNombre(Empleado empleado, TextBox textBox)
         {
-            if (!string.IsNullOrWhiteSpace(textBox.Text) && !int.TryParse(textBox.Text, out _))
+            if (!int.TryParse(textBox.Text, out _))
             {
-                empleado.Nombre = textBox.Text;
-                return true;
+                if (!string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    empleado.Nombre = textBox.Text;
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, No puede estar vacio, ingrese un valor para el Nombre");
+                    return false;
+                }  
             }
             else
             {
-                MessageBox.Show("Por favor, el nombre no puede estar vacío o ser un número.");
+                MessageBox.Show("Por favor, el nombre no puede ser un número.");
                 return false;
             }
         }
         public bool ValidarEdad(Empleado empleado, TextBox textBox)
         {
-            if (int.TryParse(textBox.Text, out int edad))
+
+            if (!string.IsNullOrWhiteSpace(textBox.Text))
             {
-                if (edad > 0 && edad < 65)
+                if (int.TryParse(textBox.Text, out int edad))
+                {
+
+                if (edad >= 18 && edad < 65)
                 {
                     empleado.Edad = edad;
                     return true;
                 }
+                else if (edad >= 65)
+                {
+                    MessageBox.Show("Por favor, No puede trabajar aquí porque tienes edad de jubilación, solo permitimos (18 a 64) años.");
+                    return false;
+                }
+                else if (edad <= 18)
+                {
+                    MessageBox.Show("Por favor, No puede trabajar aquí porque eres menor de edad, solo permitimos (18 a 64) años.");
+                    return false;
+                }
                 else
                 {
-                    MessageBox.Show("Por favor, ingrese una edad válida (entre 1 y 64).");
+                    MessageBox.Show("Por favor, ingrese una edad válida (entre 18 y 64).");
+                    return false;
+                }
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, ingrese un valor numérico válido para la Edad.");
                     return false;
                 }
             }
             else
             {
-                MessageBox.Show("Por favor, ingrese un valor numérico válido para la edad.");
+                MessageBox.Show("Por favor, No puede estar vacio, ingrese un valor para la Edad");
                 return false;
             }
+
+
         }
         public bool ValidarExperiencia(Empleado empleado, TextBox textBox)
         {
-            if (int.TryParse(textBox.Text, out int experiencia))
+            if (!string.IsNullOrWhiteSpace(textBox.Text))
             {
-                if (experiencia >= 0 && experiencia <= 40)
+                if (int.TryParse(textBox.Text, out int experiencia))
                 {
-                    empleado.Experiencia = experiencia;
-                    return true;
+                    if (experiencia >= 0 && experiencia <= 45)
+                    {
+                        empleado.Experiencia = experiencia;
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Por favor, ingrese una experiencia válida (entre 0 y 45).");
+                        return false;
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Por favor, ingrese una experiencia válida (entre 0 y 40).");
+                    MessageBox.Show("Por favor, ingrese un valor numérico válido para la Experiencia.");
                     return false;
                 }
             }
             else
             {
-                MessageBox.Show("Por favor, ingrese un valor numérico válido para la experiencia.");
+                MessageBox.Show("Por favor, No puede estar vacio, ingrese un valor para la Experiencia");
                 return false;
             }
+
         }
-        public bool ValidadSalario(Empleado empleado, TextBox textBox)
+        public bool ValidarSalario(Empleado empleado, TextBox textBox)
         {
-            if (int.TryParse(textBox.Text, out int salario))
+            if (!string.IsNullOrWhiteSpace(textBox.Text))
             {
-                if (salario > 0)
+                if (int.TryParse(textBox.Text, out int salario))
                 {
-                    empleado.Salario = salario;
-                    return true;
+                    if (salario > 0)
+                    {
+                        empleado.Salario = salario;
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Por favor, ingrese un valor numérico mayor a 0 para el Salario.");
+                        return false;
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Por favor, ingrese un valor numérico mayor a 0 para el salario.");
+                    MessageBox.Show("Por favor, ingrese un valor numérico válido para el Salario.");
                     return false;
                 }
             }
             else
             {
-                MessageBox.Show("Por favor, ingrese un valor numérico válido para el salario.");
+                MessageBox.Show("Por favor, No puede estar vacio, ingrese un valor para el Salario");
                 return false;
             }
+
         }
     }
 }

@@ -130,7 +130,7 @@ namespace Formularios
                 case "edad":
                     return ValidarEdad(desarrollador, textBox);
                 case "salario":
-                    return ValidadSalario(desarrollador, textBox);
+                    return ValidarSalario(desarrollador, textBox);
                 case "experiencia":
                     return ValidarExperiencia(desarrollador, textBox);
                 case "proyectos finalizados":
@@ -142,28 +142,44 @@ namespace Formularios
 
         private bool ValidarLenguajeDeProgramacion(Desarrollador desarrollador, TextBox textBox)
         {
-            if (!string.IsNullOrWhiteSpace(textBox.Text) && !int.TryParse(textBox.Text, out _))
+            if (!string.IsNullOrWhiteSpace(textBox.Text))
             {
-                desarrollador.LenguajeDeProgramacion = textBox.Text;
-                return true;
+                if (!int.TryParse(textBox.Text, out _))
+                {
+                    desarrollador.LenguajeDeProgramacion = textBox.Text;
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, el lenguaje de programación no puede estar vacío o ser un número.");
+                    return false;
+                }
             }
             else
             {
-                MessageBox.Show("Por favor, el lenguaje de programación no puede estar vacío o ser un número.");
+                MessageBox.Show("Por favor, No puede estar vacio, ingrese un valor para el Lenguaje De Programación");
                 return false;
             }
         }
 
         private bool ValidarProyectosFinalizados(Desarrollador desarrollador, TextBox textBox)
         {
-            if (int.TryParse(textBox.Text, out int proyectosFinalizados))
+            if (!string.IsNullOrWhiteSpace(textBox.Text))
             {
-                desarrollador.ProyectosFinalizados = proyectosFinalizados;
-                return true;
+                if (int.TryParse(textBox.Text, out int proyectosFinalizados))
+                {
+                    desarrollador.ProyectosFinalizados = proyectosFinalizados;
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, ingrese un valor numérico válido para los Proyectos Finalizados.");
+                    return false;
+                }
             }
             else
             {
-                MessageBox.Show("Por favor, ingrese un valor numérico válido para los proyectos finalizados.");
+                MessageBox.Show("Por favor, No puede estar vacio, ingrese un valor para los Proyectos Finalizados");
                 return false;
             }
         }

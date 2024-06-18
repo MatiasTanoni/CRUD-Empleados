@@ -15,6 +15,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Archivos", "Archivos", "{62
 		usuarios.log = usuarios.log
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JerarquiaDeClases", "JerarquiaDeClases", "{046273A4-A77C-4ADD-A04E-34AADAD8AB3F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FormulariosCrud", "FormulariosCrud", "{4634A7F0-D825-4CBE-8313-33EFED0EEA61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +40,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2236122C-CFBA-4951-AEE1-9E9545DD07A9} = {046273A4-A77C-4ADD-A04E-34AADAD8AB3F}
+		{540CF6E8-967B-45AB-A77B-FB296C16F5DF} = {4634A7F0-D825-4CBE-8313-33EFED0EEA61}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {310806F3-59CD-4D3F-9393-17CA6233D254}

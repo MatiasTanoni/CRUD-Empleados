@@ -116,7 +116,7 @@ namespace Formularios
                 case "edad":
                     return ValidarEdad(tester, textBox);
                 case "salario":
-                    return ValidadSalario(tester, textBox);
+                    return ValidarSalario(tester, textBox);
                 case "experiencia":
                     return ValidarExperiencia(tester, textBox);
                 case "proyectos testeados":
@@ -126,73 +126,46 @@ namespace Formularios
             }
         }
 
-        //private bool ValidadSalario(Tester tester, TextBox textBox)
-        //{
-        //    if (int.TryParse(textBox.Text, out int salario))
-        //    {
-        //        if (salario > 0)
-        //        {
-        //            tester.Salario = salario;
-        //            return true;
-
-        //        }
-        //        else
-        //        {
-        //            MessageBox.Show("Por favor, ingrese un valor numérico mayor a 0 para el salario.");
-        //            return false;
-        //        }
-        //    }
-        //    else
-        //    {
-        //        MessageBox.Show("Por favor, ingrese un valor numérico válido para el salario.");
-        //        return false;
-        //    }
-        //}
         private bool ValidarHerramientaDePrueba(Tester tester, TextBox textBox)
         {
-            if (!string.IsNullOrWhiteSpace(textBox.Text) && !int.TryParse(textBox.Text, out _))
+            if (!string.IsNullOrWhiteSpace(textBox.Text))
             {
-                tester.HerramientaDePrueba = textBox.Text;
-                return true;
-            }
-            else
-            {
-                MessageBox.Show("Por favor, La HerramientaDePrueba no puede estar vacío o ser un número.");
-                return false;
-            }
-        }
-
-        private bool ValidarExperiencia(Tester tester, TextBox textBox)
-        {
-            if (int.TryParse(textBox.Text, out int experiencia))
-            {
-                if (experiencia >= 0 && experiencia <= 40)
+                if (!int.TryParse(textBox.Text, out _))
                 {
-                    tester.Experiencia = experiencia;
+                    tester.HerramientaDePrueba = textBox.Text;
                     return true;
                 }
                 else
                 {
-                    MessageBox.Show("Por favor, ingrese una experiencia válida (entre 0 y 40).");
+                    MessageBox.Show("Por favor, La HerramientaDePrueba no puede ser un número.");
                     return false;
                 }
             }
             else
             {
-                MessageBox.Show("Por favor, ingrese un valor numérico válido para la experiencia.");
+                MessageBox.Show("Por favor, No puede estar vacio, ingrese un valor para la Herramienta De Prueba.");
                 return false;
             }
         }
+
         private bool ValidarProyetosTesteados(Tester tester, TextBox textBox)
         {
-            if (int.TryParse(textBox.Text, out int ProyectosTesteados))
+            if (!string.IsNullOrWhiteSpace(textBox.Text))
             {
-                tester.ProyectosTesteados = ProyectosTesteados;
-                return true;
+                if (int.TryParse(textBox.Text, out int ProyectosTesteados))
+                {
+                    tester.ProyectosTesteados = ProyectosTesteados;
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, ingrese un valor numérico válido para los proyectos testeados.");
+                    return false;
+                }
             }
             else
             {
-                MessageBox.Show("Por favor, ingrese un valor numérico válido para los proyectos testeados.");
+                MessageBox.Show("Por favor, No puede estar vacio, ingrese un valor para los proyectos testeados.");
                 return false;
             }
         }
