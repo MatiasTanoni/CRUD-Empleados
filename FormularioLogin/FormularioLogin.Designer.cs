@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioLogin));
             pContainer = new Panel();
+            buttonContraseña = new Button();
             pictureBox2 = new PictureBox();
             buttonIniciarSesion = new Button();
             labelContrasena = new Label();
@@ -45,6 +46,7 @@
             pictureBox3 = new PictureBox();
             panel1 = new Panel();
             label1 = new Label();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             pContainer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxContrasena).BeginInit();
@@ -60,6 +62,7 @@
             // pContainer
             // 
             pContainer.BackColor = Color.White;
+            pContainer.Controls.Add(buttonContraseña);
             pContainer.Controls.Add(pictureBox2);
             pContainer.Controls.Add(buttonIniciarSesion);
             pContainer.Controls.Add(labelContrasena);
@@ -79,6 +82,18 @@
             pContainer.Name = "pContainer";
             pContainer.Size = new Size(455, 458);
             pContainer.TabIndex = 0;
+            // 
+            // buttonContraseña
+            // 
+            buttonContraseña.BackColor = Color.Gainsboro;
+            buttonContraseña.FlatAppearance.BorderColor = Color.Black;
+            buttonContraseña.FlatStyle = FlatStyle.Popup;
+            buttonContraseña.Location = new Point(398, 209);
+            buttonContraseña.Name = "buttonContraseña";
+            buttonContraseña.Size = new Size(47, 44);
+            buttonContraseña.TabIndex = 15;
+            buttonContraseña.UseVisualStyleBackColor = false;
+            buttonContraseña.Click += buttonContraseña_Click;
             // 
             // pictureBox2
             // 
@@ -282,5 +297,7 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
         private Panel panel1;
+        private Button buttonContraseña;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

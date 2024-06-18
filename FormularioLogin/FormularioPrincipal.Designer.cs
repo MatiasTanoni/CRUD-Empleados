@@ -42,7 +42,15 @@
             listBoxPrincipal = new ListBox();
             comboBoxPrincipal = new ComboBox();
             buttonVisualizador = new Button();
+            panel1 = new Panel();
+            label1 = new Label();
+            panel2 = new Panel();
+            labelBaseDeDatos = new Label();
+            buttonGuardarBaseDeDatos = new Button();
+            buttonAbrirBaseDeDatos = new Button();
             statusStrip1.SuspendLayout();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // buttonAgregar
@@ -50,7 +58,7 @@
             buttonAgregar.BackColor = Color.OliveDrab;
             buttonAgregar.FlatStyle = FlatStyle.Popup;
             buttonAgregar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonAgregar.Location = new Point(15, 369);
+            buttonAgregar.Location = new Point(121, 385);
             buttonAgregar.Name = "buttonAgregar";
             buttonAgregar.Size = new Size(127, 62);
             buttonAgregar.TabIndex = 0;
@@ -63,7 +71,7 @@
             buttonEliminar.BackColor = Color.DarkRed;
             buttonEliminar.FlatStyle = FlatStyle.Popup;
             buttonEliminar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonEliminar.Location = new Point(636, 369);
+            buttonEliminar.Location = new Point(568, 385);
             buttonEliminar.Name = "buttonEliminar";
             buttonEliminar.Size = new Size(127, 62);
             buttonEliminar.TabIndex = 2;
@@ -76,7 +84,7 @@
             buttonModificar.BackColor = SystemColors.ActiveCaption;
             buttonModificar.FlatStyle = FlatStyle.Popup;
             buttonModificar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonModificar.Location = new Point(343, 369);
+            buttonModificar.Location = new Point(338, 385);
             buttonModificar.Name = "buttonModificar";
             buttonModificar.Size = new Size(127, 62);
             buttonModificar.TabIndex = 1;
@@ -87,9 +95,9 @@
             // statusStrip1
             // 
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabelOperador, toolStripStatusLabelFecha });
-            statusStrip1.Location = new Point(0, 451);
+            statusStrip1.Location = new Point(0, 464);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(789, 22);
+            statusStrip1.Size = new Size(813, 22);
             statusStrip1.TabIndex = 4;
             statusStrip1.Text = "statusStrip1";
             // 
@@ -113,7 +121,7 @@
             buttonGuardar.FlatStyle = FlatStyle.Popup;
             buttonGuardar.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonGuardar.ForeColor = Color.White;
-            buttonGuardar.Location = new Point(688, 7);
+            buttonGuardar.Location = new Point(105, 54);
             buttonGuardar.Name = "buttonGuardar";
             buttonGuardar.Size = new Size(89, 23);
             buttonGuardar.TabIndex = 6;
@@ -127,7 +135,7 @@
             Abrir.FlatStyle = FlatStyle.Popup;
             Abrir.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             Abrir.ForeColor = Color.White;
-            Abrir.Location = new Point(688, 36);
+            Abrir.Location = new Point(3, 54);
             Abrir.Name = "Abrir";
             Abrir.Size = new Size(89, 23);
             Abrir.TabIndex = 7;
@@ -141,9 +149,9 @@
             buttonAscendente.FlatStyle = FlatStyle.Popup;
             buttonAscendente.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonAscendente.ForeColor = Color.Black;
-            buttonAscendente.Location = new Point(15, 7);
+            buttonAscendente.Location = new Point(141, 6);
             buttonAscendente.Name = "buttonAscendente";
-            buttonAscendente.Size = new Size(123, 28);
+            buttonAscendente.Size = new Size(123, 49);
             buttonAscendente.TabIndex = 9;
             buttonAscendente.Text = "Ascendente";
             buttonAscendente.UseVisualStyleBackColor = false;
@@ -155,9 +163,9 @@
             buttonDescendente.FlatStyle = FlatStyle.Popup;
             buttonDescendente.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonDescendente.ForeColor = Color.Black;
-            buttonDescendente.Location = new Point(144, 7);
+            buttonDescendente.Location = new Point(12, 6);
             buttonDescendente.Name = "buttonDescendente";
-            buttonDescendente.Size = new Size(123, 28);
+            buttonDescendente.Size = new Size(123, 49);
             buttonDescendente.TabIndex = 10;
             buttonDescendente.Text = "Descendente";
             buttonDescendente.UseVisualStyleBackColor = false;
@@ -169,10 +177,10 @@
             listBoxPrincipal.Font = new Font("Lucida Sans", 9F, FontStyle.Regular, GraphicsUnit.Point);
             listBoxPrincipal.FormattingEnabled = true;
             listBoxPrincipal.ItemHeight = 15;
-            listBoxPrincipal.Location = new Point(15, 74);
+            listBoxPrincipal.Location = new Point(12, 105);
             listBoxPrincipal.Name = "listBoxPrincipal";
             listBoxPrincipal.ScrollAlwaysVisible = true;
-            listBoxPrincipal.Size = new Size(748, 289);
+            listBoxPrincipal.Size = new Size(789, 274);
             listBoxPrincipal.TabIndex = 11;
             // 
             // comboBoxPrincipal
@@ -180,7 +188,7 @@
             comboBoxPrincipal.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxPrincipal.FormattingEnabled = true;
             comboBoxPrincipal.Items.AddRange(new object[] { "Nombre", "Edad" });
-            comboBoxPrincipal.Location = new Point(81, 41);
+            comboBoxPrincipal.Location = new Point(77, 61);
             comboBoxPrincipal.Name = "comboBoxPrincipal";
             comboBoxPrincipal.Size = new Size(121, 23);
             comboBoxPrincipal.TabIndex = 12;
@@ -191,27 +199,103 @@
             buttonVisualizador.FlatStyle = FlatStyle.Popup;
             buttonVisualizador.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonVisualizador.ForeColor = Color.White;
-            buttonVisualizador.Location = new Point(532, 7);
+            buttonVisualizador.Location = new Point(270, 6);
             buttonVisualizador.Name = "buttonVisualizador";
-            buttonVisualizador.Size = new Size(133, 52);
+            buttonVisualizador.Size = new Size(121, 92);
             buttonVisualizador.TabIndex = 5;
             buttonVisualizador.Text = "Visualizador";
             buttonVisualizador.UseVisualStyleBackColor = false;
             buttonVisualizador.Click += buttonVisualizador_Click_1;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.Gainsboro;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(buttonGuardar);
+            panel1.Controls.Add(Abrir);
+            panel1.Location = new Point(602, 7);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(199, 92);
+            panel1.TabIndex = 15;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Black;
+            label1.BorderStyle = BorderStyle.Fixed3D;
+            label1.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(50, 4);
+            label1.Name = "label1";
+            label1.Size = new Size(98, 24);
+            label1.TabIndex = 11;
+            label1.Text = "Archivos";
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.Gainsboro;
+            panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(labelBaseDeDatos);
+            panel2.Controls.Add(buttonGuardarBaseDeDatos);
+            panel2.Controls.Add(buttonAbrirBaseDeDatos);
+            panel2.Location = new Point(397, 7);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(199, 92);
+            panel2.TabIndex = 16;
+            // 
+            // labelBaseDeDatos
+            // 
+            labelBaseDeDatos.AutoSize = true;
+            labelBaseDeDatos.BackColor = Color.Black;
+            labelBaseDeDatos.BorderStyle = BorderStyle.Fixed3D;
+            labelBaseDeDatos.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelBaseDeDatos.ForeColor = Color.White;
+            labelBaseDeDatos.Location = new Point(23, 4);
+            labelBaseDeDatos.Name = "labelBaseDeDatos";
+            labelBaseDeDatos.Size = new Size(153, 24);
+            labelBaseDeDatos.TabIndex = 11;
+            labelBaseDeDatos.Text = "Base De Datos";
+            // 
+            // buttonGuardarBaseDeDatos
+            // 
+            buttonGuardarBaseDeDatos.BackColor = Color.OliveDrab;
+            buttonGuardarBaseDeDatos.FlatStyle = FlatStyle.Popup;
+            buttonGuardarBaseDeDatos.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonGuardarBaseDeDatos.ForeColor = Color.White;
+            buttonGuardarBaseDeDatos.Location = new Point(105, 54);
+            buttonGuardarBaseDeDatos.Name = "buttonGuardarBaseDeDatos";
+            buttonGuardarBaseDeDatos.Size = new Size(89, 23);
+            buttonGuardarBaseDeDatos.TabIndex = 6;
+            buttonGuardarBaseDeDatos.Text = "Guardar";
+            buttonGuardarBaseDeDatos.UseVisualStyleBackColor = false;
+            // 
+            // buttonAbrirBaseDeDatos
+            // 
+            buttonAbrirBaseDeDatos.BackColor = SystemColors.ActiveCaption;
+            buttonAbrirBaseDeDatos.FlatStyle = FlatStyle.Popup;
+            buttonAbrirBaseDeDatos.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonAbrirBaseDeDatos.ForeColor = Color.White;
+            buttonAbrirBaseDeDatos.Location = new Point(3, 54);
+            buttonAbrirBaseDeDatos.Name = "buttonAbrirBaseDeDatos";
+            buttonAbrirBaseDeDatos.Size = new Size(89, 23);
+            buttonAbrirBaseDeDatos.TabIndex = 7;
+            buttonAbrirBaseDeDatos.Text = "Abrir";
+            buttonAbrirBaseDeDatos.UseVisualStyleBackColor = false;
             // 
             // FormularioPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(789, 473);
+            ClientSize = new Size(813, 486);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
             Controls.Add(buttonVisualizador);
             Controls.Add(comboBoxPrincipal);
             Controls.Add(listBoxPrincipal);
             Controls.Add(buttonDescendente);
             Controls.Add(buttonAscendente);
-            Controls.Add(Abrir);
-            Controls.Add(buttonGuardar);
             Controls.Add(statusStrip1);
             Controls.Add(buttonModificar);
             Controls.Add(buttonEliminar);
@@ -222,6 +306,10 @@
             Load += FormularioPrincipal_Load;
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -240,5 +328,11 @@
         private ListBox listBoxPrincipal;
         private ComboBox comboBoxPrincipal;
         private Button buttonVisualizador;
+        private Panel panel1;
+        private Label label1;
+        private Panel panel2;
+        private Label labelBaseDeDatos;
+        private Button buttonGuardarBaseDeDatos;
+        private Button buttonAbrirBaseDeDatos;
     }
 }

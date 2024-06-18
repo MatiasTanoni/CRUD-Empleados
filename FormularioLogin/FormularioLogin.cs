@@ -11,6 +11,7 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Net.Http.Json;
 using Entidades;
+using System.DirectoryServices;
 
 
 namespace Formularios
@@ -21,6 +22,7 @@ namespace Formularios
         /// Usuario registrado en el formulario de inicio de sesión.
         /// </summary>
         private Usuario usuarioRegistrado = new Usuario();
+        private bool bandera = true;
         public FormularioLogin()
         {
             InitializeComponent();
@@ -85,7 +87,7 @@ namespace Formularios
         private void buttonIniciarSesion_Click(object sender, EventArgs e)
         {
             string jsonPath = "datosLogin.json";
-            
+
             if (File.Exists(jsonPath))
             {
                 try
@@ -115,7 +117,7 @@ namespace Formularios
                         }
 
                         if (usuarios != null)
-                        { 
+                        {
 
                             foreach (Usuario usuario in usuarios)
                             {
@@ -130,13 +132,13 @@ namespace Formularios
                                     {
                                         if (usuario.Clave == textContrasena.Text)
                                         {
-                                            
+
                                             UsuarioRegistrado = usuario;
                                             RegistrarAccesoUsuario();
                                             FormularioPrincipal formularioPrincipal = new FormularioPrincipal(this.UsuarioRegistrado);
                                             formularioPrincipal.ShowDialog();
                                             break;
-                                          
+
                                         }
                                         else
                                         {
@@ -172,7 +174,7 @@ namespace Formularios
         {
 
             string ruta = @"usuarios.log";
-            
+
 
             string fechaHoraActual = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             string informacionUsuario = $"Apellido: {usuarioRegistrado.Apellido} " +
@@ -193,6 +195,21 @@ namespace Formularios
             catch (Exception ex)
             {
                 MessageBox.Show($"Error al registrar el acceso del usuario: {ex.Message}");
+            }
+        }
+
+        private void buttonContraseña_Click(object sender, EventArgs e)
+        {
+            bandera = !bandera;
+            if (bandera)
+            {
+                textContrasena.PasswordChar = '*';
+
+            }
+            else
+            {
+                textContrasena.PasswordChar ='\0';
+
             }
         }
     }
