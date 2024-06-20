@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "VywHgC486TRK0HyGbqqrKijJEx+DzHr2OnfbWakOVCQwizXKZWfF1t9PX7djFECJNR9gnC+6SUlbNk1LRafNzQ==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\Matías Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\TestProject1\\TestProject1.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "El proyecto Formularios no es compatible con net6.0 (.NETCoreApp,Version=v6.0). El proyecto Formularios admite: net6.0-windows7.0 (.NETCoreApp,Version=v6.0)",
+      "libraryId": "Formularios",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
+}

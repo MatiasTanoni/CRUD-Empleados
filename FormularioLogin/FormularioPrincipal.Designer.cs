@@ -187,11 +187,12 @@
             // 
             comboBoxPrincipal.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxPrincipal.FormattingEnabled = true;
-            comboBoxPrincipal.Items.AddRange(new object[] { "Nombre", "Edad" });
-            comboBoxPrincipal.Location = new Point(77, 61);
+            comboBoxPrincipal.Items.AddRange(new object[] { "Nombre", "Edad", "Experiencia", "Salario" });
+            comboBoxPrincipal.Location = new Point(54, 62);
             comboBoxPrincipal.Name = "comboBoxPrincipal";
-            comboBoxPrincipal.Size = new Size(121, 23);
+            comboBoxPrincipal.Size = new Size(155, 23);
             comboBoxPrincipal.TabIndex = 12;
+            comboBoxPrincipal.SelectedIndexChanged += comboBoxPrincipal_SelectedIndexChanged;
             // 
             // buttonVisualizador
             // 

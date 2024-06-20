@@ -116,42 +116,45 @@ namespace Formularios
                             usuarios = new List<Usuario>(); // Manejar el caso de jsonString nulo
                         }
 
-                        if (usuarios != null)
+                        if (usuarios == null || usuarios.Count == 0)
                         {
+                            MessageBox.Show("No hay usuarios registrados.");
+                        }
+                        else
+                        {
+                            bool usuarioEncontrado = false;
+                            bool contrasenaCorrecta = false;
 
                             foreach (Usuario usuario in usuarios)
                             {
-                                if (usuario.Correo != textBoxCorreo.Text && usuario.Clave != textContrasena.Text)
+                                if (usuario.Correo == textBoxCorreo.Text)
                                 {
-                                    MessageBox.Show("Error, ha ingresado mal el correo y la contraseña.");
-                                    break;
-                                }
-                                else
-                                {
-                                    if (usuario.Correo == textBoxCorreo.Text)
-                                    {
-                                        if (usuario.Clave == textContrasena.Text)
-                                        {
+                                    usuarioEncontrado = true;
 
-                                            UsuarioRegistrado = usuario;
-                                            RegistrarAccesoUsuario();
-                                            FormularioPrincipal formularioPrincipal = new FormularioPrincipal(this.UsuarioRegistrado);
-                                            formularioPrincipal.ShowDialog();
-                                            break;
-
-                                        }
-                                        else
-                                        {
-                                            MessageBox.Show("Error, ha ingresado mal la contraseña.");
-                                            break;
-                                        }
-                                    }
-                                    else
+                                    if (usuario.Clave == textContrasena.Text)
                                     {
-                                        MessageBox.Show("Error, ha ingresado mal el correo.");
+                                        contrasenaCorrecta = true;
+                                        UsuarioRegistrado = usuario;
+                                        RegistrarAccesoUsuario();
+                                        FormularioPrincipal formularioPrincipal = new FormularioPrincipal(this.UsuarioRegistrado);
+                                        formularioPrincipal.ShowDialog();
+                                        this.Hide();
                                         break;
                                     }
                                 }
+                            }
+
+                            if (!usuarioEncontrado)
+                            {
+                                MessageBox.Show("Error, ha ingresado mal el correo.");
+                            }
+                            else if (!contrasenaCorrecta)
+                            {
+                                MessageBox.Show("Error, ha ingresado mal la contraseña.");
+                            }
+                            else if (!usuarioEncontrado && !usuarioEncontrado)
+                            {
+                                MessageBox.Show("Error, ha ingresado mal el correo y la contraseña.");
                             }
                         }
                     }
@@ -204,12 +207,10 @@ namespace Formularios
             if (bandera)
             {
                 textContrasena.PasswordChar = '*';
-
             }
             else
             {
-                textContrasena.PasswordChar ='\0';
-
+                textContrasena.PasswordChar = '\0';
             }
         }
     }

@@ -77,9 +77,8 @@ namespace Formularios
                 MessageBox.Show("Por favor, No puede estar vacio, ingrese un valor para la Edad");
                 return false;
             }
-
-
         }
+
         public bool ValidarExperiencia(Empleado empleado, TextBox textBox)
         {
             if (!string.IsNullOrWhiteSpace(textBox.Text))

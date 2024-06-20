@@ -38,7 +38,7 @@ namespace Formularios
         /// </summary>
         public FormularioPrincipal()
         {
-            InitializeComponent(); 
+            InitializeComponent();
             this.listBoxPrincipal.HorizontalScrollbar = true;
             FormClosing += FormularioPrincipal_FormClosing;
         }
@@ -50,6 +50,16 @@ namespace Formularios
         public FormularioPrincipal(Usuario usuarioRegistrado) : this()
         {
             this.usuarioRegistrado = usuarioRegistrado;
+            if (this.usuarioRegistrado.Perfil == "supervisor")
+            {
+                buttonEliminar.Enabled = false;
+            }
+            else if (this.usuarioRegistrado.Perfil == "vendedor")
+            {
+                buttonEliminar.Enabled = false;
+                buttonAgregar.Enabled = false;
+                buttonModificar.Enabled = false;
+            }
         }
 
         /// <summary>
@@ -158,18 +168,19 @@ namespace Formularios
         private void buttonEliminar_Click_1(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("¿Estás seguro que quieres Eliminar este empleado?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
             if (result == DialogResult.Yes)
             {
                 int indice = this.listBoxPrincipal.SelectedIndex;
-                if (indice != -1)
+                if (this.empresa == this.empresa.ListaDeEmpleados[indice])
                 {
-                    this.empresa -= this.empresa.ListaDeEmpleados[indice];
-                    this.listBoxPrincipal.Items.Clear();
-                    this.ActualizarVisor();
+                    if (indice != -1)
+                    {
+                        this.empresa -= this.empresa.ListaDeEmpleados[indice];
+                        this.listBoxPrincipal.Items.Clear();
+                        this.ActualizarVisor();
+                    }
                 }
             }
-
         }
 
         /// <summary>
@@ -180,7 +191,7 @@ namespace Formularios
         private void FormularioPrincipal_Load(object sender, EventArgs e)
         {
             if (this.usuarioRegistrado != null)
-            {     
+            {
                 toolStripStatusLabelOperador.Text = $"Operador: {this.usuarioRegistrado.Nombre}";
                 toolStripStatusLabelFecha.Text = "Fecha: " + DateTime.Now.ToString("dd/MM/yyyy");
             }
@@ -312,7 +323,7 @@ namespace Formularios
 
                             listBoxPrincipal.Items.Add(empleado.MostrarInformacion());
                         }
-                        
+
                     }
                 }
                 catch (Exception ex)
@@ -352,6 +363,17 @@ namespace Formularios
                 empleadosOrdenados = empresa.ListaDeEmpleados.OrderBy(e => e.Edad).ToList();
                 this.empresa.ListaDeEmpleados = empleadosOrdenados;
             }
+            else if (comboBoxPrincipal.Text == "Experiencia")
+            {
+                empleadosOrdenados = empresa.ListaDeEmpleados.OrderBy(e => e.Experiencia).ToList();
+                this.empresa.ListaDeEmpleados = empleadosOrdenados;
+            }
+            else if (comboBoxPrincipal.Text == "Salario")
+            {
+                empleadosOrdenados = empresa.ListaDeEmpleados.OrderBy(e => e.Salario).ToList();
+                this.empresa.ListaDeEmpleados = empleadosOrdenados;
+            }
+
 
             listBoxPrincipal.Items.Clear();
             foreach (var item in this.empresa.ListaDeEmpleados)
@@ -374,6 +396,16 @@ namespace Formularios
                 empleadosOrdenados = empresa.ListaDeEmpleados.OrderByDescending(e => e.Edad).ToList();
                 this.empresa.ListaDeEmpleados = empleadosOrdenados;
             }
+            else if (comboBoxPrincipal.Text == "Experiencia")
+            {
+                empleadosOrdenados = empresa.ListaDeEmpleados.OrderByDescending(e => e.Experiencia).ToList();
+                this.empresa.ListaDeEmpleados = empleadosOrdenados;
+            }
+            else if (comboBoxPrincipal.Text == "Salario")
+            {
+                empleadosOrdenados = empresa.ListaDeEmpleados.OrderByDescending(e => e.Salario).ToList();
+                this.empresa.ListaDeEmpleados = empleadosOrdenados;
+            }
 
             listBoxPrincipal.Items.Clear();
             foreach (var item in this.empresa.ListaDeEmpleados)
@@ -388,6 +420,10 @@ namespace Formularios
             formVisualizador.ShowDialog();
         }
 
+        private void comboBoxPrincipal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
