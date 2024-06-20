@@ -20,7 +20,7 @@ namespace Entidades
         /// Número de personas a cargo del empleado (si es un gerente).
         /// Número de proyectos gestionados por el empleado (si es un gerente).
         /// </summary>
-        private TipoDeEmpleados tipo = TipoDeEmpleados.Gerente;
+        //private TipoDeEmpleados tipo;
         private int personasACargo;
         private int proyectosGestionados;
 
@@ -28,11 +28,11 @@ namespace Entidades
         /// <summary>
         /// Tipo de empleado.
         /// </summary>
-        public TipoDeEmpleados Tipo
-        {
-            get { return tipo; }
-            set { tipo = value; }
-        }
+        //public TipoDeEmpleados Tipo
+        //{
+        //    get { return tipo; }
+        //    set { tipo = value; }
+        //}
 
         /// <summary>
         /// Obtiene o establece la cantidad de personas a cargo del gerente.
@@ -64,7 +64,7 @@ namespace Entidades
         /// <param name="nombre">El nombre del gerente.</param>
         /// <param name="edad">La edad del gerente.</param>
         /// <param name="experiencia">La experiencia del gerente.</param>
-        public Gerente(string nombre, int edad, int experiencia,int salario) : base(nombre, edad, experiencia, salario)
+        public Gerente(string nombre, int edad, int experiencia,int salario,TipoDeEmpleados tipo) : base(nombre, edad, experiencia, salario, tipo)
         {
         }
 
@@ -75,7 +75,7 @@ namespace Entidades
         /// <param name="nombre">El nombre del gerente.</param>
         /// <param name="edad">La edad del gerente.</param>
         /// <param name="experiencia">La experiencia del gerente.</param>
-        public Gerente(int salario, string nombre, int edad, int experiencia) : this(nombre, edad, experiencia, salario)
+        public Gerente(int salario, string nombre, int edad, int experiencia,TipoDeEmpleados tipo) : this(nombre, edad, experiencia, salario, tipo)
         {
         }
 
@@ -87,7 +87,7 @@ namespace Entidades
         /// <param name="nombre">El nombre del gerente.</param>
         /// <param name="edad">La edad del gerente.</param>
         /// <param name="experiencia">La experiencia del gerente.</param>
-        public Gerente(int salario, int personasACargo, string nombre, int edad, int experiencia) : this(salario, nombre, edad, experiencia)
+        public Gerente(int salario, int personasACargo, string nombre, int edad, int experiencia,TipoDeEmpleados tipo) : this(salario, nombre, edad, experiencia, tipo)
         {
             this.personasACargo = personasACargo;
         }
@@ -101,7 +101,7 @@ namespace Entidades
         /// <param name="nombre">El nombre del gerente.</param>
         /// <param name="edad">La edad del gerente.</param>
         /// <param name="experiencia">La experiencia del gerente.</param>
-        public Gerente(int salario, int personasACargo, int proyectosGestionados, string nombre, int edad, int experiencia) : this(salario, personasACargo, nombre, edad, experiencia)
+        public Gerente(int salario, int personasACargo, int proyectosGestionados, string nombre, int edad, int experiencia,TipoDeEmpleados tipo) : this(salario, personasACargo, nombre, edad, experiencia, tipo)
         {
             this.proyectosGestionados = proyectosGestionados;
         }

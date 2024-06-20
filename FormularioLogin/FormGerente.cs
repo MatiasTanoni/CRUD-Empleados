@@ -19,7 +19,7 @@ namespace Formularios
         /// Representa un objeto Gerente con atributos predeterminados.
         /// Representa una empresa asociada a la clase.
         /// </summary>
-        private Gerente gerente = new Gerente("", 0, 0, 0);
+        private Gerente gerente = new Gerente("", 0, 0, 0, TipoDeEmpleados.Gerente);
         public Empresa empresa;
 
         /// <summary>

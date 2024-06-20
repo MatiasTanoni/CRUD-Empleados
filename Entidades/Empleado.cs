@@ -21,6 +21,7 @@ namespace Entidades
         protected int experiencia;
         protected int salario;
         protected int edadJubilacionDefault = 65;
+        protected TipoDeEmpleados tipo;
         // Propiedades
         /// <summary>
         /// Obtiene o establece el nombre del empleado.
@@ -62,6 +63,12 @@ namespace Entidades
             get { return edadJubilacionDefault; }
         }
 
+        public TipoDeEmpleados Tipo
+        {
+            get { return tipo; }
+            set { tipo = value; }
+        }
+
         // Constructores
         public Empleado()
         {
@@ -97,9 +104,10 @@ namespace Entidades
             this.experiencia = experiencia;
         }
 
-        public Empleado(string nombre, int edad, int experiencia,int salario) : this(nombre, edad,experiencia)
+        public Empleado(string nombre, int edad, int experiencia,int salario, TipoDeEmpleados tipo) : this(nombre, edad, experiencia)
         {
             this.salario = salario;
+            Tipo = tipo;
         }
 
         public int AniosHastaJubilacion()

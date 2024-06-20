@@ -17,7 +17,7 @@ namespace Formularios
         /// Representa un objeto de tipo Tester con valores predeterminados para el nombre, la edad y el salario.
         /// Representa una instancia de la clase Empresa que almacena información sobre la empresa, incluida la lista de empleados.
         /// </summary>
-        private Tester tester = new Tester("", 0, 0, 0);
+        private Tester tester = new Tester("", 0, 0, 0, TipoDeEmpleados.Tester);
         public Empresa empresa = new Empresa();
 
         /// <summary>

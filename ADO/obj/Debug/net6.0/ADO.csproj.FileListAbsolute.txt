@@ -1,0 +1,16 @@
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\ADO\bin\Debug\net6.0\ADO.deps.json
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\ADO\bin\Debug\net6.0\ADO.dll
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\ADO\bin\Debug\net6.0\ADO.pdb
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\ADO\bin\Debug\net6.0\Entidades.dll
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\ADO\bin\Debug\net6.0\Entidades.pdb
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\ADO\obj\Debug\net6.0\ADO.csproj.AssemblyReference.cache
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\ADO\obj\Debug\net6.0\ADO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\ADO\obj\Debug\net6.0\ADO.AssemblyInfoInputs.cache
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\ADO\obj\Debug\net6.0\ADO.AssemblyInfo.cs
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\ADO\obj\Debug\net6.0\ADO.csproj.CoreCompileInputs.cache
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\ADO\obj\Debug\net6.0\ADO.sourcelink.json
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\ADO\obj\Debug\net6.0\ADO.csproj.Up2Date
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\ADO\obj\Debug\net6.0\ADO.dll
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\ADO\obj\Debug\net6.0\refint\ADO.dll
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\ADO\obj\Debug\net6.0\ADO.pdb
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\ADO\obj\Debug\net6.0\ref\ADO.dll

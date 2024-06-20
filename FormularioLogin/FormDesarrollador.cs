@@ -14,6 +14,7 @@ using System.Runtime.CompilerServices;
 using System.Diagnostics.Eventing.Reader;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using TextBox = System.Windows.Forms.TextBox;
+using ADO;
 
 namespace Formularios
 {
@@ -26,7 +27,7 @@ namespace Formularios
         /// <summary>
         /// Representa un objeto Desarrollador.
         /// </summary>
-        private Desarrollador desarrollador = new Desarrollador("", 0, 0,0);
+        private Desarrollador desarrollador = new Desarrollador("", 0, 0,0,TipoDeEmpleados.Desarrollador);
 
         /// <summary>
         /// Representa una empresa que contiene una lista de empleados.
@@ -108,6 +109,7 @@ namespace Formularios
                     this.empresa += desarrollador;
                     this.DialogResult = DialogResult.OK;
                 }
+                Datos.AgregarEmpleado(textBoxNombre.Text, int.Parse(textBoxEdad.Text), int.Parse(textBoxExperiencia.Text), int.Parse(textBoxSalario.Text), textBoxLenguajeDeProgramacion.Text, int.Parse(textBoxProyectosFinalizados.Text),TipoDeEmpleados.Desarrollador);
             }
         }
 

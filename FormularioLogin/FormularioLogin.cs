@@ -133,12 +133,12 @@ namespace Formularios
 
                                     if (usuario.Clave == textContrasena.Text)
                                     {
+                                        this.Hide();
                                         contrasenaCorrecta = true;
                                         UsuarioRegistrado = usuario;
                                         RegistrarAccesoUsuario();
                                         FormularioPrincipal formularioPrincipal = new FormularioPrincipal(this.UsuarioRegistrado);
                                         formularioPrincipal.ShowDialog();
-                                        this.Hide();
                                         break;
                                     }
                                 }

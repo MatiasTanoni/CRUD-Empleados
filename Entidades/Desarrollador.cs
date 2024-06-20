@@ -21,7 +21,7 @@ namespace Entidades
         ///Lenguaje de programación que el empleado utiliza.
         ///Número de proyectos finalizados por el empleado.
         /// </summary>
-        private TipoDeEmpleados tipo = TipoDeEmpleados.Desarrollador;
+        //private TipoDeEmpleados tipo;
         private string lenguajeDeProgramacion = string.Empty;
         private int proyectosFinalizados;
 
@@ -29,11 +29,11 @@ namespace Entidades
         /// <summary>
         /// Tipo de empleado
         /// </summary>
-        public TipoDeEmpleados Tipo
-        {
-            get { return tipo; }
-            set { tipo = value; }
-        }
+        //public TipoDeEmpleados Tipo
+        //{
+        //    get { return tipo; }
+        //    set { tipo = value; }
+        //}
 
         /// <summary>
         /// Obtiene o establece el lenguaje de programación que domina el desarrollador.
@@ -65,7 +65,7 @@ namespace Entidades
         /// <param name="nombre">El nombre del desarrollador.</param>
         /// <param name="edad">La edad del desarrollador.</param>
         /// <param name="experiencia">La experiencia del desarrollador.</param>
-        public Desarrollador(string nombre, int edad, int experiencia,int salario) : base(nombre, edad, experiencia,salario)
+        public Desarrollador(string nombre, int edad, int experiencia,int salario,TipoDeEmpleados tipo) : base(nombre, edad, experiencia,salario,tipo)
         {
         }
 
@@ -76,7 +76,7 @@ namespace Entidades
         /// <param name="nombre">El nombre del desarrollador.</param>
         /// <param name="edad">La edad del desarrollador.</param>
         /// <param name="experiencia">La experiencia del desarrollador.</param>
-        public Desarrollador(int salario, string nombre, int edad, int experiencia) : this(nombre, edad, experiencia, salario)
+        public Desarrollador(int salario, string nombre, int edad, int experiencia,TipoDeEmpleados tipo) : this(nombre, edad, experiencia, salario, tipo)
         {
         }
 
@@ -88,7 +88,7 @@ namespace Entidades
         /// <param name="nombre">El nombre del desarrollador.</param>
         /// <param name="edad">La edad del desarrollador.</param>
         /// <param name="experiencia">La experiencia del desarrollador.</param>
-        public Desarrollador(int salario, string lenguajeDeProgramacion, string nombre, int edad, int experiencia) : this(salario, nombre, edad, experiencia)
+        public Desarrollador(int salario, string lenguajeDeProgramacion, string nombre, int edad, int experiencia,TipoDeEmpleados tipo) : this(salario, nombre, edad, experiencia,tipo)
         {
             this.lenguajeDeProgramacion = lenguajeDeProgramacion;
         }
@@ -102,9 +102,10 @@ namespace Entidades
         /// <param name="nombre">El nombre del desarrollador.</param>
         /// <param name="edad">La edad del desarrollador.</param>
         /// <param name="experiencia">La experiencia del desarrollador.</param>
-        public Desarrollador(int salario, string lenguajeDeProgramacion, int proyectosFinalizados, string nombre, int edad, int experiencia) : this(salario, lenguajeDeProgramacion, nombre, edad, experiencia)
+        public Desarrollador(int salario, string lenguajeDeProgramacion, int proyectosFinalizados, string nombre, int edad, int experiencia,TipoDeEmpleados tipo) : this(salario, lenguajeDeProgramacion, nombre, edad, experiencia, tipo)
         {
             this.proyectosFinalizados = proyectosFinalizados;
+
         }
         public static bool operator ==(Desarrollador desarrollador, Desarrollador desarrollador1)
         {
@@ -124,11 +125,6 @@ namespace Entidades
             return $"{this.tipo} - {base.ToString()} - {base.MostrarExperiencia()} - Salario: {this.salario} - Lenguaje De Programacion: {this.lenguajeDeProgramacion} - Proyectos finalizados: {this.proyectosFinalizados} - {ToString()}";
         }
 
-        ///?????
-        public override string MostrarExperiencia()
-        {
-            return base.MostrarExperiencia();
-        }
         /// <summary>
         /// Devuelve una representación de cadena del objeto Desarrollador.
         /// </summary>

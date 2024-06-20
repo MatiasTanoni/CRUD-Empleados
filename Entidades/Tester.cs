@@ -15,7 +15,7 @@ public class Tester : Empleado, IEmpleado<Tester>
     /// Herramienta de prueba utilizada por el Tester.
     /// Número de proyectos testeados por el Tester.
     /// </summary>
-    private TipoDeEmpleados tipo = TipoDeEmpleados.Tester;
+    //private TipoDeEmpleados tipo;
     private string herramientaDePrueba = string.Empty;
     private int proyectosTesteados;
 
@@ -23,11 +23,11 @@ public class Tester : Empleado, IEmpleado<Tester>
     /// <summary>
     /// Tipo de empleado.
     /// </summary>
-    public TipoDeEmpleados Tipo
-    {
-        get { return tipo; }
-        set { tipo = value; }
-    }
+    //public TipoDeEmpleados Tipo
+    //{
+    //    get { return tipo; }
+    //    set { tipo = value; }
+    //}
 
 
     /// <summary>
@@ -60,7 +60,7 @@ public class Tester : Empleado, IEmpleado<Tester>
     /// <param name="nombre">El nombre del tester.</param>
     /// <param name="edad">La edad del tester.</param>
     /// <param name="experiencia">La experiencia del tester.</param>
-    public Tester(string nombre, int edad, int experiencia,int salario) : base(nombre, edad, experiencia,salario)
+    public Tester(string nombre, int edad, int experiencia,int salario,TipoDeEmpleados tipo) : base(nombre, edad, experiencia,salario, tipo)
     {
 
     }
@@ -72,7 +72,7 @@ public class Tester : Empleado, IEmpleado<Tester>
     /// <param name="nombre">El nombre del Tester.</param>
     /// <param name="edad">La edad del Tester.</param>
     /// <param name="experiencia">La experiencia del Tester.</param>
-    public Tester(int salario, string nombre, int edad, int experiencia) : this(nombre, edad, experiencia, salario)
+    public Tester(int salario, string nombre, int edad, int experiencia,TipoDeEmpleados tipo) : this(nombre, edad, experiencia, salario, tipo)
     {
     }
 
@@ -84,7 +84,7 @@ public class Tester : Empleado, IEmpleado<Tester>
     /// <param name="nombre">El nombre del Tester.</param>
     /// <param name="edad">La edad del Tester.</param>
     /// <param name="experiencia">La experiencia del Tester.</param>
-    public Tester(int salario, string herramientaDePrueba, string nombre, int edad, int experiencia) : this(salario, nombre, edad, experiencia)
+    public Tester(int salario, string herramientaDePrueba, string nombre, int edad, int experiencia,TipoDeEmpleados tipo) : this(salario, nombre, edad, experiencia, tipo)
     {
         this.herramientaDePrueba = herramientaDePrueba;
     }
@@ -98,7 +98,7 @@ public class Tester : Empleado, IEmpleado<Tester>
     /// <param name="nombre">El nombre del Tester.</param>
     /// <param name="edad">La edad del Tester.</param>
     /// <param name="experiencia">La experiencia del Tester.</param>
-    public Tester(int salario, string herramientaDePrueba, int proyectosTesteados, string nombre, int edad, int experiencia) : this(salario, herramientaDePrueba, nombre, edad, experiencia)
+    public Tester(int salario, string herramientaDePrueba, int proyectosTesteados, string nombre, int edad, int experiencia,TipoDeEmpleados tipo) : this(salario, herramientaDePrueba, nombre, edad, experiencia, tipo)
     {
         this.proyectosTesteados = proyectosTesteados;
     }
