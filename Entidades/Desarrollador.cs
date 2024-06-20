@@ -5,13 +5,14 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using Entidades.Interfaces;
 
 namespace Entidades
 {
     /// <summary>
     /// Representa un empleado de tipo Desarrollador en la empresa
     /// </summary>
-    public class Desarrollador : Empleado
+    public class Desarrollador : Empleado,IDesarrollador, IEmpleado<Desarrollador>
     {
         // Atributos
         /// <summary>
@@ -123,6 +124,7 @@ namespace Entidades
             return $"{this.tipo} - {base.ToString()} - {base.MostrarExperiencia()} - Salario: {this.salario} - Lenguaje De Programacion: {this.lenguajeDeProgramacion} - Proyectos finalizados: {this.proyectosFinalizados} - {ToString()}";
         }
 
+        ///?????
         public override string MostrarExperiencia()
         {
             return base.MostrarExperiencia();

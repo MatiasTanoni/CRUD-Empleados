@@ -1,10 +1,12 @@
 ﻿using Entidades;
 using System.Text.Json.Serialization;
+using Entidades.Interfaces;
+
 
 /// <summary>
 /// Representa un empleado de tipo Tester en la empresa.
 /// </summary>
-public class Tester : Empleado
+public class Tester : Empleado, IEmpleado<Tester>
 {
     // Atributos
     /// <summary>

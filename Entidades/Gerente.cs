@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using Entidades.Interfaces;
 
 namespace Entidades
 {
     /// <summary>
     /// Clase que representa a un gerente dentro de la empresa.
     /// </summary>
-    public class Gerente : Empleado
+    public class Gerente : Empleado, IEmpleado<Gerente>
     {
         // Atributos
         /// <summary>
