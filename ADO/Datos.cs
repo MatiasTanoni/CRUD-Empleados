@@ -261,6 +261,79 @@ namespace ADO
                 throw new Exception("Error al agregar el usuario" + e.Message);
             }
         }
+        public static void ModificarEmpleado(string nombre, int edad, int experiencia, int salario, string herramientaDePrueba, TipoDeEmpleados tipo, int proyectosTesteados,int id)
+        {
+            try
+            {
+                // Abrir conexión
+                using (SqlConnection conexionDB = AccesoDatos.ObtenerConexion())
+                {
+                    // Abrir la conexión a la base de datos
+                    conexionDB.Open();
 
+                    // Consulta SQL para actualizar los datos del empleado
+                    string query = "UPDATE Empleado SET Nombre = @Nombre, Edad = @Edad, Experiencia = @Experiencia, Salario = @Salario, HerramientasDePrueba = @HerramientasDePrueba, Tipo = @Tipo, ProyectosTesteados = @ProyectosTesteados WHERE Id = @Id";
+
+                    // Crear un comando SQL para ejecutar la consulta
+                    using (SqlCommand comando = new SqlCommand(query, conexionDB))
+                    {
+                        // Agregar los parámetros
+                        comando.Parameters.AddWithValue("@Id", id);
+                        comando.Parameters.AddWithValue("@Nombre", nombre);
+                        comando.Parameters.AddWithValue("@Edad", edad);
+                        comando.Parameters.AddWithValue("@Experiencia", experiencia);
+                        comando.Parameters.AddWithValue("@Salario", salario);
+                        comando.Parameters.AddWithValue("@HerramientasDePrueba", herramientaDePrueba);
+                        comando.Parameters.AddWithValue("@ProyectosTesteados", proyectosTesteados);
+                        comando.Parameters.AddWithValue("@Tipo", tipo.ToString());
+
+                        // Ejecutar la consulta
+                        comando.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                // Lanza una nueva excepción con un mensaje específico
+                throw new Exception("Error al actualizar el empleado: " + e.Message);
+            }
+        }
+        public static void ModificarEmpleado(string nombre, int edad, int experiencia, int salario, int personasACargo, int proyectosGestionados, int id, TipoDeEmpleados tipo)
+        {
+            try
+            {
+                // Abrir conexión
+                using (SqlConnection conexionDB = AccesoDatos.ObtenerConexion())
+                {
+                    // Abrir la conexión a la base de datos
+                    conexionDB.Open();
+
+                    // Consulta SQL para actualizar los datos del empleado
+                    string query = "UPDATE Empleado SET Nombre = @Nombre, Edad = @Edad, Experiencia = @Experiencia, Salario = @Salario, PersonasACargo = @PersonasACargo, Tipo = @Tipo, ProyectosGestionados = @ProyectosGestionados WHERE Id = @Id";
+
+                    // Crear un comando SQL para ejecutar la consulta
+                    using (SqlCommand comando = new SqlCommand(query, conexionDB))
+                    {
+                        // Agregar los parámetros
+                        comando.Parameters.AddWithValue("@Id", id);
+                        comando.Parameters.AddWithValue("@Nombre", nombre);
+                        comando.Parameters.AddWithValue("@Edad", edad);
+                        comando.Parameters.AddWithValue("@Experiencia", experiencia);
+                        comando.Parameters.AddWithValue("@Salario", salario);
+                        comando.Parameters.AddWithValue("@PersonasACargo", personasACargo);
+                        comando.Parameters.AddWithValue("@ProyectosGestionados", proyectosGestionados);
+                        comando.Parameters.AddWithValue("@Tipo", tipo.ToString());
+
+                        // Ejecutar la consulta
+                        comando.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                // Lanza una nueva excepción con un mensaje específico
+                throw new Exception("Error al actualizar el empleado: " + e.Message);
+            }
+        }
     }
 }

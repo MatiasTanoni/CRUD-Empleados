@@ -61,6 +61,8 @@ namespace Formularios
             this.textBoxSalario.Text = tester.Salario.ToString();
             this.textBoxHerramientaDePrueba.Text = tester.HerramientaDePrueba.ToString();
             this.textBoxProyectosTesteados.Text = tester.ProyectosTesteados.ToString();
+            banderaModificar = true;
+
         }
 
         /// <summary>
@@ -100,18 +102,13 @@ namespace Formularios
                     if (banderaModificar == false)
                     {
                         Datos.AgregarEmpleado(textBoxNombre.Text, int.Parse(textBoxEdad.Text), int.Parse(textBoxExperiencia.Text), int.Parse(textBoxSalario.Text), textBoxHerramientaDePrueba.Text,TipoDeEmpleados.Tester, int.Parse(textBoxProyectosTesteados.Text));
-                        //empresa.ListaDeEmpleados = Datos.ListarEmpleados();
-
                         this.DialogResult = DialogResult.OK;
                     }
-                    //else
-                    //{
-                    //    Datos.ModificarEmpleado(textBoxNombre.Text, int.Parse(textBoxEdad.Text), int.Parse(textBoxExperiencia.Text), int.Parse(textBoxSalario.Text), textBoxHerramientaDePrueba.Text, TipoDeEmpleados.Tester, int.Parse(textBoxProyectosTesteados.Text),  tester.Id);
-                    //    this.DialogResult = DialogResult.OK;
-                    //    //empresa.ListaDeEmpleados = Datos.ListarEmpleados();
-
-                    //}
-
+                    else
+                    {
+                        Datos.ModificarEmpleado(textBoxNombre.Text, int.Parse(textBoxEdad.Text), int.Parse(textBoxExperiencia.Text), int.Parse(textBoxSalario.Text), textBoxHerramientaDePrueba.Text, TipoDeEmpleados.Tester, int.Parse(textBoxProyectosTesteados.Text), tester.Id);
+                        this.DialogResult = DialogResult.OK;
+                    }
                 }
                 else
                 {

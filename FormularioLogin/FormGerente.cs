@@ -76,6 +76,8 @@ namespace Formularios
             this.textBoxSalario.Text = gerente.Salario.ToString();
             this.textBoxPersonasACargo.Text = gerente.PersonasACargo.ToString();
             this.textBoxProyectosGestionados.Text = gerente.ProyectosGestionados.ToString();
+            banderaModificar = true;
+
         }
 
         /// <summary>
@@ -100,19 +102,14 @@ namespace Formularios
                 {
                     if (banderaModificar == false)
                     {
-                        Datos.AgregarEmpleado(textBoxNombre.Text, int.Parse(textBoxEdad.Text), int.Parse(textBoxExperiencia.Text), int.Parse(textBoxSalario.Text), textBoxPersonasACargo.Text, TipoDeEmpleados.Tester, int.Parse(textBoxProyectosGestionados.Text));
-                        //empresa.ListaDeEmpleados = Datos.ListarEmpleados();
-
+                        Datos.AgregarEmpleado(textBoxNombre.Text,int.Parse(textBoxEdad.Text),int.Parse(textBoxExperiencia.Text),int.Parse(textBoxSalario.Text),int.Parse(textBoxPersonasACargo.Text),TipoDeEmpleados.Gerente,int.Parse(textBoxProyectosGestionados.Text));
                         this.DialogResult = DialogResult.OK;
                     }
-                    //else
-                    //{
-                    //    Datos.ModificarEmpleado(textBoxNombre.Text, int.Parse(textBoxEdad.Text), int.Parse(textBoxExperiencia.Text), int.Parse(textBoxSalario.Text), textBoxHerramientaDePrueba.Text, TipoDeEmpleados.Tester, int.Parse(textBoxProyectosTesteados.Text),  tester.Id);
-                    //    this.DialogResult = DialogResult.OK;
-                    //    //empresa.ListaDeEmpleados = Datos.ListarEmpleados();
-
-                    //}
-
+                    else
+                    {
+                        Datos.ModificarEmpleado(textBoxNombre.Text,int.Parse(textBoxEdad.Text),int.Parse(textBoxExperiencia.Text),int.Parse(textBoxSalario.Text),int.Parse(textBoxPersonasACargo.Text),int.Parse(textBoxProyectosGestionados.Text),Gerente.Id,TipoDeEmpleados.Gerente);
+                        this.DialogResult = DialogResult.OK;
+                    }
                 }
                 else
                 {

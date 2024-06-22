@@ -135,7 +135,6 @@ namespace Formularios
                 if (this.empresa.ListaDeEmpleados[indice].GetType() == typeof(Gerente))
                 {
                     Gerente gerente = (Gerente)this.empresa.ListaDeEmpleados[indice];
-
                     this.formGerente = new FormGerente(gerente);
                     this.formGerente.ShowDialog();
                     DialogResult resultado = formGerente.DialogResult;
@@ -148,7 +147,6 @@ namespace Formularios
                 else if (this.empresa.ListaDeEmpleados[indice].GetType() == typeof(Tester))
                 {
                     Tester tester = (Tester)this.empresa.ListaDeEmpleados[indice];
-
                     this.formTester = new FormTester(tester);
                     this.formTester.ShowDialog();
                     DialogResult resultado = formTester.DialogResult;
@@ -208,9 +206,7 @@ namespace Formularios
                 toolStripStatusLabelOperador.Text = $"Operador: {this.usuarioRegistrado.Nombre}";
                 toolStripStatusLabelFecha.Text = "Fecha: " + DateTime.Now.ToString("dd/MM/yyyy");
             }
-
         }
-
 
         /// <summary>
         /// Maneja el evento Click del botón de guardar.
@@ -434,10 +430,6 @@ namespace Formularios
             FormVisualizador formVisualizador = new FormVisualizador();
             formVisualizador.ShowDialog();
         }
-        //public static bool DiferenciarArchivosYBD()
-        //{
-        //    return abrirBD;
-        //}
 
         private void buttonAbrirBaseDeDatos_Click(object sender, EventArgs e)
         {
