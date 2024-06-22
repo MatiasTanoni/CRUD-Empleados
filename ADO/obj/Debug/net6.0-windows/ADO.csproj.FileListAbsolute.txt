@@ -1,0 +1,5 @@
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\ADO\obj\Debug\net6.0-windows\ADO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\ADO\obj\Debug\net6.0-windows\ADO.AssemblyInfoInputs.cache
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\ADO\obj\Debug\net6.0-windows\ADO.AssemblyInfo.cs
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\ADO\obj\Debug\net6.0-windows\ADO.csproj.CoreCompileInputs.cache
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\ADO\obj\Debug\net6.0-windows\ADO.sourcelink.json

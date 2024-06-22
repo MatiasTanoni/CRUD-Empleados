@@ -27,7 +27,8 @@ namespace Formularios
         /// <summary>
         /// Representa un objeto Desarrollador.
         /// </summary>
-        private Desarrollador desarrollador = new Desarrollador("", 0, 0,0,TipoDeEmpleados.Desarrollador);
+        private bool banderaModificar = false;
+        private Desarrollador desarrollador = new Desarrollador();
 
         /// <summary>
         /// Representa una empresa que contiene una lista de empleados.
@@ -59,6 +60,7 @@ namespace Formularios
         public FormDesarrollador(Empresa empresa) : this()
         {
             this.empresa = empresa;
+            banderaModificar = false;
         }
 
         /// <summary>
@@ -74,6 +76,7 @@ namespace Formularios
             this.textBoxSalario.Text = desarrollador.Salario.ToString();
             this.textBoxLenguajeDeProgramacion.Text = desarrollador.LenguajeDeProgramacion.ToString();
             this.textBoxProyectosFinalizados.Text = desarrollador.ProyectosFinalizados.ToString();
+            banderaModificar = true;
         }
 
         // Eventos
@@ -104,12 +107,29 @@ namespace Formularios
 
             if (esValido)
             {
-                if (this.empresa != desarrollador)
+                if (FormularioPrincipal.abrirBD)
                 {
-                    this.empresa += desarrollador;
-                    this.DialogResult = DialogResult.OK;
+                    if (banderaModificar == false)
+                    {
+                        Datos.AgregarEmpleado(textBoxNombre.Text, int.Parse(textBoxEdad.Text), int.Parse(textBoxExperiencia.Text), int.Parse(textBoxSalario.Text), textBoxLenguajeDeProgramacion.Text, int.Parse(textBoxProyectosFinalizados.Text),TipoDeEmpleados.Desarrollador);
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        Datos.ModificarEmpleado(textBoxNombre.Text,int.Parse(textBoxEdad.Text),int.Parse(textBoxExperiencia.Text),int.Parse(textBoxSalario.Text),textBoxLenguajeDeProgramacion.Text,int.Parse(textBoxProyectosFinalizados.Text),TipoDeEmpleados.Desarrollador, desarrollador.Id);
+                        this.DialogResult = DialogResult.OK;
+                    }
+
                 }
-                Datos.AgregarEmpleado(textBoxNombre.Text, int.Parse(textBoxEdad.Text), int.Parse(textBoxExperiencia.Text), int.Parse(textBoxSalario.Text), textBoxLenguajeDeProgramacion.Text, int.Parse(textBoxProyectosFinalizados.Text),TipoDeEmpleados.Desarrollador);
+                else
+                {
+                    if (this.empresa != desarrollador)
+                    {
+                        this.empresa += desarrollador;
+                        this.DialogResult = DialogResult.OK;
+                    }
+                }
+
             }
         }
 

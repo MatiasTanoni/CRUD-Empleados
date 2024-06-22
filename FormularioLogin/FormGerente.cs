@@ -1,4 +1,5 @@
-﻿using Entidades;
+﻿using ADO;
+using Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,8 +20,10 @@ namespace Formularios
         /// Representa un objeto Gerente con atributos predeterminados.
         /// Representa una empresa asociada a la clase.
         /// </summary>
-        private Gerente gerente = new Gerente("", 0, 0, 0, TipoDeEmpleados.Gerente);
+        private Gerente gerente = new Gerente();
         public Empresa empresa;
+        private bool banderaModificar = false;
+
 
         /// <summary>
         /// Obtiene o establece el objeto Gerente asociado.
@@ -93,14 +96,34 @@ namespace Formularios
 
             if (esValido)
             {
-                if (this.empresa != Gerente)
+                if (FormularioPrincipal.abrirBD)
                 {
-                    this.empresa += gerente;
-                    this.DialogResult = DialogResult.OK;
+                    if (banderaModificar == false)
+                    {
+                        Datos.AgregarEmpleado(textBoxNombre.Text, int.Parse(textBoxEdad.Text), int.Parse(textBoxExperiencia.Text), int.Parse(textBoxSalario.Text), textBoxPersonasACargo.Text, TipoDeEmpleados.Tester, int.Parse(textBoxProyectosGestionados.Text));
+                        //empresa.ListaDeEmpleados = Datos.ListarEmpleados();
+
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    //else
+                    //{
+                    //    Datos.ModificarEmpleado(textBoxNombre.Text, int.Parse(textBoxEdad.Text), int.Parse(textBoxExperiencia.Text), int.Parse(textBoxSalario.Text), textBoxHerramientaDePrueba.Text, TipoDeEmpleados.Tester, int.Parse(textBoxProyectosTesteados.Text),  tester.Id);
+                    //    this.DialogResult = DialogResult.OK;
+                    //    //empresa.ListaDeEmpleados = Datos.ListarEmpleados();
+
+                    //}
+
+                }
+                else
+                {
+                    if (this.empresa != gerente)
+                    {
+                        this.empresa += gerente;
+                        this.DialogResult = DialogResult.OK;
+                    }
                 }
             }
         }
-
         /// <summary>
         /// Valida los datos de un gerente.
         /// </summary>

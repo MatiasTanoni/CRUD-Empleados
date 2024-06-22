@@ -60,7 +60,7 @@ public class Tester : Empleado, IEmpleado<Tester>
     /// <param name="nombre">El nombre del tester.</param>
     /// <param name="edad">La edad del tester.</param>
     /// <param name="experiencia">La experiencia del tester.</param>
-    public Tester(string nombre, int edad, int experiencia,int salario,TipoDeEmpleados tipo) : base(nombre, edad, experiencia,salario, tipo)
+    public Tester(string nombre, int edad, int experiencia,int salario,TipoDeEmpleados tipo,int id) : base(nombre, edad, experiencia,salario, tipo, id)
     {
 
     }
@@ -72,7 +72,7 @@ public class Tester : Empleado, IEmpleado<Tester>
     /// <param name="nombre">El nombre del Tester.</param>
     /// <param name="edad">La edad del Tester.</param>
     /// <param name="experiencia">La experiencia del Tester.</param>
-    public Tester(int salario, string nombre, int edad, int experiencia,TipoDeEmpleados tipo) : this(nombre, edad, experiencia, salario, tipo)
+    public Tester(int salario, string nombre, int edad, int experiencia,TipoDeEmpleados tipo,int id) : this(nombre, edad, experiencia, salario, tipo, id)
     {
     }
 
@@ -84,7 +84,7 @@ public class Tester : Empleado, IEmpleado<Tester>
     /// <param name="nombre">El nombre del Tester.</param>
     /// <param name="edad">La edad del Tester.</param>
     /// <param name="experiencia">La experiencia del Tester.</param>
-    public Tester(int salario, string herramientaDePrueba, string nombre, int edad, int experiencia,TipoDeEmpleados tipo) : this(salario, nombre, edad, experiencia, tipo)
+    public Tester(int salario, string herramientaDePrueba, string nombre, int edad, int experiencia,TipoDeEmpleados tipo, int id) : this(salario, nombre, edad, experiencia, tipo, id)
     {
         this.herramientaDePrueba = herramientaDePrueba;
     }
@@ -98,7 +98,7 @@ public class Tester : Empleado, IEmpleado<Tester>
     /// <param name="nombre">El nombre del Tester.</param>
     /// <param name="edad">La edad del Tester.</param>
     /// <param name="experiencia">La experiencia del Tester.</param>
-    public Tester(int salario, string herramientaDePrueba, int proyectosTesteados, string nombre, int edad, int experiencia,TipoDeEmpleados tipo) : this(salario, herramientaDePrueba, nombre, edad, experiencia, tipo)
+    public Tester(int salario, string herramientaDePrueba, int proyectosTesteados, string nombre, int edad, int experiencia,TipoDeEmpleados tipo, int id) : this(salario, herramientaDePrueba, nombre, edad, experiencia, tipo, id)
     {
         this.proyectosTesteados = proyectosTesteados;
     }

@@ -42,15 +42,15 @@
             listBoxPrincipal = new ListBox();
             comboBoxPrincipal = new ComboBox();
             buttonVisualizador = new Button();
-            panel1 = new Panel();
+            panelArchivos = new Panel();
             label1 = new Label();
-            panel2 = new Panel();
+            panelBD = new Panel();
             labelBaseDeDatos = new Label();
             buttonGuardarBaseDeDatos = new Button();
             buttonAbrirBaseDeDatos = new Button();
             statusStrip1.SuspendLayout();
-            panel1.SuspendLayout();
-            panel2.SuspendLayout();
+            panelArchivos.SuspendLayout();
+            panelBD.SuspendLayout();
             SuspendLayout();
             // 
             // buttonAgregar
@@ -192,7 +192,6 @@
             comboBoxPrincipal.Name = "comboBoxPrincipal";
             comboBoxPrincipal.Size = new Size(155, 23);
             comboBoxPrincipal.TabIndex = 12;
-            comboBoxPrincipal.SelectedIndexChanged += comboBoxPrincipal_SelectedIndexChanged;
             // 
             // buttonVisualizador
             // 
@@ -208,17 +207,17 @@
             buttonVisualizador.UseVisualStyleBackColor = false;
             buttonVisualizador.Click += buttonVisualizador_Click_1;
             // 
-            // panel1
+            // panelArchivos
             // 
-            panel1.BackColor = Color.Gainsboro;
-            panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(buttonGuardar);
-            panel1.Controls.Add(Abrir);
-            panel1.Location = new Point(602, 7);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(199, 92);
-            panel1.TabIndex = 15;
+            panelArchivos.BackColor = Color.Gainsboro;
+            panelArchivos.BorderStyle = BorderStyle.FixedSingle;
+            panelArchivos.Controls.Add(label1);
+            panelArchivos.Controls.Add(buttonGuardar);
+            panelArchivos.Controls.Add(Abrir);
+            panelArchivos.Location = new Point(602, 7);
+            panelArchivos.Name = "panelArchivos";
+            panelArchivos.Size = new Size(199, 92);
+            panelArchivos.TabIndex = 15;
             // 
             // label1
             // 
@@ -233,17 +232,17 @@
             label1.TabIndex = 11;
             label1.Text = "Archivos";
             // 
-            // panel2
+            // panelBD
             // 
-            panel2.BackColor = Color.Gainsboro;
-            panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(labelBaseDeDatos);
-            panel2.Controls.Add(buttonGuardarBaseDeDatos);
-            panel2.Controls.Add(buttonAbrirBaseDeDatos);
-            panel2.Location = new Point(397, 7);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(199, 92);
-            panel2.TabIndex = 16;
+            panelBD.BackColor = Color.Gainsboro;
+            panelBD.BorderStyle = BorderStyle.FixedSingle;
+            panelBD.Controls.Add(labelBaseDeDatos);
+            panelBD.Controls.Add(buttonGuardarBaseDeDatos);
+            panelBD.Controls.Add(buttonAbrirBaseDeDatos);
+            panelBD.Location = new Point(397, 7);
+            panelBD.Name = "panelBD";
+            panelBD.Size = new Size(199, 92);
+            panelBD.TabIndex = 16;
             // 
             // labelBaseDeDatos
             // 
@@ -283,6 +282,7 @@
             buttonAbrirBaseDeDatos.TabIndex = 7;
             buttonAbrirBaseDeDatos.Text = "Abrir";
             buttonAbrirBaseDeDatos.UseVisualStyleBackColor = false;
+            buttonAbrirBaseDeDatos.Click += buttonAbrirBaseDeDatos_Click;
             // 
             // FormularioPrincipal
             // 
@@ -290,8 +290,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(813, 486);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
+            Controls.Add(panelBD);
+            Controls.Add(panelArchivos);
             Controls.Add(buttonVisualizador);
             Controls.Add(comboBoxPrincipal);
             Controls.Add(listBoxPrincipal);
@@ -307,10 +307,10 @@
             Load += FormularioPrincipal_Load;
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            panelArchivos.ResumeLayout(false);
+            panelArchivos.PerformLayout();
+            panelBD.ResumeLayout(false);
+            panelBD.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -329,9 +329,9 @@
         private ListBox listBoxPrincipal;
         private ComboBox comboBoxPrincipal;
         private Button buttonVisualizador;
-        private Panel panel1;
+        private Panel panelArchivos;
         private Label label1;
-        private Panel panel2;
+        private Panel panelBD;
         private Label labelBaseDeDatos;
         private Button buttonGuardarBaseDeDatos;
         private Button buttonAbrirBaseDeDatos;

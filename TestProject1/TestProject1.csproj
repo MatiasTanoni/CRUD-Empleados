@@ -1,24 +1,21 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-
+    <OutputType>Library</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>  Cambiar a net6.0-windows 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
+     Referencias a MSTest 
     <PackageReference Include="MSTest.TestAdapter" Version="2.2.8" />
     <PackageReference Include="MSTest.TestFramework" Version="2.2.8" />
-    <PackageReference Include="coverlet.collector" Version="3.1.2" />
   </ItemGroup>
 
   <ItemGroup>
+     Referencias a tus proyectos principales 
     <ProjectReference Include="..\Entidades\Entidades.csproj" />
-    <ProjectReference Include="..\FormularioLogin\Formularios.csproj" />
-    <ProjectReference Include="..\Main\Main.csproj" />
+    <ProjectReference Include="..\Formularios\Formularios.csproj" />
   </ItemGroup>
 
 </Project>

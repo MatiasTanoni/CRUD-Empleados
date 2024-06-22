@@ -16,6 +16,7 @@ namespace Entidades
     public abstract class Empleado
     {
         // Atributos
+        protected int id; 
         protected string nombre = string.Empty;
         protected int edad;
         protected int experiencia;
@@ -23,6 +24,13 @@ namespace Entidades
         protected int edadJubilacionDefault = 65;
         protected TipoDeEmpleados tipo;
         // Propiedades
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
+
         /// <summary>
         /// Obtiene o establece el nombre del empleado.
         /// </summary>
@@ -104,10 +112,11 @@ namespace Entidades
             this.experiencia = experiencia;
         }
 
-        public Empleado(string nombre, int edad, int experiencia,int salario, TipoDeEmpleados tipo) : this(nombre, edad, experiencia)
+        public Empleado(string nombre, int edad, int experiencia,int salario, TipoDeEmpleados tipo,int id) : this(nombre, edad, experiencia)
         {
             this.salario = salario;
             Tipo = tipo;
+            this.id = id;
         }
 
         public int AniosHastaJubilacion()

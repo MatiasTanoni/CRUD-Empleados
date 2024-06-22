@@ -65,7 +65,7 @@ namespace Entidades
         /// <param name="nombre">El nombre del desarrollador.</param>
         /// <param name="edad">La edad del desarrollador.</param>
         /// <param name="experiencia">La experiencia del desarrollador.</param>
-        public Desarrollador(string nombre, int edad, int experiencia,int salario,TipoDeEmpleados tipo) : base(nombre, edad, experiencia,salario,tipo)
+        public Desarrollador(string nombre, int edad, int experiencia,int salario,TipoDeEmpleados tipo,int id) : base(nombre, edad, experiencia,salario,tipo,id)
         {
         }
 
@@ -76,7 +76,7 @@ namespace Entidades
         /// <param name="nombre">El nombre del desarrollador.</param>
         /// <param name="edad">La edad del desarrollador.</param>
         /// <param name="experiencia">La experiencia del desarrollador.</param>
-        public Desarrollador(int salario, string nombre, int edad, int experiencia,TipoDeEmpleados tipo) : this(nombre, edad, experiencia, salario, tipo)
+        public Desarrollador(int salario, string nombre, int edad, int experiencia,TipoDeEmpleados tipo,int id) : this(nombre, edad, experiencia, salario, tipo, id)
         {
         }
 
@@ -88,7 +88,7 @@ namespace Entidades
         /// <param name="nombre">El nombre del desarrollador.</param>
         /// <param name="edad">La edad del desarrollador.</param>
         /// <param name="experiencia">La experiencia del desarrollador.</param>
-        public Desarrollador(int salario, string lenguajeDeProgramacion, string nombre, int edad, int experiencia,TipoDeEmpleados tipo) : this(salario, nombre, edad, experiencia,tipo)
+        public Desarrollador(int salario, string lenguajeDeProgramacion, string nombre, int edad, int experiencia,TipoDeEmpleados tipo, int id) : this(salario, nombre, edad, experiencia,tipo, id)
         {
             this.lenguajeDeProgramacion = lenguajeDeProgramacion;
         }
@@ -102,7 +102,7 @@ namespace Entidades
         /// <param name="nombre">El nombre del desarrollador.</param>
         /// <param name="edad">La edad del desarrollador.</param>
         /// <param name="experiencia">La experiencia del desarrollador.</param>
-        public Desarrollador(int salario, string lenguajeDeProgramacion, int proyectosFinalizados, string nombre, int edad, int experiencia,TipoDeEmpleados tipo) : this(salario, lenguajeDeProgramacion, nombre, edad, experiencia, tipo)
+        public Desarrollador(int salario, string lenguajeDeProgramacion, int proyectosFinalizados, string nombre, int edad, int experiencia,TipoDeEmpleados tipo,int id) : this(salario, lenguajeDeProgramacion, nombre, edad, experiencia, tipo, id)
         {
             this.proyectosFinalizados = proyectosFinalizados;
 

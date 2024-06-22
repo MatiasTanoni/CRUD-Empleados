@@ -1,0 +1,5 @@
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\Entidades\obj\Debug\net6.0-windows\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\Entidades\obj\Debug\net6.0-windows\Entidades.AssemblyInfoInputs.cache
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\Entidades\obj\Debug\net6.0-windows\Entidades.AssemblyInfo.cs
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\Entidades\obj\Debug\net6.0-windows\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Matías Tanoni\OneDrive\Escritorio\Parcial\Tanoni.Matias\Entidades\obj\Debug\net6.0-windows\Entidades.sourcelink.json

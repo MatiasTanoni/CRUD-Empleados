@@ -1,3 +1,4 @@
+using ADO;
 using Entidades;
 using Formularios;
 using System.Collections.Immutable;
@@ -25,7 +26,7 @@ namespace Formularios
         public FormularioDatos? formularioAgregar;
         public Empresa empresa = new Empresa();
         public Usuario? usuarioRegistrado;
-
+        public static bool abrirBD = false;
 
         /// <summary>
         /// Obtiene o establece la ruta actual.
@@ -41,6 +42,7 @@ namespace Formularios
             InitializeComponent();
             this.listBoxPrincipal.HorizontalScrollbar = true;
             FormClosing += FormularioPrincipal_FormClosing;
+            panelArchivos.BackColor = Color.Red;
         }
 
         /// <summary>
@@ -60,6 +62,7 @@ namespace Formularios
                 buttonAgregar.Enabled = false;
                 buttonModificar.Enabled = false;
             }
+
         }
 
         /// <summary>
@@ -113,6 +116,11 @@ namespace Formularios
             {
                 this.ActualizarVisor();
             }
+            if (abrirBD)
+            {
+                empresa.ListaDeEmpleados = Datos.ListarEmpleados();
+                this.ActualizarVisor();  
+            }
         }
         /// <summary>
         /// Maneja el evento de clic del botón "Modificar" para abrir el formulario correspondiente y modificar el empleado seleccionado.
@@ -126,34 +134,39 @@ namespace Formularios
             {
                 if (this.empresa.ListaDeEmpleados[indice].GetType() == typeof(Gerente))
                 {
-                    this.formGerente = new FormGerente((Gerente)this.empresa.ListaDeEmpleados[indice]);
+                    Gerente gerente = (Gerente)this.empresa.ListaDeEmpleados[indice];
+
+                    this.formGerente = new FormGerente(gerente);
                     this.formGerente.ShowDialog();
                     DialogResult resultado = formGerente.DialogResult;
                     if (resultado == DialogResult.OK)
                     {
-                        this.empresa.ListaDeEmpleados[indice] = formGerente.Gerente;
+                        gerente = formGerente.Gerente;
                         this.ActualizarVisor();
                     }
                 }
                 else if (this.empresa.ListaDeEmpleados[indice].GetType() == typeof(Tester))
                 {
-                    this.formTester = new FormTester((Tester)this.empresa.ListaDeEmpleados[indice]);
+                    Tester tester = (Tester)this.empresa.ListaDeEmpleados[indice];
+
+                    this.formTester = new FormTester(tester);
                     this.formTester.ShowDialog();
                     DialogResult resultado = formTester.DialogResult;
                     if (resultado == DialogResult.OK)
                     {
-                        this.empresa.ListaDeEmpleados[indice] = formTester.Tester;
+                        tester = formTester.Tester;
                         this.ActualizarVisor();
                     }
                 }
                 else if (this.empresa.ListaDeEmpleados[indice].GetType() == typeof(Desarrollador))
                 {
-                    this.formularioDesarrollador = new FormDesarrollador((Desarrollador)this.empresa.ListaDeEmpleados[indice]);
+                    Desarrollador desarrollador = (Desarrollador)this.empresa.ListaDeEmpleados[indice];
+                    this.formularioDesarrollador = new FormDesarrollador(desarrollador);
                     this.formularioDesarrollador.ShowDialog();
                     DialogResult resultado = formularioDesarrollador.DialogResult;
                     if (resultado == DialogResult.OK)
                     {
-                        this.empresa.ListaDeEmpleados[indice] = formularioDesarrollador.Desarrollador;
+                        desarrollador = formularioDesarrollador.Desarrollador;
                         this.ActualizarVisor();
                     }
                 }
@@ -313,6 +326,8 @@ namespace Formularios
 
                     if (empleados != null)
                     {
+                        panelArchivos.BackColor = Color.Red;
+                        panelBD.BackColor = Color.Gainsboro;
                         // Asignar la lista de empleados a la propiedad correspondiente
                         this.empresa.ListaDeEmpleados = empleados;
 
@@ -419,10 +434,18 @@ namespace Formularios
             FormVisualizador formVisualizador = new FormVisualizador();
             formVisualizador.ShowDialog();
         }
+        //public static bool DiferenciarArchivosYBD()
+        //{
+        //    return abrirBD;
+        //}
 
-        private void comboBoxPrincipal_SelectedIndexChanged(object sender, EventArgs e)
+        private void buttonAbrirBaseDeDatos_Click(object sender, EventArgs e)
         {
-
+            abrirBD = true;
+            empresa.ListaDeEmpleados = Datos.ListarEmpleados();
+            this.ActualizarVisor();
+            panelArchivos.BackColor = Color.Gainsboro;
+            panelBD.BackColor = Color.Red;
         }
     }
 }

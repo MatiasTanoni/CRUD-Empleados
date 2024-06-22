@@ -1,4 +1,5 @@
-﻿using Entidades;
+﻿using ADO;
+using Entidades;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,8 +18,10 @@ namespace Formularios
         /// Representa un objeto de tipo Tester con valores predeterminados para el nombre, la edad y el salario.
         /// Representa una instancia de la clase Empresa que almacena información sobre la empresa, incluida la lista de empleados.
         /// </summary>
-        private Tester tester = new Tester("", 0, 0, 0, TipoDeEmpleados.Tester);
+        private Tester tester = new Tester();
         public Empresa empresa = new Empresa();
+        private bool banderaModificar = false;
+
 
         /// <summary>
         /// Obtiene o establece el objeto de tipo Tester asociado a esta instancia.
@@ -88,14 +91,38 @@ namespace Formularios
             esValido &= Validar(tester, "herramienta de prueba", textBoxHerramientaDePrueba);
             esValido &= Validar(tester, "proyectos testeados", textBoxProyectosTesteados);
 
+
+
             if (esValido)
             {
-                if (this.empresa != Tester)
+                if (FormularioPrincipal.abrirBD)
                 {
-                    this.empresa += tester;
-                    this.DialogResult = DialogResult.OK;
+                    if (banderaModificar == false)
+                    {
+                        Datos.AgregarEmpleado(textBoxNombre.Text, int.Parse(textBoxEdad.Text), int.Parse(textBoxExperiencia.Text), int.Parse(textBoxSalario.Text), textBoxHerramientaDePrueba.Text,TipoDeEmpleados.Tester, int.Parse(textBoxProyectosTesteados.Text));
+                        //empresa.ListaDeEmpleados = Datos.ListarEmpleados();
+
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    //else
+                    //{
+                    //    Datos.ModificarEmpleado(textBoxNombre.Text, int.Parse(textBoxEdad.Text), int.Parse(textBoxExperiencia.Text), int.Parse(textBoxSalario.Text), textBoxHerramientaDePrueba.Text, TipoDeEmpleados.Tester, int.Parse(textBoxProyectosTesteados.Text),  tester.Id);
+                    //    this.DialogResult = DialogResult.OK;
+                    //    //empresa.ListaDeEmpleados = Datos.ListarEmpleados();
+
+                    //}
+
+                }
+                else
+                {
+                    if (this.empresa != tester)
+                    {
+                        this.empresa += tester;
+                        this.DialogResult = DialogResult.OK;
+                    }
                 }
             }
+
         }
 
         /// <summary>
