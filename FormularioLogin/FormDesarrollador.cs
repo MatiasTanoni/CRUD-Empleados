@@ -116,7 +116,7 @@ namespace Formularios
                     }
                     else
                     {
-                        Datos.ModificarEmpleado(textBoxNombre.Text,int.Parse(textBoxEdad.Text),int.Parse(textBoxExperiencia.Text),int.Parse(textBoxSalario.Text),textBoxLenguajeDeProgramacion.Text,int.Parse(textBoxProyectosFinalizados.Text),TipoDeEmpleados.Desarrollador, desarrollador.Id);
+                        Datos.ModificarEmpleado(textBoxNombre.Text, int.Parse(textBoxEdad.Text), int.Parse(textBoxExperiencia.Text), int.Parse(textBoxSalario.Text), textBoxLenguajeDeProgramacion.Text, int.Parse(textBoxProyectosFinalizados.Text), TipoDeEmpleados.Desarrollador, desarrollador.Id);
                         this.DialogResult = DialogResult.OK;
                     }
 

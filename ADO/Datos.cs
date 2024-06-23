@@ -335,5 +335,35 @@ namespace ADO
                 throw new Exception("Error al actualizar el empleado: " + e.Message);
             }
         }
+        public static void EliminarEmpleado(int id)
+        {
+            try
+            {
+                // Abrir conexión
+                using (SqlConnection conexionDB = AccesoDatos.ObtenerConexion())
+                {
+                    // Abrir la conexión a la base de datos
+                    conexionDB.Open();
+
+                    // Consulta SQL para eliminar el empleado
+                    string query = "DELETE FROM Empleado WHERE Id = @Id";
+
+                    // Crear un comando SQL para ejecutar la consulta
+                    using (SqlCommand comando = new SqlCommand(query, conexionDB))
+                    {
+                        // Agregar los parámetros
+                        comando.Parameters.AddWithValue("@Id", id);
+
+                        // Ejecutar la consulta
+                        comando.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                // Manejo de excepciones
+                throw new Exception("Error al eliminar el empleado", ex);
+            }
+        }
     }
 }

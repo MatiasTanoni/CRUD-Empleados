@@ -182,17 +182,35 @@ namespace Formularios
             if (result == DialogResult.Yes)
             {
                 int indice = this.listBoxPrincipal.SelectedIndex;
-                if (this.empresa == this.empresa.ListaDeEmpleados[indice])
+                if (indice != -1)
                 {
-                    if (indice != -1)
+                    // Obtener el empleado seleccionado
+                    Empleado empleadoSeleccionado = this.empresa.ListaDeEmpleados[indice];
+
+                    // Verificar que el empleado pertenece a la empresa
+                    if (this.empresa.ListaDeEmpleados.Contains(empleadoSeleccionado))
                     {
-                        this.empresa -= this.empresa.ListaDeEmpleados[indice];
+                        // Eliminar el empleado de la lista de la empresa
+                        this.empresa -= empleadoSeleccionado;
+
+                        // Actualizar la interfaz de usuario
                         this.listBoxPrincipal.Items.Clear();
                         this.ActualizarVisor();
+
+                        // Eliminar el empleado de la base de datos si es necesario
+                        if (abrirBD == true)
+                        {
+                            Datos.EliminarEmpleado(empleadoSeleccionado.Id);
+                        }
                     }
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, selecciona un empleado de la lista para eliminar.");
                 }
             }
         }
+
 
         /// <summary>
         /// Maneja el evento Load del formulario principal.
@@ -363,28 +381,27 @@ namespace Formularios
         private void buttonAscendente_Click(object sender, EventArgs e)
         {
             var empleadosOrdenados = new List<Empleado>();
-
-            if (comboBoxPrincipal.Text == "Nombre")
+            switch (comboBoxPrincipal.Text)
             {
-                empleadosOrdenados = empresa.ListaDeEmpleados.OrderBy(e => e.Nombre).ToList();
-                this.empresa.ListaDeEmpleados = empleadosOrdenados;
+                case "Nombre":
+                    empleadosOrdenados = empresa.ListaDeEmpleados.OrderBy(e => e.Nombre).ToList();
+                    this.empresa.ListaDeEmpleados = empleadosOrdenados;
+                    break;
+                case "Edad":
+                    empleadosOrdenados = empresa.ListaDeEmpleados.OrderBy(e => e.Edad).ToList();
+                    this.empresa.ListaDeEmpleados = empleadosOrdenados;
+                    break;
+                case "Experiencia":
+                    empleadosOrdenados = empresa.ListaDeEmpleados.OrderBy(e => e.Experiencia).ToList();
+                    this.empresa.ListaDeEmpleados = empleadosOrdenados;
+                    break;
+                case "Salario":
+                    empleadosOrdenados = empresa.ListaDeEmpleados.OrderBy(e => e.Salario).ToList();
+                    this.empresa.ListaDeEmpleados = empleadosOrdenados;
+                    break;
+                default:
+                    break;
             }
-            else if (comboBoxPrincipal.Text == "Edad")
-            {
-                empleadosOrdenados = empresa.ListaDeEmpleados.OrderBy(e => e.Edad).ToList();
-                this.empresa.ListaDeEmpleados = empleadosOrdenados;
-            }
-            else if (comboBoxPrincipal.Text == "Experiencia")
-            {
-                empleadosOrdenados = empresa.ListaDeEmpleados.OrderBy(e => e.Experiencia).ToList();
-                this.empresa.ListaDeEmpleados = empleadosOrdenados;
-            }
-            else if (comboBoxPrincipal.Text == "Salario")
-            {
-                empleadosOrdenados = empresa.ListaDeEmpleados.OrderBy(e => e.Salario).ToList();
-                this.empresa.ListaDeEmpleados = empleadosOrdenados;
-            }
-
 
             listBoxPrincipal.Items.Clear();
             foreach (var item in this.empresa.ListaDeEmpleados)
@@ -397,27 +414,27 @@ namespace Formularios
         {
             var empleadosOrdenados = new List<Empleado>();
 
-            if (comboBoxPrincipal.Text == "Nombre")
+            switch (comboBoxPrincipal.Text)
             {
-                empleadosOrdenados = empresa.ListaDeEmpleados.OrderByDescending(e => e.Nombre).ToList();
-                this.empresa.ListaDeEmpleados = empleadosOrdenados;
+                case "Nombre":
+                    empleadosOrdenados = empresa.ListaDeEmpleados.OrderByDescending(e => e.Nombre).ToList();
+                    this.empresa.ListaDeEmpleados = empleadosOrdenados;
+                    break;
+                case "Edad":
+                    empleadosOrdenados = empresa.ListaDeEmpleados.OrderByDescending(e => e.Edad).ToList();
+                    this.empresa.ListaDeEmpleados = empleadosOrdenados;
+                    break;
+                case "Experiencia":
+                    empleadosOrdenados = empresa.ListaDeEmpleados.OrderByDescending(e => e.Experiencia).ToList();
+                    this.empresa.ListaDeEmpleados = empleadosOrdenados;
+                    break;
+                case "Salario":
+                    empleadosOrdenados = empresa.ListaDeEmpleados.OrderByDescending(e => e.Salario).ToList();
+                    this.empresa.ListaDeEmpleados = empleadosOrdenados;
+                    break;
+                default:
+                    break;
             }
-            else if (comboBoxPrincipal.Text == "Edad")
-            {
-                empleadosOrdenados = empresa.ListaDeEmpleados.OrderByDescending(e => e.Edad).ToList();
-                this.empresa.ListaDeEmpleados = empleadosOrdenados;
-            }
-            else if (comboBoxPrincipal.Text == "Experiencia")
-            {
-                empleadosOrdenados = empresa.ListaDeEmpleados.OrderByDescending(e => e.Experiencia).ToList();
-                this.empresa.ListaDeEmpleados = empleadosOrdenados;
-            }
-            else if (comboBoxPrincipal.Text == "Salario")
-            {
-                empleadosOrdenados = empresa.ListaDeEmpleados.OrderByDescending(e => e.Salario).ToList();
-                this.empresa.ListaDeEmpleados = empleadosOrdenados;
-            }
-
             listBoxPrincipal.Items.Clear();
             foreach (var item in this.empresa.ListaDeEmpleados)
             {
