@@ -12,7 +12,7 @@ namespace Entidades
     /// <summary>
     /// Representa un empleado de tipo Desarrollador en la empresa
     /// </summary>
-    public class Desarrollador : Empleado,IDesarrollador, IEmpleado<Desarrollador>
+    public class Desarrollador : Empleado, IEmpleado<Empleado>
     {
         // Atributos
         /// <summary>
@@ -26,15 +26,11 @@ namespace Entidades
         private int proyectosFinalizados;
 
         // Propiedades
-        /// <summary>
-        /// Tipo de empleado
-        /// </summary>
         //public TipoDeEmpleados Tipo
         //{
         //    get { return tipo; }
         //    set { tipo = value; }
         //}
-
         /// <summary>
         /// Obtiene o establece el lenguaje de programación que domina el desarrollador.
         /// </summary>

@@ -114,6 +114,7 @@ namespace Formularios
                 {
                     if (this.empresa != tester)
                     {
+                        tester.Tipo = TipoDeEmpleados.Tester;
                         this.empresa += tester;
                         this.DialogResult = DialogResult.OK;
                     }

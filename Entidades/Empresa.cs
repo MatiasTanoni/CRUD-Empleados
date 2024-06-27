@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entidades.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,7 +8,7 @@ namespace Entidades
     /// <summary>
     /// Representa una empresa con una lista de empleados.
     /// </summary>
-    public class Empresa
+    public class Empresa : IEmpresa
     {
         // Atributos
         private List<Empleado> listaDeEmpleados;

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioLogin));
             pContainer = new Panel();
-            buttonContraseña = new Button();
+            pictureBoxOjito = new PictureBox();
             pictureBox2 = new PictureBox();
             buttonIniciarSesion = new Button();
             labelContrasena = new Label();
@@ -46,8 +46,10 @@
             pictureBox3 = new PictureBox();
             panel1 = new Panel();
             label1 = new Label();
+            buttonContraseña = new Button();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             pContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxOjito).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxContrasena).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -62,7 +64,7 @@
             // pContainer
             // 
             pContainer.BackColor = Color.White;
-            pContainer.Controls.Add(buttonContraseña);
+            pContainer.Controls.Add(pictureBoxOjito);
             pContainer.Controls.Add(pictureBox2);
             pContainer.Controls.Add(buttonIniciarSesion);
             pContainer.Controls.Add(labelContrasena);
@@ -77,23 +79,22 @@
             pContainer.Controls.Add(pictureBoxIniciarSesion);
             pContainer.Controls.Add(pictureBox3);
             pContainer.Controls.Add(panel1);
+            pContainer.Controls.Add(buttonContraseña);
             pContainer.Dock = DockStyle.Fill;
             pContainer.Location = new Point(0, 0);
             pContainer.Name = "pContainer";
             pContainer.Size = new Size(455, 458);
             pContainer.TabIndex = 0;
             // 
-            // buttonContraseña
+            // pictureBoxOjito
             // 
-            buttonContraseña.BackColor = Color.Gainsboro;
-            buttonContraseña.FlatAppearance.BorderColor = Color.Black;
-            buttonContraseña.FlatStyle = FlatStyle.Popup;
-            buttonContraseña.Location = new Point(398, 209);
-            buttonContraseña.Name = "buttonContraseña";
-            buttonContraseña.Size = new Size(47, 44);
-            buttonContraseña.TabIndex = 15;
-            buttonContraseña.UseVisualStyleBackColor = false;
-            buttonContraseña.Click += buttonContraseña_Click;
+            pictureBoxOjito.Image = Properties.Resources.ojitocerrado;
+            pictureBoxOjito.Location = new Point(233, 192);
+            pictureBoxOjito.Name = "pictureBoxOjito";
+            pictureBoxOjito.Size = new Size(54, 29);
+            pictureBoxOjito.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxOjito.TabIndex = 16;
+            pictureBoxOjito.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -249,11 +250,24 @@
             label1.BorderStyle = BorderStyle.Fixed3D;
             label1.Font = new Font("Lucida Sans", 21.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(177, 17);
+            label1.Location = new Point(164, 17);
             label1.Name = "label1";
             label1.Size = new Size(101, 35);
             label1.TabIndex = 11;
             label1.Text = "Login";
+            // 
+            // buttonContraseña
+            // 
+            buttonContraseña.BackColor = Color.Gainsboro;
+            buttonContraseña.FlatAppearance.BorderColor = Color.Black;
+            buttonContraseña.FlatStyle = FlatStyle.Popup;
+            buttonContraseña.ForeColor = SystemColors.ControlText;
+            buttonContraseña.Location = new Point(396, 213);
+            buttonContraseña.Name = "buttonContraseña";
+            buttonContraseña.Size = new Size(54, 45);
+            buttonContraseña.TabIndex = 15;
+            buttonContraseña.UseVisualStyleBackColor = false;
+            buttonContraseña.Click += buttonContraseña_Click;
             // 
             // FormularioLogin
             // 
@@ -266,6 +280,7 @@
             Text = "Login";
             pContainer.ResumeLayout(false);
             pContainer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxOjito).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxContrasena).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -299,5 +314,6 @@
         private Panel panel1;
         private Button buttonContraseña;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private PictureBox pictureBoxOjito;
     }
 }

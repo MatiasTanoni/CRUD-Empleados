@@ -8,8 +8,8 @@ namespace Entidades
 {
     public enum TipoDeEmpleados
     {
-        Gerente,
         Tester,
+        Gerente,
         Desarrollador,
     }
 }

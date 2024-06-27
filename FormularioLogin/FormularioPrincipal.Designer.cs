@@ -48,9 +48,14 @@
             labelBaseDeDatos = new Label();
             buttonGuardarBaseDeDatos = new Button();
             buttonAbrirBaseDeDatos = new Button();
+            labelTiempo = new Label();
+            pictureBox1 = new PictureBox();
+            panelTiempo = new Panel();
             statusStrip1.SuspendLayout();
             panelArchivos.SuspendLayout();
             panelBD.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panelTiempo.SuspendLayout();
             SuspendLayout();
             // 
             // buttonAgregar
@@ -58,7 +63,7 @@
             buttonAgregar.BackColor = Color.OliveDrab;
             buttonAgregar.FlatStyle = FlatStyle.Popup;
             buttonAgregar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonAgregar.Location = new Point(121, 385);
+            buttonAgregar.Location = new Point(194, 389);
             buttonAgregar.Name = "buttonAgregar";
             buttonAgregar.Size = new Size(127, 62);
             buttonAgregar.TabIndex = 0;
@@ -71,7 +76,7 @@
             buttonEliminar.BackColor = Color.DarkRed;
             buttonEliminar.FlatStyle = FlatStyle.Popup;
             buttonEliminar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonEliminar.Location = new Point(568, 385);
+            buttonEliminar.Location = new Point(591, 389);
             buttonEliminar.Name = "buttonEliminar";
             buttonEliminar.Size = new Size(127, 62);
             buttonEliminar.TabIndex = 2;
@@ -84,7 +89,7 @@
             buttonModificar.BackColor = SystemColors.ActiveCaption;
             buttonModificar.FlatStyle = FlatStyle.Popup;
             buttonModificar.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonModificar.Location = new Point(338, 385);
+            buttonModificar.Location = new Point(397, 389);
             buttonModificar.Name = "buttonModificar";
             buttonModificar.Size = new Size(127, 62);
             buttonModificar.TabIndex = 1;
@@ -95,7 +100,7 @@
             // statusStrip1
             // 
             statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabelOperador, toolStripStatusLabelFecha });
-            statusStrip1.Location = new Point(0, 464);
+            statusStrip1.Location = new Point(0, 481);
             statusStrip1.Name = "statusStrip1";
             statusStrip1.Size = new Size(813, 22);
             statusStrip1.TabIndex = 4;
@@ -284,12 +289,44 @@
             buttonAbrirBaseDeDatos.UseVisualStyleBackColor = false;
             buttonAbrirBaseDeDatos.Click += buttonAbrirBaseDeDatos_Click;
             // 
+            // labelTiempo
+            // 
+            labelTiempo.AutoSize = true;
+            labelTiempo.BackColor = Color.Gainsboro;
+            labelTiempo.Font = new Font("Lucida Sans", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labelTiempo.Location = new Point(9, 69);
+            labelTiempo.Name = "labelTiempo";
+            labelTiempo.Size = new Size(86, 24);
+            labelTiempo.TabIndex = 17;
+            labelTiempo.Text = "Tiempo";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.reloj;
+            pictureBox1.Location = new Point(18, -1);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(86, 73);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 18;
+            pictureBox1.TabStop = false;
+            // 
+            // panelTiempo
+            // 
+            panelTiempo.BackColor = Color.Gainsboro;
+            panelTiempo.BorderStyle = BorderStyle.FixedSingle;
+            panelTiempo.Controls.Add(pictureBox1);
+            panelTiempo.Controls.Add(labelTiempo);
+            panelTiempo.Location = new Point(12, 385);
+            panelTiempo.Name = "panelTiempo";
+            panelTiempo.Size = new Size(123, 93);
+            panelTiempo.TabIndex = 19;
+            // 
             // FormularioPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(813, 486);
+            ClientSize = new Size(813, 503);
             Controls.Add(panelBD);
             Controls.Add(panelArchivos);
             Controls.Add(buttonVisualizador);
@@ -297,10 +334,11 @@
             Controls.Add(listBoxPrincipal);
             Controls.Add(buttonDescendente);
             Controls.Add(buttonAscendente);
-            Controls.Add(statusStrip1);
             Controls.Add(buttonModificar);
             Controls.Add(buttonEliminar);
             Controls.Add(buttonAgregar);
+            Controls.Add(statusStrip1);
+            Controls.Add(panelTiempo);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormularioPrincipal";
             Text = "FormularioPrincipal";
@@ -311,6 +349,9 @@
             panelArchivos.PerformLayout();
             panelBD.ResumeLayout(false);
             panelBD.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panelTiempo.ResumeLayout(false);
+            panelTiempo.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -335,5 +376,8 @@
         private Label labelBaseDeDatos;
         private Button buttonGuardarBaseDeDatos;
         private Button buttonAbrirBaseDeDatos;
+        private Label labelTiempo;
+        private PictureBox pictureBox1;
+        private Panel panelTiempo;
     }
 }

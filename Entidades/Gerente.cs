@@ -20,7 +20,7 @@ namespace Entidades
         /// Número de personas a cargo del empleado (si es un gerente).
         /// Número de proyectos gestionados por el empleado (si es un gerente).
         /// </summary>
-        //private TipoDeEmpleados tipo;
+        private TipoDeEmpleados tipo;
         private int personasACargo;
         private int proyectosGestionados;
 
@@ -28,16 +28,16 @@ namespace Entidades
         /// <summary>
         /// Tipo de empleado.
         /// </summary>
-        //public TipoDeEmpleados Tipo
-        //{
-        //    get { return tipo; }
-        //    set { tipo = value; }
-        //}
+        public TipoDeEmpleados Tipo
+        {
+            get { return tipo; }
+            set { tipo = value; }
+        }
 
         /// <summary>
         /// Obtiene o establece la cantidad de personas a cargo del gerente.
         /// </summary>
-        
+
         public int PersonasACargo
         {
             get { return personasACargo; }

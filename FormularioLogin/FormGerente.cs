@@ -115,6 +115,7 @@ namespace Formularios
                 {
                     if (this.empresa != gerente)
                     {
+                        gerente.Tipo = TipoDeEmpleados.Gerente;
                         this.empresa += gerente;
                         this.DialogResult = DialogResult.OK;
                     }

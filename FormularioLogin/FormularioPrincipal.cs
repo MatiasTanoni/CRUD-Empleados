@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.Json;
 using System.Windows.Forms;
 using System.Xml.Serialization;
+using Timer = System.Windows.Forms.Timer;
 namespace Formularios
 {
     public partial class FormularioPrincipal : FormConfiguraciones
@@ -27,6 +28,8 @@ namespace Formularios
         public Empresa empresa = new Empresa();
         public Usuario? usuarioRegistrado;
         public static bool abrirBD = false;
+        private Tiempo tiempo;
+        private Timer timer;
 
         /// <summary>
         /// Obtiene o establece la ruta actual.
@@ -43,6 +46,11 @@ namespace Formularios
             this.listBoxPrincipal.HorizontalScrollbar = true;
             FormClosing += FormularioPrincipal_FormClosing;
             panelArchivos.BackColor = Color.Red;
+
+            tiempo = new Tiempo();
+            tiempo.SegundoCambiado += MostrarCambioTiempo;
+            timer = new Timer();
+            timer.Tick += Timer_Tick;
         }
 
         /// <summary>
@@ -51,16 +59,32 @@ namespace Formularios
         /// <param name="usuarioRegistrado">El usuario registrado que utilizará el formulario principal.</param>
         public FormularioPrincipal(Usuario usuarioRegistrado) : this()
         {
-            this.usuarioRegistrado = usuarioRegistrado;
-            if (this.usuarioRegistrado.Perfil == "supervisor")
+            try
             {
-                buttonEliminar.Enabled = false;
+                this.usuarioRegistrado = usuarioRegistrado;
+
+                if (this.usuarioRegistrado != null)
+                {
+                    if (this.usuarioRegistrado.Perfil == "supervisor")
+                    {
+                        buttonEliminar.Enabled = false;
+                    }
+                    else if (this.usuarioRegistrado.Perfil == "vendedor")
+                    {
+                        buttonEliminar.Enabled = false;
+                        buttonAgregar.Enabled = false;
+                        buttonModificar.Enabled = false;
+                    }
+                }
+                else
+                {
+                    throw new ArgumentNullException(nameof(usuarioRegistrado), "El usuario registrado no puede ser nulo.");
+                }
             }
-            else if (this.usuarioRegistrado.Perfil == "vendedor")
+            catch (Exception ex)
             {
-                buttonEliminar.Enabled = false;
-                buttonAgregar.Enabled = false;
-                buttonModificar.Enabled = false;
+                MessageBox.Show($"Error: {ex.Message}");
+                throw;
             }
 
         }
@@ -196,8 +220,7 @@ namespace Formularios
                         // Actualizar la interfaz de usuario
                         this.listBoxPrincipal.Items.Clear();
                         this.ActualizarVisor();
-
-                        // Eliminar el empleado de la base de datos si es necesario
+  
                         if (abrirBD == true)
                         {
                             Datos.EliminarEmpleado(empleadoSeleccionado.Id);
@@ -223,8 +246,19 @@ namespace Formularios
             {
                 toolStripStatusLabelOperador.Text = $"Operador: {this.usuarioRegistrado.Nombre}";
                 toolStripStatusLabelFecha.Text = "Fecha: " + DateTime.Now.ToString("dd/MM/yyyy");
+                timer.Start();
             }
         }
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            tiempo.SimularCambioTiempo();
+        }
+
+        public void MostrarCambioTiempo(object reloj, InfoTiempoEventArgs info)
+        {
+            labelTiempo.Text = $"{info.Hora:D2}:{info.Minuto:D2}:{info.Segundos:D2}";
+        }
+
 
         /// <summary>
         /// Maneja el evento Click del botón de guardar.
@@ -374,6 +408,10 @@ namespace Formularios
             if (resultado == DialogResult.No)
             {
                 e.Cancel = true;
+            }
+            else
+            {
+                Environment.Exit(0);
             }
         }
 

@@ -23,6 +23,7 @@ namespace Formularios
         /// </summary>
         private Usuario usuarioRegistrado = new Usuario();
         private bool bandera = true;
+        private bool isImage1 = true;
         public FormularioLogin()
         {
             InitializeComponent();
@@ -207,11 +208,14 @@ namespace Formularios
             if (bandera)
             {
                 textContrasena.PasswordChar = '*';
+                pictureBoxOjito.Image = Properties.Resources.ojitocerrado;
             }
             else
             {
                 textContrasena.PasswordChar = '\0';
+                pictureBoxOjito.Image = Properties.Resources.ojito;
             }
         }
     }
+
 }

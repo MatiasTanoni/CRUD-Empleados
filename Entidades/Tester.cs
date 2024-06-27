@@ -15,25 +15,20 @@ public class Tester : Empleado, IEmpleado<Tester>
     /// Herramienta de prueba utilizada por el Tester.
     /// Número de proyectos testeados por el Tester.
     /// </summary>
-    //private TipoDeEmpleados tipo;
+    private TipoDeEmpleados tipo;
     private string herramientaDePrueba = string.Empty;
     private int proyectosTesteados;
 
     // Propiedades
-    /// <summary>
-    /// Tipo de empleado.
-    /// </summary>
-    //public TipoDeEmpleados Tipo
-    //{
-    //    get { return tipo; }
-    //    set { tipo = value; }
-    //}
-
-
+    public TipoDeEmpleados Tipo
+    {
+        get { return tipo; }
+        set { tipo = value; }
+    }
     /// <summary>
     /// Obtiene o establece la herramienta de prueba utilizada por el tester.
     /// </summary>
-    
+
     public string HerramientaDePrueba
     {
         set { herramientaDePrueba = value; }

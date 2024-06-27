@@ -125,6 +125,7 @@ namespace Formularios
                 {
                     if (this.empresa != desarrollador)
                     {
+                        desarrollador.Tipo = TipoDeEmpleados.Desarrollador;
                         this.empresa += desarrollador;
                         this.DialogResult = DialogResult.OK;
                     }
