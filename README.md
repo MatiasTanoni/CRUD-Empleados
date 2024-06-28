@@ -3,7 +3,9 @@ Titulo: CRUD - Empleados
 Sobre mí: Mi nombre es Matias Tanoni, tengo 19 años, soy estudiante de la Tecnicatura Universitaria En Programacion, en esta ocasión realice un "CRUD - Empleados"
 
 Resumen: La aplicación proporciona una interfaz para manejar datos de empleados en una empresa. 
-Permite agregar, modificar y eliminar empleados.
+Permite agregar, modificar y eliminar empleados. Dependiendo que perfil tengas el perfil de administrador pueda realizar el CRUD (Create, Read, Update y
+Delete). El perfil de supervisor pueda realizar solamente ‘CRU’ (Create, Read y
+Update). El perfil de vendedor solo pueda realizar el ‘R’ (Read).
 Tambien se puede abrir y guardar archivos XML (esta en ROJO el panel "Archivos" cuando se esta operando con archivos), 
 tambien se puede abrir la Base De Datos que tiene una lista de empleados (Esta en ROJO el panel "Base De Datos" cuando se esta operando con Base de Datos)
 El botón "Agregar" abre un formulario para agregar un nuevo empleado a la empresa. 
