@@ -12,5 +12,5 @@ El botón "Eliminar" elimina el empleado seleccionado de la lista.
 El botón "Visualizador" muestra un formulario para visualizar el historial de acceso de usuarios. 
 El boton "Ascendente" o "Descendente" ordenan la lista de empleados dependiendo que criterio quiere utilizar (nombre,edad,experiecia o salario)
 
-![Descripción de la imagen]([https://github.com/tu-usuario/tu-repositorio/raw/rama/images/tu-imagen.png](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/FotoLogin.png))
+![Descripción de la imagen](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/FotoLogin.png)
 
