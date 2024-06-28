@@ -14,6 +14,7 @@ El botón "Eliminar" elimina el empleado seleccionado de la lista.
 El botón "Visualizador" muestra un formulario para visualizar el historial de acceso de usuarios. 
 El boton "Ascendente" o "Descendente" ordenan la lista de empleados dependiendo que criterio quiere utilizar (nombre,edad,experiecia o salario)
 -.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+
 **LOGIN 👋**:
 En el login Tenemos el sector para poner el correo y la contraseña.
 Tenemos la opcion de poder observar la contraseña o no (con el boton a la derecha de textbox Contraseña)
