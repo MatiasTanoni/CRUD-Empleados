@@ -25,7 +25,7 @@ En esta foto, estamos en el formulario principal operando con archivos. (Sabemos
 ![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/PrincipalOperandoEnArchivos.png)
 
 **PRINCIPAL 💥**:
-(Operando en BS)
+(Operando en BD)
 En esta foto, estamos en el formulario principal operando con Base de Datos. (Sabemos debido a que esta en rojo el panel de "Base De Datos")
 
 ![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/PrincipalOperandoEnBD.png)
