@@ -41,7 +41,7 @@ En esta foto, estamos en el visualizador donde muestra el historial de acceso de
 **ASCENDENTE Y DESCENDENTE 🖕👇**
 En esta foto, estamos observando los botones ascendete y descendente que ordenan la lista dependiendo que criterio.
 
-![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/FotoAscendenteYDescendente.png)
+![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/Imagenes%20Readme/FotoAscendenteYDescendente.png)
 
 **AGREGAR EMPLEADO 🧑‍💼**
 En esta foto, estamos observando el formulario para elegir que tipo de empleado queremos agregar (Desarrollador, Tester o Gerente)
