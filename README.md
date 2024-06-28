@@ -1,8 +1,8 @@
-Titulo: CRUD - Empleados
+**CRUD - Empleados**
 
-Sobre mí: Mi nombre es Matias Tanoni, tengo 19 años, soy estudiante de la Tecnicatura Universitaria En Programacion, en esta ocasión realice un "CRUD - Empleados"
+**Sobre mí:** Mi nombre es Matias Tanoni, tengo 19 años, soy estudiante de la Tecnicatura Universitaria En Programacion, en esta ocasión realice un "CRUD - Empleados"
 
-Resumen: La aplicación proporciona una interfaz para manejar datos de empleados en una empresa. 
+**Resumen:** La aplicación proporciona una interfaz para manejar datos de empleados en una empresa. 
 Permite agregar, modificar y eliminar empleados. Dependiendo que perfil tengas el perfil de administrador pueda realizar el CRUD (Create, Read, Update y
 Delete). El perfil de supervisor pueda realizar solamente ‘CRU’ (Create, Read y
 Update). El perfil de vendedor solo pueda realizar el ‘R’ (Read).
@@ -13,7 +13,7 @@ El botón "Modificar" abre un formulario correspondiente para modificar el emple
 El botón "Eliminar" elimina el empleado seleccionado de la lista. 
 El botón "Visualizador" muestra un formulario para visualizar el historial de acceso de usuarios. 
 El boton "Ascendente" o "Descendente" ordenan la lista de empleados dependiendo que criterio quiere utilizar (nombre,edad,experiecia o salario)
-
+-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
 **LOGIN 👋**:
 En el login Tenemos el sector para poner el correo y la contraseña.
 Tenemos la opcion de poder observar la contraseña o no (con el boton a la derecha de textbox Contraseña)
