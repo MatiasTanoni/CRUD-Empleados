@@ -3,16 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{540CF6E8-967B-45AB-A77B-FB296C16F5DF}|FormularioLogin\\Formularios.csproj|c:\\users\\mat\u00EDas tanoni\\onedrive\\escritorio\\parcial\\tanoni.matias\\formulariologin\\formularioprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{540CF6E8-967B-45AB-A77B-FB296C16F5DF}|FormularioLogin\\Formularios.csproj|solutionrelative:formulariologin\\formularioprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\entidades\\interfaces\\iempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|solutionrelative:entidades\\interfaces\\iempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{540CF6E8-967B-45AB-A77B-FB296C16F5DF}|FormularioLogin\\Formularios.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\formulariologin\\formdesarrollador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540CF6E8-967B-45AB-A77B-FB296C16F5DF}|FormularioLogin\\Formularios.csproj|solutionrelative:formulariologin\\formdesarrollador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{540CF6E8-967B-45AB-A77B-FB296C16F5DF}|FormularioLogin\\Formularios.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\formulariologin\\formularioprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{540CF6E8-967B-45AB-A77B-FB296C16F5DF}|FormularioLogin\\Formularios.csproj|solutionrelative:formulariologin\\formularioprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540CF6E8-967B-45AB-A77B-FB296C16F5DF}|FormularioLogin\\Formularios.csproj|c:\\users\\mat\u00EDas tanoni\\onedrive\\escritorio\\parcial\\tanoni.matias\\formulariologin\\formularioprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{540CF6E8-967B-45AB-A77B-FB296C16F5DF}|FormularioLogin\\Formularios.csproj|solutionrelative:formulariologin\\formularioprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\entidades\\tester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|solutionrelative:entidades\\tester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\entidades\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|solutionrelative:entidades\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\entidades\\gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|solutionrelative:entidades\\gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540CF6E8-967B-45AB-A77B-FB296C16F5DF}|FormularioLogin\\Formularios.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\formulariologin\\formulariodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540CF6E8-967B-45AB-A77B-FB296C16F5DF}|FormularioLogin\\Formularios.csproj|solutionrelative:formulariologin\\formulariodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\entidades\\desarrollador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|solutionrelative:entidades\\desarrollador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\entidades\\interfaces\\iempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|solutionrelative:entidades\\interfaces\\iempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{540CF6E8-967B-45AB-A77B-FB296C16F5DF}|FormularioLogin\\Formularios.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\formulariologin\\formulariologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -31,10 +55,6 @@
       "RelativeMoniker": "D:0:0:{540CF6E8-967B-45AB-A77B-FB296C16F5DF}|FormularioLogin\\Formularios.csproj|solutionrelative:formulariologin\\formconfiguraciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\entidades\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|solutionrelative:entidades\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\entidades\\empresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|solutionrelative:entidades\\empresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -51,10 +71,6 @@
       "RelativeMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|solutionrelative:entidades\\interfaces\\iempleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{540CF6E8-967B-45AB-A77B-FB296C16F5DF}|FormularioLogin\\Formularios.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\formulariologin\\formdesarrollador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{540CF6E8-967B-45AB-A77B-FB296C16F5DF}|FormularioLogin\\Formularios.csproj|solutionrelative:formulariologin\\formdesarrollador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A618D8D2-23A3-4A52-8AC8-E86845510B5A}|ADO\\ADO.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\ado\\datos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A618D8D2-23A3-4A52-8AC8-E86845510B5A}|ADO\\ADO.csproj|solutionrelative:ado\\datos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -65,22 +81,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FE5A9746-35AD-4298-A69C-7B278A59AA77}|TestProject\\TestProject.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\testproject\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FE5A9746-35AD-4298-A69C-7B278A59AA77}|TestProject\\TestProject.csproj|solutionrelative:testproject\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\entidades\\desarrollador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|solutionrelative:entidades\\desarrollador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{540CF6E8-967B-45AB-A77B-FB296C16F5DF}|FormularioLogin\\Formularios.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\formulariologin\\formulariodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{540CF6E8-967B-45AB-A77B-FB296C16F5DF}|FormularioLogin\\Formularios.csproj|solutionrelative:formulariologin\\formulariodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\entidades\\tester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|solutionrelative:entidades\\tester.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\entidades\\gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2236122C-CFBA-4951-AEE1-9E9545DD07A9}|Entidades\\Entidades.csproj|solutionrelative:entidades\\gerente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{540CF6E8-967B-45AB-A77B-FB296C16F5DF}|FormularioLogin\\Formularios.csproj|C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\formulariologin\\formvisualizador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -187,24 +187,24 @@
         },
         {
           "DockedWidth": 173,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IEmpresa.cs",
-              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Interfaces\\IEmpresa.cs",
-              "RelativeDocumentMoniker": "Entidades\\Interfaces\\IEmpresa.cs",
-              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Interfaces\\IEmpresa.cs",
-              "RelativeToolTip": "Entidades\\Interfaces\\IEmpresa.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "DocumentIndex": 3,
+              "Title": "Tester.cs",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Tester.cs",
+              "RelativeDocumentMoniker": "Entidades\\Tester.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Tester.cs",
+              "RelativeToolTip": "Entidades\\Tester.cs",
+              "ViewState": "AQIAAGMAAAAAAAAAAAAUwHUAAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T01:29:01.85Z",
+              "WhenOpened": "2024-05-29T04:37:36.13Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "FormularioPrincipal.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormularioPrincipal.cs",
               "RelativeDocumentMoniker": "FormularioLogin\\FormularioPrincipal.cs",
@@ -216,79 +216,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FormGerente.cs",
-              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormGerente.cs",
-              "RelativeDocumentMoniker": "FormularioLogin\\FormGerente.cs",
-              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormGerente.cs",
-              "RelativeToolTip": "FormularioLogin\\FormGerente.cs",
-              "ViewState": "AQIAAEkAAAAAAAAAAAAIwHUAAAA/AAAA",
+              "DocumentIndex": 0,
+              "Title": "FormDesarrollador.cs",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormDesarrollador.cs",
+              "RelativeDocumentMoniker": "FormularioLogin\\FormDesarrollador.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormDesarrollador.cs",
+              "RelativeToolTip": "FormularioLogin\\FormDesarrollador.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAUwH8AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T04:42:41.09Z"
+              "WhenOpened": "2024-05-29T04:40:07.74Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "FormTester.cs",
-              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormTester.cs",
-              "RelativeDocumentMoniker": "FormularioLogin\\FormTester.cs",
-              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormTester.cs",
-              "RelativeToolTip": "FormularioLogin\\FormTester.cs",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAIwHgAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T04:47:06.538Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Tester.cs",
-              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Tester.cs",
-              "RelativeDocumentMoniker": "Entidades\\Tester.cs",
-              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Tester.cs",
-              "RelativeToolTip": "Entidades\\Tester.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T04:37:36.13Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "FormularioLogin.cs",
-              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormularioLogin.cs",
-              "RelativeDocumentMoniker": "FormularioLogin\\FormularioLogin.cs",
-              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormularioLogin.cs",
-              "RelativeToolTip": "FormularioLogin\\FormularioLogin.cs",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAMwNIAAABKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T04:47:41.541Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Tiempo.cs",
-              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Tiempo.cs",
-              "RelativeDocumentMoniker": "Entidades\\Tiempo.cs",
-              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Tiempo.cs",
-              "RelativeToolTip": "Entidades\\Tiempo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T16:11:24.484Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Enum.cs",
-              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Enum.cs",
-              "RelativeDocumentMoniker": "Entidades\\Enum.cs",
-              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Enum.cs",
-              "RelativeToolTip": "Entidades\\Enum.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T17:53:44.889Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 12,
               "Title": "FormConfiguraciones.cs",
               "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormConfiguraciones.cs",
               "RelativeDocumentMoniker": "FormularioLogin\\FormConfiguraciones.cs",
@@ -300,43 +241,95 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 14,
+              "Title": "Enum.cs",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Enum.cs",
+              "RelativeDocumentMoniker": "Entidades\\Enum.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Enum.cs",
+              "RelativeToolTip": "Entidades\\Enum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-12T17:53:44.889Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Tiempo.cs",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Tiempo.cs",
+              "RelativeDocumentMoniker": "Entidades\\Tiempo.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Tiempo.cs",
+              "RelativeToolTip": "Entidades\\Tiempo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T16:11:24.484Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FormularioLogin.cs",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormularioLogin.cs",
+              "RelativeDocumentMoniker": "FormularioLogin\\FormularioLogin.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormularioLogin.cs",
+              "RelativeToolTip": "FormularioLogin\\FormularioLogin.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAMwNIAAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T04:47:41.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormularioDatos.cs",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormularioDatos.cs",
+              "RelativeDocumentMoniker": "FormularioLogin\\FormularioDatos.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormularioDatos.cs",
+              "RelativeToolTip": "FormularioLogin\\FormularioDatos.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAqwEoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T00:50:42.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "FormularioPrincipal.cs",
               "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormularioPrincipal.cs",
               "RelativeDocumentMoniker": "FormularioLogin\\FormularioPrincipal.cs",
               "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormularioPrincipal.cs",
               "RelativeToolTip": "FormularioLogin\\FormularioPrincipal.cs",
-              "ViewState": "AQIAAD8BAAAAAAAAAAAnwFwBAAA/AAAA",
+              "ViewState": "AQIAAE0BAAAAAAAAAAAhwFcBAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-15T04:47:34.761Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormularioLogin.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormularioLogin.cs",
-              "RelativeDocumentMoniker": "FormularioLogin\\FormularioLogin.cs",
-              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormularioLogin.cs [Dise\u00F1o]",
-              "RelativeToolTip": "FormularioLogin\\FormularioLogin.cs [Dise\u00F1o]",
+              "DocumentIndex": 5,
+              "Title": "Gerente.cs",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Gerente.cs",
+              "RelativeDocumentMoniker": "Entidades\\Gerente.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Gerente.cs",
+              "RelativeToolTip": "Entidades\\Gerente.cs",
+              "ViewState": "AQIAAG0AAAAAAAAAAAAswHwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T21:10:16.711Z"
+              "WhenOpened": "2024-05-29T04:36:05.854Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IEmpleado.cs",
-              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Interfaces\\IEmpleado.cs",
-              "RelativeDocumentMoniker": "Entidades\\Interfaces\\IEmpleado.cs",
-              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Interfaces\\IEmpleado.cs",
-              "RelativeToolTip": "Entidades\\Interfaces\\IEmpleado.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAkAAAA",
+              "DocumentIndex": 7,
+              "Title": "Desarrollador.cs",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Desarrollador.cs",
+              "RelativeDocumentMoniker": "Entidades\\Desarrollador.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Desarrollador.cs",
+              "RelativeToolTip": "Entidades\\Desarrollador.cs",
+              "ViewState": "AQIAAHQAAAAAAAAAAAAqwI8AAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T01:29:25.241Z"
+              "WhenOpened": "2024-05-29T04:26:40.566Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "Empresa.cs",
               "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Empresa.cs",
               "RelativeDocumentMoniker": "Entidades\\Empresa.cs",
@@ -348,19 +341,79 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "Empleado.cs",
               "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Empleado.cs",
               "RelativeDocumentMoniker": "Entidades\\Empleado.cs",
               "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Empleado.cs",
               "RelativeToolTip": "Entidades\\Empleado.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEcAAAAJAAAA",
+              "ViewState": "AQIAAIEAAAAAAAAAAAAswJIAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T04:31:27.185Z"
+              "WhenOpened": "2024-05-29T04:31:27.185Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
+              "Title": "IEmpleado.cs",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Interfaces\\IEmpleado.cs",
+              "RelativeDocumentMoniker": "Entidades\\Interfaces\\IEmpleado.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Interfaces\\IEmpleado.cs",
+              "RelativeToolTip": "Entidades\\Interfaces\\IEmpleado.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T01:29:25.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormularioLogin.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormularioLogin.cs",
+              "RelativeDocumentMoniker": "FormularioLogin\\FormularioLogin.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormularioLogin.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FormularioLogin\\FormularioLogin.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T21:10:16.711Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "FormTester.cs",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormTester.cs",
+              "RelativeDocumentMoniker": "FormularioLogin\\FormTester.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormTester.cs",
+              "RelativeToolTip": "FormularioLogin\\FormTester.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAIwHgAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T04:47:06.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FormGerente.cs",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormGerente.cs",
+              "RelativeDocumentMoniker": "FormularioLogin\\FormGerente.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormGerente.cs",
+              "RelativeToolTip": "FormularioLogin\\FormGerente.cs",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAIwHUAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-29T04:42:41.09Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IEmpresa.cs",
+              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Interfaces\\IEmpresa.cs",
+              "RelativeDocumentMoniker": "Entidades\\Interfaces\\IEmpresa.cs",
+              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Interfaces\\IEmpresa.cs",
+              "RelativeToolTip": "Entidades\\Interfaces\\IEmpresa.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-20T01:29:01.85Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "UnitTest1.cs",
               "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\TestProject\\UnitTest1.cs",
               "RelativeDocumentMoniker": "TestProject\\UnitTest1.cs",
@@ -372,19 +425,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "FormDesarrollador.cs",
-              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormDesarrollador.cs",
-              "RelativeDocumentMoniker": "FormularioLogin\\FormDesarrollador.cs",
-              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormDesarrollador.cs",
-              "RelativeToolTip": "FormularioLogin\\FormDesarrollador.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAUwHEAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T04:40:07.74Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "Datos.cs",
               "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\ADO\\Datos.cs",
               "RelativeDocumentMoniker": "ADO\\Datos.cs",
@@ -404,42 +445,6 @@
               "RelativeToolTip": "FormularioLogin\\FormConfiguraciones.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-17T20:45:03.429Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Desarrollador.cs",
-              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Desarrollador.cs",
-              "RelativeDocumentMoniker": "Entidades\\Desarrollador.cs",
-              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Desarrollador.cs",
-              "RelativeToolTip": "Entidades\\Desarrollador.cs",
-              "ViewState": "AQIAAFUAAAAAAAAAAAAcwEAAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T04:26:40.566Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "FormularioDatos.cs",
-              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormularioDatos.cs",
-              "RelativeDocumentMoniker": "FormularioLogin\\FormularioDatos.cs",
-              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormularioDatos.cs",
-              "RelativeToolTip": "FormularioLogin\\FormularioDatos.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAqwEoAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T00:50:42.372Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Gerente.cs",
-              "DocumentMoniker": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Gerente.cs",
-              "RelativeDocumentMoniker": "Entidades\\Gerente.cs",
-              "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\Entidades\\Gerente.cs",
-              "RelativeToolTip": "Entidades\\Gerente.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAAACAAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-29T04:36:05.854Z"
             },
             {
               "$type": "Document",
@@ -474,7 +479,8 @@
               "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormDesarrollador.cs [Dise\u00F1o]",
               "RelativeToolTip": "FormularioLogin\\FormDesarrollador.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-22T00:39:22.232Z"
+              "WhenOpened": "2024-06-22T00:39:22.232Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
@@ -507,7 +513,8 @@
               "ToolTip": "C:\\Users\\Mat\u00EDas Tanoni\\OneDrive\\Escritorio\\Parcial\\Tanoni.Matias\\FormularioLogin\\FormularioDatos.cs [Dise\u00F1o]",
               "RelativeToolTip": "FormularioLogin\\FormularioDatos.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T22:57:09.78Z"
+              "WhenOpened": "2024-06-17T22:57:09.78Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",

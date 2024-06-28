@@ -341,6 +341,7 @@ namespace Formularios
 
         private void Abrir_Click(object sender, EventArgs e)
         {
+            abrirBD = false;
             OpenFileDialog openFileDialog = new OpenFileDialog();
 
             openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
@@ -376,6 +377,7 @@ namespace Formularios
                     {
                         panelArchivos.BackColor = Color.Red;
                         panelBD.BackColor = Color.Gainsboro;
+                        this.empresa.ListaDeEmpleados.Clear();
                         // Asignar la lista de empleados a la propiedad correspondiente
                         this.empresa.ListaDeEmpleados = empleados;
 

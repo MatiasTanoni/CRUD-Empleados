@@ -144,7 +144,8 @@ namespace Entidades
 
         public override int GetHashCode()
         {
-            throw new NotImplementedException();
+            return 0;
+            //throw new NotImplementedException();
         }
     }
 

@@ -137,7 +137,8 @@ public class Tester : Empleado, IEmpleado<Tester>
 
     public override int GetHashCode()
     {
-        throw new NotImplementedException();
+        return 0;
+        //throw new NotImplementedException();
     }
 }
 
