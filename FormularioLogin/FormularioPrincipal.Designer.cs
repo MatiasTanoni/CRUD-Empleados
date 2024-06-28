@@ -46,7 +46,6 @@
             label1 = new Label();
             panelBD = new Panel();
             labelBaseDeDatos = new Label();
-            buttonGuardarBaseDeDatos = new Button();
             buttonAbrirBaseDeDatos = new Button();
             labelTiempo = new Label();
             pictureBox1 = new PictureBox();
@@ -242,7 +241,6 @@
             panelBD.BackColor = Color.Gainsboro;
             panelBD.BorderStyle = BorderStyle.FixedSingle;
             panelBD.Controls.Add(labelBaseDeDatos);
-            panelBD.Controls.Add(buttonGuardarBaseDeDatos);
             panelBD.Controls.Add(buttonAbrirBaseDeDatos);
             panelBD.Location = new Point(397, 7);
             panelBD.Name = "panelBD";
@@ -262,28 +260,15 @@
             labelBaseDeDatos.TabIndex = 11;
             labelBaseDeDatos.Text = "Base De Datos";
             // 
-            // buttonGuardarBaseDeDatos
-            // 
-            buttonGuardarBaseDeDatos.BackColor = Color.OliveDrab;
-            buttonGuardarBaseDeDatos.FlatStyle = FlatStyle.Popup;
-            buttonGuardarBaseDeDatos.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
-            buttonGuardarBaseDeDatos.ForeColor = Color.White;
-            buttonGuardarBaseDeDatos.Location = new Point(105, 54);
-            buttonGuardarBaseDeDatos.Name = "buttonGuardarBaseDeDatos";
-            buttonGuardarBaseDeDatos.Size = new Size(89, 23);
-            buttonGuardarBaseDeDatos.TabIndex = 6;
-            buttonGuardarBaseDeDatos.Text = "Guardar";
-            buttonGuardarBaseDeDatos.UseVisualStyleBackColor = false;
-            // 
             // buttonAbrirBaseDeDatos
             // 
             buttonAbrirBaseDeDatos.BackColor = SystemColors.ActiveCaption;
             buttonAbrirBaseDeDatos.FlatStyle = FlatStyle.Popup;
             buttonAbrirBaseDeDatos.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonAbrirBaseDeDatos.ForeColor = Color.White;
-            buttonAbrirBaseDeDatos.Location = new Point(3, 54);
+            buttonAbrirBaseDeDatos.Location = new Point(44, 41);
             buttonAbrirBaseDeDatos.Name = "buttonAbrirBaseDeDatos";
-            buttonAbrirBaseDeDatos.Size = new Size(89, 23);
+            buttonAbrirBaseDeDatos.Size = new Size(115, 44);
             buttonAbrirBaseDeDatos.TabIndex = 7;
             buttonAbrirBaseDeDatos.Text = "Abrir";
             buttonAbrirBaseDeDatos.UseVisualStyleBackColor = false;
@@ -374,7 +359,6 @@
         private Label label1;
         private Panel panelBD;
         private Label labelBaseDeDatos;
-        private Button buttonGuardarBaseDeDatos;
         private Button buttonAbrirBaseDeDatos;
         private Label labelTiempo;
         private PictureBox pictureBox1;
