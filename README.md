@@ -19,24 +19,24 @@ El boton "Ascendente" o "Descendente" ordenan la lista de empleados dependiendo 
 En el login Tenemos el sector para poner el correo y la contraseña.
 Tenemos la opcion de poder observar la contraseña o no (con el boton a la derecha de textbox Contraseña)
 
-![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/FotoLogin.png)
+![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/Imagenes%20Readme/FotoLogin.png)
 
 **PRINCIPAL 💥**:
 (Operando en Archivos)
 En esta foto, estamos en el formulario principal operando con archivos. (Sabemos debido a que esta en rojo el panel de "Archivos")
 
-![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/PrincipalOperandoEnArchivos.png)
+![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/Imagenes%20Readme/PrincipalOperandoEnArchivos.png)
 
 **PRINCIPAL 💥**:
 (Operando en BD)
 En esta foto, estamos en el formulario principal operando con Base de Datos. (Sabemos debido a que esta en rojo el panel de "Base De Datos")
 
-![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/PrincipalOperandoEnBD.png)
+![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/Imagenes%20Readme/PrincipalOperandoEnBD.png)
 
 **VISUALIZADOR 😎**:
 En esta foto, estamos en el visualizador donde muestra el historial de acceso de usuarios.
 
-![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/FotoVisualizador.png)
+![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/Imagenes%20Readme/FotoVisualizador.png)
 
 **ASCENDENTE Y DESCENDENTE 🖕👇**
 En esta foto, estamos observando los botones ascendete y descendente que ordenan la lista dependiendo que criterio.
@@ -46,11 +46,11 @@ En esta foto, estamos observando los botones ascendete y descendente que ordenan
 **AGREGAR EMPLEADO 🧑‍💼**
 En esta foto, estamos observando el formulario para elegir que tipo de empleado queremos agregar (Desarrollador, Tester o Gerente)
 
-![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/FotoAgregarEmpleado.png)
+![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/Imagenes%20Readme/FotoAgregarEmpleado.png)
 
 *DESARROLLADOR 🤖**
 En esta foto, podemos observar el ejemplo del formulario de uno de los empleados, en esta caso el desarrollador.
 
-![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/FotoDesarrollador.png)
+![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/Imagenes%20Readme/FotoDesarrollador.png)
 
 
