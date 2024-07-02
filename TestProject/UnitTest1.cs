@@ -1,4 +1,3 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Entidades;
 
 namespace TestProject
@@ -99,5 +98,4 @@ namespace TestProject
             Assert.IsTrue(info.Contains("10"));
         }
     }
-
 }

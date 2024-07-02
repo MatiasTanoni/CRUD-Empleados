@@ -83,7 +83,7 @@ namespace Formularios
                 {
                     if (banderaModificar == false)
                     {
-                        Datos.AgregarEmpleado(textBoxNombre.Text, int.Parse(textBoxEdad.Text), int.Parse(textBoxExperiencia.Text), int.Parse(textBoxSalario.Text), textBoxLenguajeDeProgramacion.Text, int.Parse(textBoxProyectosFinalizados.Text),TipoDeEmpleados.Desarrollador);
+                        Datos.AgregarEmpleado(textBoxNombre.Text, int.Parse(textBoxEdad.Text), int.Parse(textBoxExperiencia.Text), int.Parse(textBoxSalario.Text), textBoxLenguajeDeProgramacion.Text, int.Parse(textBoxProyectosFinalizados.Text), TipoDeEmpleados.Desarrollador);
                         this.DialogResult = DialogResult.OK;
                     }
                     else
@@ -193,5 +193,3 @@ namespace Formularios
         }
     }
 }
-
-

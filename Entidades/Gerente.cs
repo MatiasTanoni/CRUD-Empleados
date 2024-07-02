@@ -2,23 +2,12 @@
 
 namespace Entidades
 {
-    /// <summary>
-    /// Clase que representa a un gerente dentro de la empresa.
-    /// </summary>
     public class Gerente : Empleado, IEmpleado<Gerente>
     {
-        // Atributos
-        /// <summary>
-        /// Tipo de empleado.
-        /// Salario del empleado.
-        /// Número de personas a cargo del empleado (si es un gerente).
-        /// Número de proyectos gestionados por el empleado (si es un gerente).
-        /// </summary>
         private TipoDeEmpleados tipo;
         private int personasACargo;
         private int proyectosGestionados;
 
-        // Propiedades
         /// <summary>
         /// Tipo de empleado.
         /// </summary>
@@ -31,7 +20,6 @@ namespace Entidades
         /// <summary>
         /// Obtiene o establece la cantidad de personas a cargo del gerente.
         /// </summary>
-
         public int PersonasACargo
         {
             get { return personasACargo; }
@@ -41,17 +29,16 @@ namespace Entidades
         /// <summary>
         /// Obtiene o establece la cantidad de proyectos gestionados por el gerente.
         /// </summary>
-        
         public int ProyectosGestionados
         {
             get { return proyectosGestionados; }
             set { proyectosGestionados = value; }
         }
 
-        // Constructor
         public Gerente()
         {
         }
+
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="Gerente"/>.
         /// </summary>

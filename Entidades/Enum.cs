@@ -1,5 +1,4 @@
-﻿
-namespace Entidades
+﻿namespace Entidades
 {
     public enum TipoDeEmpleados
     {

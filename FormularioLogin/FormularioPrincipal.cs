@@ -2,6 +2,7 @@ using ADO;
 using Entidades;
 using System.Xml.Serialization;
 using Timer = System.Windows.Forms.Timer;
+
 namespace Formularios
 {
     public partial class FormularioPrincipal : FormConfiguraciones
@@ -39,9 +40,9 @@ namespace Formularios
         }
 
         /// <summary>
-        /// Constructor de la clase FormularioPrincipal que recibe un usuario registrado.
+        /// Constructor para inicializar el formulario principal con un usuario registrado.
         /// </summary>
-        /// <param name="usuarioRegistrado">El usuario registrado que utilizará el formulario principal.</param>
+        /// <param name="usuarioRegistrado">El usuario que ha iniciado sesión y se está pasando al formulario.</param>
         public FormularioPrincipal(Usuario usuarioRegistrado) : this()
         {
             try
@@ -537,5 +538,3 @@ namespace Formularios
         }
     }
 }
-
-

@@ -134,6 +134,7 @@ namespace Formularios
                     return false;
             }
         }
+
         /// <summary>
         /// Valida el valor ingresado en el TextBox para los proyectos gestionados por el Gerente.
         /// Si el valor es numérico, lo asigna al Gerente y retorna verdadero; de lo contrario, muestra un mensaje de error y retorna falso.

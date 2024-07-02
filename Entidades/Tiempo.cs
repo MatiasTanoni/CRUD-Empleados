@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-namespace Entidades
+﻿namespace Entidades
 {
     public class Tiempo
     {
@@ -40,12 +35,12 @@ namespace Entidades
         public DateTime TiempoActual { get; }
 
         /// <summary>
-        /// Constructor que inicializa los argumentos del evento.
+        /// Constructor que inicializa los argumentos del tiempo actual.
         /// </summary>
-        /// <param name="hora">Hora actual.</param>
-        /// <param name="minuto">Minuto actual.</param>
-        /// <param name="segundos">Segundo actual.</param>
-        /// <param name="tiempoActual">Fecha y hora actual.</param>
+        /// <param name="hora">Hora del tiempo actual.</param>
+        /// <param name="minuto">Minuto del tiempo actual.</param>
+        /// <param name="segundos">Segundos del tiempo actual.</param>
+        /// <param name="tiempoActual">Momento exacto del tiempo actual.</param>
         public InfoTiempoEventArgs(int hora, int minuto, int segundos, DateTime tiempoActual)
         {
             Hora = hora;

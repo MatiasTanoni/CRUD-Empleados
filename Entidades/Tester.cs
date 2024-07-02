@@ -135,11 +135,8 @@ public class Tester : Empleado, IEmpleado<Tester>
     {
         return otroTester is Tester && this == (Tester)otroTester;
     }
-
     public override int GetHashCode()
     {
         return 0;
     }
 }
-
-
