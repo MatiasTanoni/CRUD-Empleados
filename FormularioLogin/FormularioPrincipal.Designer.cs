@@ -43,6 +43,7 @@
             comboBoxPrincipal = new ComboBox();
             buttonVisualizador = new Button();
             panelArchivos = new Panel();
+            buttonNuevo = new Button();
             label1 = new Label();
             panelBD = new Panel();
             labelBaseDeDatos = new Label();
@@ -125,7 +126,7 @@
             buttonGuardar.FlatStyle = FlatStyle.Popup;
             buttonGuardar.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             buttonGuardar.ForeColor = Color.White;
-            buttonGuardar.Location = new Point(105, 54);
+            buttonGuardar.Location = new Point(105, 60);
             buttonGuardar.Name = "buttonGuardar";
             buttonGuardar.Size = new Size(89, 23);
             buttonGuardar.TabIndex = 6;
@@ -139,7 +140,7 @@
             Abrir.FlatStyle = FlatStyle.Popup;
             Abrir.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             Abrir.ForeColor = Color.White;
-            Abrir.Location = new Point(3, 54);
+            Abrir.Location = new Point(3, 60);
             Abrir.Name = "Abrir";
             Abrir.Size = new Size(89, 23);
             Abrir.TabIndex = 7;
@@ -215,6 +216,7 @@
             // 
             panelArchivos.BackColor = Color.Gainsboro;
             panelArchivos.BorderStyle = BorderStyle.FixedSingle;
+            panelArchivos.Controls.Add(buttonNuevo);
             panelArchivos.Controls.Add(label1);
             panelArchivos.Controls.Add(buttonGuardar);
             panelArchivos.Controls.Add(Abrir);
@@ -223,16 +225,30 @@
             panelArchivos.Size = new Size(199, 92);
             panelArchivos.TabIndex = 15;
             // 
+            // buttonNuevo
+            // 
+            buttonNuevo.BackColor = SystemColors.HotTrack;
+            buttonNuevo.FlatStyle = FlatStyle.Popup;
+            buttonNuevo.Font = new Font("Lucida Sans", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            buttonNuevo.ForeColor = Color.White;
+            buttonNuevo.Location = new Point(51, 32);
+            buttonNuevo.Name = "buttonNuevo";
+            buttonNuevo.Size = new Size(89, 25);
+            buttonNuevo.TabIndex = 12;
+            buttonNuevo.Text = "Nuevo";
+            buttonNuevo.UseVisualStyleBackColor = false;
+            buttonNuevo.Click += buttonNuevo_Click;
+            // 
             // label1
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Black;
             label1.BorderStyle = BorderStyle.Fixed3D;
-            label1.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Lucida Sans", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(50, 4);
+            label1.Location = new Point(41, 4);
             label1.Name = "label1";
-            label1.Size = new Size(98, 24);
+            label1.Size = new Size(108, 25);
             label1.TabIndex = 11;
             label1.Text = "Archivos";
             // 
@@ -252,11 +268,11 @@
             labelBaseDeDatos.AutoSize = true;
             labelBaseDeDatos.BackColor = Color.Black;
             labelBaseDeDatos.BorderStyle = BorderStyle.Fixed3D;
-            labelBaseDeDatos.Font = new Font("Lucida Sans", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            labelBaseDeDatos.Font = new Font("Lucida Sans", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
             labelBaseDeDatos.ForeColor = Color.White;
-            labelBaseDeDatos.Location = new Point(23, 4);
+            labelBaseDeDatos.Location = new Point(13, 4);
             labelBaseDeDatos.Name = "labelBaseDeDatos";
-            labelBaseDeDatos.Size = new Size(153, 24);
+            labelBaseDeDatos.Size = new Size(170, 25);
             labelBaseDeDatos.TabIndex = 11;
             labelBaseDeDatos.Text = "Base De Datos";
             // 
@@ -363,5 +379,6 @@
         private Label labelTiempo;
         private PictureBox pictureBox1;
         private Panel panelTiempo;
+        private Button buttonNuevo;
     }
 }

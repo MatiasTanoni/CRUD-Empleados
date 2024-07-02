@@ -13,14 +13,6 @@ namespace Formularios
 {
     public partial class FormularioPrincipal : FormConfiguraciones
     {
-        /// <summary>
-        /// Formulario para manejar datos de desarrolladores.
-        /// Formulario para manejar datos de testers.
-        /// Formulario para manejar datos de gerentes.
-        /// Formulario para agregar nuevos empleados.
-        /// Empresa que contiene la lista de empleados.
-        /// El usuario registrado.
-        /// </summary>
         public FormDesarrollador? formularioDesarrollador = new FormDesarrollador();
         public FormTester? formTester = new FormTester();
         public FormGerente? formGerente = new FormGerente();
@@ -143,7 +135,7 @@ namespace Formularios
             if (abrirBD)
             {
                 empresa.ListaDeEmpleados = Datos.ListarEmpleados();
-                this.ActualizarVisor();  
+                this.ActualizarVisor();
             }
         }
         /// <summary>
@@ -220,7 +212,7 @@ namespace Formularios
                         // Actualizar la interfaz de usuario
                         this.listBoxPrincipal.Items.Clear();
                         this.ActualizarVisor();
-  
+
                         if (abrirBD == true)
                         {
                             Datos.EliminarEmpleado(empleadoSeleccionado.Id);
@@ -338,7 +330,11 @@ namespace Formularios
                 MessageBox.Show("Error al guardar el archivo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        /// <summary>
+        /// Maneja el evento Click del botón Abrir para abrir un archivo XML y deserializar la lista de empleados.
+        /// </summary>
+        /// <param name="sender">El objeto que desencadenó el evento.</param>
+        /// <param name="e">Los datos del evento.</param>
         private void Abrir_Click(object sender, EventArgs e)
         {
             abrirBD = false;
@@ -490,11 +486,29 @@ namespace Formularios
 
         private void buttonAbrirBaseDeDatos_Click(object sender, EventArgs e)
         {
-            abrirBD = true;
-            empresa.ListaDeEmpleados = Datos.ListarEmpleados();
-            this.ActualizarVisor();
-            panelArchivos.BackColor = Color.Gainsboro;
-            panelBD.BackColor = Color.Red;
+            DialogResult result = MessageBox.Show("¿Estás seguro que quieres abrir la Base De Datos?", "Base De Datos", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                abrirBD = true;
+                empresa.ListaDeEmpleados = Datos.ListarEmpleados();
+                this.ActualizarVisor();
+                panelArchivos.BackColor = Color.Gainsboro;
+                panelBD.BackColor = Color.Red;
+            }
+        }
+
+        private void buttonNuevo_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Estás seguro que quieres crear un nuevo archivo VACIO?", "Nuevo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                panelArchivos.BackColor = Color.Red;
+                panelBD.BackColor = Color.Gainsboro;
+                abrirBD = false;
+                this.empresa.ListaDeEmpleados.Clear();
+                listBoxPrincipal.Items.Clear();             
+            }
         }
     }
 }

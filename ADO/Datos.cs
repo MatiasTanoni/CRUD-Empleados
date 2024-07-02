@@ -12,6 +12,10 @@ namespace ADO
 {
     public static class Datos
     {
+        /// <summary>
+        /// Obtiene una lista de empleados desde la base de datos.
+        /// </summary>
+        /// <returns>Una lista de empleados.</returns>
         public static List<Empleado> ListarEmpleados()
         {
             List<Empleado> lista = new List<Empleado>();
@@ -142,8 +146,12 @@ namespace ADO
                 // Lanza una nueva excepción con un mensaje específico
                 throw new Exception("Error al agregar el usuario" + e.Message);
             }
-
         }
+        /// <summary>
+        /// Método para agregar un nuevo empleado a la base de datos.
+        /// </summary>
+        /// <param name="nombre">El nombre del usuario.</param>
+        /// <param name="clave">La clave del usuario.</param>
         public static void AgregarEmpleado(string nombre, int edad, int experiencia, int salario, string herramientaDePrueba, TipoDeEmpleados tipo,int proyectosTesteados)
         {
             try
@@ -182,9 +190,13 @@ namespace ADO
                 throw new Exception("Error al agregar el usuario" + e.Message);
             }
         }
-
-         public static void AgregarEmpleado(string nombre, int edad, int experiencia, int salario, int personasACargo, TipoDeEmpleados tipo,int proyectosGestionados)
-         {
+        /// <summary>
+        /// Método para agregar un nuevo empleado a la base de datos.
+        /// </summary>
+        /// <param name="nombre">El nombre del usuario.</param>
+        /// <param name="clave">La clave del usuario.</param>
+        public static void AgregarEmpleado(string nombre, int edad, int experiencia, int salario, int personasACargo, TipoDeEmpleados tipo,int proyectosGestionados)
+        {
             try
             {
                 // Abrir conexión
@@ -220,8 +232,7 @@ namespace ADO
                 // Lanza una nueva excepción con un mensaje específico
                 throw new Exception("Error al agregar el usuario" + e.Message);
             }
-
-         }
+        }
         public static void ModificarEmpleado(string nombre, int edad, int experiencia, int salario, string lenguajeDeProgramacion, int proyectosFinalizados, TipoDeEmpleados tipo,int id)
         {
             try
@@ -261,6 +272,9 @@ namespace ADO
                 throw new Exception("Error al agregar el usuario" + e.Message);
             }
         }
+        /// <summary>
+        /// Modifica los datos de un empleado en la base de datos.
+        /// </summary>
         public static void ModificarEmpleado(string nombre, int edad, int experiencia, int salario, string herramientaDePrueba, TipoDeEmpleados tipo, int proyectosTesteados,int id)
         {
             try
@@ -298,6 +312,9 @@ namespace ADO
                 throw new Exception("Error al actualizar el empleado: " + e.Message);
             }
         }
+        /// <summary>
+        /// Modifica los datos de un empleado en la base de datos.
+        /// </summary>
         public static void ModificarEmpleado(string nombre, int edad, int experiencia, int salario, int personasACargo, int proyectosGestionados, int id, TipoDeEmpleados tipo)
         {
             try
@@ -335,6 +352,9 @@ namespace ADO
                 throw new Exception("Error al actualizar el empleado: " + e.Message);
             }
         }
+        /// <summary>
+        /// Elimina un empleado en la base de datos.
+        /// </summary>
         public static void EliminarEmpleado(int id)
         {
             try
