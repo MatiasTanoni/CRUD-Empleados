@@ -1,34 +1,21 @@
 ﻿using Entidades;
-using System.Text.Json.Serialization;
 using Entidades.Interfaces;
 
-
-/// <summary>
-/// Representa un empleado de tipo Tester en la empresa.
-/// </summary>
 public class Tester : Empleado, IEmpleado<Tester>
 {
-    // Atributos
-    /// <summary>
-    /// Tipo de empleado.
-    /// Salario del Tester.
-    /// Herramienta de prueba utilizada por el Tester.
-    /// Número de proyectos testeados por el Tester.
-    /// </summary>
     private TipoDeEmpleados tipo;
     private string herramientaDePrueba = string.Empty;
     private int proyectosTesteados;
 
-    // Propiedades
     public TipoDeEmpleados Tipo
     {
         get { return tipo; }
         set { tipo = value; }
     }
+
     /// <summary>
     /// Obtiene o establece la herramienta de prueba utilizada por el tester.
     /// </summary>
-
     public string HerramientaDePrueba
     {
         set { herramientaDePrueba = value; }
@@ -37,18 +24,18 @@ public class Tester : Empleado, IEmpleado<Tester>
 
     /// <summary>
     /// Obtiene o establece la cantidad de proyectos testeados por el tester.
-    /// </summary>
-    
+    /// </summary> 
     public int ProyectosTesteados
     {
         set { proyectosTesteados = value; }
         get { return proyectosTesteados; }
     }
 
-    // Constructor
     public Tester()
     {
+
     }
+
     /// <summary>
     /// Inicializa una nueva instancia de la clase Tester con el nombre, la edad y la experiencia especificados.
     /// </summary>
@@ -69,6 +56,7 @@ public class Tester : Empleado, IEmpleado<Tester>
     /// <param name="experiencia">La experiencia del Tester.</param>
     public Tester(int salario, string nombre, int edad, int experiencia,TipoDeEmpleados tipo,int id) : this(nombre, edad, experiencia, salario, tipo, id)
     {
+
     }
 
     /// <summary>
@@ -98,11 +86,23 @@ public class Tester : Empleado, IEmpleado<Tester>
         this.proyectosTesteados = proyectosTesteados;
     }
 
+    /// <summary>
+    /// Compara dos objetos Tester para determinar si son iguales basándose en el salario, herramienta de prueba y proyectos testeados.
+    /// </summary>
+    /// <param name="tester">Primer objeto Tester a comparar.</param>
+    /// <param name="tester1">Segundo objeto Tester a comparar.</param>
+    /// <returns>True si ambos objetos Tester son iguales; False en caso contrario.</returns>
     public static bool operator ==(Tester tester, Tester tester1)
     {
         return tester.Salario == tester1.Salario && tester.HerramientaDePrueba == tester1.HerramientaDePrueba && tester.ProyectosTesteados == tester1.ProyectosTesteados;
     }
 
+    /// <summary>
+    /// Compara dos objetos Tester para determinar si son diferentes basándose en el salario, herramienta de prueba y proyectos testeados.
+    /// </summary>
+    /// <param name="tester">Primer objeto Tester a comparar.</param>
+    /// <param name="tester1">Segundo objeto Tester a comparar.</param>
+    /// <returns>True si los objetos Tester son diferentes; False si son iguales.</returns>
     public static bool operator !=(Tester tester, Tester tester1)
     {
         return tester.Salario != tester1.Salario && tester.HerramientaDePrueba != tester1.HerramientaDePrueba && tester.ProyectosTesteados != tester1.ProyectosTesteados;
@@ -116,6 +116,7 @@ public class Tester : Empleado, IEmpleado<Tester>
     {
         return $"{this.tipo} - {base.ToString()} - {base.MostrarExperiencia()} - Salario: {this.salario} - Herramienta De Prueba: {this.herramientaDePrueba} - Testeo: {this.proyectosTesteados} proyectos - {ToString()}";
     }
+
     /// <summary>
     /// Devuelve una representación de cadena del objeto Tester.
     /// </summary>
@@ -138,7 +139,6 @@ public class Tester : Empleado, IEmpleado<Tester>
     public override int GetHashCode()
     {
         return 0;
-        //throw new NotImplementedException();
     }
 }
 

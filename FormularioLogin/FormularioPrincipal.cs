@@ -1,12 +1,5 @@
 using ADO;
 using Entidades;
-using Formularios;
-using System.Collections.Immutable;
-using System.Diagnostics.Contracts;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Text.Json;
-using System.Windows.Forms;
 using System.Xml.Serialization;
 using Timer = System.Windows.Forms.Timer;
 namespace Formularios
@@ -78,7 +71,6 @@ namespace Formularios
                 MessageBox.Show($"Error: {ex.Message}");
                 throw;
             }
-
         }
 
         /// <summary>
@@ -106,7 +98,6 @@ namespace Formularios
                 MessageBox.Show("No agregaste nada a la lista de empleados.");
             }
         }
-
 
         /// <summary>
         /// Maneja el evento de clic del botón "Agregar" para abrir el formulario de datos y agregar un nuevo empleado.
@@ -138,6 +129,7 @@ namespace Formularios
                 this.ActualizarVisor();
             }
         }
+
         /// <summary>
         /// Maneja el evento de clic del botón "Modificar" para abrir el formulario correspondiente y modificar el empleado seleccionado.
         /// </summary>
@@ -226,7 +218,6 @@ namespace Formularios
             }
         }
 
-
         /// <summary>
         /// Maneja el evento Load del formulario principal.
         /// </summary>
@@ -241,16 +232,23 @@ namespace Formularios
                 timer.Start();
             }
         }
+
+        /// <summary>
+        /// Maneja el evento Tick del temporizador para simular el cambio de tiempo.
+        /// Invoca el método SimularCambioTiempo del objeto tiempo.
+        /// </summary>
         private void Timer_Tick(object sender, EventArgs e)
         {
             tiempo.SimularCambioTiempo();
         }
 
+        /// <summary>
+        /// Actualiza el contenido de la etiqueta de tiempo con la información proporcionada.
+        /// </summary>
         public void MostrarCambioTiempo(object reloj, InfoTiempoEventArgs info)
         {
             labelTiempo.Text = $"{info.Hora:D2}:{info.Minuto:D2}:{info.Segundos:D2}";
         }
-
 
         /// <summary>
         /// Maneja el evento Click del botón de guardar.
@@ -330,6 +328,7 @@ namespace Formularios
                 MessageBox.Show("Error al guardar el archivo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         /// <summary>
         /// Maneja el evento Click del botón Abrir para abrir un archivo XML y deserializar la lista de empleados.
         /// </summary>
@@ -413,7 +412,11 @@ namespace Formularios
             }
         }
 
-
+        /// <summary>
+        /// Maneja el evento Click del botón para ordenar la lista de empleados en orden ascendente según el criterio seleccionado.
+        /// </summary>
+        /// <param name="sender">El objeto que desencadenó el evento.</param>
+        /// <param name="e">Los datos del evento.</param>
         private void buttonAscendente_Click(object sender, EventArgs e)
         {
             var empleadosOrdenados = new List<Empleado>();
@@ -446,6 +449,11 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Maneja el evento Click del botón para ordenar la lista de empleados en orden descendente según el criterio seleccionado.
+        /// </summary>
+        /// <param name="sender">El objeto que desencadenó el evento.</param>
+        /// <param name="e">Los datos del evento.</param>
         private void buttonDescendente_Click(object sender, EventArgs e)
         {
             var empleadosOrdenados = new List<Empleado>();
@@ -478,12 +486,23 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Maneja el evento Click del botón para abrir el formulario visualizador.
+        /// </summary>
+        /// <param name="sender">El objeto que desencadenó el evento.</param>
+        /// <param name="e">Los datos del evento.</param>
         private void buttonVisualizador_Click_1(object sender, EventArgs e)
         {
             FormVisualizador formVisualizador = new FormVisualizador();
             formVisualizador.ShowDialog();
         }
 
+        /// <summary>
+        /// Maneja el evento Click del botón para abrir la Base de Datos y cargar la lista de empleados.
+        /// Muestra un mensaje de confirmación antes de proceder.
+        /// </summary>
+        /// <param name="sender">El objeto que desencadenó el evento.</param>
+        /// <param name="e">Los datos del evento.</param>
         private void buttonAbrirBaseDeDatos_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("¿Estás seguro que quieres abrir la Base De Datos?", "Base De Datos", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -497,6 +516,12 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Maneja el evento Click del botón para crear un nuevo archivo vacío.
+        /// Limpia la lista de empleados y el visor, y cambia los colores de fondo de los paneles según sea necesario.
+        /// </summary>
+        /// <param name="sender">El objeto que desencadenó el evento.</param>
+        /// <param name="e">Los datos del evento.</param>
         private void buttonNuevo_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("¿Estás seguro que quieres crear un nuevo archivo VACIO?", "Nuevo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

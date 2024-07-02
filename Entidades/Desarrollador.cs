@@ -1,36 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-using Entidades.Interfaces;
+﻿using Entidades.Interfaces;
 
 namespace Entidades
 {
-    /// <summary>
-    /// Representa un empleado de tipo Desarrollador en la empresa
-    /// </summary>
     public class Desarrollador : Empleado, IEmpleado<Empleado>
     {
-        // Atributos
-        /// <summary>
-        ///Tipo de empleado
-        ///Salario del empleado
-        ///Lenguaje de programación que el empleado utiliza.
-        ///Número de proyectos finalizados por el empleado.
-        /// </summary>
-        //private TipoDeEmpleados tipo;
         private string lenguajeDeProgramacion = string.Empty;
         private int proyectosFinalizados;
 
-        // Propiedades
-        //public TipoDeEmpleados Tipo
-        //{
-        //    get { return tipo; }
-        //    set { tipo = value; }
-        //}
         /// <summary>
         /// Obtiene o establece el lenguaje de programación que domina el desarrollador.
         /// </summary>
@@ -50,7 +26,6 @@ namespace Entidades
             set { proyectosFinalizados = value; }
         }
 
-        // Constructor
         public Desarrollador()
         {
         }
@@ -63,6 +38,7 @@ namespace Entidades
         /// <param name="experiencia">La experiencia del desarrollador.</param>
         public Desarrollador(string nombre, int edad, int experiencia,int salario,TipoDeEmpleados tipo,int id) : base(nombre, edad, experiencia,salario,tipo,id)
         {
+
         }
 
         /// <summary>
@@ -74,6 +50,7 @@ namespace Entidades
         /// <param name="experiencia">La experiencia del desarrollador.</param>
         public Desarrollador(int salario, string nombre, int edad, int experiencia,TipoDeEmpleados tipo,int id) : this(nombre, edad, experiencia, salario, tipo, id)
         {
+
         }
 
         /// <summary>
@@ -103,15 +80,29 @@ namespace Entidades
             this.proyectosFinalizados = proyectosFinalizados;
 
         }
+
+        /// <summary>
+        /// Compara dos objetos Desarrollador para verificar si son iguales.
+        /// </summary>
+        /// <param name="desarrollador">Primer desarrollador a comparar.</param>
+        /// <param name="desarrollador1">Segundo desarrollador a comparar.</param>
+        /// <returns>True si ambos desarrolladores son iguales en salario, lenguaje de programación y proyectos finalizados; de lo contrario, false.</returns>
         public static bool operator ==(Desarrollador desarrollador, Desarrollador desarrollador1)
         {
             return desarrollador.Salario == desarrollador1.Salario && desarrollador.LenguajeDeProgramacion == desarrollador1.LenguajeDeProgramacion && desarrollador.ProyectosFinalizados == desarrollador1.ProyectosFinalizados;
         }
 
+        /// <summary>
+        /// Compara dos objetos Desarrollador para verificar si son diferentes.
+        /// </summary>
+        /// <param name="desarrollador">Primer desarrollador a comparar.</param>
+        /// <param name="desarrollador1">Segundo desarrollador a comparar.</param>
+        /// <returns>True si algún aspecto de los desarrolladores (salario, lenguaje de programación o proyectos finalizados) es diferente; de lo contrario, false.</returns>
         public static bool operator !=(Desarrollador desarrollador, Desarrollador desarrollador1)
         {
             return desarrollador.Salario != desarrollador1.Salario && desarrollador.LenguajeDeProgramacion != desarrollador1.LenguajeDeProgramacion && desarrollador.ProyectosFinalizados != desarrollador1.ProyectosFinalizados;
         }
+
         /// <summary>
         /// Devuelve la información del desarrollador.
         /// </summary>
@@ -129,6 +120,7 @@ namespace Entidades
         {
             return "Información de un Desarrollador";
         }
+
         /// <summary>
         /// Comprueba si el objeto actual es igual a otro objeto Desarrollador.
         /// </summary>
@@ -142,8 +134,6 @@ namespace Entidades
         public override int GetHashCode()
         {
             return 0;
-            //throw new NotImplementedException();
         }
     }
-
 }

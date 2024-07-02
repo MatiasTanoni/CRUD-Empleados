@@ -1,32 +1,11 @@
 ﻿using Entidades;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Formularios;
-using System.Text.RegularExpressions;
-using System.Runtime.CompilerServices;
-using System.Diagnostics.Eventing.Reader;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using TextBox = System.Windows.Forms.TextBox;
 using ADO;
 
 namespace Formularios
 {
-    /// <summary>
-    /// Clase parcial que representa el formulario para manejar información de desarrolladores.
-    /// </summary>
     public partial class FormDesarrollador : FormConfiguraciones
     {
-        // Atributos
-        /// <summary>
-        /// Representa un objeto Desarrollador.
-        /// </summary>
         private bool banderaModificar = false;
         private Desarrollador desarrollador = new Desarrollador();
 
@@ -35,7 +14,6 @@ namespace Formularios
         /// </summary>
         public Empresa empresa = new Empresa();
 
-        // Propiedades
         /// <summary>
         /// Obtiene o establece el objeto Desarrollador asociado.
         /// </summary>
@@ -45,12 +23,11 @@ namespace Formularios
             set { desarrollador = value; }
         }
 
-        // Constructor
         public FormDesarrollador()
         {
             InitializeComponent();
-            empresa = new Empresa(); // Inicializa la empresa aquí
-            empresa.ListaDeEmpleados = new List<Empleado>(); // Inicializa la lista de empleados aquí
+            empresa = new Empresa();
+            empresa.ListaDeEmpleados = new List<Empleado>();
         }
 
         /// <summary>
@@ -79,12 +56,9 @@ namespace Formularios
             banderaModificar = true;
         }
 
-        // Eventos
         /// <summary>
         /// Maneja el evento Click del botón de cancelar, estableciendo el resultado del diálogo como Cancelar.
         /// </summary>
-        /// <param name="sender">El objeto que generó el evento.</param>
-        /// <param name="e">Los datos del evento.</param>
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
@@ -93,8 +67,6 @@ namespace Formularios
         /// <summary>
         /// Maneja el evento Click del botón de aceptar, valida los datos del desarrollador y los agrega a la lista de empleados de la empresa si son válidos.
         /// </summary>
-        /// <param name="sender">El objeto que generó el evento.</param>
-        /// <param name="e">Los datos del evento.</param>
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
             bool esValido = true;
@@ -132,7 +104,6 @@ namespace Formularios
             }
         }
 
-        // Métodos de validación
         /// <summary>
         /// Valida los datos de un desarrollador según el tipo de dato especificado y el contenido del cuadro de texto proporcionado.
         /// </summary>
@@ -161,6 +132,14 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Valida el valor ingresado en el TextBox para el lenguaje de programación del Desarrollador.
+        /// Si el valor no es numérico, lo asigna al Desarrollador y retorna verdadero; de lo contrario, muestra un mensaje de error y retorna falso.
+        /// Si el TextBox está vacío, muestra un mensaje de error y retorna falso.
+        /// </summary>
+        /// <param name="desarrollador">El objeto Desarrollador al que se asignará el lenguaje de programación.</param>
+        /// <param name="textBox">El TextBox que contiene el valor del lenguaje de programación.</param>
+        /// <returns>Verdadero si la validación es exitosa y se asigna el lenguaje de programación al Desarrollador; de lo contrario, falso.</returns>
         private bool ValidarLenguajeDeProgramacion(Desarrollador desarrollador, TextBox textBox)
         {
             if (!string.IsNullOrWhiteSpace(textBox.Text))
@@ -183,6 +162,14 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Valida el valor ingresado en el TextBox para los proyectos finalizados del Desarrollador.
+        /// Si el valor es un número válido, lo asigna al Desarrollador y retorna verdadero; de lo contrario, muestra un mensaje de error y retorna falso.
+        /// Si el TextBox está vacío, muestra un mensaje de error y retorna falso.
+        /// </summary>
+        /// <param name="desarrollador">El objeto Desarrollador al que se asignará la cantidad de proyectos finalizados.</param>
+        /// <param name="textBox">El TextBox que contiene el valor de los proyectos finalizados.</param>
+        /// <returns>Verdadero si la validación es exitosa y se asigna la cantidad de proyectos finalizados al Desarrollador; de lo contrario, falso.</returns>
         private bool ValidarProyectosFinalizados(Desarrollador desarrollador, TextBox textBox)
         {
             if (!string.IsNullOrWhiteSpace(textBox.Text))

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Text.Json.Serialization;
-using System.Xml.Serialization;
+﻿using System.Xml.Serialization;
 
 namespace Entidades
 {
@@ -15,7 +13,7 @@ namespace Entidades
 
     public abstract class Empleado
     {
-        // Atributos
+
         protected int id; 
         protected string nombre = string.Empty;
         protected int edad;
@@ -23,18 +21,16 @@ namespace Entidades
         protected int salario;
         protected int edadJubilacionDefault = 65;
         protected TipoDeEmpleados tipo;
-        // Propiedades
+
         public int Id
         {
             get { return id; }
             set { id = value; }
         }
 
-
         /// <summary>
         /// Obtiene o establece el nombre del empleado.
         /// </summary>
-
         public string Nombre
         {
             get { return nombre; }
@@ -44,7 +40,6 @@ namespace Entidades
         /// <summary>
         /// Obtiene o establece la edad del empleado.
         /// </summary>
-        
         public int Edad
         {
             get { return edad; }
@@ -54,30 +49,38 @@ namespace Entidades
         /// <summary>
         /// Obtiene o establece la experiencia del empleado.
         /// </summary>
-        
         public int Experiencia
         {
             get { return experiencia; }
             set { experiencia = value; }
         }
 
+        /// <summary>
+        /// Obtiene o establece el salario del empleado.
+        /// </summary>
         public int Salario
         {
             get { return salario; }
             set { salario = value; }
         }
+
+        /// <summary>
+        /// Obtiene o establece la edad de jubilacion del empleado.
+        /// </summary>
         public int EdadJubilacionDefault
         {
             get { return edadJubilacionDefault; }
         }
 
+        /// <summary>
+        /// Obtiene o establece el tipo de empleado.
+        /// </summary>
         public TipoDeEmpleados Tipo
         {
             get { return tipo; }
             set { tipo = value; }
         }
 
-        // Constructores
         public Empleado()
         {
         }
@@ -112,6 +115,15 @@ namespace Entidades
             this.experiencia = experiencia;
         }
 
+        /// <summary>
+        /// Constructor de la clase Empleado que inicializa todas las propiedades.
+        /// </summary>
+        /// <param name="nombre">Nombre del empleado.</param>
+        /// <param name="edad">Edad del empleado.</param>
+        /// <param name="experiencia">Experiencia en años del empleado.</param>
+        /// <param name="salario">Salario del empleado.</param>
+        /// <param name="tipo">Tipo de empleado (por ejemplo, Tester, Desarrollador, Gerente).</param>
+        /// <param name="id">Identificador único del empleado.</param>
         public Empleado(string nombre, int edad, int experiencia,int salario, TipoDeEmpleados tipo,int id) : this(nombre, edad, experiencia)
         {
             this.salario = salario;
@@ -119,6 +131,10 @@ namespace Entidades
             this.id = id;
         }
 
+        /// <summary>
+        /// Calcula los años restantes hasta la jubilación usando la edad de jubilación predeterminada.
+        /// </summary>
+        /// <returns>Años restantes hasta la jubilación.</returns>
         public int AniosHastaJubilacion()
         {
             return AniosHastaJubilacion(EdadJubilacionDefault);
@@ -140,11 +156,15 @@ namespace Entidades
         /// <returns>Información del empleado.</returns>
         public abstract string MostrarInformacion();
 
-
+        /// <summary>
+        /// Retorna una cadena que representa la experiencia del empleado.
+        /// </summary>
+        /// <returns>Cadena que indica la experiencia del empleado.</returns>
         public virtual string MostrarExperiencia()
         {
             return $"Experiencia: {Experiencia}";
         }
+
         /// <summary>
         /// Devuelve una representación de cadena del objeto Empleado.
         /// </summary>

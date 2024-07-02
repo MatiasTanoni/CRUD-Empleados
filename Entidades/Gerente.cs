@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-using Entidades.Interfaces;
+﻿using Entidades.Interfaces;
 
 namespace Entidades
 {
@@ -106,15 +100,28 @@ namespace Entidades
             this.proyectosGestionados = proyectosGestionados;
         }
 
+        /// <summary>
+        /// Compara dos objetos Gerente para determinar si son iguales basándose en el salario, personas a cargo y proyectos gestionados.
+        /// </summary>
+        /// <param name="gerente">Primer objeto Gerente a comparar.</param>
+        /// <param name="gerente1">Segundo objeto Gerente a comparar.</param>
+        /// <returns>True si ambos objetos Gerente son iguales; False en caso contrario.</returns>
         public static bool operator ==(Gerente gerente, Gerente gerente1)
         {
             return gerente.Salario == gerente1.Salario && gerente.PersonasACargo == gerente1.PersonasACargo && gerente.ProyectosGestionados == gerente1.ProyectosGestionados;
         }
 
+        /// <summary>
+        /// Compara dos objetos Gerente para determinar si son diferentes basándose en el salario, personas a cargo y proyectos gestionados.
+        /// </summary>
+        /// <param name="gerente">Primer objeto Gerente a comparar.</param>
+        /// <param name="gerente1">Segundo objeto Gerente a comparar.</param>
+        /// <returns>True si los objetos Gerente son diferentes; False si son iguales.</returns>
         public static bool operator !=(Gerente gerente, Gerente gerente1)
         {
             return gerente.Salario != gerente1.Salario && gerente.PersonasACargo != gerente1.PersonasACargo && gerente.ProyectosGestionados != gerente1.ProyectosGestionados;
         }
+
         /// <summary>
         /// Devuelve la información del gerente.
         /// </summary>
@@ -123,6 +130,7 @@ namespace Entidades
         {
             return $"{this.tipo} - {base.ToString()} - {base.MostrarExperiencia()} - Salario: {this.salario} - A cargo de: {this.personasACargo} personas - Proyectos Gestionados: {this.proyectosGestionados} - {ToString()}";
         }
+
         /// <summary>
         /// Devuelve una representación de cadena del objeto Gerente.
         /// </summary>
@@ -145,8 +153,6 @@ namespace Entidades
         public override int GetHashCode()
         {
             return 0;
-            //throw new NotImplementedException();
         }
     }
-
 }

@@ -1,25 +1,9 @@
 ﻿using Entidades;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
 
 namespace Formularios
 {
     public partial class FormularioDatos : FormConfiguraciones
     {
-        /// <summary>
-        /// Formulario para manejar las acciones relacionadas con un desarrollador.
-        /// Formulario para manejar las acciones relacionadas con un tester.
-        /// Formulario para manejar las acciones relacionadas con un gerente.
-        /// Instancia de la empresa que contiene la lista de empleados.
-        /// </summary>
         public FormDesarrollador? formDesarrollador = null;
         public FormTester? formTester = null;
         public FormGerente? formGerente = null;
@@ -29,6 +13,7 @@ namespace Formularios
         {
             InitializeComponent();
         }
+
         /// <summary>
         /// Inicializa una nueva instancia de la clase <see cref="FormularioDatos"/> con una instancia de <see cref="Empresa"/>.
         /// </summary>
@@ -69,7 +54,6 @@ namespace Formularios
                 {
                     this.formDesarrollador.Close();
                 }
-
             }
             this.Hide();
         }
@@ -107,6 +91,5 @@ namespace Formularios
             }
             this.Hide();
         }
-
     }
 }

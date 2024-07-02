@@ -1,29 +1,13 @@
 ﻿using ADO;
 using Entidades;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics.Metrics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.TextBox;
 
 namespace Formularios
 {
     public partial class FormGerente : FormConfiguraciones
     {
-        /// <summary>
-        /// Representa un objeto Gerente con atributos predeterminados.
-        /// Representa una empresa asociada a la clase.
-        /// </summary>
         private Gerente gerente = new Gerente();
         public Empresa empresa;
         private bool banderaModificar = false;
-
 
         /// <summary>
         /// Obtiene o establece el objeto Gerente asociado.
@@ -35,12 +19,11 @@ namespace Formularios
             set { gerente = value; }
         }  
 
-        // Constructores
         public FormGerente()
         {
             InitializeComponent();
-            empresa = new Empresa(); // Inicializa la empresa aca
-            empresa.ListaDeEmpleados = new List<Empleado>(); // Inicializa la lista de empleados aca
+            empresa = new Empresa();
+            empresa.ListaDeEmpleados = new List<Empleado>();
         }
 
         /// <summary>
@@ -77,7 +60,6 @@ namespace Formularios
             this.textBoxPersonasACargo.Text = gerente.PersonasACargo.ToString();
             this.textBoxProyectosGestionados.Text = gerente.ProyectosGestionados.ToString();
             banderaModificar = true;
-
         }
 
         /// <summary>
@@ -122,6 +104,7 @@ namespace Formularios
                 }
             }
         }
+
         /// <summary>
         /// Valida los datos de un gerente.
         /// </summary>
@@ -151,10 +134,16 @@ namespace Formularios
                     return false;
             }
         }
-
+        /// <summary>
+        /// Valida el valor ingresado en el TextBox para los proyectos gestionados por el Gerente.
+        /// Si el valor es numérico, lo asigna al Gerente y retorna verdadero; de lo contrario, muestra un mensaje de error y retorna falso.
+        /// Si el TextBox está vacío, muestra un mensaje de error y retorna falso.
+        /// </summary>
+        /// <param name="gerente">El objeto Gerente al que se asignarán los proyectos gestionados.</param>
+        /// <param name="textBox">El TextBox que contiene el valor de los proyectos gestionados.</param>
+        /// <returns>Verdadero si la validación es exitosa y se asignan los proyectos gestionados al Gerente; de lo contrario, falso.</returns>
         private bool ValidarProyectosGestionados(Gerente gerente, TextBox textBox) 
         {
-
             if (!string.IsNullOrWhiteSpace(textBox.Text))
             {
                 if (int.TryParse(textBox.Text, out int ProyectosGestionados))
@@ -173,9 +162,16 @@ namespace Formularios
                 MessageBox.Show("Por favor, No puede estar vacio, ingrese un valor para los Proyectos Gestionados.");
                 return false;
             }
-
-
         }
+
+        /// <summary>
+        /// Valida el valor ingresado en el TextBox para las personas a cargo del Gerente.
+        /// Si el valor es numérico, lo asigna al Gerente y retorna verdadero; de lo contrario, muestra un mensaje de error y retorna falso.
+        /// Si el TextBox está vacío, muestra un mensaje de error y retorna falso.
+        /// </summary>
+        /// <param name="gerente">El objeto Gerente al que se asignarán las personas a cargo.</param>
+        /// <param name="textBox">El TextBox que contiene el valor de las personas a cargo.</param>
+        /// <returns>Verdadero si la validación es exitosa y se asignan las personas a cargo al Gerente; de lo contrario, falso.</returns>
         private bool ValidarPersonasACargo(Gerente gerente, TextBox textBox)
         {
             if (!string.IsNullOrWhiteSpace(textBox.Text))
@@ -199,5 +195,4 @@ namespace Formularios
             }
         }
     }
-
 }

@@ -34,6 +34,5 @@ namespace Entidades
 
         [JsonPropertyName("perfil")]
         public string Perfil { get; set; } = string.Empty;
-
     }
 }

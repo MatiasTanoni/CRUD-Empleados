@@ -1,21 +1,9 @@
-﻿using Entidades;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Text;
 
 namespace Formularios
 {
     public partial class FormVisualizador : FormConfiguraciones
     {
-        /// <summary>
-        /// Constructor por defecto de la clase FormVisualizador.
-        /// </summary>
         public FormVisualizador()
         {
             InitializeComponent();
@@ -64,6 +52,5 @@ namespace Formularios
         {
             this.DialogResult = DialogResult.Cancel;
         }
-
     }
 }

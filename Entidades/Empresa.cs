@@ -1,7 +1,4 @@
 ﻿using Entidades.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Entidades
 {
@@ -10,7 +7,6 @@ namespace Entidades
     /// </summary>
     public class Empresa : IEmpresa
     {
-        // Atributos
         private List<Empleado> listaDeEmpleados;
 
         /// <summary>
@@ -87,7 +83,6 @@ namespace Entidades
             {
                 return false;
             }
-
             Empresa other = (Empresa)obj;
             return listaDeEmpleados.SequenceEqual(other.listaDeEmpleados);
         }

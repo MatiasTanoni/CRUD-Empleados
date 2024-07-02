@@ -1,27 +1,13 @@
 ﻿using ADO;
 using Entidades;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Formularios
 {
     public partial class FormTester : FormConfiguraciones
     {
-        /// <summary>
-        /// Representa un objeto de tipo Tester con valores predeterminados para el nombre, la edad y el salario.
-        /// Representa una instancia de la clase Empresa que almacena información sobre la empresa, incluida la lista de empleados.
-        /// </summary>
         private Tester tester = new Tester();
         public Empresa empresa = new Empresa();
         private bool banderaModificar = false;
-
 
         /// <summary>
         /// Obtiene o establece el objeto de tipo Tester asociado a esta instancia.
@@ -35,9 +21,10 @@ namespace Formularios
         public FormTester()
         {
             InitializeComponent();
-            empresa = new Empresa(); // Inicializa la empresa aca
-            empresa.ListaDeEmpleados = new List<Empleado>(); // Inicializa la lista de empleados aca
+            empresa = new Empresa();
+            empresa.ListaDeEmpleados = new List<Empleado>(); 
         }
+
         /// <summary>
         /// Inicializa una nueva instancia de la clase FormTester con la empresa proporcionada.
         /// </summary>
@@ -62,16 +49,12 @@ namespace Formularios
             this.textBoxHerramientaDePrueba.Text = tester.HerramientaDePrueba.ToString();
             this.textBoxProyectosTesteados.Text = tester.ProyectosTesteados.ToString();
             banderaModificar = true;
-
         }
 
         /// <summary>
         /// Maneja el evento Click del botón "Cancelar".
         /// Establece el resultado del diálogo como Cancelar.
         /// </summary>
-        /// <param name="sender">El origen del evento.</param>
-        /// <param name="e">Los datos del evento.</param>
-
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
@@ -81,8 +64,6 @@ namespace Formularios
         /// Maneja el evento Click del botón "Aceptar".
         /// Valida los datos del formulario y agrega un nuevo objeto Tester a la lista de empleados si los datos son válidos.
         /// </summary>
-        /// <param name="sender">El origen del evento.</param>
-        /// <param name="e">Los datos del evento.</param>
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
             bool esValido = true;
@@ -92,8 +73,6 @@ namespace Formularios
             esValido &= Validar(tester, "salario", textBoxSalario);
             esValido &= Validar(tester, "herramienta de prueba", textBoxHerramientaDePrueba);
             esValido &= Validar(tester, "proyectos testeados", textBoxProyectosTesteados);
-
-
 
             if (esValido)
             {
@@ -120,7 +99,6 @@ namespace Formularios
                     }
                 }
             }
-
         }
 
         /// <summary>
@@ -151,6 +129,14 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Valida el valor ingresado en el TextBox para la herramienta de prueba del Tester.
+        /// Si el valor no es numérico, lo asigna al Tester y retorna verdadero; de lo contrario, muestra un mensaje de error y retorna falso.
+        /// Si el TextBox está vacío, muestra un mensaje de error y retorna falso.
+        /// </summary>
+        /// <param name="tester">El objeto Tester al que se asignará la herramienta de prueba.</param>
+        /// <param name="textBox">El TextBox que contiene el valor de la herramienta de prueba.</param>
+        /// <returns>Verdadero si la validación es exitosa y se asigna la herramienta de prueba al Tester; de lo contrario, falso.</returns>
         private bool ValidarHerramientaDePrueba(Tester tester, TextBox textBox)
         {
             if (!string.IsNullOrWhiteSpace(textBox.Text))
@@ -173,6 +159,14 @@ namespace Formularios
             }
         }
 
+        /// <summary>
+        /// Valida el valor ingresado en el TextBox para los proyectos testeados del Tester.
+        /// Si el valor es numérico, lo asigna al Tester y retorna verdadero; de lo contrario, muestra un mensaje de error y retorna falso.
+        /// Si el TextBox está vacío, muestra un mensaje de error y retorna falso.
+        /// </summary>
+        /// <param name="tester">El objeto Tester al que se asignarán los proyectos testeados.</param>
+        /// <param name="textBox">El TextBox que contiene el valor de los proyectos testeados.</param>
+        /// <returns>Verdadero si la validación es exitosa y se asignan los proyectos testeados al Tester; de lo contrario, falso.</returns>
         private bool ValidarProyetosTesteados(Tester tester, TextBox textBox)
         {
             if (!string.IsNullOrWhiteSpace(textBox.Text))
