@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Entidades.Desarrollador">
+    <Position X="8.25" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>EAAAEAAAAAAAgAAEgAAAEAAAAAAAAIAAAAACAAAAAiA=</HashCode>
+      <FileName>Desarrollador.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entidades.Empleado">
+    <Position X="8.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>UAICBUAAAAAAAACEgAAAgAAAAAABAoAAAAICAAACAgQ=</HashCode>
+      <FileName>Empleado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Empresa">
+    <Position X="6.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAwAEAAAAAAAAAAIAAAAAAAAAAAiQ=</HashCode>
+      <FileName>Empresa.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entidades.Gerente">
+    <Position X="11" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAABIAAAAAAAAAEgAAAAgAAAAAAAIAAAAAAIAAAAiQ=</HashCode>
+      <FileName>Gerente.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entidades.MiExcepcionPersonalizada">
+    <Position X="14" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MiExcepcionPersonalizada.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Tester">
+    <Position X="5.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EABABAAAAAAABAAkgAAAAAAAAAAAAIAACAAAAAAAAiQ=</HashCode>
+      <FileName>Tester.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Entidades.Tiempo">
+    <Position X="14" Y="4.25" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="Entidades.Tiempo.NotificarCambioTiempo" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Tiempo.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAggAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tiempo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.InfoTiempoEventArgs">
+    <Position X="12.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAMAAAAAAAAAAAAAEAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Tiempo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Entidades.Usuario">
+    <Position X="10.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAQAAhAAAAIAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Usuario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Entidades.Interfaces.IEmpresa">
+    <Position X="14.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Interfaces\IEmpresa.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Entidades.Interfaces.IEmpleado&lt;T&gt;">
+    <Position X="13" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAEAAAAAAAAAAAAAAgAAAAAAAAgAAAAAAAAACAAA=</HashCode>
+      <FileName>Interfaces\IEmpleado.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Entidades.TipoDeEmpleados">
+    <Position X="10.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Enum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
