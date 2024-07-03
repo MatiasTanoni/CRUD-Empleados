@@ -18,6 +18,10 @@ El boton "Ascendente" o "Descendente" ordenan la lista de empleados dependiendo 
 
 https://www.youtube.com/watch?v=8Hf_3bzPi84&t=1s
 
+**DIAGRAMA DE CLASES 👾**
+
+![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/DiagramaDeClases.png)
+
 **LOGIN 👋**:
 En el login Tenemos el sector para poner el correo y la contraseña.
 Tenemos la opcion de poder observar la contraseña o no (con el boton a la derecha de textbox Contraseña)
