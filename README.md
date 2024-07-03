@@ -13,7 +13,12 @@ El botón "Modificar" abre un formulario correspondiente para modificar el emple
 El botón "Eliminar" elimina el empleado seleccionado de la lista. 
 El botón "Visualizador" muestra un formulario para visualizar el historial de acceso de usuarios. 
 El boton "Ascendente" o "Descendente" ordenan la lista de empleados dependiendo que criterio quiere utilizar (nombre,edad,experiecia o salario)
-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-
+
+**IMPORTANTE!**
+**La informacion para crear la base de datos esta en script.sql.**
+**La cadena de conexion esta en el proyecto "ADO" dentro de la clase "AccesoDatos".**
+**LISTADO DE DEPENDENCIAS: coverlet.collector //  Microsoft.Data.SqlClient // Microsoft.NET.Test.Sdk // MSTest.TestAdapter // MSTest.TestFramework**
+
 **LINK AL VIDEO DEL PROYECTO - YOUTUBE 📺**
 
 https://www.youtube.com/watch?v=8Hf_3bzPi84&t=1s
