@@ -3,11 +3,14 @@ using Entidades.Interfaces;
 
 public class Tester : Empleado, IEmpleado<Tester>
 {
-    private TipoDeEmpleados tipo;
+    private new TipoDeEmpleados tipo;
     private string herramientaDePrueba = string.Empty;
     private int proyectosTesteados;
 
-    public TipoDeEmpleados Tipo
+    /// <summary>
+    /// Obtiene o establece el tipo por el tester.
+    /// </summary>
+    public new TipoDeEmpleados Tipo
     {
         get { return tipo; }
         set { tipo = value; }
@@ -31,6 +34,9 @@ public class Tester : Empleado, IEmpleado<Tester>
         get { return proyectosTesteados; }
     }
 
+    /// <summary>
+    /// Inicializa una nueva instancia de la clase <see cref="Tester"/>.
+    /// </summary>
     public Tester()
     {
 

@@ -1,6 +1,7 @@
 ﻿using Entidades;
 using TextBox = System.Windows.Forms.TextBox;
 using ADO;
+using Entidades;
 
 namespace Formularios
 {

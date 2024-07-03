@@ -1,4 +1,5 @@
 ﻿using System.Xml.Serialization;
+using Entidades;
 
 namespace Entidades
 {
@@ -22,6 +23,9 @@ namespace Entidades
         protected int edadJubilacionDefault = 65;
         protected TipoDeEmpleados tipo;
 
+        /// <summary>
+        /// Obtiene o establece el if del empleado.
+        /// </summary>
         public int Id
         {
             get { return id; }

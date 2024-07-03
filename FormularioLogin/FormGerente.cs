@@ -17,8 +17,10 @@ namespace Formularios
         { 
             get { return gerente; } 
             set { gerente = value; }
-        }  
-
+        }
+        /// <summary>
+        /// Inicializa una nueva instancia de la clase <see cref="FormGerente"/>.
+        /// </summary>
         public FormGerente()
         {
             InitializeComponent();

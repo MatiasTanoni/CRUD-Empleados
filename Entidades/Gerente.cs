@@ -1,17 +1,18 @@
 ﻿using Entidades.Interfaces;
+using Entidades;
 
 namespace Entidades
 {
     public class Gerente : Empleado, IEmpleado<Gerente>
     {
-        private TipoDeEmpleados tipo;
+        private new TipoDeEmpleados tipo;
         private int personasACargo;
         private int proyectosGestionados;
 
         /// <summary>
         /// Tipo de empleado.
         /// </summary>
-        public TipoDeEmpleados Tipo
+        public new TipoDeEmpleados Tipo
         {
             get { return tipo; }
             set { tipo = value; }
@@ -35,6 +36,9 @@ namespace Entidades
             set { proyectosGestionados = value; }
         }
 
+        /// <summary>
+        /// Inicializa una nueva instancia de la clase <see cref="Gerente"/>.
+        /// </summary>
         public Gerente()
         {
         }

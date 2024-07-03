@@ -1,5 +1,6 @@
 ﻿using ADO;
 using Entidades;
+using Entidades;
 
 namespace Formularios
 {

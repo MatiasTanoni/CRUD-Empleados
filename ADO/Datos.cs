@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using Entidades;
+using Entidades;
 
 namespace ADO
 {

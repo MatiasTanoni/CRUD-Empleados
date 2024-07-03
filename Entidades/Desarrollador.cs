@@ -26,6 +26,9 @@ namespace Entidades
             set { proyectosFinalizados = value; }
         }
 
+        /// <summary>
+        /// Inicializa una nueva instancia de la clase <see cref="Desarrollador"/>.
+        /// </summary>
         public Desarrollador()
         {
         }
