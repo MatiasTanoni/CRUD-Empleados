@@ -28,13 +28,13 @@ Tenemos la opcion de poder observar la contraseña o no (con el boton a la derec
 (Operando en Archivos)
 En esta foto, estamos en el formulario principal operando con archivos. (Sabemos debido a que esta en rojo el panel de "Archivos")
 
-![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/Imagenes%20Readme/PrincipalOperandoEnArchivos.png)
+![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/Imagenes%20Readme/PrincipalArchivos.png)
 
 **PRINCIPAL 💥**:
 (Operando en BD)
 En esta foto, estamos en el formulario principal operando con Base de Datos. (Sabemos debido a que esta en rojo el panel de "Base De Datos")
 
-![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/Imagenes%20Readme/PrincipalOperandoEnBD.png)
+![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/Imagenes%20Readme/PrincipalBD.png)
 
 **VISUALIZADOR 😎**:
 En esta foto, estamos en el visualizador donde muestra el historial de acceso de usuarios.
@@ -44,7 +44,7 @@ En esta foto, estamos en el visualizador donde muestra el historial de acceso de
 **ASCENDENTE Y DESCENDENTE 🖕👇**
 En esta foto, estamos observando los botones ascendete y descendente que ordenan la lista dependiendo que criterio.
 
-![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/Imagenes%20Readme/FotoAscendenteYDescendente.png)
+![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/Imagenes%20Readme/BotonesAscDesc.png)
 
 **AGREGAR EMPLEADO 🧑‍💼**
 En esta foto, estamos observando el formulario para elegir que tipo de empleado queremos agregar (Desarrollador, Tester o Gerente)
