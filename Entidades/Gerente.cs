@@ -1,5 +1,4 @@
 ﻿using Entidades.Interfaces;
-using Entidades;
 
 namespace Entidades
 {
@@ -49,7 +48,7 @@ namespace Entidades
         /// <param name="nombre">El nombre del gerente.</param>
         /// <param name="edad">La edad del gerente.</param>
         /// <param name="experiencia">La experiencia del gerente.</param>
-        public Gerente(string nombre, int edad, int experiencia,int salario,TipoDeEmpleados tipo,int id) : base(nombre, edad, experiencia, salario, tipo, id)
+        public Gerente(string nombre, int edad, int experiencia, int salario, TipoDeEmpleados tipo, int id) : base(nombre, edad, experiencia, salario, tipo, id)
         {
         }
 
@@ -60,7 +59,7 @@ namespace Entidades
         /// <param name="nombre">El nombre del gerente.</param>
         /// <param name="edad">La edad del gerente.</param>
         /// <param name="experiencia">La experiencia del gerente.</param>
-        public Gerente(int salario, string nombre, int edad, int experiencia,TipoDeEmpleados tipo,int id) : this(nombre, edad, experiencia, salario, tipo, id)
+        public Gerente(int salario, string nombre, int edad, int experiencia, TipoDeEmpleados tipo, int id) : this(nombre, edad, experiencia, salario, tipo, id)
         {
         }
 
@@ -72,7 +71,7 @@ namespace Entidades
         /// <param name="nombre">El nombre del gerente.</param>
         /// <param name="edad">La edad del gerente.</param>
         /// <param name="experiencia">La experiencia del gerente.</param>
-        public Gerente(int salario, int personasACargo, string nombre, int edad, int experiencia,TipoDeEmpleados tipo,int id) : this(salario, nombre, edad, experiencia, tipo, id)
+        public Gerente(int salario, int personasACargo, string nombre, int edad, int experiencia, TipoDeEmpleados tipo, int id) : this(salario, nombre, edad, experiencia, tipo, id)
         {
             this.personasACargo = personasACargo;
         }
@@ -86,7 +85,7 @@ namespace Entidades
         /// <param name="nombre">El nombre del gerente.</param>
         /// <param name="edad">La edad del gerente.</param>
         /// <param name="experiencia">La experiencia del gerente.</param>
-        public Gerente(int salario, int personasACargo, int proyectosGestionados, string nombre, int edad, int experiencia,TipoDeEmpleados tipo,int id) : this(salario, personasACargo, nombre, edad, experiencia, tipo, id)
+        public Gerente(int salario, int personasACargo, int proyectosGestionados, string nombre, int edad, int experiencia, TipoDeEmpleados tipo, int id) : this(salario, personasACargo, nombre, edad, experiencia, tipo, id)
         {
             this.proyectosGestionados = proyectosGestionados;
         }

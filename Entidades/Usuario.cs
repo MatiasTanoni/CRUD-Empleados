@@ -20,8 +20,8 @@ namespace Entidades
 
         [JsonPropertyName("legajo")]
         public int Legajo { get; set; }
- 
-        [JsonPropertyName("correo")] 
+
+        [JsonPropertyName("correo")]
         public string Correo { get; set; } = string.Empty;
 
         [JsonPropertyName("clave")]

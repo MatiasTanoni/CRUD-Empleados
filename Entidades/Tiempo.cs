@@ -6,7 +6,7 @@
         public delegate void NotificarCambioTiempo(object reloj, InfoTiempoEventArgs infoTiempo);
 
         // Evento que se dispara cuando cambia el segundo
-        public event NotificarCambioTiempo SegundoCambiado;
+        public event NotificarCambioTiempo? SegundoCambiado;
 
         /// <summary>
         /// Método para simular el cambio de tiempo y notificar a los suscriptores.

@@ -13,9 +13,9 @@ namespace Formularios
         /// Obtiene o establece el objeto Gerente asociado.
         /// </summary>
         /// <value>El objeto Gerente asociado.</value>
-        public Gerente Gerente 
-        { 
-            get { return gerente; } 
+        public Gerente Gerente
+        {
+            get { return gerente; }
             set { gerente = value; }
         }
         /// <summary>
@@ -32,7 +32,7 @@ namespace Formularios
         /// Inicializa una nueva instancia de la clase FormGerente con empresa asociada.
         /// </summary>
         /// <param name="empresa">La empresa asociada al formulario.</param>
-        public FormGerente(Empresa empresa) :this()
+        public FormGerente(Empresa empresa) : this()
         {
             this.empresa = empresa;
         }
@@ -86,12 +86,12 @@ namespace Formularios
                 {
                     if (banderaModificar == false)
                     {
-                        Datos.AgregarEmpleado(textBoxNombre.Text,int.Parse(textBoxEdad.Text),int.Parse(textBoxExperiencia.Text),int.Parse(textBoxSalario.Text),int.Parse(textBoxPersonasACargo.Text),TipoDeEmpleados.Gerente,int.Parse(textBoxProyectosGestionados.Text));
+                        Datos.AgregarEmpleado(textBoxNombre.Text, int.Parse(textBoxEdad.Text), int.Parse(textBoxExperiencia.Text), int.Parse(textBoxSalario.Text), int.Parse(textBoxPersonasACargo.Text), TipoDeEmpleados.Gerente, int.Parse(textBoxProyectosGestionados.Text));
                         this.DialogResult = DialogResult.OK;
                     }
                     else
                     {
-                        Datos.ModificarEmpleado(textBoxNombre.Text,int.Parse(textBoxEdad.Text),int.Parse(textBoxExperiencia.Text),int.Parse(textBoxSalario.Text),int.Parse(textBoxPersonasACargo.Text),int.Parse(textBoxProyectosGestionados.Text),Gerente.Id,TipoDeEmpleados.Gerente);
+                        Datos.ModificarEmpleado(textBoxNombre.Text, int.Parse(textBoxEdad.Text), int.Parse(textBoxExperiencia.Text), int.Parse(textBoxSalario.Text), int.Parse(textBoxPersonasACargo.Text), int.Parse(textBoxProyectosGestionados.Text), Gerente.Id, TipoDeEmpleados.Gerente);
                         this.DialogResult = DialogResult.OK;
                     }
                 }
@@ -121,17 +121,17 @@ namespace Formularios
             switch (dato)
             {
                 case "nombre":
-                    return ValidarNombre(gerente,textBox);
+                    return ValidarNombre(gerente, textBox);
                 case "proyectos gestionados":
-                    return ValidarProyectosGestionados(gerente,textBox);
+                    return ValidarProyectosGestionados(gerente, textBox);
                 case "edad":
-                    return ValidarEdad(gerente,textBox);
+                    return ValidarEdad(gerente, textBox);
                 case "salario":
-                    return ValidarSalario(gerente,textBox);
+                    return ValidarSalario(gerente, textBox);
                 case "experiencia":
-                    return ValidarExperiencia(gerente,textBox);
+                    return ValidarExperiencia(gerente, textBox);
                 case "personas a cargo":
-                    return ValidarPersonasACargo(gerente,textBox);
+                    return ValidarPersonasACargo(gerente, textBox);
                 default:
                     return false;
             }
@@ -145,7 +145,7 @@ namespace Formularios
         /// <param name="gerente">El objeto Gerente al que se asignarán los proyectos gestionados.</param>
         /// <param name="textBox">El TextBox que contiene el valor de los proyectos gestionados.</param>
         /// <returns>Verdadero si la validación es exitosa y se asignan los proyectos gestionados al Gerente; de lo contrario, falso.</returns>
-        private bool ValidarProyectosGestionados(Gerente gerente, TextBox textBox) 
+        private bool ValidarProyectosGestionados(Gerente gerente, TextBox textBox)
         {
             if (!string.IsNullOrWhiteSpace(textBox.Text))
             {

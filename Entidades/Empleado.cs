@@ -1,5 +1,4 @@
 ﻿using System.Xml.Serialization;
-using Entidades;
 
 namespace Entidades
 {
@@ -15,7 +14,7 @@ namespace Entidades
     public abstract class Empleado
     {
 
-        protected int id; 
+        protected int id;
         protected string nombre = string.Empty;
         protected int edad;
         protected int experiencia;
@@ -128,7 +127,7 @@ namespace Entidades
         /// <param name="salario">Salario del empleado.</param>
         /// <param name="tipo">Tipo de empleado (por ejemplo, Tester, Desarrollador, Gerente).</param>
         /// <param name="id">Identificador único del empleado.</param>
-        public Empleado(string nombre, int edad, int experiencia,int salario, TipoDeEmpleados tipo,int id) : this(nombre, edad, experiencia)
+        public Empleado(string nombre, int edad, int experiencia, int salario, TipoDeEmpleados tipo, int id) : this(nombre, edad, experiencia)
         {
             this.salario = salario;
             Tipo = tipo;

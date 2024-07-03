@@ -134,7 +134,7 @@ namespace Formularios
                                     {
                                         UsuarioRegistrado = usuario;
                                         RegistrarAccesoUsuario();
-                                        this.Invoke((MethodInvoker)delegate 
+                                        this.Invoke((MethodInvoker)delegate
                                         {
                                             this.Hide();
                                             FormularioPrincipal formularioPrincipal = new FormularioPrincipal(this.UsuarioRegistrado);
@@ -173,7 +173,7 @@ namespace Formularios
         /// <param name="mensaje">Mensaje que se desea mostrar.</param>
         private void MostrarMensaje(string mensaje)
         {
-            this.Invoke((MethodInvoker)delegate 
+            this.Invoke((MethodInvoker)delegate
             {
                 MessageBox.Show(mensaje);
             });

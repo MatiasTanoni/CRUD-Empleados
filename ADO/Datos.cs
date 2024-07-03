@@ -1,6 +1,5 @@
-﻿using Microsoft.Data.SqlClient;
-using Entidades;
-using Entidades;
+﻿using Entidades;
+using Microsoft.Data.SqlClient;
 
 namespace ADO
 {
@@ -146,7 +145,7 @@ namespace ADO
         /// </summary>
         /// <param name="nombre">El nombre del usuario.</param>
         /// <param name="clave">La clave del usuario.</param>
-        public static void AgregarEmpleado(string nombre, int edad, int experiencia, int salario, string herramientaDePrueba, TipoDeEmpleados tipo,int proyectosTesteados)
+        public static void AgregarEmpleado(string nombre, int edad, int experiencia, int salario, string herramientaDePrueba, TipoDeEmpleados tipo, int proyectosTesteados)
         {
             try
             {
@@ -189,7 +188,7 @@ namespace ADO
         /// </summary>
         /// <param name="nombre">El nombre del usuario.</param>
         /// <param name="clave">La clave del usuario.</param>
-        public static void AgregarEmpleado(string nombre, int edad, int experiencia, int salario, int personasACargo, TipoDeEmpleados tipo,int proyectosGestionados)
+        public static void AgregarEmpleado(string nombre, int edad, int experiencia, int salario, int personasACargo, TipoDeEmpleados tipo, int proyectosGestionados)
         {
             try
             {
@@ -227,7 +226,7 @@ namespace ADO
                 throw new Exception("Error al agregar el usuario" + e.Message);
             }
         }
-        public static void ModificarEmpleado(string nombre, int edad, int experiencia, int salario, string lenguajeDeProgramacion, int proyectosFinalizados, TipoDeEmpleados tipo,int id)
+        public static void ModificarEmpleado(string nombre, int edad, int experiencia, int salario, string lenguajeDeProgramacion, int proyectosFinalizados, TipoDeEmpleados tipo, int id)
         {
             try
             {
@@ -269,7 +268,7 @@ namespace ADO
         /// <summary>
         /// Modifica los datos de un empleado en la base de datos.
         /// </summary>
-        public static void ModificarEmpleado(string nombre, int edad, int experiencia, int salario, string herramientaDePrueba, TipoDeEmpleados tipo, int proyectosTesteados,int id)
+        public static void ModificarEmpleado(string nombre, int edad, int experiencia, int salario, string herramientaDePrueba, TipoDeEmpleados tipo, int proyectosTesteados, int id)
         {
             try
             {

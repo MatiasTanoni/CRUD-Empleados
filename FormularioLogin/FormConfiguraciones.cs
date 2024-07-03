@@ -43,17 +43,17 @@ namespace Formularios
                     {
                         MessageBox.Show("Por favor, No puede estar vacio, ingrese un valor para el Nombre");
                         return false;
-                    }  
+                    }
                 }
                 else
                 {
                     throw new MiExcepcionPersonalizada("Por favor, el nombre no puede ser un número.");
                 }
             }
-            catch (MiExcepcionPersonalizada ex) 
-            { 
+            catch (MiExcepcionPersonalizada ex)
+            {
                 MessageBox.Show(ex.Message);
-                return false ;
+                return false;
             }
         }
 
@@ -75,26 +75,26 @@ namespace Formularios
                     if (int.TryParse(textBox.Text, out int edad))
                     {
 
-                    if (edad >= 18 && edad < 65)
-                    {
-                        empleado.Edad = edad;
-                        return true;
-                    }
-                    else if (edad >= 65)
-                    {
-                        MessageBox.Show("Por favor, No puede trabajar aquí porque tienes edad de jubilación, solo permitimos (18 a 64) años.");
-                        return false;
-                    }
-                    else if (edad <= 18)
-                    {
-                        MessageBox.Show("Por favor, No puede trabajar aquí porque eres menor de edad, solo permitimos (18 a 64) años.");
-                        return false;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Por favor, ingrese una edad válida (entre 18 y 64).");
-                        return false;
-                    }
+                        if (edad >= 18 && edad < 65)
+                        {
+                            empleado.Edad = edad;
+                            return true;
+                        }
+                        else if (edad >= 65)
+                        {
+                            MessageBox.Show("Por favor, No puede trabajar aquí porque tienes edad de jubilación, solo permitimos (18 a 64) años.");
+                            return false;
+                        }
+                        else if (edad <= 18)
+                        {
+                            MessageBox.Show("Por favor, No puede trabajar aquí porque eres menor de edad, solo permitimos (18 a 64) años.");
+                            return false;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Por favor, ingrese una edad válida (entre 18 y 64).");
+                            return false;
+                        }
                     }
                     else
                     {

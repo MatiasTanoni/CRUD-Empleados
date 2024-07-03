@@ -1,6 +1,5 @@
 ﻿using ADO;
 using Entidades;
-using Entidades;
 
 namespace Formularios
 {
@@ -23,7 +22,7 @@ namespace Formularios
         {
             InitializeComponent();
             empresa = new Empresa();
-            empresa.ListaDeEmpleados = new List<Empleado>(); 
+            empresa.ListaDeEmpleados = new List<Empleado>();
         }
 
         /// <summary>
@@ -81,7 +80,7 @@ namespace Formularios
                 {
                     if (banderaModificar == false)
                     {
-                        Datos.AgregarEmpleado(textBoxNombre.Text, int.Parse(textBoxEdad.Text), int.Parse(textBoxExperiencia.Text), int.Parse(textBoxSalario.Text), textBoxHerramientaDePrueba.Text,TipoDeEmpleados.Tester, int.Parse(textBoxProyectosTesteados.Text));
+                        Datos.AgregarEmpleado(textBoxNombre.Text, int.Parse(textBoxEdad.Text), int.Parse(textBoxExperiencia.Text), int.Parse(textBoxSalario.Text), textBoxHerramientaDePrueba.Text, TipoDeEmpleados.Tester, int.Parse(textBoxProyectosTesteados.Text));
                         this.DialogResult = DialogResult.OK;
                     }
                     else

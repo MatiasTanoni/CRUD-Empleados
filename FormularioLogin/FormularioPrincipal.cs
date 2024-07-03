@@ -533,7 +533,7 @@ namespace Formularios
                 panelBD.BackColor = Color.Gainsboro;
                 abrirBD = false;
                 this.empresa.ListaDeEmpleados.Clear();
-                listBoxPrincipal.Items.Clear();             
+                listBoxPrincipal.Items.Clear();
             }
         }
     }
