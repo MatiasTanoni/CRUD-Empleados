@@ -20,7 +20,7 @@ https://www.youtube.com/watch?v=8Hf_3bzPi84&t=1s
 
 **DIAGRAMA DE CLASES 👾**
 
-![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/master/Diagrama%20de%20Clases.png)
+![](https://github.com/MatiasTanoni/Tanoni.Matias.PrimerParcial/blob/segundo_parcial/DiagramaDeClases.png)
 
 **LOGIN 👋**:
 En el login Tenemos el sector para poner el correo y la contraseña.
