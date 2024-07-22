@@ -1,4 +1,4 @@
-#2do Parcial Laboratorio 
+# 2do Parcial Laboratorio 2
 
 **CRUD - Empleados**
 
